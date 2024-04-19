@@ -1,0 +1,62 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\DropSun\\DropSun\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3064341D-4178-4C8F-96A4-68D548318443}|DropSun.csproj|c:\\users\\nicol\\onedrive\\documents\\github\\dropsun\\dropsun\\views\\weatherview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3064341D-4178-4C8F-96A4-68D548318443}|DropSun.csproj|solutionrelative:views\\weatherview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3064341D-4178-4C8F-96A4-68D548318443}|DropSun.csproj|c:\\users\\nicol\\onedrive\\documents\\github\\dropsun\\dropsun\\views\\wrapperpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3064341D-4178-4C8F-96A4-68D548318443}|DropSun.csproj|solutionrelative:views\\wrapperpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:2062758501:0:{83107a3e-496a-485e-b455-16ddb978e55e}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "WeatherView.xaml",
+              "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\DropSun\\DropSun\\Views\\WeatherView.xaml",
+              "RelativeDocumentMoniker": "Views\\WeatherView.xaml",
+              "ToolTip": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\DropSun\\DropSun\\Views\\WeatherView.xaml",
+              "RelativeToolTip": "Views\\WeatherView.xaml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-04-19T22:45:01.657Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "WrapperPage.xaml",
+              "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\DropSun\\DropSun\\Views\\WrapperPage.xaml",
+              "RelativeDocumentMoniker": "Views\\WrapperPage.xaml",
+              "ToolTip": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\DropSun\\DropSun\\Views\\WrapperPage.xaml",
+              "RelativeToolTip": "Views\\WrapperPage.xaml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-04-19T22:44:44.922Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

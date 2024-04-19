@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "DropSun (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "DropSun (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
