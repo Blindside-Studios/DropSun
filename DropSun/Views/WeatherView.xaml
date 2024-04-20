@@ -11,6 +11,5 @@
 
     <Grid x:Name="ContentGrid" PointerMoved="ContentGrid_PointerMoved">
         <Frame x:Name="ContentFrame" Content="BlueSky" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
-        <Rectangle HorizontalAlignment="Center" VerticalAlignment="Center" Fill="DarkRed" Height="200" Width="200"/>
     </Grid>
 </Page>

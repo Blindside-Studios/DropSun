@@ -6,10 +6,12 @@
     xmlns:local="using:DropSun.Views.Conditions.Sunny"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="using:DropSun.Model.ViewModels"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid Background="Green">
-
+    <Grid Background="LawnGreen">
+        <Rectangle Fill="DarkOliveGreen" Opacity="{x:Bind vm:ViewRenderingModel.Instance.EveningLevel, Mode=OneWay}"/>
+        <Rectangle Fill="DarkGreen" Opacity="{x:Bind vm:ViewRenderingModel.Instance.NightLevel, Mode=OneWay}"/>
     </Grid>
 </Page>

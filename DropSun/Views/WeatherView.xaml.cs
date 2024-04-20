@@ -24,6 +24,7 @@ namespace DropSun.Views
         {
             this.InitializeComponent();
             this.DataContext = Model.ViewModels.ViewRenderingModel.Instance;
+            Model.ViewModels.ViewRenderingModel.Instance.ReceiverGridHeight = Convert.ToInt32(ContentGrid.ActualHeight);
 
             FrameNavigationOptions navOptions = new FrameNavigationOptions();
             Type pageType = typeof(Conditions.Rendered.Sunny);
@@ -32,7 +33,9 @@ namespace DropSun.Views
 
         private void ContentGrid_PointerMoved(object sender, PointerRoutedEventArgs e)
         {
-            // update the ViewModel with new 
+            // first update the stored grid height in case something changed
+            Model.ViewModels.ViewRenderingModel.Instance.ReceiverGridHeight = Convert.ToInt32(ContentGrid.ActualHeight);
+            // then update the ViewModel with new information, for which it needs the information in the above line
             Model.ViewModels.ViewRenderingModel.Instance.CursorPosition = e.GetCurrentPoint(ContentGrid).Position;
         }
     }
