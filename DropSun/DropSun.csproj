@@ -12,6 +12,10 @@
     <EnableMsixTooling>true</EnableMsixTooling>
   </PropertyGroup>
   <ItemGroup>
+    <None Remove="Views\Conditions\Rendered\Sunny.xaml" />
+    <None Remove="Views\Conditions\Sunny\BlueSky.xaml" />
+    <None Remove="Views\Conditions\Sunny\Ground.xaml" />
+    <None Remove="Views\Conditions\Sunny\Sun.xaml" />
     <None Remove="Views\WeatherView.xaml" />
     <None Remove="Views\WrapperPage.xaml" />
   </ItemGroup>
@@ -41,12 +45,32 @@
     <ProjectCapability Include="Msix" />
   </ItemGroup>
   <ItemGroup>
+    <Page Update="Views\Conditions\Sunny\Ground.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Views\Conditions\Sunny\Sun.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
     <Page Update="Views\WeatherView.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
     <Page Update="Views\WrapperPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Views\Conditions\Sunny\BlueSky.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Views\Conditions\Rendered\Sunny.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>

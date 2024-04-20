@@ -18,14 +18,22 @@ using Windows.Foundation.Collections;
 
 namespace DropSun.Views
 {
-    /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
-    /// </summary>
     public sealed partial class WeatherView : Page
     {
         public WeatherView()
         {
             this.InitializeComponent();
+            this.DataContext = Model.ViewModels.ViewRenderingModel.Instance;
+
+            FrameNavigationOptions navOptions = new FrameNavigationOptions();
+            Type pageType = typeof(Conditions.Rendered.Sunny);
+            ContentFrame.NavigateToType(pageType, null, navOptions);
+        }
+
+        private void ContentGrid_PointerMoved(object sender, PointerRoutedEventArgs e)
+        {
+            // update the ViewModel with new 
+            Model.ViewModels.ViewRenderingModel.Instance.CursorPosition = e.GetCurrentPoint(ContentGrid).Position;
         }
     }
 }

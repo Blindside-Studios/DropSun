@@ -26,6 +26,10 @@ namespace DropSun.Views
         public WrapperPage()
         {
             this.InitializeComponent();
+
+            FrameNavigationOptions navOptions = new FrameNavigationOptions();
+            Type pageType = typeof(WeatherView);
+            ContentFrame.NavigateToType(pageType, null, navOptions);
         }
     }
 }

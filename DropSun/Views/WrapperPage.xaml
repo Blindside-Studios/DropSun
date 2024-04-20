@@ -10,6 +10,6 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-
+        <Frame x:Name="ContentFrame" Content="WeatherView" Margin="200,5,5,5" CornerRadius="3"/>
     </Grid>
 </Page>

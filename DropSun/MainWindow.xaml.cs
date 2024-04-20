@@ -1,3 +1,4 @@
+using DropSun.Views;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Controls.Primitives;
@@ -26,11 +27,10 @@ namespace DropSun
         public MainWindow()
         {
             this.InitializeComponent();
-        }
 
-        private void myButton_Click(object sender, RoutedEventArgs e)
-        {
-            myButton.Content = "Clicked";
+            FrameNavigationOptions navOptions = new FrameNavigationOptions();
+            Type pageType = typeof(WrapperPage);
+            ContentFrame.NavigateToType(pageType, null, navOptions);
         }
     }
 }
