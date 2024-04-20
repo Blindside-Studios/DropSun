@@ -57,6 +57,10 @@
             "Microsoft.WindowsAppSDK": {
               "target": "Package",
               "version": "[1.4.230913002, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
             }
           },
           "imports": [

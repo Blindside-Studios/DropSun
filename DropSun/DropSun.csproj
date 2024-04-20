@@ -15,11 +15,14 @@
     <Content Remove="Assets\Application\Sky\BlueSkyGradient.png" />
     <Content Remove="Assets\Application\Sky\EveningSkyGradient.png" />
     <Content Remove="Assets\Application\Sky\NightSkyGradient.png" />
+    <Content Remove="Assets\Application\WeatherObjects\Star.png" />
+    <Content Remove="Assets\Application\WeatherObjects\Star.svg" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Views\Conditions\Rendered\Sunny.xaml" />
     <None Remove="Views\Conditions\Sunny\BlueSky.xaml" />
     <None Remove="Views\Conditions\Sunny\Ground.xaml" />
+    <None Remove="Views\Conditions\Sunny\StarSky.xaml" />
     <None Remove="Views\Conditions\Sunny\Sun.xaml" />
     <None Remove="Views\WeatherView.xaml" />
     <None Remove="Views\WrapperPage.xaml" />
@@ -38,6 +41,7 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.4.230913002" />
     <PackageReference Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.22621.755" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     <Manifest Include="$(ApplicationManifest)" />
   </ItemGroup>
 
@@ -59,6 +63,15 @@
     <None Update="Assets\Application\Sky\NightSkyGradient.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="Assets\Application\WeatherObjects\Star.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Assets\Application\WeatherObjects\Star.svg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Page Update="Views\Conditions\Sunny\StarSky.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Page Update="Views\Conditions\Sunny\Ground.xaml">

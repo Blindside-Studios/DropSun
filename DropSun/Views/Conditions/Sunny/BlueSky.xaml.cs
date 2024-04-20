@@ -26,6 +26,11 @@ namespace DropSun.Views.Conditions.Sunny
         public BlueSky()
         {
             this.InitializeComponent();
+
+            FrameNavigationOptions navOptions = new FrameNavigationOptions();
+
+            Type nightPage = typeof(Conditions.Sunny.StarSky);
+            StarFrame.NavigateToType(nightPage, null, navOptions);
         }
     }
 }

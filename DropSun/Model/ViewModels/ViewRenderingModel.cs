@@ -1,4 +1,5 @@
 ﻿using ABI.Microsoft.UI.Xaml;
+using Microsoft.UI.Xaml;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -98,11 +99,12 @@ namespace DropSun.Model.ViewModels
         const double nightRelativeStartThreshold = 0.75;
 
         // This stores the height of the grid that tracks mouse movements to calculate the distance to the bottom
+        public int ReceiverGridWidth { get; set; }
         public int ReceiverGridHeight { get; set; }
 
         private void calculateTimeOfDay(double sunYPosition)
         {
-            sunYPosition = sunYPosition + 50;
+            sunYPosition = sunYPosition + 75;
 
             double nightModfier = 0;
             if (ReceiverGridHeight - sunYPosition < eveningStartThreshold)
@@ -151,6 +153,22 @@ namespace DropSun.Model.ViewModels
                 {
                     _nightLevel = value;
                     OnPropertyChanged(nameof(NightLevel));
+                    if (NightLevel == 0) AreStarsRequired = Visibility.Collapsed;
+                    else if (NightLevel > 0) AreStarsRequired = Visibility.Visible;
+                }
+            }
+        }
+
+        private Visibility _areStarsRequired;
+        public Visibility AreStarsRequired
+        {
+            get => _areStarsRequired;
+            set
+            {
+                if (_areStarsRequired != value)
+                {
+                    _areStarsRequired = value;
+                    OnPropertyChanged(nameof(AreStarsRequired));
                 }
             }
         }

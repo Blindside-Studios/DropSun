@@ -3,6 +3,7 @@ MainWindow.xbf
 Views\Conditions\Rendered\Sunny.xbf
 Views\Conditions\Sunny\BlueSky.xbf
 Views\Conditions\Sunny\Ground.xbf
+Views\Conditions\Sunny\StarSky.xbf
 Views\Conditions\Sunny\Sun.xbf
 Views\WeatherView.xbf
 Views\WrapperPage.xbf
