@@ -102,6 +102,8 @@ namespace DropSun.Model.ViewModels
 
         private void calculateTimeOfDay(double sunYPosition)
         {
+            sunYPosition = sunYPosition + 50;
+
             double nightModfier = 0;
             if (ReceiverGridHeight - sunYPosition < eveningStartThreshold)
             {
@@ -110,7 +112,7 @@ namespace DropSun.Model.ViewModels
 
             if (nightModfier > nightRelativeStartThreshold)
             {
-                NightLevel = (nightModfier - 0.75) / (1 - nightRelativeStartThreshold);
+                NightLevel = (nightModfier - nightRelativeStartThreshold) / (1 - nightRelativeStartThreshold);
                 EveningLevel = 1;
             }
             else if (nightModfier > 0)

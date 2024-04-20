@@ -10,7 +10,7 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid Background="LawnGreen">
+    <Grid Background="ForestGreen">
         <Rectangle Fill="DarkOliveGreen" Opacity="{x:Bind vm:ViewRenderingModel.Instance.EveningLevel, Mode=OneWay}"/>
         <Rectangle Fill="DarkGreen" Opacity="{x:Bind vm:ViewRenderingModel.Instance.NightLevel, Mode=OneWay}"/>
     </Grid>

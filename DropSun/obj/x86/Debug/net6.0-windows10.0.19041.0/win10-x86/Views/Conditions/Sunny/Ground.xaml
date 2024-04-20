@@ -10,7 +10,7 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid Background="LawnGreen">
+    <Grid Background="ForestGreen">
         <Rectangle x:ConnectionId='2' Fill="DarkOliveGreen"                                                                            />
         <Rectangle x:ConnectionId='3' Fill="DarkGreen"                                                                          />
     </Grid>

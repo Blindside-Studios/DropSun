@@ -12,6 +12,11 @@
     <EnableMsixTooling>true</EnableMsixTooling>
   </PropertyGroup>
   <ItemGroup>
+    <Content Remove="Assets\Application\Sky\BlueSkyGradient.png" />
+    <Content Remove="Assets\Application\Sky\EveningSkyGradient.png" />
+    <Content Remove="Assets\Application\Sky\NightSkyGradient.png" />
+  </ItemGroup>
+  <ItemGroup>
     <None Remove="Views\Conditions\Rendered\Sunny.xaml" />
     <None Remove="Views\Conditions\Sunny\BlueSky.xaml" />
     <None Remove="Views\Conditions\Sunny\Ground.xaml" />
@@ -43,6 +48,17 @@
   -->
   <ItemGroup Condition="'$(DisableMsixProjectCapabilityAddedByProject)'!='true' and '$(EnableMsixTooling)'=='true'">
     <ProjectCapability Include="Msix" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="Assets\Application\Sky\BlueSkyGradient.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Assets\Application\Sky\EveningSkyGradient.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Assets\Application\Sky\NightSkyGradient.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Page Update="Views\Conditions\Sunny\Ground.xaml">
