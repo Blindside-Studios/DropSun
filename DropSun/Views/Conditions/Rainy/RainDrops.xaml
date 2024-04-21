@@ -6,10 +6,17 @@
     xmlns:local="using:DropSun.Views.Conditions.Rainy"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="using:DropSun.Model.ViewModels"
     mc:Ignorable="d"
     Background="Transparent">
 
-    <Grid x:Name="RainGrid">
-
+    <Grid x:Name="RainGrid" SizeChanged="RainGrid_SizeChanged">
+        <Rectangle x:Name="CollisionRectangle" HorizontalAlignment="Left" VerticalAlignment="Top"
+                   Height="{x:Bind vm:ViewRenderingModel.Instance.UmbrellaRadius, Mode=OneWay}"
+                   Width="{x:Bind vm:ViewRenderingModel.Instance.UmbrellaRadius, Mode=OneWay}"
+                   Translation="{x:Bind vm:ViewRenderingModel.Instance.UmbrellaCenterPointVector, Mode=OneWay}"
+                   RadiusX="150" RadiusY="150"
+                   Fill="Red"
+                   Opacity="0"/>
     </Grid>
 </Page>

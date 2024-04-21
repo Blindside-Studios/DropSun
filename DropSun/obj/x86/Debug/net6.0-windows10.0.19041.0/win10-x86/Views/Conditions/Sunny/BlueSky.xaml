@@ -10,7 +10,7 @@
     mc:Ignorable="d"
     Background="Transparent">
 
-    <Grid Background="DeepSkyBlue">
+    <Grid >
         <Image Source="/Assets/Application/Sky/BlueSkyGradient.png" Stretch="Fill" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
         <Image x:ConnectionId='2' Source="/Assets/Application/Sky/EveningSkyGradient.png"                                                                             Stretch="Fill" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
         <Image x:ConnectionId='3' Source="/Assets/Application/Sky/NightSkyGradient.png"                                                                           Stretch="Fill" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>

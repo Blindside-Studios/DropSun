@@ -224,51 +224,63 @@ namespace DropSun.DropSun_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[21];
+            _typeNameTable = new string[27];
             _typeNameTable[0] = "Microsoft.UI.Xaml.Controls.XamlControlsResources";
             _typeNameTable[1] = "Microsoft.UI.Xaml.ResourceDictionary";
             _typeNameTable[2] = "Object";
             _typeNameTable[3] = "Boolean";
-            _typeNameTable[4] = "DropSun.MainWindow";
-            _typeNameTable[5] = "Microsoft.UI.Xaml.Window";
-            _typeNameTable[6] = "DropSun.Views.Conditions.Rainy.RainDrops";
-            _typeNameTable[7] = "Microsoft.UI.Xaml.Controls.Page";
-            _typeNameTable[8] = "Microsoft.UI.Xaml.Controls.UserControl";
-            _typeNameTable[9] = "DropSun.Views.Conditions.Rendered.Rainy";
-            _typeNameTable[10] = "DropSun.Views.Conditions.Rendered.Sunny";
-            _typeNameTable[11] = "DropSun.Views.Conditions.Sunny.BlueSky";
-            _typeNameTable[12] = "DropSun.Views.Conditions.Sunny.Ground";
-            _typeNameTable[13] = "DropSun.Views.Conditions.Sunny.StarSky";
-            _typeNameTable[14] = "DropSun.Views.Conditions.Sunny.Sun";
-            _typeNameTable[15] = "DropSun.Views.WeatherView";
-            _typeNameTable[16] = "DropSun.Views.WrapperPage";
-            _typeNameTable[17] = "Microsoft.UI.Xaml.Controls.TreeViewNode";
-            _typeNameTable[18] = "Microsoft.UI.Xaml.DependencyObject";
-            _typeNameTable[19] = "System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>";
-            _typeNameTable[20] = "Int32";
+            _typeNameTable[4] = "Microsoft.UI.Xaml.Media.MicaBackdrop";
+            _typeNameTable[5] = "Microsoft.UI.Xaml.Media.SystemBackdrop";
+            _typeNameTable[6] = "Microsoft.UI.Composition.SystemBackdrops.MicaKind";
+            _typeNameTable[7] = "System.Enum";
+            _typeNameTable[8] = "System.ValueType";
+            _typeNameTable[9] = "DropSun.MainWindow";
+            _typeNameTable[10] = "Microsoft.UI.Xaml.Window";
+            _typeNameTable[11] = "DropSun.Views.Conditions.Rainy.RainDrops";
+            _typeNameTable[12] = "Microsoft.UI.Xaml.Controls.Page";
+            _typeNameTable[13] = "Microsoft.UI.Xaml.Controls.UserControl";
+            _typeNameTable[14] = "DropSun.Views.Conditions.Rendered.Rainy";
+            _typeNameTable[15] = "DropSun.Views.Conditions.Rendered.Sunny";
+            _typeNameTable[16] = "DropSun.Views.Conditions.Sunny.BlueSky";
+            _typeNameTable[17] = "DropSun.Views.Conditions.Sunny.Ground";
+            _typeNameTable[18] = "DropSun.Views.Conditions.Sunny.StarSky";
+            _typeNameTable[19] = "DropSun.Views.Conditions.Sunny.Sun";
+            _typeNameTable[20] = "DropSun.Views.WeatherCards.General";
+            _typeNameTable[21] = "DropSun.Views.WeatherView";
+            _typeNameTable[22] = "DropSun.Views.WrapperPage";
+            _typeNameTable[23] = "Microsoft.UI.Xaml.Controls.TreeViewNode";
+            _typeNameTable[24] = "Microsoft.UI.Xaml.DependencyObject";
+            _typeNameTable[25] = "System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>";
+            _typeNameTable[26] = "Int32";
 
-            _typeTable = new global::System.Type[21];
+            _typeTable = new global::System.Type[27];
             _typeTable[0] = typeof(global::Microsoft.UI.Xaml.Controls.XamlControlsResources);
             _typeTable[1] = typeof(global::Microsoft.UI.Xaml.ResourceDictionary);
             _typeTable[2] = typeof(global::System.Object);
             _typeTable[3] = typeof(global::System.Boolean);
-            _typeTable[4] = typeof(global::DropSun.MainWindow);
-            _typeTable[5] = typeof(global::Microsoft.UI.Xaml.Window);
-            _typeTable[6] = typeof(global::DropSun.Views.Conditions.Rainy.RainDrops);
-            _typeTable[7] = typeof(global::Microsoft.UI.Xaml.Controls.Page);
-            _typeTable[8] = typeof(global::Microsoft.UI.Xaml.Controls.UserControl);
-            _typeTable[9] = typeof(global::DropSun.Views.Conditions.Rendered.Rainy);
-            _typeTable[10] = typeof(global::DropSun.Views.Conditions.Rendered.Sunny);
-            _typeTable[11] = typeof(global::DropSun.Views.Conditions.Sunny.BlueSky);
-            _typeTable[12] = typeof(global::DropSun.Views.Conditions.Sunny.Ground);
-            _typeTable[13] = typeof(global::DropSun.Views.Conditions.Sunny.StarSky);
-            _typeTable[14] = typeof(global::DropSun.Views.Conditions.Sunny.Sun);
-            _typeTable[15] = typeof(global::DropSun.Views.WeatherView);
-            _typeTable[16] = typeof(global::DropSun.Views.WrapperPage);
-            _typeTable[17] = typeof(global::Microsoft.UI.Xaml.Controls.TreeViewNode);
-            _typeTable[18] = typeof(global::Microsoft.UI.Xaml.DependencyObject);
-            _typeTable[19] = typeof(global::System.Collections.Generic.IList<global::Microsoft.UI.Xaml.Controls.TreeViewNode>);
-            _typeTable[20] = typeof(global::System.Int32);
+            _typeTable[4] = typeof(global::Microsoft.UI.Xaml.Media.MicaBackdrop);
+            _typeTable[5] = typeof(global::Microsoft.UI.Xaml.Media.SystemBackdrop);
+            _typeTable[6] = typeof(global::Microsoft.UI.Composition.SystemBackdrops.MicaKind);
+            _typeTable[7] = typeof(global::System.Enum);
+            _typeTable[8] = typeof(global::System.ValueType);
+            _typeTable[9] = typeof(global::DropSun.MainWindow);
+            _typeTable[10] = typeof(global::Microsoft.UI.Xaml.Window);
+            _typeTable[11] = typeof(global::DropSun.Views.Conditions.Rainy.RainDrops);
+            _typeTable[12] = typeof(global::Microsoft.UI.Xaml.Controls.Page);
+            _typeTable[13] = typeof(global::Microsoft.UI.Xaml.Controls.UserControl);
+            _typeTable[14] = typeof(global::DropSun.Views.Conditions.Rendered.Rainy);
+            _typeTable[15] = typeof(global::DropSun.Views.Conditions.Rendered.Sunny);
+            _typeTable[16] = typeof(global::DropSun.Views.Conditions.Sunny.BlueSky);
+            _typeTable[17] = typeof(global::DropSun.Views.Conditions.Sunny.Ground);
+            _typeTable[18] = typeof(global::DropSun.Views.Conditions.Sunny.StarSky);
+            _typeTable[19] = typeof(global::DropSun.Views.Conditions.Sunny.Sun);
+            _typeTable[20] = typeof(global::DropSun.Views.WeatherCards.General);
+            _typeTable[21] = typeof(global::DropSun.Views.WeatherView);
+            _typeTable[22] = typeof(global::DropSun.Views.WrapperPage);
+            _typeTable[23] = typeof(global::Microsoft.UI.Xaml.Controls.TreeViewNode);
+            _typeTable[24] = typeof(global::Microsoft.UI.Xaml.DependencyObject);
+            _typeTable[25] = typeof(global::System.Collections.Generic.IList<global::Microsoft.UI.Xaml.Controls.TreeViewNode>);
+            _typeTable[26] = typeof(global::System.Int32);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -304,17 +316,19 @@ namespace DropSun.DropSun_XamlTypeInfo
         }
 
         private object Activate_0_XamlControlsResources() { return new global::Microsoft.UI.Xaml.Controls.XamlControlsResources(); }
-        private object Activate_4_MainWindow() { return new global::DropSun.MainWindow(); }
-        private object Activate_6_RainDrops() { return new global::DropSun.Views.Conditions.Rainy.RainDrops(); }
-        private object Activate_9_Rainy() { return new global::DropSun.Views.Conditions.Rendered.Rainy(); }
-        private object Activate_10_Sunny() { return new global::DropSun.Views.Conditions.Rendered.Sunny(); }
-        private object Activate_11_BlueSky() { return new global::DropSun.Views.Conditions.Sunny.BlueSky(); }
-        private object Activate_12_Ground() { return new global::DropSun.Views.Conditions.Sunny.Ground(); }
-        private object Activate_13_StarSky() { return new global::DropSun.Views.Conditions.Sunny.StarSky(); }
-        private object Activate_14_Sun() { return new global::DropSun.Views.Conditions.Sunny.Sun(); }
-        private object Activate_15_WeatherView() { return new global::DropSun.Views.WeatherView(); }
-        private object Activate_16_WrapperPage() { return new global::DropSun.Views.WrapperPage(); }
-        private object Activate_17_TreeViewNode() { return new global::Microsoft.UI.Xaml.Controls.TreeViewNode(); }
+        private object Activate_4_MicaBackdrop() { return new global::Microsoft.UI.Xaml.Media.MicaBackdrop(); }
+        private object Activate_9_MainWindow() { return new global::DropSun.MainWindow(); }
+        private object Activate_11_RainDrops() { return new global::DropSun.Views.Conditions.Rainy.RainDrops(); }
+        private object Activate_14_Rainy() { return new global::DropSun.Views.Conditions.Rendered.Rainy(); }
+        private object Activate_15_Sunny() { return new global::DropSun.Views.Conditions.Rendered.Sunny(); }
+        private object Activate_16_BlueSky() { return new global::DropSun.Views.Conditions.Sunny.BlueSky(); }
+        private object Activate_17_Ground() { return new global::DropSun.Views.Conditions.Sunny.Ground(); }
+        private object Activate_18_StarSky() { return new global::DropSun.Views.Conditions.Sunny.StarSky(); }
+        private object Activate_19_Sun() { return new global::DropSun.Views.Conditions.Sunny.Sun(); }
+        private object Activate_20_General() { return new global::DropSun.Views.WeatherCards.General(); }
+        private object Activate_21_WeatherView() { return new global::DropSun.Views.WeatherView(); }
+        private object Activate_22_WrapperPage() { return new global::DropSun.Views.WrapperPage(); }
+        private object Activate_23_TreeViewNode() { return new global::Microsoft.UI.Xaml.Controls.TreeViewNode(); }
         private void MapAdd_0_XamlControlsResources(object instance, object key, object item)
         {
             var collection = (global::System.Collections.Generic.IDictionary<global::System.Object, global::System.Object>)instance;
@@ -322,7 +336,7 @@ namespace DropSun.DropSun_XamlTypeInfo
             var newItem = (global::System.Object)item;
             collection.Add(newKey, newItem);
         }
-        private void VectorAdd_19_IList(object instance, object item)
+        private void VectorAdd_25_IList(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Microsoft.UI.Xaml.Controls.TreeViewNode>)instance;
             var newItem = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)item;
@@ -359,91 +373,126 @@ namespace DropSun.DropSun_XamlTypeInfo
                 xamlType = new global::DropSun.DropSun_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 4:   //  DropSun.MainWindow
+            case 4:   //  Microsoft.UI.Xaml.Media.MicaBackdrop
+                userType = new global::DropSun.DropSun_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Media.SystemBackdrop"));
+                userType.Activator = Activate_4_MicaBackdrop;
+                userType.AddMemberName("Kind");
+                xamlType = userType;
+                break;
+
+            case 5:   //  Microsoft.UI.Xaml.Media.SystemBackdrop
+                xamlType = new global::DropSun.DropSun_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 6:   //  Microsoft.UI.Composition.SystemBackdrops.MicaKind
+                userType = new global::DropSun.DropSun_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
+                userType.AddEnumValue("Base", global::Microsoft.UI.Composition.SystemBackdrops.MicaKind.Base);
+                userType.AddEnumValue("BaseAlt", global::Microsoft.UI.Composition.SystemBackdrops.MicaKind.BaseAlt);
+                xamlType = userType;
+                break;
+
+            case 7:   //  System.Enum
+                userType = new global::DropSun.DropSun_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
+                xamlType = userType;
+                break;
+
+            case 8:   //  System.ValueType
+                userType = new global::DropSun.DropSun_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                xamlType = userType;
+                break;
+
+            case 9:   //  DropSun.MainWindow
                 userType = new global::DropSun.DropSun_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Window"));
-                userType.Activator = Activate_4_MainWindow;
+                userType.Activator = Activate_9_MainWindow;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 5:   //  Microsoft.UI.Xaml.Window
+            case 10:   //  Microsoft.UI.Xaml.Window
                 xamlType = new global::DropSun.DropSun_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 6:   //  DropSun.Views.Conditions.Rainy.RainDrops
+            case 11:   //  DropSun.Views.Conditions.Rainy.RainDrops
                 userType = new global::DropSun.DropSun_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_6_RainDrops;
+                userType.Activator = Activate_11_RainDrops;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 7:   //  Microsoft.UI.Xaml.Controls.Page
+            case 12:   //  Microsoft.UI.Xaml.Controls.Page
                 xamlType = new global::DropSun.DropSun_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 8:   //  Microsoft.UI.Xaml.Controls.UserControl
+            case 13:   //  Microsoft.UI.Xaml.Controls.UserControl
                 xamlType = new global::DropSun.DropSun_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 9:   //  DropSun.Views.Conditions.Rendered.Rainy
+            case 14:   //  DropSun.Views.Conditions.Rendered.Rainy
                 userType = new global::DropSun.DropSun_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_9_Rainy;
+                userType.Activator = Activate_14_Rainy;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 10:   //  DropSun.Views.Conditions.Rendered.Sunny
+            case 15:   //  DropSun.Views.Conditions.Rendered.Sunny
                 userType = new global::DropSun.DropSun_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_10_Sunny;
+                userType.Activator = Activate_15_Sunny;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 11:   //  DropSun.Views.Conditions.Sunny.BlueSky
+            case 16:   //  DropSun.Views.Conditions.Sunny.BlueSky
                 userType = new global::DropSun.DropSun_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_11_BlueSky;
+                userType.Activator = Activate_16_BlueSky;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 12:   //  DropSun.Views.Conditions.Sunny.Ground
+            case 17:   //  DropSun.Views.Conditions.Sunny.Ground
                 userType = new global::DropSun.DropSun_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_12_Ground;
+                userType.Activator = Activate_17_Ground;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 13:   //  DropSun.Views.Conditions.Sunny.StarSky
+            case 18:   //  DropSun.Views.Conditions.Sunny.StarSky
                 userType = new global::DropSun.DropSun_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_13_StarSky;
+                userType.Activator = Activate_18_StarSky;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 14:   //  DropSun.Views.Conditions.Sunny.Sun
+            case 19:   //  DropSun.Views.Conditions.Sunny.Sun
                 userType = new global::DropSun.DropSun_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_14_Sun;
+                userType.Activator = Activate_19_Sun;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 15:   //  DropSun.Views.WeatherView
+            case 20:   //  DropSun.Views.WeatherCards.General
                 userType = new global::DropSun.DropSun_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_15_WeatherView;
+                userType.Activator = Activate_20_General;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 16:   //  DropSun.Views.WrapperPage
+            case 21:   //  DropSun.Views.WeatherView
                 userType = new global::DropSun.DropSun_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_16_WrapperPage;
+                userType.Activator = Activate_21_WeatherView;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 17:   //  Microsoft.UI.Xaml.Controls.TreeViewNode
+            case 22:   //  DropSun.Views.WrapperPage
+                userType = new global::DropSun.DropSun_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_22_WrapperPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 23:   //  Microsoft.UI.Xaml.Controls.TreeViewNode
                 userType = new global::DropSun.DropSun_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.DependencyObject"));
-                userType.Activator = Activate_17_TreeViewNode;
+                userType.Activator = Activate_23_TreeViewNode;
                 userType.AddMemberName("Children");
                 userType.AddMemberName("Content");
                 userType.AddMemberName("Depth");
@@ -455,18 +504,18 @@ namespace DropSun.DropSun_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 18:   //  Microsoft.UI.Xaml.DependencyObject
+            case 24:   //  Microsoft.UI.Xaml.DependencyObject
                 xamlType = new global::DropSun.DropSun_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 19:   //  System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>
+            case 25:   //  System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>
                 userType = new global::DropSun.DropSun_XamlTypeInfo.XamlUserType(this, typeName, type, null);
-                userType.CollectionAdd = VectorAdd_19_IList;
+                userType.CollectionAdd = VectorAdd_25_IList;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 20:   //  Int32
+            case 26:   //  Int32
                 xamlType = new global::DropSun.DropSun_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
             }
@@ -538,52 +587,62 @@ namespace DropSun.DropSun_XamlTypeInfo
             var that = (global::Microsoft.UI.Xaml.Controls.XamlControlsResources)instance;
             that.UseCompactResources = (global::System.Boolean)Value;
         }
-        private object get_1_TreeViewNode_Children(object instance)
+        private object get_1_MicaBackdrop_Kind(object instance)
+        {
+            var that = (global::Microsoft.UI.Xaml.Media.MicaBackdrop)instance;
+            return that.Kind;
+        }
+        private void set_1_MicaBackdrop_Kind(object instance, object Value)
+        {
+            var that = (global::Microsoft.UI.Xaml.Media.MicaBackdrop)instance;
+            that.Kind = (global::Microsoft.UI.Composition.SystemBackdrops.MicaKind)Value;
+        }
+        private object get_2_TreeViewNode_Children(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
             return that.Children;
         }
-        private object get_2_TreeViewNode_Content(object instance)
+        private object get_3_TreeViewNode_Content(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
             return that.Content;
         }
-        private void set_2_TreeViewNode_Content(object instance, object Value)
+        private void set_3_TreeViewNode_Content(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
             that.Content = (global::System.Object)Value;
         }
-        private object get_3_TreeViewNode_Depth(object instance)
+        private object get_4_TreeViewNode_Depth(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
             return that.Depth;
         }
-        private object get_4_TreeViewNode_HasChildren(object instance)
+        private object get_5_TreeViewNode_HasChildren(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
             return that.HasChildren;
         }
-        private object get_5_TreeViewNode_HasUnrealizedChildren(object instance)
+        private object get_6_TreeViewNode_HasUnrealizedChildren(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
             return that.HasUnrealizedChildren;
         }
-        private void set_5_TreeViewNode_HasUnrealizedChildren(object instance, object Value)
+        private void set_6_TreeViewNode_HasUnrealizedChildren(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
             that.HasUnrealizedChildren = (global::System.Boolean)Value;
         }
-        private object get_6_TreeViewNode_IsExpanded(object instance)
+        private object get_7_TreeViewNode_IsExpanded(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
             return that.IsExpanded;
         }
-        private void set_6_TreeViewNode_IsExpanded(object instance, object Value)
+        private void set_7_TreeViewNode_IsExpanded(object instance, object Value)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
             that.IsExpanded = (global::System.Boolean)Value;
         }
-        private object get_7_TreeViewNode_Parent(object instance)
+        private object get_8_TreeViewNode_Parent(object instance)
         {
             var that = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)instance;
             return that.Parent;
@@ -603,50 +662,57 @@ namespace DropSun.DropSun_XamlTypeInfo
                 xamlMember.Getter = get_0_XamlControlsResources_UseCompactResources;
                 xamlMember.Setter = set_0_XamlControlsResources_UseCompactResources;
                 break;
+            case "Microsoft.UI.Xaml.Media.MicaBackdrop.Kind":
+                userType = (global::DropSun.DropSun_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Media.MicaBackdrop");
+                xamlMember = new global::DropSun.DropSun_XamlTypeInfo.XamlMember(this, "Kind", "Microsoft.UI.Composition.SystemBackdrops.MicaKind");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_1_MicaBackdrop_Kind;
+                xamlMember.Setter = set_1_MicaBackdrop_Kind;
+                break;
             case "Microsoft.UI.Xaml.Controls.TreeViewNode.Children":
                 userType = (global::DropSun.DropSun_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TreeViewNode");
                 xamlMember = new global::DropSun.DropSun_XamlTypeInfo.XamlMember(this, "Children", "System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>");
-                xamlMember.Getter = get_1_TreeViewNode_Children;
+                xamlMember.Getter = get_2_TreeViewNode_Children;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.UI.Xaml.Controls.TreeViewNode.Content":
                 userType = (global::DropSun.DropSun_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TreeViewNode");
                 xamlMember = new global::DropSun.DropSun_XamlTypeInfo.XamlMember(this, "Content", "Object");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_2_TreeViewNode_Content;
-                xamlMember.Setter = set_2_TreeViewNode_Content;
+                xamlMember.Getter = get_3_TreeViewNode_Content;
+                xamlMember.Setter = set_3_TreeViewNode_Content;
                 break;
             case "Microsoft.UI.Xaml.Controls.TreeViewNode.Depth":
                 userType = (global::DropSun.DropSun_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TreeViewNode");
                 xamlMember = new global::DropSun.DropSun_XamlTypeInfo.XamlMember(this, "Depth", "Int32");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_3_TreeViewNode_Depth;
+                xamlMember.Getter = get_4_TreeViewNode_Depth;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.UI.Xaml.Controls.TreeViewNode.HasChildren":
                 userType = (global::DropSun.DropSun_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TreeViewNode");
                 xamlMember = new global::DropSun.DropSun_XamlTypeInfo.XamlMember(this, "HasChildren", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_4_TreeViewNode_HasChildren;
+                xamlMember.Getter = get_5_TreeViewNode_HasChildren;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.UI.Xaml.Controls.TreeViewNode.HasUnrealizedChildren":
                 userType = (global::DropSun.DropSun_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TreeViewNode");
                 xamlMember = new global::DropSun.DropSun_XamlTypeInfo.XamlMember(this, "HasUnrealizedChildren", "Boolean");
-                xamlMember.Getter = get_5_TreeViewNode_HasUnrealizedChildren;
-                xamlMember.Setter = set_5_TreeViewNode_HasUnrealizedChildren;
+                xamlMember.Getter = get_6_TreeViewNode_HasUnrealizedChildren;
+                xamlMember.Setter = set_6_TreeViewNode_HasUnrealizedChildren;
                 break;
             case "Microsoft.UI.Xaml.Controls.TreeViewNode.IsExpanded":
                 userType = (global::DropSun.DropSun_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TreeViewNode");
                 xamlMember = new global::DropSun.DropSun_XamlTypeInfo.XamlMember(this, "IsExpanded", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_6_TreeViewNode_IsExpanded;
-                xamlMember.Setter = set_6_TreeViewNode_IsExpanded;
+                xamlMember.Getter = get_7_TreeViewNode_IsExpanded;
+                xamlMember.Setter = set_7_TreeViewNode_IsExpanded;
                 break;
             case "Microsoft.UI.Xaml.Controls.TreeViewNode.Parent":
                 userType = (global::DropSun.DropSun_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.UI.Xaml.Controls.TreeViewNode");
                 xamlMember = new global::DropSun.DropSun_XamlTypeInfo.XamlMember(this, "Parent", "Microsoft.UI.Xaml.Controls.TreeViewNode");
-                xamlMember.Getter = get_7_TreeViewNode_Parent;
+                xamlMember.Getter = get_8_TreeViewNode_Parent;
                 xamlMember.SetIsReadOnly();
                 break;
             }

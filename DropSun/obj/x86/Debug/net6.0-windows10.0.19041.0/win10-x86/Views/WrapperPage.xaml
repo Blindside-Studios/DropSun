@@ -7,9 +7,13 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="Transparent">
 
     <Grid>
+        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Center">
+            <Button x:ConnectionId='3' x:Name="ShowSunnyButton" Content="Sunny"                              />
+            <Button x:ConnectionId='4' x:Name="ShowRainButton" Content="Rainy"                             />
+        </StackPanel>
         <Frame x:ConnectionId='2' x:Name="ContentFrame" Content="WeatherView" Margin="200,5,5,5" CornerRadius="3"/>
     </Grid>
 </Page>

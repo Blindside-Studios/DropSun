@@ -19,5 +19,8 @@
                
                Translation="{x:Bind vm:ViewRenderingModel.Instance.UmbrellaTranslation, Mode=OneWay}"
                Rotation="{x:Bind vm:ViewRenderingModel.Instance.UmbrellaRotation, Mode=OneWay}"/>
+        <Rectangle Height="10" Width="10" Fill="Red" HorizontalAlignment="Left" VerticalAlignment="Top"
+                   Translation="{x:Bind vm:ViewRenderingModel.Instance.UmbrellaCenterPointVector, Mode=OneWay}"
+                   Opacity="0"/>
     </Grid>
 </Page>

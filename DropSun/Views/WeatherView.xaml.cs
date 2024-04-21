@@ -1,3 +1,4 @@
+using DropSun.Views.WeatherCards;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Controls.Primitives;
@@ -26,11 +27,24 @@ namespace DropSun.Views
             this.DataContext = Model.ViewModels.ViewRenderingModel.Instance;
             Model.ViewModels.ViewRenderingModel.Instance.ReceiverGridHeight = Convert.ToInt32(ContentGrid.ActualHeight);
             Model.ViewModels.ViewRenderingModel.Instance.ReceiverGridWidth = Convert.ToInt32(ContentGrid.ActualWidth);
-            Model.ViewModels.ViewRenderingModel.Instance.WeatherCondition = Model.Weather.Condition.Rainy;
 
             FrameNavigationOptions navOptions = new FrameNavigationOptions();
-            Type pageType = typeof(Conditions.Rendered.Rainy);
-            ContentFrame.NavigateToType(pageType, null, navOptions);
+            if (Model.ViewModels.ViewRenderingModel.Instance.WeatherCondition == Model.Weather.Condition.Sunny)
+            {
+                
+                Type pageType = typeof(Conditions.Rendered.Sunny);
+                ContentFrame.NavigateToType(pageType, null, navOptions);
+            }
+            else
+            {
+                Type pageType = typeof(Conditions.Rendered.Rainy);
+                ContentFrame.NavigateToType(pageType, null, navOptions);
+            }
+
+            GeneralFrame.Navigate(typeof(General), this);
+
+            Model.ViewModels.WeatherState.Instance.Condition = Model.ViewModels.ViewRenderingModel.Instance.WeatherCondition;
+            Model.ViewModels.WeatherState.Instance.TemperatureDouble = 23.5;
         }
 
         private void ContentGrid_PointerMoved(object sender, PointerRoutedEventArgs e)

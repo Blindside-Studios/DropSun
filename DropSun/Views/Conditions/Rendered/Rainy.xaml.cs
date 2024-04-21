@@ -39,7 +39,7 @@ namespace DropSun.Views.Conditions.Rendered
             Type pageType = typeof(RainDrops);
             DropletsFrame.NavigateToType(pageType, null, navOptions);
 
-            UmbrellaImage.CenterPoint = new System.Numerics.Vector3(120, 200, 0);
+            UmbrellaImage.CenterPoint = new System.Numerics.Vector3(145, 140, 0);
         }
     }
 }

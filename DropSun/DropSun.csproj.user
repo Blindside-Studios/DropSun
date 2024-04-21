@@ -11,6 +11,9 @@
     <None Update="Package.appxmanifest">
       <SubType>Designer</SubType>
     </None>
+    <Page Update="Views\WeatherCards\General.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Views\Conditions\Rainy\RainDrops.xaml">
       <SubType>Designer</SubType>
     </Page>

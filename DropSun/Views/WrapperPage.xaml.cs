@@ -4,6 +4,7 @@ using Microsoft.UI.Xaml.Controls.Primitives;
 using Microsoft.UI.Xaml.Data;
 using Microsoft.UI.Xaml.Input;
 using Microsoft.UI.Xaml.Media;
+using Microsoft.UI.Xaml.Media.Animation;
 using Microsoft.UI.Xaml.Navigation;
 using System;
 using System.Collections.Generic;
@@ -26,8 +27,22 @@ namespace DropSun.Views
         public WrapperPage()
         {
             this.InitializeComponent();
+        }
 
+        private void ShowSunnyButton_Click(object sender, RoutedEventArgs e)
+        {
+            Model.ViewModels.ViewRenderingModel.Instance.WeatherCondition = Model.Weather.Condition.Sunny;
             FrameNavigationOptions navOptions = new FrameNavigationOptions();
+            navOptions.TransitionInfoOverride = new DrillInNavigationTransitionInfo();
+            Type pageType = typeof(WeatherView);
+            ContentFrame.NavigateToType(pageType, null, navOptions);
+        }
+
+        private void ShowRainButton_Click(object sender, RoutedEventArgs e)
+        {
+            Model.ViewModels.ViewRenderingModel.Instance.WeatherCondition = Model.Weather.Condition.Rainy;
+            FrameNavigationOptions navOptions = new FrameNavigationOptions();
+            navOptions.TransitionInfoOverride = new DrillInNavigationTransitionInfo();
             Type pageType = typeof(WeatherView);
             ContentFrame.NavigateToType(pageType, null, navOptions);
         }

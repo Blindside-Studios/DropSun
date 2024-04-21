@@ -14,6 +14,7 @@ using Microsoft.UI.Xaml.Media;
 using Microsoft.UI.Xaml.Navigation;
 using Microsoft.UI.Xaml.Media.Imaging;
 using System.Threading.Tasks;
+using Microsoft.UI.Xaml.Media.Animation;
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -29,8 +30,8 @@ namespace DropSun.Views.Conditions.Rainy
         private int maxSize = 20;
 
         private int maxDroplets = 150;
-        private double maxAnimationSeconds = 3.0;
-        private double minAnimationSeconds = 1.0;
+        private double maxAnimationSeconds = 3.0; //3
+        private double minAnimationSeconds = 1.0; //1
 
         Random random = new Random();
 
@@ -53,6 +54,7 @@ namespace DropSun.Views.Conditions.Rainy
 
                 await Task.Delay(10);
             }
+            //startDetectingCollisions();
         }
 
         private async void createDroplet()
@@ -73,37 +75,81 @@ namespace DropSun.Views.Conditions.Rainy
 
             setDropletPosition(dropletImage);
 
-            var animationDuration = setDropletAnimation(dropletImage);
-
-            await Task.Delay(animationDuration);
-            recycleDroplet(dropletImage);
+            setDropletAnimation(dropletImage);
         }
 
         private void setDropletPosition(Image dropletImage)
         {
-            var translation = new System.Numerics.Vector3((float)random.Next(0, (int)RainGrid.ActualWidth), -100, 0);
+            var translation = new System.Numerics.Vector3((float)random.Next(0, (int)RainGrid.ActualWidth), -maxSize, 0);
             dropletImage.Translation = translation;
         }
 
-        private TimeSpan setDropletAnimation(Image droplet)
+        private void setDropletAnimation(Image droplet)
         {
-            droplet.TranslationTransition = new Vector3Transition();
             var animationDuration = TimeSpan.FromSeconds(random.NextDouble() * maxAnimationSeconds);
-            if (animationDuration < TimeSpan.FromSeconds(minAnimationSeconds)) animationDuration = animationDuration = TimeSpan.FromMilliseconds(animationDuration.TotalMilliseconds + (minAnimationSeconds * 1000));
-            droplet.TranslationTransition.Duration = animationDuration;
 
-            droplet.Translation = new System.Numerics.Vector3((float)droplet.Translation.X, (float)RainGrid.ActualHeight + 350, 0);
+            if (animationDuration < TimeSpan.FromSeconds(minAnimationSeconds))
+                animationDuration = TimeSpan.FromMilliseconds(animationDuration.TotalMilliseconds + (minAnimationSeconds * 1000));
 
-            return animationDuration;
+            Storyboard storyboard = new Storyboard();
+
+            DoubleAnimation doubleAnimation = new DoubleAnimation();
+            doubleAnimation.Duration = animationDuration;
+
+            TranslateTransform translateTransform = new TranslateTransform();
+            droplet.RenderTransform = translateTransform;
+
+            Storyboard.SetTarget(doubleAnimation, droplet);
+            Storyboard.SetTargetProperty(doubleAnimation, "UIElement.RenderTransform.(TranslateTransform.Y)");
+
+            doubleAnimation.To = RainGrid.ActualHeight;
+
+            storyboard.Children.Add(doubleAnimation);
+
+            storyboard.RepeatBehavior = RepeatBehavior.Forever;
+
+            storyboard.Begin();
         }
 
-        private async void recycleDroplet(Image droplet)
+        private void startDetectingCollisions()
         {
-            droplet.TranslationTransition = null;
-            setDropletPosition(droplet);
-            var animationDuration = setDropletAnimation(droplet);
-            await Task.Delay(animationDuration);
-            recycleDroplet(droplet);
+            while (true)
+            {
+                System.Drawing.Point umbrellaCenter = Model.ViewModels.ViewRenderingModel.Instance.UmbrellaCenterPoint;
+                int umbrellaRadius = Model.ViewModels.ViewRenderingModel.Instance.UmbrellaRadius;
+
+                // Iterate through each droplet in the RainGrid
+                foreach (var droplet in RainGrid.Children.OfType<Image>())
+                {
+                    // Calculate the distance from the droplet to the center of the umbrella
+                    double dropletDistance = Math.Sqrt(
+                        Math.Pow(droplet.Translation.X - umbrellaCenter.X, 2) +
+                        Math.Pow(droplet.Translation.Y - umbrellaCenter.Y, 2));
+
+                    // Check if the droplet is within the radius of the umbrella
+                    if (dropletDistance <= umbrellaRadius)
+                    {
+                        // Hide the droplet by setting its visibility to Collapsed
+                        droplet.Visibility = Visibility.Collapsed;
+                    }
+                }
+            }
+        }
+
+        private async void RainGrid_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
+            var starGridSize = RainGrid.ActualSize;
+            await Task.Delay(50);
+            if (starGridSize == RainGrid.ActualSize)
+            {
+                RainGrid.Children.Clear();
+                for (int i = 0; i < maxDroplets; i++)
+                {
+                    createDroplet();
+
+                    await Task.Delay(10);
+                }
+            }
         }
     }
 }

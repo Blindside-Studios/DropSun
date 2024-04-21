@@ -7,10 +7,11 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="Transparent">
 
     <Grid x:ConnectionId='2' x:Name="ContentGrid"                                        >
-        <Frame x:ConnectionId='3' x:Name="ContentFrame" Content="BlueSky" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+        <Frame x:ConnectionId='3' x:Name="ContentFrame" Content="Background" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+        <Frame x:ConnectionId='4' x:Name="GeneralFrame" Content="General" Margin="50,50,0,0" HorizontalAlignment="Left" VerticalAlignment="Stretch"/>
     </Grid>
 </Page>
 

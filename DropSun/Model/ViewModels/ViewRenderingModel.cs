@@ -101,7 +101,6 @@ namespace DropSun.Model.ViewModels
                 rotation = Math.Clamp(rotation, -45, 45);
 
                 UmbrellaRotation = rotation;
-                //Debug.WriteLine((int)Math.Round(rotation));
 
                 if (Vector3.Distance(newUmbrellaTranslation, UmbrellaTranslation) < 0.01f)
                 {
@@ -144,6 +143,8 @@ namespace DropSun.Model.ViewModels
                 {
                     _umbrellaTranslation = value;
                     OnPropertyChanged(nameof(UmbrellaTranslation));
+                    UmbrellaCenterPoint = new Point((int)UmbrellaTranslation.X + 145, (int)UmbrellaTranslation.Y + 140);
+                    UmbrellaCenterPointVector = new Vector3(UmbrellaCenterPoint.X, UmbrellaCenterPoint.Y, 0);
                 }
             }
         }
@@ -160,6 +161,26 @@ namespace DropSun.Model.ViewModels
                     OnPropertyChanged(nameof(UmbrellaRotation));
                 }
             }
+        }
+
+        private Vector3 _umbrellaCenterPointVector;
+        public Vector3 UmbrellaCenterPointVector
+        {
+            get => _umbrellaCenterPointVector;
+            set
+            {
+                if (_umbrellaCenterPointVector != value)
+                {
+                    _umbrellaCenterPointVector = value;
+                    OnPropertyChanged(nameof(UmbrellaCenterPointVector));
+                }
+            }
+        }
+
+        public Point UmbrellaCenterPoint { get; set; }
+        public int UmbrellaRadius
+        {
+            get => 90;
         }
 
 

@@ -19,6 +19,9 @@
                
                                                                                                      
                                                                                                />
+        <Rectangle x:ConnectionId='5' Height="10" Width="10" Fill="Red" HorizontalAlignment="Left" VerticalAlignment="Top"
+                                                                                                               
+                   Opacity="0"/>
     </Grid>
 </Page>
 
