@@ -43,11 +43,14 @@
     <AppxPackagedFile Include="C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\Assets\Application\Sky\NightSkyGradient.png">
       <PackagePath>Assets\Application\Sky\NightSkyGradient.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\Assets\Application\Sky\RainSky.png">
+      <PackagePath>Assets\Application\Sky\RainSky.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\Assets\Application\WeatherObjects\Raindrop.png">
+      <PackagePath>Assets\Application\WeatherObjects\Raindrop.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\Assets\Application\WeatherObjects\Star.png">
       <PackagePath>Assets\Application\WeatherObjects\Star.png</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\Assets\Application\WeatherObjects\Star.svg">
-      <PackagePath>Assets\Application\WeatherObjects\Star.svg</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\apphost.exe">
       <PackagePath>DropSun.exe</PackagePath>

@@ -224,47 +224,49 @@ namespace DropSun.DropSun_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[19];
+            _typeNameTable = new string[20];
             _typeNameTable[0] = "Microsoft.UI.Xaml.Controls.XamlControlsResources";
             _typeNameTable[1] = "Microsoft.UI.Xaml.ResourceDictionary";
             _typeNameTable[2] = "Object";
             _typeNameTable[3] = "Boolean";
             _typeNameTable[4] = "DropSun.MainWindow";
             _typeNameTable[5] = "Microsoft.UI.Xaml.Window";
-            _typeNameTable[6] = "DropSun.Views.Conditions.Rendered.Sunny";
+            _typeNameTable[6] = "DropSun.Views.Conditions.Rendered.Rainy";
             _typeNameTable[7] = "Microsoft.UI.Xaml.Controls.Page";
             _typeNameTable[8] = "Microsoft.UI.Xaml.Controls.UserControl";
-            _typeNameTable[9] = "DropSun.Views.Conditions.Sunny.BlueSky";
-            _typeNameTable[10] = "DropSun.Views.Conditions.Sunny.Ground";
-            _typeNameTable[11] = "DropSun.Views.Conditions.Sunny.StarSky";
-            _typeNameTable[12] = "DropSun.Views.Conditions.Sunny.Sun";
-            _typeNameTable[13] = "DropSun.Views.WeatherView";
-            _typeNameTable[14] = "DropSun.Views.WrapperPage";
-            _typeNameTable[15] = "Microsoft.UI.Xaml.Controls.TreeViewNode";
-            _typeNameTable[16] = "Microsoft.UI.Xaml.DependencyObject";
-            _typeNameTable[17] = "System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>";
-            _typeNameTable[18] = "Int32";
+            _typeNameTable[9] = "DropSun.Views.Conditions.Rendered.Sunny";
+            _typeNameTable[10] = "DropSun.Views.Conditions.Sunny.BlueSky";
+            _typeNameTable[11] = "DropSun.Views.Conditions.Sunny.Ground";
+            _typeNameTable[12] = "DropSun.Views.Conditions.Sunny.StarSky";
+            _typeNameTable[13] = "DropSun.Views.Conditions.Sunny.Sun";
+            _typeNameTable[14] = "DropSun.Views.WeatherView";
+            _typeNameTable[15] = "DropSun.Views.WrapperPage";
+            _typeNameTable[16] = "Microsoft.UI.Xaml.Controls.TreeViewNode";
+            _typeNameTable[17] = "Microsoft.UI.Xaml.DependencyObject";
+            _typeNameTable[18] = "System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>";
+            _typeNameTable[19] = "Int32";
 
-            _typeTable = new global::System.Type[19];
+            _typeTable = new global::System.Type[20];
             _typeTable[0] = typeof(global::Microsoft.UI.Xaml.Controls.XamlControlsResources);
             _typeTable[1] = typeof(global::Microsoft.UI.Xaml.ResourceDictionary);
             _typeTable[2] = typeof(global::System.Object);
             _typeTable[3] = typeof(global::System.Boolean);
             _typeTable[4] = typeof(global::DropSun.MainWindow);
             _typeTable[5] = typeof(global::Microsoft.UI.Xaml.Window);
-            _typeTable[6] = typeof(global::DropSun.Views.Conditions.Rendered.Sunny);
+            _typeTable[6] = typeof(global::DropSun.Views.Conditions.Rendered.Rainy);
             _typeTable[7] = typeof(global::Microsoft.UI.Xaml.Controls.Page);
             _typeTable[8] = typeof(global::Microsoft.UI.Xaml.Controls.UserControl);
-            _typeTable[9] = typeof(global::DropSun.Views.Conditions.Sunny.BlueSky);
-            _typeTable[10] = typeof(global::DropSun.Views.Conditions.Sunny.Ground);
-            _typeTable[11] = typeof(global::DropSun.Views.Conditions.Sunny.StarSky);
-            _typeTable[12] = typeof(global::DropSun.Views.Conditions.Sunny.Sun);
-            _typeTable[13] = typeof(global::DropSun.Views.WeatherView);
-            _typeTable[14] = typeof(global::DropSun.Views.WrapperPage);
-            _typeTable[15] = typeof(global::Microsoft.UI.Xaml.Controls.TreeViewNode);
-            _typeTable[16] = typeof(global::Microsoft.UI.Xaml.DependencyObject);
-            _typeTable[17] = typeof(global::System.Collections.Generic.IList<global::Microsoft.UI.Xaml.Controls.TreeViewNode>);
-            _typeTable[18] = typeof(global::System.Int32);
+            _typeTable[9] = typeof(global::DropSun.Views.Conditions.Rendered.Sunny);
+            _typeTable[10] = typeof(global::DropSun.Views.Conditions.Sunny.BlueSky);
+            _typeTable[11] = typeof(global::DropSun.Views.Conditions.Sunny.Ground);
+            _typeTable[12] = typeof(global::DropSun.Views.Conditions.Sunny.StarSky);
+            _typeTable[13] = typeof(global::DropSun.Views.Conditions.Sunny.Sun);
+            _typeTable[14] = typeof(global::DropSun.Views.WeatherView);
+            _typeTable[15] = typeof(global::DropSun.Views.WrapperPage);
+            _typeTable[16] = typeof(global::Microsoft.UI.Xaml.Controls.TreeViewNode);
+            _typeTable[17] = typeof(global::Microsoft.UI.Xaml.DependencyObject);
+            _typeTable[18] = typeof(global::System.Collections.Generic.IList<global::Microsoft.UI.Xaml.Controls.TreeViewNode>);
+            _typeTable[19] = typeof(global::System.Int32);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -301,14 +303,15 @@ namespace DropSun.DropSun_XamlTypeInfo
 
         private object Activate_0_XamlControlsResources() { return new global::Microsoft.UI.Xaml.Controls.XamlControlsResources(); }
         private object Activate_4_MainWindow() { return new global::DropSun.MainWindow(); }
-        private object Activate_6_Sunny() { return new global::DropSun.Views.Conditions.Rendered.Sunny(); }
-        private object Activate_9_BlueSky() { return new global::DropSun.Views.Conditions.Sunny.BlueSky(); }
-        private object Activate_10_Ground() { return new global::DropSun.Views.Conditions.Sunny.Ground(); }
-        private object Activate_11_StarSky() { return new global::DropSun.Views.Conditions.Sunny.StarSky(); }
-        private object Activate_12_Sun() { return new global::DropSun.Views.Conditions.Sunny.Sun(); }
-        private object Activate_13_WeatherView() { return new global::DropSun.Views.WeatherView(); }
-        private object Activate_14_WrapperPage() { return new global::DropSun.Views.WrapperPage(); }
-        private object Activate_15_TreeViewNode() { return new global::Microsoft.UI.Xaml.Controls.TreeViewNode(); }
+        private object Activate_6_Rainy() { return new global::DropSun.Views.Conditions.Rendered.Rainy(); }
+        private object Activate_9_Sunny() { return new global::DropSun.Views.Conditions.Rendered.Sunny(); }
+        private object Activate_10_BlueSky() { return new global::DropSun.Views.Conditions.Sunny.BlueSky(); }
+        private object Activate_11_Ground() { return new global::DropSun.Views.Conditions.Sunny.Ground(); }
+        private object Activate_12_StarSky() { return new global::DropSun.Views.Conditions.Sunny.StarSky(); }
+        private object Activate_13_Sun() { return new global::DropSun.Views.Conditions.Sunny.Sun(); }
+        private object Activate_14_WeatherView() { return new global::DropSun.Views.WeatherView(); }
+        private object Activate_15_WrapperPage() { return new global::DropSun.Views.WrapperPage(); }
+        private object Activate_16_TreeViewNode() { return new global::Microsoft.UI.Xaml.Controls.TreeViewNode(); }
         private void MapAdd_0_XamlControlsResources(object instance, object key, object item)
         {
             var collection = (global::System.Collections.Generic.IDictionary<global::System.Object, global::System.Object>)instance;
@@ -316,7 +319,7 @@ namespace DropSun.DropSun_XamlTypeInfo
             var newItem = (global::System.Object)item;
             collection.Add(newKey, newItem);
         }
-        private void VectorAdd_17_IList(object instance, object item)
+        private void VectorAdd_18_IList(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Microsoft.UI.Xaml.Controls.TreeViewNode>)instance;
             var newItem = (global::Microsoft.UI.Xaml.Controls.TreeViewNode)item;
@@ -364,9 +367,9 @@ namespace DropSun.DropSun_XamlTypeInfo
                 xamlType = new global::DropSun.DropSun_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 6:   //  DropSun.Views.Conditions.Rendered.Sunny
+            case 6:   //  DropSun.Views.Conditions.Rendered.Rainy
                 userType = new global::DropSun.DropSun_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_6_Sunny;
+                userType.Activator = Activate_6_Rainy;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -379,51 +382,58 @@ namespace DropSun.DropSun_XamlTypeInfo
                 xamlType = new global::DropSun.DropSun_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 9:   //  DropSun.Views.Conditions.Sunny.BlueSky
+            case 9:   //  DropSun.Views.Conditions.Rendered.Sunny
                 userType = new global::DropSun.DropSun_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_9_BlueSky;
+                userType.Activator = Activate_9_Sunny;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 10:   //  DropSun.Views.Conditions.Sunny.Ground
+            case 10:   //  DropSun.Views.Conditions.Sunny.BlueSky
                 userType = new global::DropSun.DropSun_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_10_Ground;
+                userType.Activator = Activate_10_BlueSky;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 11:   //  DropSun.Views.Conditions.Sunny.StarSky
+            case 11:   //  DropSun.Views.Conditions.Sunny.Ground
                 userType = new global::DropSun.DropSun_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_11_StarSky;
+                userType.Activator = Activate_11_Ground;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 12:   //  DropSun.Views.Conditions.Sunny.Sun
+            case 12:   //  DropSun.Views.Conditions.Sunny.StarSky
                 userType = new global::DropSun.DropSun_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_12_Sun;
+                userType.Activator = Activate_12_StarSky;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 13:   //  DropSun.Views.WeatherView
+            case 13:   //  DropSun.Views.Conditions.Sunny.Sun
                 userType = new global::DropSun.DropSun_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_13_WeatherView;
+                userType.Activator = Activate_13_Sun;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 14:   //  DropSun.Views.WrapperPage
+            case 14:   //  DropSun.Views.WeatherView
                 userType = new global::DropSun.DropSun_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_14_WrapperPage;
+                userType.Activator = Activate_14_WeatherView;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 15:   //  Microsoft.UI.Xaml.Controls.TreeViewNode
+            case 15:   //  DropSun.Views.WrapperPage
+                userType = new global::DropSun.DropSun_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_15_WrapperPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 16:   //  Microsoft.UI.Xaml.Controls.TreeViewNode
                 userType = new global::DropSun.DropSun_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Microsoft.UI.Xaml.DependencyObject"));
-                userType.Activator = Activate_15_TreeViewNode;
+                userType.Activator = Activate_16_TreeViewNode;
                 userType.AddMemberName("Children");
                 userType.AddMemberName("Content");
                 userType.AddMemberName("Depth");
@@ -435,18 +445,18 @@ namespace DropSun.DropSun_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 16:   //  Microsoft.UI.Xaml.DependencyObject
+            case 17:   //  Microsoft.UI.Xaml.DependencyObject
                 xamlType = new global::DropSun.DropSun_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 17:   //  System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>
+            case 18:   //  System.Collections.Generic.IList`1<Microsoft.UI.Xaml.Controls.TreeViewNode>
                 userType = new global::DropSun.DropSun_XamlTypeInfo.XamlUserType(this, typeName, type, null);
-                userType.CollectionAdd = VectorAdd_17_IList;
+                userType.CollectionAdd = VectorAdd_18_IList;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 18:   //  Int32
+            case 19:   //  Int32
                 xamlType = new global::DropSun.DropSun_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
             }

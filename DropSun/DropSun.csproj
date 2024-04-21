@@ -15,10 +15,12 @@
     <Content Remove="Assets\Application\Sky\BlueSkyGradient.png" />
     <Content Remove="Assets\Application\Sky\EveningSkyGradient.png" />
     <Content Remove="Assets\Application\Sky\NightSkyGradient.png" />
+    <Content Remove="Assets\Application\Sky\RainSky.png" />
+    <Content Remove="Assets\Application\WeatherObjects\Raindrop.png" />
     <Content Remove="Assets\Application\WeatherObjects\Star.png" />
-    <Content Remove="Assets\Application\WeatherObjects\Star.svg" />
   </ItemGroup>
   <ItemGroup>
+    <None Remove="Views\Conditions\Rendered\Rainy.xaml" />
     <None Remove="Views\Conditions\Rendered\Sunny.xaml" />
     <None Remove="Views\Conditions\Sunny\BlueSky.xaml" />
     <None Remove="Views\Conditions\Sunny\Ground.xaml" />
@@ -63,12 +65,18 @@
     <None Update="Assets\Application\Sky\NightSkyGradient.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="Assets\Application\Sky\RainSky.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Assets\Application\WeatherObjects\Raindrop.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Assets\Application\WeatherObjects\Star.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Assets\Application\WeatherObjects\Star.svg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
+    <Page Update="Views\Conditions\Rendered\Rainy.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Update="Views\Conditions\Sunny\StarSky.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>

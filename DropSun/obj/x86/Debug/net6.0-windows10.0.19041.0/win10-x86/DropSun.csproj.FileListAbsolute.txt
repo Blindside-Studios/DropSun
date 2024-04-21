@@ -318,7 +318,6 @@ C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\obj\x86\Debug\net6.0-wi
 C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Assets\Application\Sky\BlueSkyGradient.png
 C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Assets\Application\Sky\EveningSkyGradient.png
 C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Assets\Application\Sky\NightSkyGradient.png
-C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Assets\Application\WeatherObjects\Star.svg
 C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Views\Conditions\Sunny\StarSky.xbf
 C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Views\Conditions\Sunny\StarSky.g.i.cs
 C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Views\Conditions\Sunny\StarSky.g.cs
@@ -326,3 +325,10 @@ C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\obj\x86\Debug\net6.0-wi
 C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Views\Conditions\Sunny\StarSky.xbf
 C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Assets\Application\WeatherObjects\Star.png
 C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Newtonsoft.Json.dll
+C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Assets\Application\WeatherObjects\Raindrop.png
+C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Views\Conditions\Rendered\Rainy.xbf
+C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Views\Conditions\Rendered\Rainy.g.i.cs
+C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Views\Conditions\Rendered\Rainy.g.cs
+C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Views\Conditions\Rendered\Rainy.xaml
+C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Views\Conditions\Rendered\Rainy.xbf
+C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Assets\Application\Sky\RainSky.png

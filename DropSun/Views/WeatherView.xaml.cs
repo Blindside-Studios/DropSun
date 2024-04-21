@@ -28,7 +28,7 @@ namespace DropSun.Views
             Model.ViewModels.ViewRenderingModel.Instance.ReceiverGridWidth = Convert.ToInt32(ContentGrid.ActualWidth);
 
             FrameNavigationOptions navOptions = new FrameNavigationOptions();
-            Type pageType = typeof(Conditions.Rendered.Sunny);
+            Type pageType = typeof(Conditions.Rendered.Rainy);
             ContentFrame.NavigateToType(pageType, null, navOptions);
         }
 
