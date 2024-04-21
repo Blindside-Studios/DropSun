@@ -34,6 +34,9 @@
     <AppxPackagedFile Include="C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\DropSun.dll">
       <PackagePath>DropSun.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\Assets\Application\CursorObjects\Umbrella.png">
+      <PackagePath>Assets\Application\CursorObjects\Umbrella.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\Assets\Application\Sky\BlueSkyGradient.png">
       <PackagePath>Assets\Application\Sky\BlueSkyGradient.png</PackagePath>
     </AppxPackagedFile>

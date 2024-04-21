@@ -6,10 +6,18 @@
     xmlns:local="using:DropSun.Views.Conditions.Rendered"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="using:DropSun.Model.ViewModels"
     mc:Ignorable="d"
     Background="Transparent">
 
     <Grid x:Name="RainGrid">
         <Image Source="/Assets/Application/Sky/RainSky.png" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Stretch="Fill"/>
+        <Frame x:Name="DropletsFrame"/>
+        <Image x:Name="UmbrellaImage"
+               Source="/Assets/Application/CursorObjects/Umbrella.png" 
+               Height="300" Width="300" Stretch="Uniform" HorizontalAlignment="Left" VerticalAlignment="Top"
+               
+               Translation="{x:Bind vm:ViewRenderingModel.Instance.UmbrellaTranslation, Mode=OneWay}"
+               Rotation="{x:Bind vm:ViewRenderingModel.Instance.UmbrellaRotation, Mode=OneWay}"/>
     </Grid>
 </Page>

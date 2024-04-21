@@ -26,6 +26,7 @@ namespace DropSun.Views
             this.DataContext = Model.ViewModels.ViewRenderingModel.Instance;
             Model.ViewModels.ViewRenderingModel.Instance.ReceiverGridHeight = Convert.ToInt32(ContentGrid.ActualHeight);
             Model.ViewModels.ViewRenderingModel.Instance.ReceiverGridWidth = Convert.ToInt32(ContentGrid.ActualWidth);
+            Model.ViewModels.ViewRenderingModel.Instance.WeatherCondition = Model.Weather.Condition.Rainy;
 
             FrameNavigationOptions navOptions = new FrameNavigationOptions();
             Type pageType = typeof(Conditions.Rendered.Rainy);

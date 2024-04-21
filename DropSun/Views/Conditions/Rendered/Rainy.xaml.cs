@@ -1,3 +1,4 @@
+using DropSun.Views.Conditions.Rainy;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Controls.Primitives;
@@ -26,15 +27,6 @@ namespace DropSun.Views.Conditions.Rendered
     /// </summary>
     public sealed partial class Rainy : Page
     {
-        private int minSize = 10;
-        private int maxSize = 20;
-
-        private int maxDroplets = 200;
-        private double maxAnimationSeconds = 3.0;
-        private double minAnimationSeconds = 0.5;
-
-        Random random = new Random();
-
         public Rainy()
         {
             this.InitializeComponent();
@@ -43,68 +35,11 @@ namespace DropSun.Views.Conditions.Rendered
 
         private void Rainy_Loaded(object sender, RoutedEventArgs e)
         {
-            startRain();
-        }
+            FrameNavigationOptions navOptions = new FrameNavigationOptions();
+            Type pageType = typeof(RainDrops);
+            DropletsFrame.NavigateToType(pageType, null, navOptions);
 
-        private async void startRain()
-        {
-            for (int i = 0; i < maxDroplets; i++)
-            {
-                createDroplet();
-
-                await Task.Delay(10);
-            }
-        }
-
-        private async void createDroplet()
-        {
-            Image dropletImage = new Image();
-            BitmapImage bitmapImageSource = new BitmapImage(new Uri("ms-appx:///Assets/Application/WeatherObjects/Raindrop.png"));
-
-            dropletImage.Source = bitmapImageSource;
-
-            // Set a random size between minSize and maxSize
-            double size = random.Next(minSize, maxSize);
-            dropletImage.Width = size;
-            dropletImage.Height = size;
-
-            RainGrid.Children.Add(dropletImage);
-            dropletImage.HorizontalAlignment = HorizontalAlignment.Left;
-            dropletImage.VerticalAlignment = VerticalAlignment.Top;
-            
-            setDropletPosition(dropletImage);
-
-            var animationDuration = setDropletAnimation(dropletImage);
-
-            await Task.Delay(animationDuration);
-            recycleDroplet(dropletImage);
-        }
-
-        private void setDropletPosition(Image dropletImage)
-        {
-            var translation = new System.Numerics.Vector3((float)random.Next(0, (int)RainGrid.ActualWidth), -100, 0);
-            dropletImage.Translation = translation;
-        }
-
-        private TimeSpan setDropletAnimation(Image droplet)
-        {
-            droplet.TranslationTransition = new Vector3Transition();
-            var animationDuration = TimeSpan.FromSeconds(random.NextDouble() * maxAnimationSeconds);
-            if (animationDuration < TimeSpan.FromSeconds(minAnimationSeconds)) animationDuration = animationDuration = TimeSpan.FromMilliseconds(animationDuration.TotalMilliseconds + (minAnimationSeconds * 1000)); 
-            droplet.TranslationTransition.Duration = animationDuration;
-
-            droplet.Translation = new System.Numerics.Vector3((float)droplet.Translation.X, (float)RainGrid.ActualHeight + 350, 0);
-
-            return animationDuration;
-        }
-
-        private async void recycleDroplet(Image droplet)
-        {
-            droplet.TranslationTransition = null;
-            setDropletPosition(droplet);
-            var animationDuration = setDropletAnimation(droplet);
-            await Task.Delay(animationDuration);
-            recycleDroplet(droplet);
+            UmbrellaImage.CenterPoint = new System.Numerics.Vector3(120, 200, 0);
         }
     }
 }

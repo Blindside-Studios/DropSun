@@ -1,5 +1,6 @@
 App.xbf
 MainWindow.xbf
+Views\Conditions\Rainy\RainDrops.xbf
 Views\Conditions\Rendered\Rainy.xbf
 Views\Conditions\Rendered\Sunny.xbf
 Views\Conditions\Sunny\BlueSky.xbf

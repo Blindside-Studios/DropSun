@@ -332,3 +332,9 @@ C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\obj\x86\Debug\net6.0-wi
 C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Views\Conditions\Rendered\Rainy.xaml
 C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Views\Conditions\Rendered\Rainy.xbf
 C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Assets\Application\Sky\RainSky.png
+C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Assets\Application\CursorObjects\Umbrella.png
+C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Views\Conditions\Rainy\RainDrops.xbf
+C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Views\Conditions\Rainy\RainDrops.g.i.cs
+C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Views\Conditions\Rainy\RainDrops.g.cs
+C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Views\Conditions\Rainy\RainDrops.xaml
+C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Views\Conditions\Rainy\RainDrops.xbf

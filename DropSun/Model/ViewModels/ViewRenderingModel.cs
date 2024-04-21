@@ -1,4 +1,5 @@
 ﻿using ABI.Microsoft.UI.Xaml;
+using DropSun.Model.Weather;
 using Microsoft.UI.Xaml;
 using System;
 using System.Collections.Generic;
@@ -12,7 +13,7 @@ using System.Threading.Tasks;
 
 namespace DropSun.Model.ViewModels
 {
-    class ViewRenderingModel: INotifyPropertyChanged
+    class ViewRenderingModel : INotifyPropertyChanged
     {
         private static ViewRenderingModel _instance;
         public static ViewRenderingModel Instance
@@ -29,6 +30,7 @@ namespace DropSun.Model.ViewModels
 
         public event PropertyChangedEventHandler PropertyChanged;
 
+        public Condition WeatherCondition { get; set; }
 
         private Windows.Foundation.Point _cursorPosition;
         private const float MaxSpeed = 0.25f; // Maximum speed per update
@@ -36,6 +38,7 @@ namespace DropSun.Model.ViewModels
         private const float UpdateTime = 0.016f; // Assuming 60 updates per second
 
         private bool _sunNeedsUpdate = false;
+        private bool _umbrellaNeedsUpdate = false;
         private Windows.Foundation.Point _targetCursorPosition;
 
         public Windows.Foundation.Point CursorPosition
@@ -46,10 +49,23 @@ namespace DropSun.Model.ViewModels
                 if (_cursorPosition != value)
                 {
                     _cursorPosition = value;
-                    _targetCursorPosition = value; // Update the target position
+                    _targetCursorPosition = value;
                     OnPropertyChanged(nameof(CursorPosition));
-                    _sunNeedsUpdate = true; // Set the flag to true as the cursor has moved
-                    StartUpdatingSunPosition(); // Start the update process
+
+                    switch (WeatherCondition)
+                    {
+                        case Condition.Sunny:
+                            _sunNeedsUpdate = true;
+                            StartUpdatingSunPosition();
+                            break;
+                        case Condition.Rainy:
+                            _umbrellaNeedsUpdate = true;
+                            StartUpdatingUmbrellaPosition();
+                            break;
+                        default:
+                            Debug.WriteLine("No condition set");
+                            break;
+                    }
                 }
             }
         }
@@ -74,6 +90,32 @@ namespace DropSun.Model.ViewModels
             }
         }
 
+        private async void StartUpdatingUmbrellaPosition()
+        {
+            while (_umbrellaNeedsUpdate)
+            {
+                Vector3 newUmbrellaTranslation = Vector3.Lerp(UmbrellaTranslation, new Vector3((float)_targetCursorPosition.X - 120, (float)_targetCursorPosition.Y - 266, 0), MaxSpeed * UpdateTime);
+
+                float distance = UmbrellaTranslation.X - newUmbrellaTranslation.X;
+                float rotation = distance * 45;
+                rotation = Math.Clamp(rotation, -45, 45);
+
+                UmbrellaRotation = rotation;
+                //Debug.WriteLine((int)Math.Round(rotation));
+
+                if (Vector3.Distance(newUmbrellaTranslation, UmbrellaTranslation) < 0.01f)
+                {
+                    UmbrellaTranslation = newUmbrellaTranslation;
+                    _umbrellaNeedsUpdate = false;
+                }
+                else
+                {
+                    UmbrellaTranslation = newUmbrellaTranslation;
+                    await Task.Delay(TimeSpan.FromMilliseconds(16));
+                }
+            }
+        }
+
 
 
 
@@ -88,6 +130,34 @@ namespace DropSun.Model.ViewModels
                     _sunTranslation = value;
                     OnPropertyChanged(nameof(SunTranslation));
                     calculateTimeOfDay(_sunTranslation.Y);
+                }
+            }
+        }
+
+        private Vector3 _umbrellaTranslation;
+        public Vector3 UmbrellaTranslation
+        {
+            get => _umbrellaTranslation;
+            set
+            {
+                if (_umbrellaTranslation != value)
+                {
+                    _umbrellaTranslation = value;
+                    OnPropertyChanged(nameof(UmbrellaTranslation));
+                }
+            }
+        }
+
+        private float _umbrellaRotation;
+        public float UmbrellaRotation
+        {
+            get => _umbrellaRotation;
+            set
+            {
+                if (_umbrellaRotation != value)
+                {
+                    _umbrellaRotation = value;
+                    OnPropertyChanged(nameof(UmbrellaRotation));
                 }
             }
         }
