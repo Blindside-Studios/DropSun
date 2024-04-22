@@ -144,7 +144,8 @@ namespace DropSun.Model.ViewModels
                     _umbrellaTranslation = value;
                     OnPropertyChanged(nameof(UmbrellaTranslation));
                     UmbrellaCenterPoint = new Point((int)UmbrellaTranslation.X + 145, (int)UmbrellaTranslation.Y + 140);
-                    UmbrellaCenterPointVector = new Vector3(UmbrellaCenterPoint.X, UmbrellaCenterPoint.Y, 0);
+                    // set the trigger 100 up to account for droplets only being registered after a certain time
+                    UmbrellaCenterPointVector = new Vector3(UmbrellaCenterPoint.X, UmbrellaCenterPoint.Y - 100, 0);
                 }
             }
         }
@@ -180,7 +181,7 @@ namespace DropSun.Model.ViewModels
         public Point UmbrellaCenterPoint { get; set; }
         public int UmbrellaRadius
         {
-            get => 90;
+            get => 100;
         }
 
 
