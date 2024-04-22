@@ -47,12 +47,14 @@ namespace DropSun.Model.ViewModels
         }
 
         private Windows.Foundation.Point _cursorPosition;
-        private const float MaxSpeed = 0.25f; // Maximum speed per update
+        private const float MaxSpeed = 4f; // Maximum speed per update
         private float _timeSinceLastUpdate = 0f;
         private const float UpdateTime = 0.016f; // Assuming 60 updates per second
 
         private bool _sunNeedsUpdate = false;
+        private int _sunAnimationUpdateCount = 0;
         private bool _umbrellaNeedsUpdate = false;
+        private int _umbrellaAnimationUpdateCount = 0;
         private Windows.Foundation.Point _targetCursorPosition;
 
         public Windows.Foundation.Point CursorPosition
@@ -86,7 +88,10 @@ namespace DropSun.Model.ViewModels
 
         private async void StartUpdatingSunPosition()
         {
-            while (_sunNeedsUpdate)
+            // To stop this from animating should there be a new pointer update.
+            _sunAnimationUpdateCount++;
+            var currentUpdate = _sunAnimationUpdateCount;
+            while (_sunNeedsUpdate && _sunAnimationUpdateCount == currentUpdate)
             {
                 Vector3 newSunTranslation = Vector3.Lerp(SunTranslation, new Vector3((float)_targetCursorPosition.X - 50, (float)_targetCursorPosition.Y - 50, 0), MaxSpeed * UpdateTime);
 
@@ -106,7 +111,9 @@ namespace DropSun.Model.ViewModels
 
         private async void StartUpdatingUmbrellaPosition()
         {
-            while (_umbrellaNeedsUpdate)
+            _umbrellaAnimationUpdateCount++;
+            var currentUpdate = _umbrellaAnimationUpdateCount;
+            while (_umbrellaNeedsUpdate && _umbrellaAnimationUpdateCount == currentUpdate)
             {
                 Vector3 newUmbrellaTranslation = Vector3.Lerp(UmbrellaTranslation, new Vector3((float)_targetCursorPosition.X - 120, (float)_targetCursorPosition.Y - 266, 0), MaxSpeed * UpdateTime);
 

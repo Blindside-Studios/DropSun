@@ -24,14 +24,18 @@ namespace DropSun.Views
         public WeatherView()
         {
             this.InitializeComponent();
-            this.DataContext = Model.ViewModels.ViewRenderingModel.Instance;
+            this.Loaded += WeatherView_Loaded;
+        }
+
+        private void WeatherView_Loaded(object sender, RoutedEventArgs e)
+        {
             Model.ViewModels.ViewRenderingModel.Instance.ReceiverGridHeight = Convert.ToInt32(ContentGrid.ActualHeight);
             Model.ViewModels.ViewRenderingModel.Instance.ReceiverGridWidth = Convert.ToInt32(ContentGrid.ActualWidth);
 
             FrameNavigationOptions navOptions = new FrameNavigationOptions();
             if (Model.ViewModels.ViewRenderingModel.Instance.WeatherCondition == Model.Weather.Condition.Sunny)
             {
-                
+
                 Type pageType = typeof(Conditions.Rendered.Sunny);
                 ContentFrame.NavigateToType(pageType, null, navOptions);
             }
