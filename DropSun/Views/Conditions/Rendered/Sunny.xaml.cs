@@ -27,7 +27,7 @@ namespace DropSun.Views.Conditions.Rendered
         public Sunny()
         {
             this.InitializeComponent();
-            this.DataContext = Model.ViewModels.ViewRenderingModel.Instance;
+            this.Loaded += Sunny_Loaded;
 
             FrameNavigationOptions navOptions = new FrameNavigationOptions();
 
@@ -39,6 +39,16 @@ namespace DropSun.Views.Conditions.Rendered
             
             Type pageTypeGround = typeof(Conditions.Sunny.Ground);
             GroundFrame.NavigateToType(pageTypeGround, null, navOptions);
+        }
+
+        private void Sunny_Loaded(object sender, RoutedEventArgs e)
+        {
+            Model.ViewModels.ViewRenderingModel.Instance.VisibleVerticalSpace = (int)BlueSkyFrame.ActualHeight;
+        }
+
+        private void BlueSkyFrame_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
+            Model.ViewModels.ViewRenderingModel.Instance.VisibleVerticalSpace = (int)BlueSkyFrame.ActualHeight;
         }
     }
 }
