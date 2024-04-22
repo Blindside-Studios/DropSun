@@ -11,9 +11,9 @@
     Background="Transparent">
 
     <Grid >
-        <Image Source="/Assets/Application/Sky/BlueSkyGradient.png" Stretch="Fill" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
-        <Image Source="/Assets/Application/Sky/EveningSkyGradient.png" Opacity="{x:Bind vm:ViewRenderingModel.Instance.EveningLevel, Mode=OneWay}" Stretch="Fill" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
-        <Image Source="/Assets/Application/Sky/NightSkyGradient.png" Opacity="{x:Bind vm:ViewRenderingModel.Instance.NightLevel, Mode=OneWay}" Stretch="Fill" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+        <Image Source="/Assets/Application/Sky/BlueSkyGradient.png" Stretch="Fill" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="{x:Bind vm:ViewRenderingModel.Instance.VisibleVerticalSpace, Mode=OneWay}"/>
+        <Image Source="/Assets/Application/Sky/EveningSkyGradient.png" Opacity="{x:Bind vm:ViewRenderingModel.Instance.EveningLevel, Mode=OneWay}" Stretch="Fill" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="{x:Bind vm:ViewRenderingModel.Instance.VisibleVerticalSpace, Mode=OneWay}"/>
+        <Image Source="/Assets/Application/Sky/NightSkyGradient.png" Opacity="{x:Bind vm:ViewRenderingModel.Instance.NightLevel, Mode=OneWay}" Stretch="Fill" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="{x:Bind vm:ViewRenderingModel.Instance.VisibleVerticalSpace, Mode=OneWay}"/>
         <Frame x:Name="StarFrame" Opacity="{x:Bind vm:ViewRenderingModel.Instance.NightLevel, Mode=OneWay}" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
     </Grid>
 </Page>

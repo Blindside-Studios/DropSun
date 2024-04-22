@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Page x:ConnectionId='1'
+    x:Class="DropSun.Views.Conditions.Rainy.RainDrops"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:DropSun.Views.Conditions.Rainy"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="using:DropSun.Model.ViewModels"
+    mc:Ignorable="d"
+    Background="Transparent">
+
+    <Grid x:ConnectionId='2' x:Name="RainGrid"                                   >
+        <Rectangle x:ConnectionId='3' x:Name="CollisionRectangle" HorizontalAlignment="Left" VerticalAlignment="Top"
+                                                                                               
+                                                                                              
+                                                                                                               
+                   RadiusX="150" RadiusY="150"
+                   Fill="Red"
+                   Opacity="0"/>
+    </Grid>
+</Page>
+

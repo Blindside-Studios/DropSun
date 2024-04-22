@@ -89,7 +89,7 @@ namespace DropSun.Views.Conditions.Sunny
                 StarGrid.Children.Add(starImage);
                 starImage.HorizontalAlignment = HorizontalAlignment.Left;
                 starImage.VerticalAlignment = VerticalAlignment.Top;
-                var translation = new System.Numerics.Vector3((float)random.Next(0, (int)StarGrid.ActualWidth), (float)random.Next(0, (int)StarGrid.ActualWidth), 0);
+                var translation = new System.Numerics.Vector3((float)random.Next(0, (int)StarGrid.ActualWidth), (float)random.Next(0, (int)StarGrid.ActualHeight), 0);
                 starImage.Translation = translation;
             }
         }

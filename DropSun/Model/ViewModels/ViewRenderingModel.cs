@@ -30,7 +30,21 @@ namespace DropSun.Model.ViewModels
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-        public Condition WeatherCondition { get; set; }
+        private Condition _weatherCondition;
+        public Condition WeatherCondition
+        {
+            get => _weatherCondition;
+            set
+            {
+                if (_weatherCondition != value)
+                {
+                    _weatherCondition = value;
+                    OnPropertyChanged(nameof(WeatherCondition));
+                    _sunNeedsUpdate = false;
+                    _umbrellaNeedsUpdate = false;
+                }
+            }
+        }
 
         private Windows.Foundation.Point _cursorPosition;
         private const float MaxSpeed = 0.25f; // Maximum speed per update
@@ -100,7 +114,7 @@ namespace DropSun.Model.ViewModels
                 float rotation = distance * 45;
                 rotation = Math.Clamp(rotation, -45, 45);
 
-                UmbrellaRotation = rotation;
+                UmbrellaRotation = rotation / 2; // dampen the animation for the new sunny texture below the umbrella
 
                 if (Vector3.Distance(newUmbrellaTranslation, UmbrellaTranslation) < 0.01f)
                 {
@@ -112,11 +126,12 @@ namespace DropSun.Model.ViewModels
                     UmbrellaTranslation = newUmbrellaTranslation;
                     await Task.Delay(TimeSpan.FromMilliseconds(16));
                 }
+
+                VisibleVerticalSpace = ReceiverGridHeight - UmbrellaCenterPoint.Y + UmbrellaRadius;
+                Vector3 newSunTranslation = new Vector3(newUmbrellaTranslation.Y / ReceiverGridHeight * 250 + 50, newUmbrellaTranslation.X / ReceiverGridWidth * VisibleVerticalSpace + 200, 0);
+                SunTranslation = newSunTranslation;
             }
         }
-
-
-
 
         private Vector3 _sunTranslation;
         public Vector3 SunTranslation
@@ -144,8 +159,7 @@ namespace DropSun.Model.ViewModels
                     _umbrellaTranslation = value;
                     OnPropertyChanged(nameof(UmbrellaTranslation));
                     UmbrellaCenterPoint = new Point((int)UmbrellaTranslation.X + 145, (int)UmbrellaTranslation.Y + 140);
-                    // set the trigger 100 up to account for droplets only being registered after a certain time
-                    UmbrellaCenterPointVector = new Vector3(UmbrellaCenterPoint.X, UmbrellaCenterPoint.Y - 100, 0);
+                    UmbrellaCenterPointVector = new Vector3(UmbrellaCenterPoint.X, UmbrellaCenterPoint.Y, 0);
                 }
             }
         }
@@ -185,23 +199,62 @@ namespace DropSun.Model.ViewModels
         }
 
 
-        // constants defining the day to night curve
-        const int eveningStartThreshold = 500;
-        // at which point in the evening does the night start?
-        const double nightRelativeStartThreshold = 0.75;
 
         // This stores the height of the grid that tracks mouse movements to calculate the distance to the bottom
         public int ReceiverGridWidth { get; set; }
-        public int ReceiverGridHeight { get; set; }
+
+        private int _receiverGridHeight;
+        public int ReceiverGridHeight
+        {
+            get => _receiverGridHeight;
+            set
+            {
+                if (_receiverGridHeight != value)
+                {
+                    _receiverGridHeight = value;
+                    OnPropertyChanged(nameof(ReceiverGridHeight));
+                    if (WeatherCondition == Condition.Sunny) VisibleVerticalSpace = value;
+                }
+            }
+        }
+
+        private int _visibleVerticalSpace;
+        public int VisibleVerticalSpace
+        {
+            get => _visibleVerticalSpace;
+            set
+            {
+                if (_visibleVerticalSpace != value)
+                {
+                    _visibleVerticalSpace = value;
+                    OnPropertyChanged(nameof(VisibleVerticalSpace));
+                }
+            }
+        }
+
 
         private void calculateTimeOfDay(double sunYPosition)
         {
+            // constants defining the day to night curve
+            int eveningStartThreshold = 500;
+            // at which point in the evening does the night start?
+            double nightRelativeStartThreshold = 0.75;
+
+            var viewableHeight = ReceiverGridHeight;
+
+            if (WeatherCondition == Condition.Rainy)
+            {
+                eveningStartThreshold = 500;
+                nightRelativeStartThreshold = 0.9;
+                viewableHeight = VisibleVerticalSpace + 100;
+            }
+
             sunYPosition = sunYPosition + 75;
 
             double nightModfier = 0;
-            if (ReceiverGridHeight - sunYPosition < eveningStartThreshold)
+            if (viewableHeight - sunYPosition < eveningStartThreshold)
             {
-                nightModfier = 1 - ((ReceiverGridHeight - sunYPosition) / eveningStartThreshold);
+                nightModfier = 1 - ((viewableHeight - sunYPosition) / eveningStartThreshold);
             }
 
             if (nightModfier > nightRelativeStartThreshold)

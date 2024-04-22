@@ -10,7 +10,7 @@
     mc:Ignorable="d">
 
     <Grid x:ConnectionId='2' x:Name="ContentGrid">
-        <Frame x:ConnectionId='3' x:Name="BlueSkyFrame" Margin="0,0,0,130" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+        <Frame x:ConnectionId='3' x:Name="BlueSkyFrame" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
         <Frame x:ConnectionId='4' x:Name="SunFrame" Background="Transparent" Height="100" Width="100"                                                                                   RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" VerticalAlignment="Top"/>
         <Frame x:ConnectionId='5' x:Name="GroundFrame" Background="Transparent" Height="150" HorizontalAlignment="Stretch" VerticalAlignment="Bottom"/>
     </Grid>

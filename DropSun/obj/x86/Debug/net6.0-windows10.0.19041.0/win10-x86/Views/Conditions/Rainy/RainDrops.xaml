@@ -10,14 +10,17 @@
     mc:Ignorable="d"
     Background="Transparent">
 
-    <Grid x:ConnectionId='2' x:Name="RainGrid"                                   >
-        <Rectangle x:ConnectionId='3' x:Name="CollisionRectangle" HorizontalAlignment="Left" VerticalAlignment="Top"
-                                                                                               
-                                                                                              
-                                                                                                               
-                   RadiusX="150" RadiusY="150"
-                   Fill="Red"
-                   Opacity="0"/>
+    <Grid x:ConnectionId='2' x:Name="ContentGrid">
+        <Grid x:ConnectionId='3' x:Name="RainGrid"                                   />
+        <Canvas>
+            <Frame x:ConnectionId='4'  x:Name="UmbrellaSafeAreaFrame"
+                Height="2000"
+                Width="250"
+                                                                                                      
+                Margin="25,50,0,0"
+                CornerRadius="100">
+            </Frame>
+        </Canvas>
     </Grid>
 </Page>
 

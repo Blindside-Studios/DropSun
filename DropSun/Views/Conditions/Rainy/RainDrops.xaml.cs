@@ -16,6 +16,7 @@ using Microsoft.UI.Xaml.Media.Imaging;
 using System.Threading.Tasks;
 using Microsoft.UI.Xaml.Media.Animation;
 using System.Diagnostics;
+using Microsoft.UI.Xaml.Documents;
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -31,8 +32,8 @@ namespace DropSun.Views.Conditions.Rainy
         private int maxSize = 20;
 
         private int maxDroplets = 100;
-        private double maxAnimationSeconds = 3.0; //3
-        private double minAnimationSeconds = 1.0; //1
+        private double maxAnimationSeconds = 1.5; //3
+        private double minAnimationSeconds = 0.5; //1
 
         Random random = new Random();
 
@@ -45,7 +46,7 @@ namespace DropSun.Views.Conditions.Rainy
         private void Rainy_Loaded(object sender, RoutedEventArgs e)
         {
             startRain();
-            startDetectingCollisions();
+            UmbrellaSafeAreaFrame.Navigate(typeof(Conditions.Rendered.Sunny), null, null);
         }
 
         private async void startRain()
@@ -81,7 +82,7 @@ namespace DropSun.Views.Conditions.Rainy
 
         private void setDropletPosition(Image dropletImage)
         {
-            var translation = new System.Numerics.Vector3((float)random.Next(0, (int)RainGrid.ActualWidth), - 50, 0);
+            var translation = new System.Numerics.Vector3((float)random.Next(0, (int)RainGrid.ActualWidth), - maxSize, 0);
             dropletImage.Translation = translation;
         }
 
@@ -100,7 +101,7 @@ namespace DropSun.Views.Conditions.Rainy
             droplet.RenderTransform = translateTransform;
             Storyboard.SetTarget(doubleAnimation, droplet);
             Storyboard.SetTargetProperty(doubleAnimation, "UIElement.RenderTransform.(TranslateTransform.Y)");
-            doubleAnimation.By = RainGrid.ActualHeight + 100;
+            doubleAnimation.By = RainGrid.ActualHeight + maxSize;
             storyboard.Children.Add(doubleAnimation);
 
             droplet.Tag = Math.Round(animationDuration.TotalMilliseconds).ToString();
@@ -114,11 +115,20 @@ namespace DropSun.Views.Conditions.Rainy
         {
             while (true)
             {
-                System.Drawing.Point umbrellaCenter = Model.ViewModels.ViewRenderingModel.Instance.UmbrellaCenterPoint;
-                int umbrellaRadius = Model.ViewModels.ViewRenderingModel.Instance.UmbrellaRadius;
+                await Task.Delay(50);
+                await detectColision();
+            }
+        }
 
-                // Iterate through each droplet in the RainGrid
-                foreach (var droplet in RainGrid.Children.OfType<Image>())
+        private async Task detectColision()
+        {
+            System.Drawing.Point umbrellaCenter = Model.ViewModels.ViewRenderingModel.Instance.UmbrellaCenterPoint;
+            int umbrellaRadius = Model.ViewModels.ViewRenderingModel.Instance.UmbrellaRadius;
+
+            // Iterate through each droplet in the RainGrid
+            foreach (var droplet in RainGrid.Children.OfType<Image>())
+            {
+                if (droplet.Translation.X > umbrellaCenter.X - umbrellaRadius && droplet.Translation.X < umbrellaCenter.X + umbrellaRadius)
                 {
                     GeneralTransform transform = droplet.TransformToVisual(RainGrid);
 
@@ -136,16 +146,16 @@ namespace DropSun.Views.Conditions.Rainy
                         hideDroplet(droplet);
                     }
                 }
-                await Task.Delay(10);
             }
+            return;
         }
 
         private async void hideDroplet(Image droplet)
         {
+            droplet.Visibility = Visibility.Collapsed;
+
             GeneralTransform transform = droplet.TransformToVisual(RainGrid);
             double startingPosition = Convert.ToDouble(transform.TransformPoint(new Point(0, 0)).Y);
-            
-            droplet.Visibility = Visibility.Collapsed;
 
             string duration = droplet.Tag as string;
             double animationDuration = Convert.ToDouble(duration);
