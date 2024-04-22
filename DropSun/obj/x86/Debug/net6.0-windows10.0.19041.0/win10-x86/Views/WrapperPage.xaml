@@ -10,9 +10,11 @@
     Background="Transparent">
 
     <Grid>
-        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Center">
-            <Button x:ConnectionId='3' x:Name="ShowSunnyButton" Content="Sunny"                              />
-            <Button x:ConnectionId='4' x:Name="ShowRainButton" Content="Rainy"                             />
+        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Center" Spacing="10">
+            <TextBox x:ConnectionId='3' x:Name="ExampleCityTextBox" Width="180"/>
+            <Button x:ConnectionId='4' x:Name="ConfirmCityButton" Content="ObtainWeather"                                />
+            <Button x:ConnectionId='5' x:Name="ShowSunnyButton" Content="ForceSunny"                              />
+            <Button x:ConnectionId='6' x:Name="ShowRainButton" Content="ForceRainy"                             />
         </StackPanel>
         <Frame x:ConnectionId='2' x:Name="ContentFrame" Content="WeatherView" Margin="200,5,5,5" CornerRadius="3"/>
     </Grid>

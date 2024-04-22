@@ -3,8 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\DropSun\\DropSun\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{3064341D-4178-4C8F-96A4-68D548318443}|DropSun.csproj|c:\\users\\nicol\\onedrive\\documents\\github\\dropsun\\dropsun\\model\\weather\\obtainweather.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3064341D-4178-4C8F-96A4-68D548318443}|DropSun.csproj|solutionrelative:model\\weather\\obtainweather.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{3064341D-4178-4C8F-96A4-68D548318443}|DropSun.csproj|c:\\users\\nicol\\onedrive\\documents\\github\\dropsun\\dropsun\\model\\viewmodels\\viewrenderingmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3064341D-4178-4C8F-96A4-68D548318443}|DropSun.csproj|solutionrelative:model\\viewmodels\\viewrenderingmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3064341D-4178-4C8F-96A4-68D548318443}|DropSun.csproj|c:\\users\\nicol\\onedrive\\documents\\github\\dropsun\\dropsun\\views\\wrapperpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3064341D-4178-4C8F-96A4-68D548318443}|DropSun.csproj|solutionrelative:views\\wrapperpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3064341D-4178-4C8F-96A4-68D548318443}|DropSun.csproj|c:\\users\\nicol\\onedrive\\documents\\github\\dropsun\\dropsun\\views\\wrapperpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3064341D-4178-4C8F-96A4-68D548318443}|DropSun.csproj|solutionrelative:views\\wrapperpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3064341D-4178-4C8F-96A4-68D548318443}|DropSun.csproj|c:\\users\\nicol\\onedrive\\documents\\github\\dropsun\\dropsun\\package.appxmanifest||{4D47164B-07B6-4A52-A855-728D6A2E2AA3}",
+      "RelativeMoniker": "D:0:0:{3064341D-4178-4C8F-96A4-68D548318443}|DropSun.csproj|solutionrelative:package.appxmanifest||{4D47164B-07B6-4A52-A855-728D6A2E2AA3}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3064341D-4178-4C8F-96A4-68D548318443}|DropSun.csproj|c:\\users\\nicol\\onedrive\\documents\\github\\dropsun\\dropsun\\app.manifest||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{3064341D-4178-4C8F-96A4-68D548318443}|DropSun.csproj|solutionrelative:app.manifest||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3064341D-4178-4C8F-96A4-68D548318443}|DropSun.csproj|c:\\users\\nicol\\onedrive\\documents\\github\\dropsun\\dropsun\\model\\viewmodels\\weatherstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3064341D-4178-4C8F-96A4-68D548318443}|DropSun.csproj|solutionrelative:model\\viewmodels\\weatherstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3064341D-4178-4C8F-96A4-68D548318443}|DropSun.csproj|c:\\users\\nicol\\onedrive\\documents\\github\\dropsun\\dropsun\\views\\conditions\\rendered\\sunny.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -47,10 +71,6 @@
       "RelativeMoniker": "D:0:0:{3064341D-4178-4C8F-96A4-68D548318443}|DropSun.csproj|solutionrelative:views\\conditions\\rendered\\rainy.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3064341D-4178-4C8F-96A4-68D548318443}|DropSun.csproj|c:\\users\\nicol\\onedrive\\documents\\github\\dropsun\\dropsun\\model\\viewmodels\\weatherstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3064341D-4178-4C8F-96A4-68D548318443}|DropSun.csproj|solutionrelative:model\\viewmodels\\weatherstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3064341D-4178-4C8F-96A4-68D548318443}|DropSun.csproj|c:\\users\\nicol\\onedrive\\documents\\github\\dropsun\\dropsun\\views\\weatherview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{3064341D-4178-4C8F-96A4-68D548318443}|DropSun.csproj|solutionrelative:views\\weatherview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
@@ -61,14 +81,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{3064341D-4178-4C8F-96A4-68D548318443}|DropSun.csproj|c:\\users\\nicol\\onedrive\\documents\\github\\dropsun\\dropsun\\views\\weathercards\\general.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3064341D-4178-4C8F-96A4-68D548318443}|DropSun.csproj|solutionrelative:views\\weathercards\\general.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3064341D-4178-4C8F-96A4-68D548318443}|DropSun.csproj|c:\\users\\nicol\\onedrive\\documents\\github\\dropsun\\dropsun\\views\\wrapperpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{3064341D-4178-4C8F-96A4-68D548318443}|DropSun.csproj|solutionrelative:views\\wrapperpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3064341D-4178-4C8F-96A4-68D548318443}|DropSun.csproj|c:\\users\\nicol\\onedrive\\documents\\github\\dropsun\\dropsun\\views\\wrapperpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3064341D-4178-4C8F-96A4-68D548318443}|DropSun.csproj|solutionrelative:views\\wrapperpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3064341D-4178-4C8F-96A4-68D548318443}|DropSun.csproj|c:\\users\\nicol\\onedrive\\documents\\github\\dropsun\\dropsun\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -111,173 +123,41 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ViewRenderingModel.cs",
-              "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\DropSun\\DropSun\\Model\\ViewModels\\ViewRenderingModel.cs",
-              "RelativeDocumentMoniker": "Model\\ViewModels\\ViewRenderingModel.cs",
-              "ToolTip": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\DropSun\\DropSun\\Model\\ViewModels\\ViewRenderingModel.cs",
-              "RelativeToolTip": "Model\\ViewModels\\ViewRenderingModel.cs",
-              "ViewState": "AQIAADsBAAAAAAAAAADgv0oBAAAMAAAA",
+              "Title": "ObtainWeather.cs",
+              "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\DropSun\\DropSun\\Model\\Weather\\ObtainWeather.cs",
+              "RelativeDocumentMoniker": "Model\\Weather\\ObtainWeather.cs",
+              "ToolTip": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\DropSun\\DropSun\\Model\\Weather\\ObtainWeather.cs",
+              "RelativeToolTip": "Model\\Weather\\ObtainWeather.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAmwBoAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-20T11:36:31.37Z",
+              "WhenOpened": "2024-04-22T18:41:54.626Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "WeatherState.cs",
-              "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\DropSun\\DropSun\\Model\\ViewModels\\WeatherState.cs",
-              "RelativeDocumentMoniker": "Model\\ViewModels\\WeatherState.cs",
-              "ToolTip": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\DropSun\\DropSun\\Model\\ViewModels\\WeatherState.cs",
-              "RelativeToolTip": "Model\\ViewModels\\WeatherState.cs",
-              "ViewState": "AQIAABwAAAAAAAAAAAAQwDUAAAAiAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-21T21:06:06.866Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "WeatherView.xaml",
-              "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\DropSun\\DropSun\\Views\\WeatherView.xaml",
-              "RelativeDocumentMoniker": "Views\\WeatherView.xaml",
-              "ToolTip": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\DropSun\\DropSun\\Views\\WeatherView.xaml",
-              "RelativeToolTip": "Views\\WeatherView.xaml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAA3AAAA",
+              "DocumentIndex": 3,
+              "Title": "WrapperPage.xaml",
+              "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\DropSun\\DropSun\\Views\\WrapperPage.xaml",
+              "RelativeDocumentMoniker": "Views\\WrapperPage.xaml",
+              "ToolTip": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\DropSun\\DropSun\\Views\\WrapperPage.xaml",
+              "RelativeToolTip": "Views\\WrapperPage.xaml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAA6AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-04-19T22:45:01.657Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "WeatherView.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\DropSun\\DropSun\\Views\\WeatherView.xaml.cs",
-              "RelativeDocumentMoniker": "Views\\WeatherView.xaml.cs",
-              "ToolTip": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\DropSun\\DropSun\\Views\\WeatherView.xaml.cs",
-              "RelativeToolTip": "Views\\WeatherView.xaml.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAADIAAABMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-20T11:08:52.461Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "General.xaml",
-              "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\DropSun\\DropSun\\Views\\WeatherCards\\General.xaml",
-              "RelativeDocumentMoniker": "Views\\WeatherCards\\General.xaml",
-              "ToolTip": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\DropSun\\DropSun\\Views\\WeatherCards\\General.xaml",
-              "RelativeToolTip": "Views\\WeatherCards\\General.xaml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAUAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-04-21T21:05:18.844Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "General.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\DropSun\\DropSun\\Views\\WeatherCards\\General.xaml.cs",
-              "RelativeDocumentMoniker": "Views\\WeatherCards\\General.xaml.cs",
-              "ToolTip": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\DropSun\\DropSun\\Views\\WeatherCards\\General.xaml.cs",
-              "RelativeToolTip": "Views\\WeatherCards\\General.xaml.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAkwBsAAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-21T21:05:21.89Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "RainDrops.xaml",
-              "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\DropSun\\DropSun\\Views\\Conditions\\Rainy\\RainDrops.xaml",
-              "RelativeDocumentMoniker": "Views\\Conditions\\Rainy\\RainDrops.xaml",
-              "ToolTip": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\DropSun\\DropSun\\Views\\Conditions\\Rainy\\RainDrops.xaml",
-              "RelativeToolTip": "Views\\Conditions\\Rainy\\RainDrops.xaml",
-              "ViewState": "AQIAAAcAAAAAAAAAAAAnwA0AAABEAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-04-21T14:26:11.099Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "RainDrops.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\DropSun\\DropSun\\Views\\Conditions\\Rainy\\RainDrops.xaml.cs",
-              "RelativeDocumentMoniker": "Views\\Conditions\\Rainy\\RainDrops.xaml.cs",
-              "ToolTip": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\DropSun\\DropSun\\Views\\Conditions\\Rainy\\RainDrops.xaml.cs",
-              "RelativeToolTip": "Views\\Conditions\\Rainy\\RainDrops.xaml.cs",
-              "ViewState": "AQIAACQAAAAAAAAAAADgvzEAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-21T14:26:23.599Z",
+              "WhenOpened": "2024-04-19T22:44:44.922Z",
               "IsPinned": true
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Sunny.xaml",
-              "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\DropSun\\DropSun\\Views\\Conditions\\Rendered\\Sunny.xaml",
-              "RelativeDocumentMoniker": "Views\\Conditions\\Rendered\\Sunny.xaml",
-              "ToolTip": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\DropSun\\DropSun\\Views\\Conditions\\Rendered\\Sunny.xaml",
-              "RelativeToolTip": "Views\\Conditions\\Rendered\\Sunny.xaml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAACFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-04-20T11:09:53.049Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Sunny.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\DropSun\\DropSun\\Views\\Conditions\\Rendered\\Sunny.xaml.cs",
-              "RelativeDocumentMoniker": "Views\\Conditions\\Rendered\\Sunny.xaml.cs",
-              "ToolTip": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\DropSun\\DropSun\\Views\\Conditions\\Rendered\\Sunny.xaml.cs",
-              "RelativeToolTip": "Views\\Conditions\\Rendered\\Sunny.xaml.cs",
-              "ViewState": "AQIAABgAAAAAAAAAAAAAADIAAABvAAAA",
+              "Title": "WrapperPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\DropSun\\DropSun\\Views\\WrapperPage.xaml.cs",
+              "RelativeDocumentMoniker": "Views\\WrapperPage.xaml.cs",
+              "ToolTip": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\DropSun\\DropSun\\Views\\WrapperPage.xaml.cs",
+              "RelativeToolTip": "Views\\WrapperPage.xaml.cs",
+              "ViewState": "AQIAACYAAAAAAAAAAAAQwDMAAABNAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-20T11:12:22.929Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "StarSky.xaml",
-              "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\DropSun\\DropSun\\Views\\Conditions\\Sunny\\StarSky.xaml",
-              "RelativeDocumentMoniker": "Views\\Conditions\\Sunny\\StarSky.xaml",
-              "ToolTip": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\DropSun\\DropSun\\Views\\Conditions\\Sunny\\StarSky.xaml",
-              "RelativeToolTip": "Views\\Conditions\\Sunny\\StarSky.xaml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAbAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-04-20T18:28:24.898Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "StarSky.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\DropSun\\DropSun\\Views\\Conditions\\Sunny\\StarSky.xaml.cs",
-              "RelativeDocumentMoniker": "Views\\Conditions\\Sunny\\StarSky.xaml.cs",
-              "ToolTip": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\DropSun\\DropSun\\Views\\Conditions\\Sunny\\StarSky.xaml.cs",
-              "RelativeToolTip": "Views\\Conditions\\Sunny\\StarSky.xaml.cs",
-              "ViewState": "AQIAAEQAAAAAAAAAAAAgwFsAAACaAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-20T18:37:36.539Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Rainy.xaml",
-              "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\DropSun\\DropSun\\Views\\Conditions\\Rendered\\Rainy.xaml",
-              "RelativeDocumentMoniker": "Views\\Conditions\\Rendered\\Rainy.xaml",
-              "ToolTip": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\DropSun\\DropSun\\Views\\Conditions\\Rendered\\Rainy.xaml",
-              "RelativeToolTip": "Views\\Conditions\\Rendered\\Rainy.xaml",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAYwBgAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-04-21T11:17:59.545Z",
+              "WhenOpened": "2024-04-20T11:08:40.452Z",
               "IsPinned": true
             },
             {
@@ -285,24 +165,139 @@
               "Name": "ST:2062758501:0:{83107a3e-496a-485e-b455-16ddb978e55e}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "app.manifest",
+              "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\DropSun\\DropSun\\app.manifest",
+              "RelativeDocumentMoniker": "app.manifest",
+              "ToolTip": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\DropSun\\DropSun\\app.manifest",
+              "RelativeToolTip": "app.manifest",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001203|",
+              "WhenOpened": "2024-04-22T19:16:52.297Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 9,
+              "Title": "Rainy.xaml",
+              "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\DropSun\\DropSun\\Views\\Conditions\\Rendered\\Rainy.xaml",
+              "RelativeDocumentMoniker": "Views\\Conditions\\Rendered\\Rainy.xaml",
+              "ToolTip": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\DropSun\\DropSun\\Views\\Conditions\\Rendered\\Rainy.xaml",
+              "RelativeToolTip": "Views\\Conditions\\Rendered\\Rainy.xaml",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAYwBgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-04-21T11:17:59.545Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ViewRenderingModel.cs",
+              "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\DropSun\\DropSun\\Model\\ViewModels\\ViewRenderingModel.cs",
+              "RelativeDocumentMoniker": "Model\\ViewModels\\ViewRenderingModel.cs",
+              "ToolTip": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\DropSun\\DropSun\\Model\\ViewModels\\ViewRenderingModel.cs",
+              "RelativeToolTip": "Model\\ViewModels\\ViewRenderingModel.cs",
+              "ViewState": "AQIAAC8BAAAAAAAAAAAvwEoBAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-20T11:36:31.37Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Package.appxmanifest",
+              "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\DropSun\\DropSun\\Package.appxmanifest",
+              "RelativeDocumentMoniker": "Package.appxmanifest",
+              "ToolTip": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\DropSun\\DropSun\\Package.appxmanifest",
+              "RelativeToolTip": "Package.appxmanifest",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001793|",
+              "WhenOpened": "2024-04-22T19:16:56.33Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "WeatherState.cs",
+              "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\DropSun\\DropSun\\Model\\ViewModels\\WeatherState.cs",
+              "RelativeDocumentMoniker": "Model\\ViewModels\\WeatherState.cs",
+              "ToolTip": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\DropSun\\DropSun\\Model\\ViewModels\\WeatherState.cs",
+              "RelativeToolTip": "Model\\ViewModels\\WeatherState.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAzwDUAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-21T21:06:06.866Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "StarSky.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\DropSun\\DropSun\\Views\\Conditions\\Sunny\\StarSky.xaml.cs",
+              "RelativeDocumentMoniker": "Views\\Conditions\\Sunny\\StarSky.xaml.cs",
+              "ToolTip": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\DropSun\\DropSun\\Views\\Conditions\\Sunny\\StarSky.xaml.cs",
+              "RelativeToolTip": "Views\\Conditions\\Sunny\\StarSky.xaml.cs",
+              "ViewState": "AQIAAEQAAAAAAAAAAAAgwFsAAACaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-20T18:37:36.539Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "StarSky.xaml",
+              "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\DropSun\\DropSun\\Views\\Conditions\\Sunny\\StarSky.xaml",
+              "RelativeDocumentMoniker": "Views\\Conditions\\Sunny\\StarSky.xaml",
+              "ToolTip": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\DropSun\\DropSun\\Views\\Conditions\\Sunny\\StarSky.xaml",
+              "RelativeToolTip": "Views\\Conditions\\Sunny\\StarSky.xaml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-04-20T18:28:24.898Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Sunny.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\DropSun\\DropSun\\Views\\Conditions\\Rendered\\Sunny.xaml.cs",
+              "RelativeDocumentMoniker": "Views\\Conditions\\Rendered\\Sunny.xaml.cs",
+              "ToolTip": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\DropSun\\DropSun\\Views\\Conditions\\Rendered\\Sunny.xaml.cs",
+              "RelativeToolTip": "Views\\Conditions\\Rendered\\Sunny.xaml.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAIBJwDIAAABvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-20T11:12:22.929Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "General.xaml",
+              "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\DropSun\\DropSun\\Views\\WeatherCards\\General.xaml",
+              "RelativeDocumentMoniker": "Views\\WeatherCards\\General.xaml",
+              "ToolTip": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\DropSun\\DropSun\\Views\\WeatherCards\\General.xaml",
+              "RelativeToolTip": "Views\\WeatherCards\\General.xaml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-04-21T21:05:18.844Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "WeatherView.xaml",
+              "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\DropSun\\DropSun\\Views\\WeatherView.xaml",
+              "RelativeDocumentMoniker": "Views\\WeatherView.xaml",
+              "ToolTip": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\DropSun\\DropSun\\Views\\WeatherView.xaml",
+              "RelativeToolTip": "Views\\WeatherView.xaml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-04-19T22:45:01.657Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
               "Title": "Rainy.xaml.cs",
               "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\DropSun\\DropSun\\Views\\Conditions\\Rendered\\Rainy.xaml.cs",
               "RelativeDocumentMoniker": "Views\\Conditions\\Rendered\\Rainy.xaml.cs",
               "ToolTip": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\DropSun\\DropSun\\Views\\Conditions\\Rendered\\Rainy.xaml.cs",
               "RelativeToolTip": "Views\\Conditions\\Rendered\\Rainy.xaml.cs",
-              "ViewState": "AQIAABkAAAAAAAAAAAAAACkAAABMAAAA",
+              "ViewState": "AQIAABYAAAAAAAAAAIBJwCkAAABMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-21T11:18:28.283Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 11,
               "Title": "BlueSky.xaml",
               "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\DropSun\\DropSun\\Views\\Conditions\\Sunny\\BlueSky.xaml",
               "RelativeDocumentMoniker": "Views\\Conditions\\Sunny\\BlueSky.xaml",
@@ -314,31 +309,67 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "WrapperPage.xaml",
-              "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\DropSun\\DropSun\\Views\\WrapperPage.xaml",
-              "RelativeDocumentMoniker": "Views\\WrapperPage.xaml",
-              "ToolTip": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\DropSun\\DropSun\\Views\\WrapperPage.xaml",
-              "RelativeToolTip": "Views\\WrapperPage.xaml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAcAAAA",
+              "DocumentIndex": 8,
+              "Title": "Sunny.xaml",
+              "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\DropSun\\DropSun\\Views\\Conditions\\Rendered\\Sunny.xaml",
+              "RelativeDocumentMoniker": "Views\\Conditions\\Rendered\\Sunny.xaml",
+              "ToolTip": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\DropSun\\DropSun\\Views\\Conditions\\Rendered\\Sunny.xaml",
+              "RelativeToolTip": "Views\\Conditions\\Rendered\\Sunny.xaml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAACFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-04-19T22:44:44.922Z"
+              "WhenOpened": "2024-04-20T11:09:53.049Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "WrapperPage.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\DropSun\\DropSun\\Views\\WrapperPage.xaml.cs",
-              "RelativeDocumentMoniker": "Views\\WrapperPage.xaml.cs",
-              "ToolTip": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\DropSun\\DropSun\\Views\\WrapperPage.xaml.cs",
-              "RelativeToolTip": "Views\\WrapperPage.xaml.cs",
-              "ViewState": "AQIAAB4AAAAAAAAAAAAAwCwAAABWAAAA",
+              "DocumentIndex": 12,
+              "Title": "RainDrops.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\DropSun\\DropSun\\Views\\Conditions\\Rainy\\RainDrops.xaml.cs",
+              "RelativeDocumentMoniker": "Views\\Conditions\\Rainy\\RainDrops.xaml.cs",
+              "ToolTip": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\DropSun\\DropSun\\Views\\Conditions\\Rainy\\RainDrops.xaml.cs",
+              "RelativeToolTip": "Views\\Conditions\\Rainy\\RainDrops.xaml.cs",
+              "ViewState": "AQIAACQAAAAAAAAAAADgvzEAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-20T11:08:40.452Z"
+              "WhenOpened": "2024-04-21T14:26:23.599Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 13,
+              "Title": "RainDrops.xaml",
+              "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\DropSun\\DropSun\\Views\\Conditions\\Rainy\\RainDrops.xaml",
+              "RelativeDocumentMoniker": "Views\\Conditions\\Rainy\\RainDrops.xaml",
+              "ToolTip": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\DropSun\\DropSun\\Views\\Conditions\\Rainy\\RainDrops.xaml",
+              "RelativeToolTip": "Views\\Conditions\\Rainy\\RainDrops.xaml",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAnwA0AAABEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-04-21T14:26:11.099Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "General.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\DropSun\\DropSun\\Views\\WeatherCards\\General.xaml.cs",
+              "RelativeDocumentMoniker": "Views\\WeatherCards\\General.xaml.cs",
+              "ToolTip": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\DropSun\\DropSun\\Views\\WeatherCards\\General.xaml.cs",
+              "RelativeToolTip": "Views\\WeatherCards\\General.xaml.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAkwBsAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-21T21:05:21.89Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "WeatherView.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\DropSun\\DropSun\\Views\\WeatherView.xaml.cs",
+              "RelativeDocumentMoniker": "Views\\WeatherView.xaml.cs",
+              "ToolTip": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\DropSun\\DropSun\\Views\\WeatherView.xaml.cs",
+              "RelativeToolTip": "Views\\WeatherView.xaml.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAIBJwDIAAABMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-20T11:08:52.461Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\DropSun\\DropSun\\MainWindow.xaml",
               "RelativeDocumentMoniker": "MainWindow.xaml",
@@ -350,7 +381,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 21,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\DropSun\\DropSun\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "MainWindow.xaml.cs",
@@ -362,7 +393,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 22,
               "Title": "App.g.i.cs",
               "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\DropSun\\DropSun\\obj\\x86\\Debug\\net6.0-windows10.0.19041.0\\win10-x86\\App.g.i.cs",
               "RelativeDocumentMoniker": "obj\\x86\\Debug\\net6.0-windows10.0.19041.0\\win10-x86\\App.g.i.cs",
@@ -374,7 +405,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 23,
               "Title": "Conditions.cs",
               "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\DropSun\\DropSun\\Model\\Weather\\Conditions.cs",
               "RelativeDocumentMoniker": "Model\\Weather\\Conditions.cs",
@@ -386,19 +417,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 24,
               "Title": "BlueSky.xaml.cs",
               "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\DropSun\\DropSun\\Views\\Conditions\\Sunny\\BlueSky.xaml.cs",
               "RelativeDocumentMoniker": "Views\\Conditions\\Sunny\\BlueSky.xaml.cs",
               "ToolTip": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\DropSun\\DropSun\\Views\\Conditions\\Sunny\\BlueSky.xaml.cs",
               "RelativeToolTip": "Views\\Conditions\\Sunny\\BlueSky.xaml.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAAACEAAAAJAAAA",
+              "ViewState": "AQIAAAwAAAAAAAAAAIBJwCEAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-20T19:16:25.887Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 25,
               "Title": "Ground.xaml",
               "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\DropSun\\DropSun\\Views\\Conditions\\Sunny\\Ground.xaml",
               "RelativeDocumentMoniker": "Views\\Conditions\\Sunny\\Ground.xaml",
@@ -410,7 +441,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 26,
               "Title": "Sun.xaml",
               "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\DropSun\\DropSun\\Views\\Conditions\\Sunny\\Sun.xaml",
               "RelativeDocumentMoniker": "Views\\Conditions\\Sunny\\Sun.xaml",
@@ -419,6 +450,10 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAACkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2024-04-20T10:58:14.032Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             }
           ]
         }

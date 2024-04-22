@@ -46,5 +46,10 @@ namespace DropSun.Views
             Type pageType = typeof(WeatherView);
             ContentFrame.NavigateToType(pageType, null, navOptions);
         }
+
+        private void ConfirmCityButton_Click(object sender, RoutedEventArgs e)
+        {
+            Model.Weather.ObtainWeather.FromOpenMeteo(ExampleCityTextBox.Text);
+        }
     }
 }
