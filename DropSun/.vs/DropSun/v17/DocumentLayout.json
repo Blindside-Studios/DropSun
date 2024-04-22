@@ -116,7 +116,7 @@
               "RelativeDocumentMoniker": "Model\\ViewModels\\ViewRenderingModel.cs",
               "ToolTip": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\DropSun\\DropSun\\Model\\ViewModels\\ViewRenderingModel.cs",
               "RelativeToolTip": "Model\\ViewModels\\ViewRenderingModel.cs",
-              "ViewState": "AQIAADkBAAAAAAAAAIAwwEoBAAAMAAAA",
+              "ViewState": "AQIAAG8AAAAAAAAAAIA4wHgAAABEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-20T11:36:31.37Z",
               "IsPinned": true,
@@ -159,8 +159,7 @@
               "ViewState": "AQIAAAwAAAAAAAAAAAAAADIAAABMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-20T11:08:52.461Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -308,8 +307,7 @@
               "RelativeToolTip": "Views\\Conditions\\Sunny\\BlueSky.xaml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAADTAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-04-20T10:58:03.77Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-20T10:58:03.77Z"
             },
             {
               "$type": "Document",

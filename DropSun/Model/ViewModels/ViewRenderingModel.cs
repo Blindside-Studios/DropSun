@@ -117,11 +117,11 @@ namespace DropSun.Model.ViewModels
             {
                 Vector3 newUmbrellaTranslation = Vector3.Lerp(UmbrellaTranslation, new Vector3((float)_targetCursorPosition.X - 120, (float)_targetCursorPosition.Y - 266, 0), MaxSpeed * UpdateTime);
 
-                float distance = UmbrellaTranslation.X - newUmbrellaTranslation.X;
-                float rotation = distance * 45;
+                double distance = UmbrellaTranslation.X + 120 - _cursorPosition.X;
+                double rotation = distance / ReceiverGridWidth * 135;
                 rotation = Math.Clamp(rotation, -45, 45);
 
-                UmbrellaRotation = rotation / 2; // dampen the animation for the new sunny texture below the umbrella
+                UmbrellaRotation = (float)rotation;
 
                 if (Vector3.Distance(newUmbrellaTranslation, UmbrellaTranslation) < 0.01f)
                 {
