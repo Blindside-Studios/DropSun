@@ -8,9 +8,9 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:vm="using:DropSun.Model.ViewModels"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="#265f4d">
 
-    <Grid Background="ForestGreen">
+    <Grid Opacity="0" Background="ForestGreen">
         <Rectangle Fill="DarkOliveGreen" Opacity="{x:Bind vm:ViewRenderingModel.Instance.EveningLevel, Mode=OneWay}"/>
         <Rectangle Fill="DarkGreen" Opacity="{x:Bind vm:ViewRenderingModel.Instance.NightLevel, Mode=OneWay}"/>
     </Grid>
