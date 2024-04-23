@@ -49,6 +49,9 @@
     <AppxPackagedFile Include="C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\Assets\Application\Sky\RainSky.png">
       <PackagePath>Assets\Application\Sky\RainSky.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\Assets\Application\WeatherObjects\GrassBlade.png">
+      <PackagePath>Assets\Application\WeatherObjects\GrassBlade.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\Assets\Application\WeatherObjects\Raindrop.png">
       <PackagePath>Assets\Application\WeatherObjects\Raindrop.png</PackagePath>
     </AppxPackagedFile>

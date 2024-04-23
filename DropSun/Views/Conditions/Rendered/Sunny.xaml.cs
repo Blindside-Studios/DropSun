@@ -13,6 +13,7 @@ using Microsoft.UI.Xaml.Input;
 using Microsoft.UI.Xaml.Media;
 using Microsoft.UI.Xaml.Navigation;
 using System.Xml.Linq;
+using Windows.Graphics.Printing.OptionDetails;
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -36,9 +37,15 @@ namespace DropSun.Views.Conditions.Rendered
 
             Type pageTypeSun = typeof(Conditions.Sunny.Sun);
             SunFrame.NavigateToType(pageTypeSun, null, navOptions);
-            
-            Type pageTypeGround = typeof(Conditions.Sunny.Ground);
-            GroundFrame.NavigateToType(pageTypeGround, null, navOptions);
+
+            if (Model.ViewModels.ViewRenderingModel.Instance.WeatherCondition == Model.Weather.Condition.Sunny)
+            {
+                Type pageTypeGrass = typeof(Conditions.Sunny.SwingingGrass);
+                GrassFrame.NavigateToType(pageTypeGrass, null, navOptions);
+
+                Type pageTypeGround = typeof(Conditions.Sunny.Ground);
+                GroundFrame.NavigateToType(pageTypeGround, null, navOptions);
+            }
         }
 
         private void Sunny_Loaded(object sender, RoutedEventArgs e)

@@ -111,62 +111,6 @@ namespace DropSun.Views.Conditions.Rainy
             storyboard.Begin();
         }
 
-        private async void startDetectingCollisions()
-        {
-            while (true)
-            {
-                await Task.Delay(50);
-                await detectColision();
-            }
-        }
-
-        private async Task detectColision()
-        {
-            System.Drawing.Point umbrellaCenter = Model.ViewModels.ViewRenderingModel.Instance.UmbrellaCenterPoint;
-            int umbrellaRadius = Model.ViewModels.ViewRenderingModel.Instance.UmbrellaRadius;
-
-            // Iterate through each droplet in the RainGrid
-            foreach (var droplet in RainGrid.Children.OfType<Image>())
-            {
-                if (droplet.Translation.X > umbrellaCenter.X - umbrellaRadius && droplet.Translation.X < umbrellaCenter.X + umbrellaRadius)
-                {
-                    GeneralTransform transform = droplet.TransformToVisual(RainGrid);
-
-                    Point position = transform.TransformPoint(new Point(0, 0));
-
-                    // Calculate the distance from the droplet to the center of the umbrella
-                    double dropletDistance = Math.Sqrt(
-                        Math.Pow(position.X - umbrellaCenter.X, 2) +
-                        Math.Pow(position.Y - umbrellaCenter.Y, 2));
-
-                    // Check if the droplet is within the radius of the umbrella with a generous padding to account for delays
-                    if (dropletDistance <= umbrellaRadius + 20)
-                    {
-                        // Hide the droplet
-                        hideDroplet(droplet);
-                    }
-                }
-            }
-            return;
-        }
-
-        private async void hideDroplet(Image droplet)
-        {
-            droplet.Visibility = Visibility.Collapsed;
-
-            GeneralTransform transform = droplet.TransformToVisual(RainGrid);
-            double startingPosition = Convert.ToDouble(transform.TransformPoint(new Point(0, 0)).Y);
-
-            string duration = droplet.Tag as string;
-            double animationDuration = Convert.ToDouble(duration);
-
-            double animationPercentage = 1 - ((startingPosition + 25) / (RainGrid.ActualHeight + 50));
-
-            // artificially reduce the delay to account for inaccuracies
-            await Task.Delay((int)Math.Round((double)(animationDuration * animationPercentage)) - 90);
-            droplet.Visibility = Visibility.Visible;
-        }
-
         private async void RainGrid_SizeChanged(object sender, SizeChangedEventArgs e)
         {
             var starGridSize = RainGrid.ActualSize;

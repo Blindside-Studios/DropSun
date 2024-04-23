@@ -17,6 +17,7 @@
     <Content Remove="Assets\Application\Sky\EveningSkyGradient.png" />
     <Content Remove="Assets\Application\Sky\NightSkyGradient.png" />
     <Content Remove="Assets\Application\Sky\RainSky.png" />
+    <Content Remove="Assets\Application\WeatherObjects\GrassBlade.png" />
     <Content Remove="Assets\Application\WeatherObjects\Raindrop.png" />
     <Content Remove="Assets\Application\WeatherObjects\Star.png" />
   </ItemGroup>
@@ -28,6 +29,7 @@
     <None Remove="Views\Conditions\Sunny\Ground.xaml" />
     <None Remove="Views\Conditions\Sunny\StarSky.xaml" />
     <None Remove="Views\Conditions\Sunny\Sun.xaml" />
+    <None Remove="Views\Conditions\Sunny\SwingingGrass.xaml" />
     <None Remove="Views\WeatherCards\General.xaml" />
     <None Remove="Views\WeatherView.xaml" />
     <None Remove="Views\WrapperPage.xaml" />
@@ -75,12 +77,18 @@
     <None Update="Assets\Application\Sky\RainSky.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="Assets\Application\WeatherObjects\GrassBlade.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Assets\Application\WeatherObjects\Raindrop.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="Assets\Application\WeatherObjects\Star.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <Page Update="Views\Conditions\Sunny\SwingingGrass.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Update="Views\WeatherCards\General.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
