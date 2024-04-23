@@ -5,7 +5,8 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:DropSun"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:animatedvisuals="using:Microsoft.UI.Xaml.Controls.AnimatedVisuals"
     mc:Ignorable="d">
 
     <Window.SystemBackdrop>
@@ -13,6 +14,56 @@
     </Window.SystemBackdrop>
 
     <Grid>
-        <Frame x:Name="ContentFrame" Content="WrapperPage" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="48"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+        <Grid x:Name="AppTitleBar" Grid.Row="0" Height="48" VerticalAlignment="Top">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition x:Name="LeftPaddingColumn" Width="0"/>
+                <ColumnDefinition x:Name="IconColumn" Width="Auto"/>
+                <ColumnDefinition x:Name="TitleColumn" Width="Auto"/>
+                <ColumnDefinition x:Name="LeftDragColumn" Width="*"/>
+                <ColumnDefinition x:Name="SearchColumn" Width="4*" MinWidth="220"/>
+                <ColumnDefinition x:Name="RightDragColumn" Width="*" MinWidth="48"/>
+                <ColumnDefinition x:Name="AccountColumn" Width="Auto"/>
+                <ColumnDefinition x:Name="RightPaddingColumn" Width="0"/>
+            </Grid.ColumnDefinitions>
+            <Image x:Name="TitleBarIcon" 
+           Source="ms-appx:///Assets/StoreLogo.png"
+           Grid.Column="1"
+           Width="16" Height="16"
+           Margin="8,0,4,0"/>
+            <TextBlock x:Name="TitleBarTextBlock"
+               Text="App title" 
+               Style="{StaticResource CaptionTextBlockStyle}"
+               Grid.Column="2"
+               VerticalAlignment="Center">
+            </TextBlock>
+            <AutoSuggestBox x:Name="TitleBarSearchBox" 
+                    Grid.Column="4" 
+                    QueryIcon="Find"
+                    PlaceholderText="Search"
+                    VerticalAlignment="Center"
+                    MaxWidth="600"/>
+            <Button x:Name="SettingsButton" Grid.Column="6" 
+                    PointerEntered="Settings_PointerEntered" 
+                    PointerExited="Settings_PointerExited" 
+                    Click="Settings_Click" 
+                    Height="40" Width="40" Margin="0,0,16,0" 
+                    Background="Transparent" BorderThickness="0">
+                <AnimatedIcon x:Name="SettingsAnimatedIcon" >
+                    <AnimatedIcon.Source>
+                        <animatedvisuals:AnimatedSettingsVisualSource/>
+                    </AnimatedIcon.Source>
+                    <AnimatedIcon.FallbackIconSource>
+                        <SymbolIconSource Symbol="Setting"/>
+                    </AnimatedIcon.FallbackIconSource>
+                </AnimatedIcon>
+            </Button>
+        </Grid>
+        
+        <Frame x:Name="ContentFrame" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
     </Grid>
 </Window>

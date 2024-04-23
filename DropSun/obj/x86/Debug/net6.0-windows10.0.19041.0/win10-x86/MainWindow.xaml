@@ -5,7 +5,8 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:DropSun"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:animatedvisuals="using:Microsoft.UI.Xaml.Controls.AnimatedVisuals"
     mc:Ignorable="d">
 
     <Window.SystemBackdrop>
@@ -13,7 +14,57 @@
     </Window.SystemBackdrop>
 
     <Grid>
-        <Frame x:ConnectionId='2' x:Name="ContentFrame" Content="WrapperPage" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="48"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+        <Grid x:ConnectionId='2' x:Name="AppTitleBar" Grid.Row="0" Height="48" VerticalAlignment="Top">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition x:ConnectionId='4' x:Name="LeftPaddingColumn" Width="0"/>
+                <ColumnDefinition x:ConnectionId='5' x:Name="IconColumn" Width="Auto"/>
+                <ColumnDefinition x:ConnectionId='6' x:Name="TitleColumn" Width="Auto"/>
+                <ColumnDefinition x:ConnectionId='7' x:Name="LeftDragColumn" Width="*"/>
+                <ColumnDefinition x:ConnectionId='8' x:Name="SearchColumn" Width="4*" MinWidth="220"/>
+                <ColumnDefinition x:ConnectionId='9' x:Name="RightDragColumn" Width="*" MinWidth="48"/>
+                <ColumnDefinition x:ConnectionId='10' x:Name="AccountColumn" Width="Auto"/>
+                <ColumnDefinition x:ConnectionId='11' x:Name="RightPaddingColumn" Width="0"/>
+            </Grid.ColumnDefinitions>
+            <Image x:ConnectionId='12' x:Name="TitleBarIcon" 
+           Source="ms-appx:///Assets/StoreLogo.png"
+           Grid.Column="1"
+           Width="16" Height="16"
+           Margin="8,0,4,0"/>
+            <TextBlock x:ConnectionId='13' x:Name="TitleBarTextBlock"
+               Text="App title" 
+               Style="{StaticResource CaptionTextBlockStyle}"
+               Grid.Column="2"
+               VerticalAlignment="Center">
+            </TextBlock>
+            <AutoSuggestBox x:ConnectionId='14' x:Name="TitleBarSearchBox" 
+                    Grid.Column="4" 
+                    QueryIcon="Find"
+                    PlaceholderText="Search"
+                    VerticalAlignment="Center"
+                    MaxWidth="600"/>
+            <Button x:ConnectionId='15' x:Name="SettingsButton" Grid.Column="6" 
+                                                             
+                                                           
+                                           
+                    Height="40" Width="40" Margin="0,0,16,0" 
+                    Background="Transparent" BorderThickness="0">
+                <AnimatedIcon x:ConnectionId='16' x:Name="SettingsAnimatedIcon" >
+                    <AnimatedIcon.Source>
+                        <animatedvisuals:AnimatedSettingsVisualSource/>
+                    </AnimatedIcon.Source>
+                    <AnimatedIcon.FallbackIconSource>
+                        <SymbolIconSource Symbol="Setting"/>
+                    </AnimatedIcon.FallbackIconSource>
+                </AnimatedIcon>
+            </Button>
+        </Grid>
+        
+        <Frame x:ConnectionId='3' x:Name="ContentFrame" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
     </Grid>
 </Window>
 

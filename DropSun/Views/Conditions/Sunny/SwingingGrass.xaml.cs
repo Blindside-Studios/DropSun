@@ -26,8 +26,8 @@ namespace DropSun.Views.Conditions.Sunny
     {
         private int[] GrassAnimationModifiers = new int[] { 0, 20, 5, 16, 4, 38, 20, 35, 10, 0 };
         private double coveredlength = -20;
-        private double minAnimationSeconds = 0.5;
-        private double maxAnimationSeconds = 1.0;
+        private double minAnimationSeconds = 0.75;
+        private double maxAnimationSeconds = 1.5;
         Random random = new Random();
 
         public SwingingGrass()
@@ -48,9 +48,9 @@ namespace DropSun.Views.Conditions.Sunny
                 BitmapImage bitmapImageSource = new BitmapImage(new Uri("ms-appx:///Assets/Application/WeatherObjects/GrassBlade.png"));
                 grassBlade.Source = bitmapImageSource;
 
-                double scaleFactor = 0.25 + (random.NextDouble() / 3);
-                grassBlade.Height = 150 * scaleFactor;
-                grassBlade.Width = 30 * scaleFactor;
+                double scaleFactor = 0.4 + (random.NextDouble() / 2);
+                grassBlade.Height = 200 * scaleFactor;
+                grassBlade.Width = 40 * scaleFactor;
                 grassBlade.Stretch = Stretch.Fill;
                 
                 grassBlade.HorizontalAlignment = HorizontalAlignment.Left;
