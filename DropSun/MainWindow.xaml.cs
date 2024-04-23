@@ -132,5 +132,11 @@ namespace DropSun
         {
 
         }
+
+        private void TitleBarSearchBox_QuerySubmitted(AutoSuggestBox sender, AutoSuggestBoxQuerySubmittedEventArgs args)
+        {
+            var wrapperPage = ContentFrame.Content as WrapperPage;
+            wrapperPage.addLocation(args.QueryText);
+        }
     }
 }

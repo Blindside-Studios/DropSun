@@ -11,12 +11,13 @@ namespace DropSun.Model.Weather
 {
     public class ObtainWeather
     {
-        public static void FromOpenMeteo(string location)
+        public async static Task<WeatherForecast> FromOpenMeteo(string location)
         {
-            RunAsync(location);
+            WeatherForecast forecast = await RunAsync(location);
+            return forecast;
         }
 
-        static async Task RunAsync(string location)
+        static async Task<WeatherForecast> RunAsync(string location)
         {
             // Before using the library you have to create a new client. Once created you can reuse it for every other api call you are going to make. 
             // There is no need to create multiple clients.
@@ -25,8 +26,7 @@ namespace DropSun.Model.Weather
             // Make a new api call to get the current weather in tokyo
             WeatherForecast weatherData = await client.QueryAsync(location).ConfigureAwait(false);
 
-            // Output the current weather to console
-            Debug.WriteLine("Weather in " + location + ": " + weatherData.Current.Temperature + "°C");
+            return weatherData;
         }
     }
 }

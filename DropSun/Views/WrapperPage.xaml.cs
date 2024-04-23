@@ -1,3 +1,4 @@
+using DropSun.Views.Controls;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Controls.Primitives;
@@ -29,6 +30,21 @@ namespace DropSun.Views
             this.InitializeComponent();
         }
 
+        public async void addLocation(string location)
+        {
+            SidebarWeatherItem weatherItem = new()
+            {
+                Location = location,
+                Temperature = 0,
+                Precipitation = 0,
+                Condition = Model.Weather.Condition.Sunny
+            };
+            LocationsListView.Items.Add(weatherItem);
+            var weatherForecast = await Model.Weather.ObtainWeather.FromOpenMeteo(location);
+            weatherItem.Temperature = (double)weatherForecast.Current.Temperature;
+            weatherItem.Precipitation = (int)(weatherForecast.Current.Precipitation * 100);
+        }
+
         private void ShowSunnyButton_Click(object sender, RoutedEventArgs e)
         {
             Model.ViewModels.ViewRenderingModel.Instance.WeatherCondition = Model.Weather.Condition.Sunny;
@@ -47,9 +63,9 @@ namespace DropSun.Views
             ContentFrame.NavigateToType(pageType, null, navOptions);
         }
 
-        private void ConfirmCityButton_Click(object sender, RoutedEventArgs e)
+        private async void ConfirmCityButton_Click(object sender, RoutedEventArgs e)
         {
-            Model.Weather.ObtainWeather.FromOpenMeteo(ExampleCityTextBox.Text);
+            await Model.Weather.ObtainWeather.FromOpenMeteo(ExampleCityTextBox.Text);
         }
     }
 }

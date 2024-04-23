@@ -350,3 +350,11 @@ C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\obj\x86\Debug\net6.0-wi
 C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Views\Conditions\Sunny\SwingingGrass.xaml
 C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Views\Conditions\Sunny\SwingingGrass.xbf
 C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Assets\Application\WeatherObjects\GrassBlade.png
+C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Views\Controls\SidebarWeatherItem.g.i.cs
+C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Views\Controls\SidebarWeatherItem.g.cs
+C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Themes\Generic.xaml
+C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Views\Controls\SidebarWeatherItem.xaml
+C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Themes\Generic.xbf
+C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\obj\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Views\Controls\SidebarWeatherItem.xbf
+C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Themes\Generic.xbf
+C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\Views\Controls\SidebarWeatherItem.xbf

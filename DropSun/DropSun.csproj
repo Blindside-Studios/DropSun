@@ -30,6 +30,7 @@
     <None Remove="Views\Conditions\Sunny\StarSky.xaml" />
     <None Remove="Views\Conditions\Sunny\Sun.xaml" />
     <None Remove="Views\Conditions\Sunny\SwingingGrass.xaml" />
+    <None Remove="Views\Controls\SidebarWeatherItem.xaml" />
     <None Remove="Views\WeatherCards\General.xaml" />
     <None Remove="Views\WeatherView.xaml" />
     <None Remove="Views\WrapperPage.xaml" />
@@ -86,6 +87,9 @@
     <None Update="Assets\Application\WeatherObjects\Star.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <Page Update="Views\Controls\SidebarWeatherItem.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Update="Views\Conditions\Sunny\SwingingGrass.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>

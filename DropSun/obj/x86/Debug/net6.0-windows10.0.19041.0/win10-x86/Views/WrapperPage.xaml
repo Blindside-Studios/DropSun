@@ -10,14 +10,14 @@
     Background="Transparent">
 
     <Grid>
-        <ListView HorizontalAlignment="Left" VerticalAlignment="Center">
-            <TextBox x:ConnectionId='3' x:Name="ExampleCityTextBox" Width="180"/>
-            <Button x:ConnectionId='4' x:Name="ConfirmCityButton" Content="ObtainWeather"                                />
-            <Button x:ConnectionId='5' x:Name="ShowSunnyButton" Content="ForceSunny"                              />
-            <Button x:ConnectionId='6' x:Name="ShowRainButton" Content="ForceRainy"                             />
+        <ListView x:ConnectionId='2' x:Name="LocationsListView" HorizontalAlignment="Left" Width="280" Margin="10,10,0,0" VerticalAlignment="Stretch" SelectionMode="None">
+            <TextBox x:ConnectionId='4' x:Name="ExampleCityTextBox"/>
+            <Button x:ConnectionId='5' x:Name="ConfirmCityButton" Content="ObtainWeather"                                />
+            <Button x:ConnectionId='6' x:Name="ShowSunnyButton" Content="ForceSunny"                              />
+            <Button x:ConnectionId='7' x:Name="ShowRainButton" Content="ForceRainy"                             />
         </ListView>
         <Rectangle Fill="{StaticResource SolidBackgroundFillColorBaseBrush}" Margin="300,0,5,5" RadiusX="3" RadiusY="3"/>
-        <Frame x:ConnectionId='2' x:Name="ContentFrame" Content="WeatherView" Margin="300,0,5,5" CornerRadius="3"/>
+        <Frame x:ConnectionId='3' x:Name="ContentFrame" Content="WeatherView" Margin="300,0,5,5" CornerRadius="3"/>
     </Grid>
 </Page>
 

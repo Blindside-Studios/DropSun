@@ -41,10 +41,12 @@
                Grid.Column="2"
                VerticalAlignment="Center">
             </TextBlock>
-            <AutoSuggestBox x:Name="TitleBarSearchBox" 
+            <AutoSuggestBox 
+                    x:Name="TitleBarSearchBox" 
+                    x:Uid="GlobalSearchBox"
                     Grid.Column="4" 
                     QueryIcon="Find"
-                    PlaceholderText="Search"
+                    QuerySubmitted="TitleBarSearchBox_QuerySubmitted"
                     VerticalAlignment="Center"
                     MaxWidth="600"/>
             <Button x:Name="SettingsButton" Grid.Column="6" 

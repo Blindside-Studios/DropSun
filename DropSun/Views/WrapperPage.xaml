@@ -10,8 +10,8 @@
     Background="Transparent">
 
     <Grid>
-        <ListView HorizontalAlignment="Left" VerticalAlignment="Center">
-            <TextBox x:Name="ExampleCityTextBox" Width="180"/>
+        <ListView x:Name="LocationsListView" HorizontalAlignment="Left" Width="280" Margin="10,10,0,0" VerticalAlignment="Stretch" SelectionMode="None">
+            <TextBox x:Name="ExampleCityTextBox"/>
             <Button x:Name="ConfirmCityButton" Content="ObtainWeather" Click="ConfirmCityButton_Click"/>
             <Button x:Name="ShowSunnyButton" Content="ForceSunny" Click="ShowSunnyButton_Click"/>
             <Button x:Name="ShowRainButton" Content="ForceRainy" Click="ShowRainButton_Click"/>
