@@ -22,6 +22,7 @@
         <Grid x:Name="AppTitleBar" Grid.Row="0" Height="48" VerticalAlignment="Top">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition x:Name="LeftPaddingColumn" Width="0"/>
+                <ColumnDefinition x:Name="SidebarColumn" Width="Auto"/>
                 <ColumnDefinition x:Name="IconColumn" Width="Auto"/>
                 <ColumnDefinition x:Name="TitleColumn" Width="Auto"/>
                 <ColumnDefinition x:Name="LeftDragColumn" Width="*"/>
@@ -30,26 +31,41 @@
                 <ColumnDefinition x:Name="AccountColumn" Width="Auto"/>
                 <ColumnDefinition x:Name="RightPaddingColumn" Width="0"/>
             </Grid.ColumnDefinitions>
+            <Button x:Name="SidebarButton" Grid.Column="1" 
+                    PointerEntered="SidebarButton_PointerEntered"
+                    PointerExited="SidebarButton_PointerExited"
+                    Click="SidebarButton_Click"
+                    Height="40" Width="40" Margin="3.5,0,3.5,0" 
+                    Background="Transparent" BorderThickness="0">
+                <AnimatedIcon x:Name="SidebarAnimatedIcon" >
+                    <AnimatedIcon.Source>
+                        <animatedvisuals:AnimatedGlobalNavigationButtonVisualSource/>
+                    </AnimatedIcon.Source>
+                    <AnimatedIcon.FallbackIconSource>
+                        <SymbolIconSource Symbol="Setting"/>
+                    </AnimatedIcon.FallbackIconSource>
+                </AnimatedIcon>
+            </Button>
             <Image x:Name="TitleBarIcon" 
            Source="ms-appx:///Assets/StoreLogo.png"
-           Grid.Column="1"
+           Grid.Column="2"
            Width="16" Height="16"
-           Margin="8,0,4,0"/>
+           Margin="0,0,4,0"/>
             <TextBlock x:Name="TitleBarTextBlock"
                Text="App title" 
                Style="{StaticResource CaptionTextBlockStyle}"
-               Grid.Column="2"
+               Grid.Column="3"
                VerticalAlignment="Center">
             </TextBlock>
             <AutoSuggestBox 
                     x:Name="TitleBarSearchBox" 
                     x:Uid="GlobalSearchBox"
-                    Grid.Column="4" 
+                    Grid.Column="5" 
                     QueryIcon="Find"
                     QuerySubmitted="TitleBarSearchBox_QuerySubmitted"
                     VerticalAlignment="Center"
                     MaxWidth="600"/>
-            <Button x:Name="SettingsButton" Grid.Column="6" 
+            <Button x:Name="SettingsButton" Grid.Column="7" 
                     PointerEntered="Settings_PointerEntered" 
                     PointerExited="Settings_PointerExited" 
                     Click="Settings_Click" 

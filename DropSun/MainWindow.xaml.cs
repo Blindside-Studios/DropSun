@@ -87,7 +87,13 @@ namespace DropSun
                                                         SettingsButton.ActualHeight));
             Windows.Graphics.RectInt32 SettingsBtnRect = GetRect(bounds, scaleAdjustment);
 
-            var rectArray = new Windows.Graphics.RectInt32[] { SearchBoxRect, SettingsBtnRect };
+            transform = SidebarButton.TransformToVisual(null);
+            bounds = transform.TransformBounds(new Rect(0, 0,
+                                                        SidebarButton.ActualWidth,
+                                                        SidebarButton.ActualHeight));
+            Windows.Graphics.RectInt32 SidebarBtnRect = GetRect(bounds, scaleAdjustment);
+
+            var rectArray = new Windows.Graphics.RectInt32[] { SearchBoxRect, SettingsBtnRect, SidebarBtnRect };
 
             InputNonClientPointerSource nonClientInputSrc =
                 InputNonClientPointerSource.GetForWindowId(this.AppWindow.Id);
@@ -130,13 +136,32 @@ namespace DropSun
 
         private void Settings_Click(object sender, RoutedEventArgs e)
         {
-
+            var wrapperPage = ContentFrame.Content as WrapperPage;
+            wrapperPage.addDebugLocation("Los Angeles");
+            wrapperPage.addDebugLocation("Chicago");
+            wrapperPage.addDebugLocation("San Francisco");
         }
 
         private void TitleBarSearchBox_QuerySubmitted(AutoSuggestBox sender, AutoSuggestBoxQuerySubmittedEventArgs args)
         {
             var wrapperPage = ContentFrame.Content as WrapperPage;
             wrapperPage.addLocation(args.QueryText);
+        }
+
+        private void SidebarButton_PointerEntered(object sender, PointerRoutedEventArgs e)
+        {
+            AnimatedIcon.SetState(this.SidebarAnimatedIcon, "PointerOver");
+        }
+
+        private void SidebarButton_PointerExited(object sender, PointerRoutedEventArgs e)
+        {
+            AnimatedIcon.SetState(this.SidebarAnimatedIcon, "Normal");
+        }
+
+        private void SidebarButton_Click(object sender, RoutedEventArgs e)
+        {
+            var wrapperPage = ContentFrame.Content as WrapperPage;
+            wrapperPage.toggleSidebarState();
         }
     }
 }

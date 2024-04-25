@@ -9,15 +9,25 @@
     mc:Ignorable="d"
     Background="Transparent">
 
-    <Grid>
-        <ListView x:ConnectionId='2' x:Name="LocationsListView" HorizontalAlignment="Left" Width="280" Margin="10,10,0,0" VerticalAlignment="Stretch" SelectionMode="None">
-            <TextBox x:ConnectionId='4' x:Name="ExampleCityTextBox"/>
-            <Button x:ConnectionId='5' x:Name="ConfirmCityButton" Content="ObtainWeather"                                />
-            <Button x:ConnectionId='6' x:Name="ShowSunnyButton" Content="ForceSunny"                              />
-            <Button x:ConnectionId='7' x:Name="ShowRainButton" Content="ForceRainy"                             />
-        </ListView>
-        <Rectangle Fill="{StaticResource SolidBackgroundFillColorBaseBrush}" Margin="300,0,5,5" RadiusX="3" RadiusY="3"/>
-        <Frame x:ConnectionId='3' x:Name="ContentFrame" Content="WeatherView" Margin="300,0,5,5" CornerRadius="3"/>
+    <Grid Margin="-20,0,0,0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid x:ConnectionId='2' x:Name="SidebarContainer" Grid.Column="0" Width="270">
+            <ListView x:ConnectionId='4' x:Name="LocationsListView" Grid.Column="0" HorizontalAlignment="Right" Width="250" VerticalAlignment="Stretch" SelectionMode="None">
+                <TextBox x:ConnectionId='5' x:Name="ExampleCityTextBox"/>
+                <Button x:ConnectionId='6' x:Name="ConfirmCityButton" Content="ObtainWeather"                                />
+                <Button x:ConnectionId='7' x:Name="ShowSunnyButton" Content="ForceSunny"                              />
+                <Button x:ConnectionId='8' x:Name="ShowRainButton" Content="ForceRainy"                             />
+            </ListView>
+        </Grid>
+
+        <Grid Grid.Column="1">
+            <Rectangle Fill="{StaticResource SolidBackgroundFillColorBaseBrush}" Margin="5,0,5,5" RadiusX="3" RadiusY="3"/>
+            <Frame x:ConnectionId='3' x:Name="ContentFrame" Content="WeatherView" Margin="5,0,5,5" CornerRadius="3"/>
+        </Grid>
     </Grid>
 </Page>
 
