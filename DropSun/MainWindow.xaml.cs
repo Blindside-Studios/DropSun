@@ -39,7 +39,6 @@ namespace DropSun
             AppTitleBar.Loaded += AppTitleBar_Loaded;
             AppTitleBar.SizeChanged += AppTitleBar_SizeChanged;
             ExtendsContentIntoTitleBar = true;
-            TitleBarTextBlock.Text = AppInfo.Current.DisplayInfo.DisplayName;
 
             FrameNavigationOptions navOptions = new FrameNavigationOptions();
             Type pageType = typeof(WrapperPage);

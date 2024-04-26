@@ -34,6 +34,9 @@
     <AppxPackagedFile Include="C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\bin\x86\Debug\net6.0-windows10.0.19041.0\win10-x86\DropSun.dll">
       <PackagePath>DropSun.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\Assets\StoreLogo.scale-200.png">
+      <PackagePath>Assets\StoreLogo.scale-200.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\Assets\Application\CursorObjects\Umbrella.png">
       <PackagePath>Assets\Application\CursorObjects\Umbrella.png</PackagePath>
     </AppxPackagedFile>
@@ -790,26 +793,158 @@
     <AppxPackagedFile Include="C:\Users\nicol\.nuget\packages\microsoft.windowsappsdk\1.4.230913002\runtimes\win10-x86\native\Microsoft.WindowsAppRuntime.Bootstrap.dll">
       <PackagePath>Microsoft.WindowsAppRuntime.Bootstrap.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\Assets\LargeTile.scale-100.png">
+      <PackagePath>Assets\LargeTile.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\Assets\LargeTile.scale-125.png">
+      <PackagePath>Assets\LargeTile.scale-125.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\Assets\LargeTile.scale-150.png">
+      <PackagePath>Assets\LargeTile.scale-150.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\Assets\LargeTile.scale-200.png">
+      <PackagePath>Assets\LargeTile.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\Assets\LargeTile.scale-400.png">
+      <PackagePath>Assets\LargeTile.scale-400.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\Assets\SmallTile.scale-100.png">
+      <PackagePath>Assets\SmallTile.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\Assets\SmallTile.scale-125.png">
+      <PackagePath>Assets\SmallTile.scale-125.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\Assets\SmallTile.scale-150.png">
+      <PackagePath>Assets\SmallTile.scale-150.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\Assets\SmallTile.scale-200.png">
+      <PackagePath>Assets\SmallTile.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\Assets\SmallTile.scale-400.png">
+      <PackagePath>Assets\SmallTile.scale-400.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\Assets\SplashScreen.scale-100.png">
+      <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\Assets\SplashScreen.scale-125.png">
+      <PackagePath>Assets\SplashScreen.scale-125.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\Assets\SplashScreen.scale-150.png">
+      <PackagePath>Assets\SplashScreen.scale-150.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\Assets\SplashScreen.scale-400.png">
+      <PackagePath>Assets\SplashScreen.scale-400.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\Assets\Square150x150Logo.scale-100.png">
+      <PackagePath>Assets\Square150x150Logo.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\Assets\Square150x150Logo.scale-125.png">
+      <PackagePath>Assets\Square150x150Logo.scale-125.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\Assets\Square150x150Logo.scale-150.png">
+      <PackagePath>Assets\Square150x150Logo.scale-150.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\Assets\Square150x150Logo.scale-400.png">
+      <PackagePath>Assets\Square150x150Logo.scale-400.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\Assets\Square44x44Logo.altform-lightunplated_targetsize-16.png">
+      <PackagePath>Assets\Square44x44Logo.altform-lightunplated_targetsize-16.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\Assets\Square44x44Logo.altform-lightunplated_targetsize-24.png">
+      <PackagePath>Assets\Square44x44Logo.altform-lightunplated_targetsize-24.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\Assets\Square44x44Logo.altform-lightunplated_targetsize-256.png">
+      <PackagePath>Assets\Square44x44Logo.altform-lightunplated_targetsize-256.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\Assets\Square44x44Logo.altform-lightunplated_targetsize-32.png">
+      <PackagePath>Assets\Square44x44Logo.altform-lightunplated_targetsize-32.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\Assets\Square44x44Logo.altform-lightunplated_targetsize-48.png">
+      <PackagePath>Assets\Square44x44Logo.altform-lightunplated_targetsize-48.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\Assets\Square44x44Logo.altform-unplated_targetsize-16.png">
+      <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-16.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\Assets\Square44x44Logo.altform-unplated_targetsize-256.png">
+      <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-256.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\Assets\Square44x44Logo.altform-unplated_targetsize-32.png">
+      <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-32.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\Assets\Square44x44Logo.altform-unplated_targetsize-48.png">
+      <PackagePath>Assets\Square44x44Logo.altform-unplated_targetsize-48.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\Assets\Square44x44Logo.scale-100.png">
+      <PackagePath>Assets\Square44x44Logo.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\Assets\Square44x44Logo.scale-125.png">
+      <PackagePath>Assets\Square44x44Logo.scale-125.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\Assets\Square44x44Logo.scale-150.png">
+      <PackagePath>Assets\Square44x44Logo.scale-150.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\Assets\Square44x44Logo.scale-400.png">
+      <PackagePath>Assets\Square44x44Logo.scale-400.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\Assets\Square44x44Logo.targetsize-16.png">
+      <PackagePath>Assets\Square44x44Logo.targetsize-16.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\Assets\Square44x44Logo.targetsize-24.png">
+      <PackagePath>Assets\Square44x44Logo.targetsize-24.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\Assets\StoreLogo.png">
-      <PackagePath>Assets\StoreLogo.png</PackagePath>
+    <AppxPackagedFile Include="C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\Assets\Square44x44Logo.targetsize-256.png">
+      <PackagePath>Assets\Square44x44Logo.targetsize-256.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\Assets\Square44x44Logo.targetsize-32.png">
+      <PackagePath>Assets\Square44x44Logo.targetsize-32.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\Assets\Square44x44Logo.targetsize-48.png">
+      <PackagePath>Assets\Square44x44Logo.targetsize-48.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\Assets\StoreLogo.backup.png">
+      <PackagePath>Assets\StoreLogo.backup.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\Assets\StoreLogo.scale-100.png">
+      <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\Assets\StoreLogo.scale-125.png">
+      <PackagePath>Assets\StoreLogo.scale-125.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\Assets\StoreLogo.scale-150.png">
+      <PackagePath>Assets\StoreLogo.scale-150.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\Assets\StoreLogo.scale-400.png">
+      <PackagePath>Assets\StoreLogo.scale-400.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\Assets\Wide310x150Logo.scale-100.png">
+      <PackagePath>Assets\Wide310x150Logo.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\Assets\Wide310x150Logo.scale-125.png">
+      <PackagePath>Assets\Wide310x150Logo.scale-125.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\Assets\Wide310x150Logo.scale-150.png">
+      <PackagePath>Assets\Wide310x150Logo.scale-150.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\nicol\OneDrive\Documents\GitHub\DropSun\DropSun\Assets\Wide310x150Logo.scale-400.png">
+      <PackagePath>Assets\Wide310x150Logo.scale-400.png</PackagePath>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

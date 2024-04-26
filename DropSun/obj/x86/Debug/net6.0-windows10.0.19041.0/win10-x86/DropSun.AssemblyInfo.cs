@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DropSun")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+216310954882055ad38ee2498b2b0010001f3f66")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ec600cf46e7b0f21e2a06dc5872f0182a0203947")]
 [assembly: System.Reflection.AssemblyProductAttribute("DropSun")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DropSun")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

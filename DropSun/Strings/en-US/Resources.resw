@@ -120,4 +120,8 @@
   <data name="GlobalSearchBox.PlaceholderText" xml:space="preserve">
     <value>Type here to add a location...</value>
   </data>
+  <data name="TitleBar.Text" xml:space="preserve">
+    <value>DropSun</value>
+    <comment>App name - only for translation into different character sets</comment>
+  </data>
 </root>

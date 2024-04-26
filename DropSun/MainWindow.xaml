@@ -47,12 +47,12 @@
                 </AnimatedIcon>
             </Button>
             <Image x:Name="TitleBarIcon" 
-           Source="ms-appx:///Assets/StoreLogo.png"
+           Source="ms-appx:///Assets/StoreLogo.scale-200.png"
            Grid.Column="2"
            Width="16" Height="16"
-           Margin="0,0,4,0"/>
+           Margin="0,0,5,0"/>
             <TextBlock x:Name="TitleBarTextBlock"
-               Text="App title" 
+               x:Uid="TitleBar"
                Style="{StaticResource CaptionTextBlockStyle}"
                Grid.Column="3"
                VerticalAlignment="Center">
