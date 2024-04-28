@@ -27,10 +27,13 @@ namespace DropSun.Views.Conditions.Sunny
         {
             this.InitializeComponent();
 
-            FrameNavigationOptions navOptions = new FrameNavigationOptions();
+            if (Model.ViewModels.ViewRenderingModel.Instance.WeatherCondition == Model.Weather.Condition.Sunny)
+            {
+                FrameNavigationOptions navOptions = new FrameNavigationOptions();
 
-            Type nightPage = typeof(Conditions.Sunny.StarSky);
-            StarFrame.NavigateToType(nightPage, null, navOptions);
+                Type nightPage = typeof(Conditions.Sunny.StarSky);
+                StarFrame.NavigateToType(nightPage, null, navOptions);
+            }
         }
     }
 }

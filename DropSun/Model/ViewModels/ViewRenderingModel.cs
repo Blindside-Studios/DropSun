@@ -42,6 +42,7 @@ namespace DropSun.Model.ViewModels
                     OnPropertyChanged(nameof(WeatherCondition));
                     _sunNeedsUpdate = false;
                     _umbrellaNeedsUpdate = false;
+                    if (WeatherCondition == Condition.Rainy) SunTranslation = new Vector3(130, 80, 0);
                 }
             }
         }
@@ -133,10 +134,6 @@ namespace DropSun.Model.ViewModels
                     UmbrellaTranslation = newUmbrellaTranslation;
                     await Task.Delay(TimeSpan.FromMilliseconds(16));
                 }
-
-                VisibleVerticalSpace = ReceiverGridHeight - UmbrellaCenterPoint.Y + UmbrellaRadius;
-                Vector3 newSunTranslation = new Vector3(newUmbrellaTranslation.Y / ReceiverGridHeight * 250 + 50, newUmbrellaTranslation.X / ReceiverGridWidth * VisibleVerticalSpace + 200, 0);
-                SunTranslation = newSunTranslation;
             }
         }
 
@@ -195,11 +192,24 @@ namespace DropSun.Model.ViewModels
                 {
                     _umbrellaCenterPointVector = value;
                     OnPropertyChanged(nameof(UmbrellaCenterPointVector));
+                    calculateTimeOfDay(UmbrellaCenterPoint.Y);
                 }
             }
         }
 
-        public Point UmbrellaCenterPoint { get; set; }
+        private Point _umbrellaCenterPoint;
+        public Point UmbrellaCenterPoint {
+            get => _umbrellaCenterPoint;
+            set
+            {
+                if ( _umbrellaCenterPoint != value)
+                {
+                    _umbrellaCenterPoint = value;
+                    OnPropertyChanged(nameof(UmbrellaCenterPoint));
+                }
+            }
+        }
+
         public int UmbrellaRadius
         {
             get => 100;
@@ -249,12 +259,12 @@ namespace DropSun.Model.ViewModels
 
             var viewableHeight = ReceiverGridHeight;
 
-            if (WeatherCondition == Condition.Rainy)
+            /*if (WeatherCondition == Condition.Rainy)
             {
-                eveningStartThreshold = 500;
-                nightRelativeStartThreshold = 0.9;
-                viewableHeight = VisibleVerticalSpace + 100;
-            }
+                eveningStartThreshold = 1000;
+                //nightRelativeStartThreshold = 0.9;
+                //viewableHeight = VisibleVerticalSpace + 100;
+            }*/
 
             sunYPosition = sunYPosition + 75;
 

@@ -1,3 +1,4 @@
+using DropSun.Model.ViewModels;
 using Microsoft.UI.Composition;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
@@ -38,7 +39,7 @@ namespace DropSun.Views.Conditions.Sunny
 
         private void SwingingGrass_Loaded(object sender, RoutedEventArgs e)
         {
-            loadGrass();
+            if(ViewRenderingModel.Instance.WeatherCondition == Model.Weather.Condition.Sunny) loadGrass();
         }
         private void loadGrass()
         {
