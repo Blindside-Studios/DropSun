@@ -17,6 +17,7 @@ using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Newtonsoft.Json;
+using Windows.Services.Store;
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -69,65 +70,88 @@ namespace DropSun.Views.Conditions.Sunny
                 // run an animation on the biggest stars
                 if (size >= minSize + ((1 - starAnimationModifier) * (maxSize - minSize)))
                 {
-                    double animationDuration = 0;
-                    do animationDuration = random.NextDouble() * 2;
-                    while (animationDuration < 0.5);
-                    DoubleAnimation fadeAnimation = new DoubleAnimation
+                    int addGrid = (int)Math.Round(random.NextDouble() * 4);
+                    Debug.WriteLine(addGrid);
+                    switch (addGrid)
                     {
-                        From = random.NextDouble() / 3 + 0.66,
-                        To = random.NextDouble() / 3,
-                        Duration = new Duration(TimeSpan.FromSeconds(animationDuration)),
-                        AutoReverse = true,
-                        RepeatBehavior = RepeatBehavior.Forever
-                    };
-                    Storyboard.SetTarget(fadeAnimation, starImage);
-                    Storyboard.SetTargetProperty(fadeAnimation, "Opacity");
-
-                    Storyboard starStoryboard = new Storyboard();
-                    starStoryboard.Children.Add(fadeAnimation);
-                    starStoryboard.Begin();
+                        case 0:
+                            AnimationsGrid1.Children.Add(starImage);
+                            break;
+                        case 1:
+                            AnimationsGrid2.Children.Add(starImage);
+                            break;
+                        case 2:
+                            AnimationsGrid3.Children.Add(starImage);
+                            break;
+                        case 3:
+                            AnimationsGrid4.Children.Add(starImage);
+                            break;
+                        case 4:
+                            AnimationsGrid5.Children.Add(starImage);
+                            break;
+                        default:
+                            Debug.WriteLine("Not added to a grid");
+                            break;
+                    }
                 }
                 // render smaller stars at a lower opacity to create the illusion of distance
-                else starImage.Opacity = (random.NextDouble() / 2) + 0.4 ;
+                else
+                {
+                    StarGrid.Children.Add(starImage);
+                    starImage.Opacity = (random.NextDouble() / 2) + 0.4;
+                }
 
 
-                StarGrid.Children.Add(starImage);
                 starImage.HorizontalAlignment = HorizontalAlignment.Left;
                 starImage.VerticalAlignment = VerticalAlignment.Top;
                 var translation = new System.Numerics.Vector3((float)random.Next(0, (int)StarGrid.ActualWidth), (float)random.Next(0, (int)StarGrid.ActualHeight), 0);
                 starImage.Translation = translation;
             }
+
+            startGridAnimation(AnimationsGrid1);
+            startGridAnimation(AnimationsGrid2);
+            startGridAnimation(AnimationsGrid3);
+            startGridAnimation(AnimationsGrid4);
+            startGridAnimation(AnimationsGrid5);
         }
 
         private async void StarGrid_SizeChanged(object sender, SizeChangedEventArgs e)
         {
-            foreach (Image star in StarGrid.Children.OfType<Image>())
+            foreach (Grid grid in AllGrids.Children.OfType<Grid>())
             {
-                star.Translation = new System.Numerics.Vector3(
-                    star.Translation.X / (float)gridWidthInitial * (float)StarGrid.ActualWidth,
-                    star.Translation.Y / (float)gridHeightInitial * (float)StarGrid.ActualHeight,
-                    0);
-            }
-            gridWidthInitial = StarGrid.ActualWidth;
-            gridHeightInitial = StarGrid.ActualHeight;
-
-            /*var starGridSize = StarGrid.ActualSize;
-            await Task.Delay(50);
-            if (starGridSize == StarGrid.ActualSize)
-            {
-                foreach (Image star in StarGrid.Children.OfType<Image>())
+                foreach (Image star in grid.Children.OfType<Image>())
                 {
-                    star.TranslationTransition = new Vector3Transition();
                     star.Translation = new System.Numerics.Vector3(
                         star.Translation.X / (float)gridWidthInitial * (float)StarGrid.ActualWidth,
                         star.Translation.Y / (float)gridHeightInitial * (float)StarGrid.ActualHeight,
                         0);
-                    star.TranslationTransition = null;
                 }
+            }
+            gridWidthInitial = StarGrid.ActualWidth;
+            gridHeightInitial = StarGrid.ActualHeight;
+        }
 
-                gridWidthInitial = StarGrid.ActualWidth;
-                gridHeightInitial = StarGrid.ActualHeight;
-            }*/
+        private void startGridAnimation(Grid grid)
+        {
+            Random random = new Random();
+
+            double animationDuration = 0;
+            do animationDuration = random.NextDouble() * 2;
+            while (animationDuration < 0.5);
+            DoubleAnimation fadeAnimation = new DoubleAnimation
+            {
+                From = random.NextDouble() / 3 + 0.66,
+                To = random.NextDouble() / 3,
+                Duration = new Duration(TimeSpan.FromSeconds(animationDuration)),
+                AutoReverse = true,
+                RepeatBehavior = RepeatBehavior.Forever
+            };
+            Storyboard.SetTarget(fadeAnimation, grid);
+            Storyboard.SetTargetProperty(fadeAnimation, "Opacity");
+
+            Storyboard starStoryboard = new Storyboard();
+            starStoryboard.Children.Add(fadeAnimation);
+            starStoryboard.Begin();
         }
     }
 }

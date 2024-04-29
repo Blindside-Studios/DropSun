@@ -10,6 +10,13 @@
     mc:Ignorable="d"
     Background="Transparent">
 
-    <Grid x:ConnectionId='2' x:Name="StarGrid"                                                                                    HorizontalAlignment="Stretch" VerticalAlignment="Stretch"                                   />
+    <Grid x:ConnectionId='2' x:Name="AllGrids">
+        <Grid x:ConnectionId='3' x:Name="StarGrid"                                                                                    HorizontalAlignment="Stretch" VerticalAlignment="Stretch"                                   />
+        <Grid x:ConnectionId='4' x:Name="AnimationsGrid1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+        <Grid x:ConnectionId='5' x:Name="AnimationsGrid2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+        <Grid x:ConnectionId='6' x:Name="AnimationsGrid3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+        <Grid x:ConnectionId='7' x:Name="AnimationsGrid4" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+        <Grid x:ConnectionId='8' x:Name="AnimationsGrid5" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+    </Grid>
 </Page>
 
