@@ -31,9 +31,13 @@ namespace DropSun.Views.Conditions.Rainy
         private int minSize = 10;
         private int maxSize = 20;
 
-        private int maxDroplets = 100;
-        private double maxAnimationSeconds = 1.5; //3
-        private double minAnimationSeconds = 0.5; //1
+        private int maxDroplets = 150;
+        private int dropletsPerGrid = 10;
+        private double maxAnimationSeconds = 3;
+        private double minAnimationSeconds = 1;
+
+        private int dropletsGridWidth = 400;
+        private int dropletsGridHeight = 200;
 
         Random random = new Random();
 
@@ -45,48 +49,62 @@ namespace DropSun.Views.Conditions.Rainy
 
         private void Rainy_Loaded(object sender, RoutedEventArgs e)
         {
+            dropletsGridHeight = Convert.ToInt32(RainGrid.ActualHeight);
+            dropletsGridWidth = Convert.ToInt32(RainGrid.ActualWidth);
             startRain();
-            UmbrellaSafeAreaFrame.Navigate(typeof(Conditions.Rendered.Sunny), null, null);
+            //UmbrellaSafeAreaFrame.Navigate(typeof(Conditions.Rendered.Sunny), null, null);
         }
 
         private async void startRain()
         {
-            for (int i = 0; i < maxDroplets; i++)
+            for (int i = 0; i < maxDroplets / dropletsPerGrid; i++)
             {
                 createDroplet();
 
-                await Task.Delay(10);
+                await Task.Delay(50);
             }
         }
 
         private void createDroplet()
         {
-            Image dropletImage = new Image();
-            BitmapImage bitmapImageSource = new BitmapImage(new Uri("ms-appx:///Assets/Application/WeatherObjects/Raindrop.png"));
+            Grid dropletsGrid = new Grid();
+            dropletsGrid.Height = dropletsGridHeight;
+            dropletsGrid.Height = dropletsGridWidth;
+            dropletsGrid.HorizontalAlignment = HorizontalAlignment.Left;
+            dropletsGrid.VerticalAlignment = VerticalAlignment.Bottom;
+            dropletsGrid.Translation = new System.Numerics.Vector3(0, (float) -(RainGrid.ActualHeight + dropletsGrid.ActualHeight + maxSize), 0);
+            RainGrid.Children.Add(dropletsGrid);
 
-            dropletImage.Source = bitmapImageSource;
+            for (int i = 0; i < dropletsPerGrid; i++)
+            {
+                Image dropletImage = new Image();
+                BitmapImage bitmapImageSource = new BitmapImage(new Uri("ms-appx:///Assets/Application/WeatherObjects/Raindrop.png"));
 
-            // Set a random size between minSize and maxSize
-            double size = random.Next(minSize, maxSize);
-            dropletImage.Width = size;
-            dropletImage.Height = size;
+                dropletImage.Source = bitmapImageSource;
 
-            RainGrid.Children.Add(dropletImage);
-            dropletImage.HorizontalAlignment = HorizontalAlignment.Left;
-            dropletImage.VerticalAlignment = VerticalAlignment.Top;
+                // Set a random size between minSize and maxSize
+                double size = random.Next(minSize, maxSize);
+                dropletImage.Width = size;
+                dropletImage.Height = size;
 
-            setDropletPosition(dropletImage);
+                dropletsGrid.Children.Add(dropletImage);
 
-            setDropletAnimation(dropletImage);
+                dropletImage.HorizontalAlignment = HorizontalAlignment.Left;
+                dropletImage.VerticalAlignment = VerticalAlignment.Top;
+
+                setDropletPosition(dropletImage, dropletsGridWidth, dropletsGridHeight);
+            }
+
+            setDropletAnimation(dropletsGrid, dropletsGridWidth, dropletsGridHeight);
         }
 
-        private void setDropletPosition(Image dropletImage)
+        private void setDropletPosition(Image dropletImage, double widthMax, double heightMax)
         {
-            var translation = new System.Numerics.Vector3((float)random.Next(0, (int)RainGrid.ActualWidth), - maxSize, 0);
+            var translation = new System.Numerics.Vector3((float)random.Next(0, (int)widthMax), (float)random.Next(0, (int)heightMax), 0);
             dropletImage.Translation = translation;
         }
 
-        private void setDropletAnimation(Image droplet)
+        private void setDropletAnimation(Grid droplets, double gridWidth, double gridHeight)
         {
             var animationDuration = TimeSpan.FromSeconds(random.NextDouble() * maxAnimationSeconds);
 
@@ -98,13 +116,11 @@ namespace DropSun.Views.Conditions.Rainy
             DoubleAnimation doubleAnimation = new DoubleAnimation();
             doubleAnimation.Duration = animationDuration;
             TranslateTransform translateTransform = new TranslateTransform();
-            droplet.RenderTransform = translateTransform;
-            Storyboard.SetTarget(doubleAnimation, droplet);
+            droplets.RenderTransform = translateTransform;
+            Storyboard.SetTarget(doubleAnimation, droplets);
             Storyboard.SetTargetProperty(doubleAnimation, "UIElement.RenderTransform.(TranslateTransform.Y)");
-            doubleAnimation.By = RainGrid.ActualHeight + maxSize;
+            doubleAnimation.By = RainGrid.ActualHeight + (dropletsGridHeight * 2);
             storyboard.Children.Add(doubleAnimation);
-
-            droplet.Tag = Math.Round(animationDuration.TotalMilliseconds).ToString();
 
             storyboard.RepeatBehavior = RepeatBehavior.Forever;
 
@@ -117,6 +133,8 @@ namespace DropSun.Views.Conditions.Rainy
             await Task.Delay(50);
             if (starGridSize == RainGrid.ActualSize)
             {
+                dropletsGridHeight = Convert.ToInt32(RainGrid.ActualHeight);
+                dropletsGridWidth = Convert.ToInt32(RainGrid.ActualWidth);
                 RainGrid.Children.Clear();
                 startRain();
             }
