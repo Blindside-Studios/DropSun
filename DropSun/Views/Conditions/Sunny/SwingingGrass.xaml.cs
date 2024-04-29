@@ -30,6 +30,7 @@ namespace DropSun.Views.Conditions.Sunny
         private double minAnimationSeconds = 0.75;
         private double maxAnimationSeconds = 1.5;
         Random random = new Random();
+        bool isFirstLoadCompleted = false;
 
         public SwingingGrass()
         {
@@ -63,6 +64,8 @@ namespace DropSun.Views.Conditions.Sunny
 
                 animateGrass(grassBlade);
             }
+
+            isFirstLoadCompleted = true;
         }
 
         private void animateGrass(Microsoft.UI.Xaml.Controls.Image grass)
@@ -108,6 +111,34 @@ namespace DropSun.Views.Conditions.Sunny
 
             storyboard.RepeatBehavior = RepeatBehavior.Forever;
             storyboard.Begin();
+        }
+
+        private void GrassGrid_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
+            if (GrassGrid.ActualSize.X < coveredlength && isFirstLoadCompleted)
+            {
+                var width = GrassGrid.ActualWidth;
+                foreach (Microsoft.UI.Xaml.Controls.Image grass in GrassGrid.Children.OfType<Microsoft.UI.Xaml.Controls.Image>())
+                {
+                    if (grass.Translation.X > width)
+                    {
+                        grass.Source = null;
+                        GrassGrid.Children.Remove(grass);
+                        grass.Visibility = Visibility.Collapsed;
+                        setGrassToNull(grass);
+                    }
+                }
+                coveredlength = GrassGrid.ActualWidth;
+            }
+            else if (GrassGrid.ActualSize.X > coveredlength && isFirstLoadCompleted)
+            {
+                loadGrass();
+            }
+        }
+
+        private void setGrassToNull(Microsoft.UI.Xaml.Controls.Image grass)
+        {
+            grass = null;
         }
     }
 }

@@ -9,5 +9,5 @@
     mc:Ignorable="d"
     Background="Transparent">
 
-    <Grid x:Name="GrassGrid"/>
+    <Grid x:Name="GrassGrid" SizeChanged="GrassGrid_SizeChanged"/>
 </Page>

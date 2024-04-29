@@ -9,6 +9,6 @@
     mc:Ignorable="d"
     Background="Transparent">
 
-    <Grid x:ConnectionId='2' x:Name="GrassGrid"/>
+    <Grid x:ConnectionId='2' x:Name="GrassGrid"                                    />
 </Page>
 
