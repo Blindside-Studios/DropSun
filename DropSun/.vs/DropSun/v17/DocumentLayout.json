@@ -313,8 +313,7 @@
               "ViewState": "AQIAAHMAAAAAAAAAAAA8wIEAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-23T17:06:47.995Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -324,7 +323,7 @@
               "RelativeDocumentMoniker": "Views\\Conditions\\Rainy\\RainDrops.xaml.cs",
               "ToolTip": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\DropSun\\DropSun\\Views\\Conditions\\Rainy\\RainDrops.xaml.cs",
               "RelativeToolTip": "Views\\Conditions\\Rainy\\RainDrops.xaml.cs",
-              "ViewState": "AQIAAHQAAAAAAAAAAAAcwD8AAAAiAAAA",
+              "ViewState": "AQIAABsAAAAAAAAAAAAAACIAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-29T22:55:45.986Z",
               "IsPinned": true,
@@ -348,8 +347,7 @@
               "RelativeToolTip": "Views\\Conditions\\Rendered\\Rainy.xaml",
               "ViewState": "AQIAAAMAAAAAAAAAAAAYwBgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-04-21T11:17:59.545Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-21T11:17:59.545Z"
             },
             {
               "$type": "Document",
@@ -419,7 +417,7 @@
               "RelativeDocumentMoniker": "Model\\ViewModels\\ViewRenderingModel.cs",
               "ToolTip": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\DropSun\\DropSun\\Model\\ViewModels\\ViewRenderingModel.cs",
               "RelativeToolTip": "Model\\ViewModels\\ViewRenderingModel.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAFQBAAAMAAAA",
+              "ViewState": "AQIAAHoAAAAAAAAAAAAWwFQBAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-20T11:36:31.37Z",
               "EditorCaption": ""
@@ -434,8 +432,7 @@
               "RelativeToolTip": "Views\\Conditions\\Rendered\\Rainy.xaml.cs",
               "ViewState": "AQIAABYAAAAAAAAAAAAYwCYAAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-21T11:18:28.283Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-21T11:18:28.283Z"
             },
             {
               "$type": "Document",
@@ -531,8 +528,7 @@
               "RelativeToolTip": "Views\\Conditions\\Rainy\\RainDrops.xaml",
               "ViewState": "AQIAAAcAAAAAAAAAAAAnwA0AAABEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-04-21T14:26:11.099Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-21T14:26:11.099Z"
             },
             {
               "$type": "Document",

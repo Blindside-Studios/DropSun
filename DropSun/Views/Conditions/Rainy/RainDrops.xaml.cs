@@ -28,13 +28,13 @@ namespace DropSun.Views.Conditions.Rainy
     /// </summary>
     public sealed partial class RainDrops : Page
     {
-        private int minSize = 10;
-        private int maxSize = 20;
+        private int minSize = 15;
+        private int maxSize = 25;
 
-        private int maxDroplets = 150;
+        private int maxDroplets = 120;
         private int dropletsPerGrid = 10;
         private double maxAnimationSeconds = 3;
-        private double minAnimationSeconds = 1;
+        private double minAnimationSeconds = 2;
 
         private int dropletsGridWidth = 400;
         private int dropletsGridHeight = 200;
@@ -61,7 +61,7 @@ namespace DropSun.Views.Conditions.Rainy
             {
                 createDroplet();
 
-                await Task.Delay(50);
+                await Task.Delay(500);
             }
         }
 
