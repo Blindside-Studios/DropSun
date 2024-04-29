@@ -33,10 +33,15 @@ namespace DropSun.Views.Conditions.Sunny
         int maxSize = 7;
         double starAnimationModifier = 0.33;
 
+        private double gridWidthInitial = 0;
+        private double gridHeightInitial = 0;
+
         public StarSky()
         {
             this.InitializeComponent();
             this.Loaded += StarSky_Loaded;
+            gridWidthInitial = StarGrid.ActualWidth;
+            gridHeightInitial = StarGrid.ActualHeight;
         }
 
         private void StarSky_Loaded(object sender, RoutedEventArgs e)
@@ -96,13 +101,33 @@ namespace DropSun.Views.Conditions.Sunny
 
         private async void StarGrid_SizeChanged(object sender, SizeChangedEventArgs e)
         {
-            var starGridSize = StarGrid.ActualSize;
+            foreach (Image star in StarGrid.Children.OfType<Image>())
+            {
+                star.Translation = new System.Numerics.Vector3(
+                    star.Translation.X / (float)gridWidthInitial * (float)StarGrid.ActualWidth,
+                    star.Translation.Y / (float)gridHeightInitial * (float)StarGrid.ActualHeight,
+                    0);
+            }
+            gridWidthInitial = StarGrid.ActualWidth;
+            gridHeightInitial = StarGrid.ActualHeight;
+
+            /*var starGridSize = StarGrid.ActualSize;
             await Task.Delay(50);
             if (starGridSize == StarGrid.ActualSize)
             {
-                StarGrid.Children.Clear();
-                generateStars();
-            }
+                foreach (Image star in StarGrid.Children.OfType<Image>())
+                {
+                    star.TranslationTransition = new Vector3Transition();
+                    star.Translation = new System.Numerics.Vector3(
+                        star.Translation.X / (float)gridWidthInitial * (float)StarGrid.ActualWidth,
+                        star.Translation.Y / (float)gridHeightInitial * (float)StarGrid.ActualHeight,
+                        0);
+                    star.TranslationTransition = null;
+                }
+
+                gridWidthInitial = StarGrid.ActualWidth;
+                gridHeightInitial = StarGrid.ActualHeight;
+            }*/
         }
     }
 }
