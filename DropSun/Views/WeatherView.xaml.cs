@@ -33,7 +33,7 @@ namespace DropSun.Views
             Model.ViewModels.ViewRenderingModel.Instance.ReceiverGridWidth = Convert.ToInt32(ContentGrid.ActualWidth);
 
             FrameNavigationOptions navOptions = new FrameNavigationOptions();
-            if (Model.ViewModels.ViewRenderingModel.Instance.WeatherCondition == Model.Weather.Condition.Sunny)
+            if (Model.ViewModels.ViewRenderingModel.Instance.Weather.Conditions == Model.Weather.Condition.Sunny)
             {
 
                 Type pageType = typeof(Conditions.Rendered.Sunny);
@@ -47,7 +47,7 @@ namespace DropSun.Views
 
             GeneralFrame.Navigate(typeof(General), this);
 
-            Model.ViewModels.WeatherState.Instance.Condition = Model.ViewModels.ViewRenderingModel.Instance.WeatherCondition;
+            Model.ViewModels.WeatherState.Instance.Condition = Model.ViewModels.ViewRenderingModel.Instance.Weather.Conditions;
             Model.ViewModels.WeatherState.Instance.TemperatureDouble = 23.5;
         }
 

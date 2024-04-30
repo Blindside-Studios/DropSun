@@ -8,6 +8,7 @@ namespace DropSun.Model.Weather
 {
     public enum Condition
     {
+        NotYetAvailable,
         Sunny,
         Rainy,
         PartlyCloudy,

@@ -136,9 +136,9 @@ namespace DropSun
         private void Settings_Click(object sender, RoutedEventArgs e)
         {
             var wrapperPage = ContentFrame.Content as WrapperPage;
-            wrapperPage.addDebugLocation("Los Angeles");
-            wrapperPage.addDebugLocation("Chicago");
-            wrapperPage.addDebugLocation("San Francisco");
+            wrapperPage.addDebugLocation("San Francisco", Model.Weather.Condition.Sunny);
+            wrapperPage.addDebugLocation("London", Model.Weather.Condition.Rainy);
+            wrapperPage.addDebugLocation("North Pole", Model.Weather.Condition.Snowy);
         }
 
         private void TitleBarSearchBox_QuerySubmitted(AutoSuggestBox sender, AutoSuggestBoxQuerySubmittedEventArgs args)

@@ -47,7 +47,7 @@ namespace DropSun.Views.Conditions.Sunny
 
         private void StarSky_Loaded(object sender, RoutedEventArgs e)
         {
-            if (Model.ViewModels.ViewRenderingModel.Instance.WeatherCondition == Model.Weather.Condition.Sunny) generateStars();
+            if (Model.ViewModels.ViewRenderingModel.Instance.Weather.Conditions == Model.Weather.Condition.Sunny) generateStars();
         }
 
         private void generateStars()
@@ -115,7 +115,7 @@ namespace DropSun.Views.Conditions.Sunny
             startGridAnimation(AnimationsGrid5);
         }
 
-        private async void StarGrid_SizeChanged(object sender, SizeChangedEventArgs e)
+        private void StarGrid_SizeChanged(object sender, SizeChangedEventArgs e)
         {
             foreach (Grid grid in AllGrids.Children.OfType<Grid>())
             {

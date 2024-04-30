@@ -1,3 +1,4 @@
+using DropSun.Model.Weather;
 using DropSun.Views.Controls;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
@@ -41,23 +42,33 @@ namespace DropSun.Views
                 Location = location,
                 Temperature = 0,
                 Precipitation = 0,
-                Condition = Model.Weather.Condition.Sunny
             };
+            weatherItem.Weather.Conditions = Model.Weather.Condition.NotYetAvailable;
+            weatherItem.Weather.Forecast = null;
             LocationsListView.Items.Add(weatherItem);
+            
             var weatherForecast = await Model.Weather.ObtainWeather.FromOpenMeteo(location);
             weatherItem.Temperature = (double)weatherForecast.Current.Temperature;
             weatherItem.Precipitation = (int)(weatherForecast.Current.Precipitation * 100);
+            weatherItem.Weather.Forecast = weatherForecast;
+            weatherItem.Weather.Conditions = Model.Weather.Weather.getCondition(weatherForecast);
         }
 
-        public void addDebugLocation(string location)
+        public void addDebugLocation(string location, Condition condition)
         {
             SidebarWeatherItem weatherItem = new()
             {
                 Location = location,
                 Temperature = 20.5,
                 Precipitation = 21,
-                Condition = Model.Weather.Condition.Sunny
             };
+            weatherItem.Weather = new Weather()
+            {
+                Forecast = null,
+                Conditions = condition
+            };
+            weatherItem.Weather.Conditions = condition;
+            weatherItem.Weather.Forecast = null;
             LocationsListView.Items.Add(weatherItem);
         }
 
@@ -130,7 +141,7 @@ namespace DropSun.Views
 
         private void ShowSunnyButton_Click(object sender, RoutedEventArgs e)
         {
-            Model.ViewModels.ViewRenderingModel.Instance.WeatherCondition = Model.Weather.Condition.Sunny;
+            Model.ViewModels.ViewRenderingModel.Instance.Weather.Conditions = Model.Weather.Condition.Sunny;
             FrameNavigationOptions navOptions = new FrameNavigationOptions();
             navOptions.TransitionInfoOverride = new DrillInNavigationTransitionInfo();
             Type pageType = typeof(WeatherView);
@@ -139,7 +150,7 @@ namespace DropSun.Views
 
         private void ShowRainButton_Click(object sender, RoutedEventArgs e)
         {
-            Model.ViewModels.ViewRenderingModel.Instance.WeatherCondition = Model.Weather.Condition.Rainy;
+            Model.ViewModels.ViewRenderingModel.Instance.Weather.Conditions = Model.Weather.Condition.Rainy;
             FrameNavigationOptions navOptions = new FrameNavigationOptions();
             navOptions.TransitionInfoOverride = new DrillInNavigationTransitionInfo();
             Type pageType = typeof(WeatherView);

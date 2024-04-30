@@ -30,26 +30,26 @@ namespace DropSun.Model.ViewModels
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-        private Condition _weatherCondition;
-        public Condition WeatherCondition
+
+        private Weather.Weather _weather;
+        public Weather.Weather Weather
         {
-            get => _weatherCondition;
+            get => _weather;
             set
             {
-                if (_weatherCondition != value)
+                if (_weather != value)
                 {
-                    _weatherCondition = value;
-                    OnPropertyChanged(nameof(WeatherCondition));
+                    _weather = value;
+                    OnPropertyChanged(nameof(Weather));
                     _sunNeedsUpdate = false;
                     _umbrellaNeedsUpdate = false;
-                    if (WeatherCondition == Condition.Rainy) SunTranslation = new Vector3(130, 80, 0);
+                    if (Weather.Conditions == Condition.Rainy) SunTranslation = new Vector3(130, 80, 0);
                 }
             }
         }
 
         private Windows.Foundation.Point _cursorPosition;
         private const float MaxSpeed = 4f; // Maximum speed per update
-        private float _timeSinceLastUpdate = 0f;
         private const float UpdateTime = 0.016f; // Assuming 60 updates per second
 
         private bool _sunNeedsUpdate = false;
@@ -69,7 +69,7 @@ namespace DropSun.Model.ViewModels
                     _targetCursorPosition = value;
                     OnPropertyChanged(nameof(CursorPosition));
 
-                    switch (WeatherCondition)
+                    switch (Weather.Conditions)
                     {
                         case Condition.Sunny:
                             _sunNeedsUpdate = true;
@@ -230,7 +230,7 @@ namespace DropSun.Model.ViewModels
                 {
                     _receiverGridHeight = value;
                     OnPropertyChanged(nameof(ReceiverGridHeight));
-                    if (WeatherCondition == Condition.Sunny) VisibleVerticalSpace = value;
+                    if (Weather.Conditions == Condition.Sunny) VisibleVerticalSpace = value;
                 }
             }
         }

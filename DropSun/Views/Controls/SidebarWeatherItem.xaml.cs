@@ -7,11 +7,13 @@ using Microsoft.UI.Xaml.Media;
 using Microsoft.UI.Xaml.Navigation;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI;
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -24,6 +26,12 @@ namespace DropSun.Views.Controls
         {
             this.InitializeComponent();
             this.Loaded += SidebarWeatherItem_Loaded;
+            this.PointerPressed += SidebarWeatherItem_PointerPressed;
+        }
+
+        private void SidebarWeatherItem_PointerPressed(object sender, PointerRoutedEventArgs e)
+        {
+            Model.ViewModels.ViewRenderingModel.Instance.Weather = Weather;
         }
 
         private void SidebarWeatherItem_Loaded(object sender, RoutedEventArgs e)
@@ -55,12 +63,32 @@ namespace DropSun.Views.Controls
         public static readonly DependencyProperty PrecipitationProperty =
             DependencyProperty.Register("Precipitation", typeof(int), typeof(SidebarWeatherItem), new PropertyMetadata(default(int)));
 
-        public Model.Weather.Condition Condition
+        public Model.Weather.Weather Weather
         {
-            get { return (Model.Weather.Condition)GetValue(ConditionProperty); }
-            set { SetValue(ConditionProperty, value); }
+            get { return (Model.Weather.Weather)GetValue(WeatherProperty); }
+            set { 
+                SetValue(WeatherProperty, value);
+
+                System.Drawing.Color color = new();
+                
+                switch (value.Conditions)
+                {
+                    case Model.Weather.Condition.NotYetAvailable:
+                        break;
+                    case Model.Weather.Condition.Sunny:
+                        color = System.Drawing.Color.DodgerBlue;
+                        break;
+                    case Model.Weather.Condition.Rainy:
+                        color = System.Drawing.Color.DarkGray;
+                        break;
+                    default:
+                        break;
+                }
+
+                BackgroundColor.Background = new SolidColorBrush(Windows.UI.Color.FromArgb(color.A, color.R, color.G, color.B));
+            }
         }
-        public static readonly DependencyProperty ConditionProperty =
-            DependencyProperty.Register("Condition", typeof(Model.Weather.Condition), typeof(SidebarWeatherItem), new PropertyMetadata(default(Model.Weather.Condition)));
+        public static readonly DependencyProperty WeatherProperty =
+            DependencyProperty.Register("Weather", typeof(Model.Weather.Weather), typeof(SidebarWeatherItem), new PropertyMetadata(default(Model.Weather.Weather)));
     }
 }

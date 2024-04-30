@@ -38,7 +38,7 @@ namespace DropSun.Views.Conditions.Rendered
             Type pageTypeSun = typeof(Conditions.Sunny.Sun);
             SunFrame.NavigateToType(pageTypeSun, null, navOptions);
 
-            if (Model.ViewModels.ViewRenderingModel.Instance.WeatherCondition == Model.Weather.Condition.Sunny)
+            if (Model.ViewModels.ViewRenderingModel.Instance.Weather.Conditions == Model.Weather.Condition.Sunny)
             {
                 Type pageTypeGrass = typeof(Conditions.Sunny.SwingingGrass);
                 GrassFrame.NavigateToType(pageTypeGrass, null, navOptions);

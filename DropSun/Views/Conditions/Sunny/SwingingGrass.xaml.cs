@@ -40,7 +40,7 @@ namespace DropSun.Views.Conditions.Sunny
 
         private void SwingingGrass_Loaded(object sender, RoutedEventArgs e)
         {
-            if(ViewRenderingModel.Instance.WeatherCondition == Model.Weather.Condition.Sunny) loadGrass();
+            if(ViewRenderingModel.Instance.Weather.Conditions == Model.Weather.Condition.Sunny) loadGrass();
         }
         private void loadGrass()
         {
