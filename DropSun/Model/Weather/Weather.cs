@@ -40,7 +40,9 @@ namespace DropSun.Model.Weather
 
         public static Condition getCondition(WeatherForecast forecast)
         {
-            return Condition.NotYetAvailable;
+            if (forecast.Current.Precipitation == 0) return Condition.Sunny;
+            else if (forecast.Current.Rain > 0) return Condition.Rainy;
+            else return Condition.NotYetAvailable;            
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

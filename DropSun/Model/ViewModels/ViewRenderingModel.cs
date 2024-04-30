@@ -31,7 +31,7 @@ namespace DropSun.Model.ViewModels
         public event PropertyChangedEventHandler PropertyChanged;
 
 
-        private Weather.Weather _weather;
+        /*private Weather.Weather _weather;
         public Weather.Weather Weather
         {
             get => _weather;
@@ -46,7 +46,7 @@ namespace DropSun.Model.ViewModels
                     if (Weather.Conditions == Condition.Rainy) SunTranslation = new Vector3(130, 80, 0);
                 }
             }
-        }
+        }*/
 
         private Windows.Foundation.Point _cursorPosition;
         private const float MaxSpeed = 4f; // Maximum speed per update
@@ -69,7 +69,7 @@ namespace DropSun.Model.ViewModels
                     _targetCursorPosition = value;
                     OnPropertyChanged(nameof(CursorPosition));
 
-                    switch (Weather.Conditions)
+                    switch (WeatherState.Instance.Condition)
                     {
                         case Condition.Sunny:
                             _sunNeedsUpdate = true;
@@ -230,7 +230,7 @@ namespace DropSun.Model.ViewModels
                 {
                     _receiverGridHeight = value;
                     OnPropertyChanged(nameof(ReceiverGridHeight));
-                    if (Weather.Conditions == Condition.Sunny) VisibleVerticalSpace = value;
+                    if (WeatherState.Instance.Condition == Condition.Sunny) VisibleVerticalSpace = value;
                 }
             }
         }

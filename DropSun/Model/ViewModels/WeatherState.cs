@@ -1,4 +1,5 @@
 ﻿using DropSun.Model.Weather;
+using OpenMeteo;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -28,6 +29,20 @@ namespace DropSun.Model.ViewModels
         protected virtual void OnPropertyChanged(string propertyName)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+        private WeatherForecast _forecast;
+        public WeatherForecast Forecast
+        {
+            get => _forecast;
+            set
+            {
+                if (_forecast != value)
+                {
+                    _forecast = value;
+                    OnPropertyChanged(nameof(Forecast));
+                }
+            }
         }
 
 

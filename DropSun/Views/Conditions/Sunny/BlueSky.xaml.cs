@@ -27,7 +27,7 @@ namespace DropSun.Views.Conditions.Sunny
         {
             this.InitializeComponent();
 
-            if (Model.ViewModels.ViewRenderingModel.Instance.Weather.Conditions == Model.Weather.Condition.Sunny)
+            if (Model.ViewModels.WeatherState.Instance.Condition == Model.Weather.Condition.Sunny)
             {
                 FrameNavigationOptions navOptions = new FrameNavigationOptions();
 

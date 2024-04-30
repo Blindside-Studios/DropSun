@@ -1,3 +1,4 @@
+using DropSun.Model.ViewModels;
 using DropSun.Views.WeatherCards;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
@@ -25,15 +26,36 @@ namespace DropSun.Views
         {
             this.InitializeComponent();
             this.Loaded += WeatherView_Loaded;
+            WeatherState.Instance.PropertyChanged += Weather_PropertyChanged;
+        }
+
+        private void Weather_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
+        {
+            switch (e.PropertyName)
+            {
+                case nameof(WeatherState.Instance.Condition):
+                    updateBackground();
+                    break;
+                case nameof(WeatherState.Instance.Forecast):
+                    // update weather display here
+                    break;
+                default:
+                    break;
+            }
         }
 
         private void WeatherView_Loaded(object sender, RoutedEventArgs e)
         {
-            Model.ViewModels.ViewRenderingModel.Instance.ReceiverGridHeight = Convert.ToInt32(ContentGrid.ActualHeight);
-            Model.ViewModels.ViewRenderingModel.Instance.ReceiverGridWidth = Convert.ToInt32(ContentGrid.ActualWidth);
+            updateBackground();
+        }
+
+        private void updateBackground()
+        {
+            ViewRenderingModel.Instance.ReceiverGridHeight = Convert.ToInt32(ContentGrid.ActualHeight);
+            ViewRenderingModel.Instance.ReceiverGridWidth = Convert.ToInt32(ContentGrid.ActualWidth);
 
             FrameNavigationOptions navOptions = new FrameNavigationOptions();
-            if (Model.ViewModels.ViewRenderingModel.Instance.Weather.Conditions == Model.Weather.Condition.Sunny)
+            if (WeatherState.Instance.Condition == Model.Weather.Condition.Sunny)
             {
 
                 Type pageType = typeof(Conditions.Rendered.Sunny);
@@ -47,17 +69,17 @@ namespace DropSun.Views
 
             GeneralFrame.Navigate(typeof(General), this);
 
-            Model.ViewModels.WeatherState.Instance.Condition = Model.ViewModels.ViewRenderingModel.Instance.Weather.Conditions;
-            Model.ViewModels.WeatherState.Instance.TemperatureDouble = 23.5;
+            WeatherState.Instance.Condition = WeatherState.Instance.Condition;
+            WeatherState.Instance.TemperatureDouble = 23.5;
         }
 
         private void ContentGrid_PointerMoved(object sender, PointerRoutedEventArgs e)
         {
             // first update the stored grid height and width in case something changed
-            Model.ViewModels.ViewRenderingModel.Instance.ReceiverGridHeight = Convert.ToInt32(ContentGrid.ActualHeight);
-            Model.ViewModels.ViewRenderingModel.Instance.ReceiverGridWidth = Convert.ToInt32(ContentGrid.ActualWidth);
+            ViewRenderingModel.Instance.ReceiverGridHeight = Convert.ToInt32(ContentGrid.ActualHeight);
+            ViewRenderingModel.Instance.ReceiverGridWidth = Convert.ToInt32(ContentGrid.ActualWidth);
             // then update the ViewModel with new information, for which it needs the information in the above line
-            Model.ViewModels.ViewRenderingModel.Instance.CursorPosition = e.GetCurrentPoint(ContentGrid).Position;
+            ViewRenderingModel.Instance.CursorPosition = e.GetCurrentPoint(ContentGrid).Position;
         }
     }
 }

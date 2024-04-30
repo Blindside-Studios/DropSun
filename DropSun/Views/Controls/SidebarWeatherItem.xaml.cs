@@ -31,7 +31,8 @@ namespace DropSun.Views.Controls
 
         private void SidebarWeatherItem_PointerPressed(object sender, PointerRoutedEventArgs e)
         {
-            Model.ViewModels.ViewRenderingModel.Instance.Weather = Weather;
+            Model.ViewModels.WeatherState.Instance.Forecast = Weather.Forecast;
+            Model.ViewModels.WeatherState.Instance.Condition = Weather.Conditions;
         }
 
         private void SidebarWeatherItem_Loaded(object sender, RoutedEventArgs e)

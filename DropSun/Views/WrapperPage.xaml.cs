@@ -43,15 +43,21 @@ namespace DropSun.Views
                 Temperature = 0,
                 Precipitation = 0,
             };
-            weatherItem.Weather.Conditions = Model.Weather.Condition.NotYetAvailable;
-            weatherItem.Weather.Forecast = null;
+            weatherItem.Weather = new Weather()
+            {
+                Conditions = Model.Weather.Condition.NotYetAvailable,
+                Forecast = null
+            };
             LocationsListView.Items.Add(weatherItem);
             
             var weatherForecast = await Model.Weather.ObtainWeather.FromOpenMeteo(location);
             weatherItem.Temperature = (double)weatherForecast.Current.Temperature;
             weatherItem.Precipitation = (int)(weatherForecast.Current.Precipitation * 100);
-            weatherItem.Weather.Forecast = weatherForecast;
-            weatherItem.Weather.Conditions = Model.Weather.Weather.getCondition(weatherForecast);
+            weatherItem.Weather = new Weather()
+            {
+                Forecast = weatherForecast,
+                Conditions = Weather.getCondition(weatherForecast)
+            };
         }
 
         public void addDebugLocation(string location, Condition condition)
@@ -141,7 +147,8 @@ namespace DropSun.Views
 
         private void ShowSunnyButton_Click(object sender, RoutedEventArgs e)
         {
-            Model.ViewModels.ViewRenderingModel.Instance.Weather.Conditions = Model.Weather.Condition.Sunny;
+            Model.ViewModels.WeatherState.Instance.Condition = Condition.Sunny;
+            Model.ViewModels.WeatherState.Instance.Forecast = null;
             FrameNavigationOptions navOptions = new FrameNavigationOptions();
             navOptions.TransitionInfoOverride = new DrillInNavigationTransitionInfo();
             Type pageType = typeof(WeatherView);
@@ -150,7 +157,8 @@ namespace DropSun.Views
 
         private void ShowRainButton_Click(object sender, RoutedEventArgs e)
         {
-            Model.ViewModels.ViewRenderingModel.Instance.Weather.Conditions = Model.Weather.Condition.Rainy;
+            Model.ViewModels.WeatherState.Instance.Condition = Condition.Rainy;
+            Model.ViewModels.WeatherState.Instance.Forecast = null;
             FrameNavigationOptions navOptions = new FrameNavigationOptions();
             navOptions.TransitionInfoOverride = new DrillInNavigationTransitionInfo();
             Type pageType = typeof(WeatherView);

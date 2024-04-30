@@ -47,7 +47,7 @@ namespace DropSun.Views.Conditions.Sunny
 
         private void StarSky_Loaded(object sender, RoutedEventArgs e)
         {
-            if (Model.ViewModels.ViewRenderingModel.Instance.Weather.Conditions == Model.Weather.Condition.Sunny) generateStars();
+            if (Model.ViewModels.WeatherState.Instance.Condition == Model.Weather.Condition.Sunny) generateStars();
         }
 
         private void generateStars()
