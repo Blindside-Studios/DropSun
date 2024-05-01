@@ -43,11 +43,11 @@ namespace DropSun.Views
                 Temperature = 0,
                 Precipitation = 0,
             };
-            weatherItem.Weather = new Weather()
+            /*weatherItem.Weather = new Weather()
             {
                 Conditions = Model.Weather.Condition.NotYetAvailable,
                 Forecast = null
-            };
+            };*/
             LocationsListView.Items.Add(weatherItem);
             
             var weatherForecast = await Model.Weather.ObtainWeather.FromOpenMeteo(location);

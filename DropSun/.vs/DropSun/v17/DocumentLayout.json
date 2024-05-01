@@ -3,24 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\DropSun\\DropSun\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3064341D-4178-4C8F-96A4-68D548318443}|DropSun.csproj|c:\\users\\nicol\\onedrive\\documents\\github\\dropsun\\dropsun\\model\\viewmodels\\weatherstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3064341D-4178-4C8F-96A4-68D548318443}|DropSun.csproj|solutionrelative:model\\viewmodels\\weatherstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3064341D-4178-4C8F-96A4-68D548318443}|DropSun.csproj|c:\\users\\nicol\\onedrive\\documents\\github\\dropsun\\dropsun\\views\\weathercards\\general.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{3064341D-4178-4C8F-96A4-68D548318443}|DropSun.csproj|solutionrelative:views\\weathercards\\general.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3064341D-4178-4C8F-96A4-68D548318443}|DropSun.csproj|c:\\users\\nicol\\onedrive\\documents\\github\\dropsun\\dropsun\\views\\controls\\sidebarweatheritem.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3064341D-4178-4C8F-96A4-68D548318443}|DropSun.csproj|solutionrelative:views\\controls\\sidebarweatheritem.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3064341D-4178-4C8F-96A4-68D548318443}|DropSun.csproj|c:\\users\\nicol\\onedrive\\documents\\github\\dropsun\\dropsun\\model\\weather\\conditions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3064341D-4178-4C8F-96A4-68D548318443}|DropSun.csproj|solutionrelative:model\\weather\\conditions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3064341D-4178-4C8F-96A4-68D548318443}|DropSun.csproj|c:\\users\\nicol\\onedrive\\documents\\github\\dropsun\\dropsun\\model\\weather\\weather.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3064341D-4178-4C8F-96A4-68D548318443}|DropSun.csproj|solutionrelative:model\\weather\\weather.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3064341D-4178-4C8F-96A4-68D548318443}|DropSun.csproj|c:\\users\\nicol\\onedrive\\documents\\github\\dropsun\\dropsun\\views\\wrapperpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -29,6 +13,22 @@
     {
       "AbsoluteMoniker": "D:0:0:{3064341D-4178-4C8F-96A4-68D548318443}|DropSun.csproj|c:\\users\\nicol\\onedrive\\documents\\github\\dropsun\\dropsun\\views\\weatherview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3064341D-4178-4C8F-96A4-68D548318443}|DropSun.csproj|solutionrelative:views\\weatherview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3064341D-4178-4C8F-96A4-68D548318443}|DropSun.csproj|c:\\users\\nicol\\onedrive\\documents\\github\\dropsun\\dropsun\\model\\viewmodels\\weatherstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3064341D-4178-4C8F-96A4-68D548318443}|DropSun.csproj|solutionrelative:model\\viewmodels\\weatherstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3064341D-4178-4C8F-96A4-68D548318443}|DropSun.csproj|c:\\users\\nicol\\onedrive\\documents\\github\\dropsun\\dropsun\\views\\weathercards\\general.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{3064341D-4178-4C8F-96A4-68D548318443}|DropSun.csproj|solutionrelative:views\\weathercards\\general.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3064341D-4178-4C8F-96A4-68D548318443}|DropSun.csproj|c:\\users\\nicol\\onedrive\\documents\\github\\dropsun\\dropsun\\model\\weather\\conditions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3064341D-4178-4C8F-96A4-68D548318443}|DropSun.csproj|solutionrelative:model\\weather\\conditions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3064341D-4178-4C8F-96A4-68D548318443}|DropSun.csproj|c:\\users\\nicol\\onedrive\\documents\\github\\dropsun\\dropsun\\model\\weather\\weather.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3064341D-4178-4C8F-96A4-68D548318443}|DropSun.csproj|solutionrelative:model\\weather\\weather.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3064341D-4178-4C8F-96A4-68D548318443}|DropSun.csproj|c:\\users\\nicol\\onedrive\\documents\\github\\dropsun\\dropsun\\views\\weatherview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -150,7 +150,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 309,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
@@ -163,18 +163,17 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2024-04-19T22:45:01.657Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
               "Title": "WeatherView.xaml.cs",
               "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\DropSun\\DropSun\\Views\\WeatherView.xaml.cs",
               "RelativeDocumentMoniker": "Views\\WeatherView.xaml.cs",
               "ToolTip": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\DropSun\\DropSun\\Views\\WeatherView.xaml.cs",
               "RelativeToolTip": "Views\\WeatherView.xaml.cs",
-              "ViewState": "AQIAABgAAAAAAAAAAIA8wCYAAAAcAAAA",
+              "ViewState": "AQIAABkAAAAAAAAAAAAnwCYAAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-20T11:08:52.461Z",
               "IsPinned": true,
@@ -182,13 +181,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "SidebarWeatherItem.xaml.cs",
               "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\DropSun\\DropSun\\Views\\Controls\\SidebarWeatherItem.xaml.cs",
               "RelativeDocumentMoniker": "Views\\Controls\\SidebarWeatherItem.xaml.cs",
               "ToolTip": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\DropSun\\DropSun\\Views\\Controls\\SidebarWeatherItem.xaml.cs",
               "RelativeToolTip": "Views\\Controls\\SidebarWeatherItem.xaml.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAuwCIAAABSAAAA",
+              "ViewState": "AQIAADkAAAAAAAAAAAAkwEkAAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-23T21:52:27.245Z",
               "IsPinned": true,
@@ -196,13 +195,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "WrapperPage.xaml.cs",
               "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\DropSun\\DropSun\\Views\\WrapperPage.xaml.cs",
               "RelativeDocumentMoniker": "Views\\WrapperPage.xaml.cs",
               "ToolTip": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\DropSun\\DropSun\\Views\\WrapperPage.xaml.cs",
               "RelativeToolTip": "Views\\WrapperPage.xaml.cs",
-              "ViewState": "AQIAACYAAAAAAAAAAAAIwDoAAAAxAAAA",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAwwDEAAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-20T11:08:40.452Z",
               "IsPinned": true,
@@ -210,13 +209,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "WeatherState.cs",
               "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\DropSun\\DropSun\\Model\\ViewModels\\WeatherState.cs",
               "RelativeDocumentMoniker": "Model\\ViewModels\\WeatherState.cs",
               "ToolTip": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\DropSun\\DropSun\\Model\\ViewModels\\WeatherState.cs",
               "RelativeToolTip": "Model\\ViewModels\\WeatherState.cs",
-              "ViewState": "AQIAADUAAAAAAAAAAAAkwEgAAAAJAAAA",
+              "ViewState": "AQIAADAAAAAAAAAAAAAgwEgAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-21T21:06:06.866Z",
               "IsPinned": true,
@@ -233,12 +232,11 @@
               "ViewState": "AQIAANQAAAAAAAAAAAA0wOgAAAA3AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-20T11:36:31.37Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "Weather.cs",
               "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\DropSun\\DropSun\\Model\\Weather\\Weather.cs",
               "RelativeDocumentMoniker": "Model\\Weather\\Weather.cs",
@@ -247,16 +245,19 @@
               "ViewState": "AQIAABUAAAAAAAAAAAAEwCwAAAAZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-30T10:17:06.744Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Bookmark",
               "Name": "ST:2062758501:0:{83107a3e-496a-485e-b455-16ddb978e55e}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Conditions.cs",
               "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\DropSun\\DropSun\\Model\\Weather\\Conditions.cs",
               "RelativeDocumentMoniker": "Model\\Weather\\Conditions.cs",
@@ -264,12 +265,11 @@
               "RelativeToolTip": "Model\\Weather\\Conditions.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-21T13:51:08.393Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-21T13:51:08.393Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "General.xaml",
               "DocumentMoniker": "C:\\Users\\nicol\\OneDrive\\Documents\\GitHub\\DropSun\\DropSun\\Views\\WeatherCards\\General.xaml",
               "RelativeDocumentMoniker": "Views\\WeatherCards\\General.xaml",
@@ -277,12 +277,7 @@
               "RelativeToolTip": "Views\\WeatherCards\\General.xaml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAUAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-04-21T21:05:18.844Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+              "WhenOpened": "2024-04-21T21:05:18.844Z"
             },
             {
               "$type": "Document",
@@ -294,8 +289,7 @@
               "RelativeToolTip": "Views\\Conditions\\Sunny\\StarSky.xaml.cs",
               "ViewState": "AQIAAB4AAAAAAAAAAAAEwDEAAABAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-20T18:37:36.539Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-20T18:37:36.539Z"
             },
             {
               "$type": "Document",
@@ -307,8 +301,7 @@
               "RelativeToolTip": "Views\\Conditions\\Sunny\\SwingingGrass.xaml.cs",
               "ViewState": "AQIAABcAAAAAAAAAAAAEwCoAAAAPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-23T17:06:47.995Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-23T17:06:47.995Z"
             },
             {
               "$type": "Document",
@@ -320,8 +313,7 @@
               "RelativeToolTip": "Views\\Conditions\\Sunny\\BlueSky.xaml.cs",
               "ViewState": "AQIAAA0AAAAAAAAAAAAEwB0AAABAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-20T19:16:25.887Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-20T19:16:25.887Z"
             },
             {
               "$type": "Document",
@@ -333,8 +325,7 @@
               "RelativeToolTip": "Views\\Conditions\\Rendered\\Sunny.xaml.cs",
               "ViewState": "AQIAABwAAAAAAAAAAAAawCgAAABAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-20T11:12:22.929Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-20T11:12:22.929Z"
             },
             {
               "$type": "Document",
@@ -357,8 +348,7 @@
               "RelativeToolTip": "MainWindow.xaml.cs",
               "ViewState": "AQIAAH4AAAAAAAAAAADgv5IAAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-20T11:02:27.845Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-20T11:02:27.845Z"
             },
             {
               "$type": "Document",
@@ -574,8 +564,7 @@
               "RelativeToolTip": "Views\\WeatherCards\\General.xaml.cs",
               "ViewState": "AQIAAAwAAAAAAAAAAAAkwBsAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-21T21:05:21.89Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-21T21:05:21.89Z"
             },
             {
               "$type": "Document",

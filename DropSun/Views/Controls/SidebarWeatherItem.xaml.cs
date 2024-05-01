@@ -51,7 +51,7 @@ namespace DropSun.Views.Controls
         public double Temperature
         {
             get { return (double)GetValue(TemperatureProperty); }
-            set { SetValue(TemperatureProperty, value); TemperatureTextBox.Text = value.ToString("0.0") + "°C"; }
+            set { SetValue(TemperatureProperty, value);  }
         }
         public static readonly DependencyProperty TemperatureProperty =
             DependencyProperty.Register("Temperature", typeof(double), typeof(SidebarWeatherItem), new PropertyMetadata(default(double)));
@@ -59,7 +59,7 @@ namespace DropSun.Views.Controls
         public int Precipitation
         {
             get { return (int)GetValue(PrecipitationProperty); }
-            set { SetValue(PrecipitationProperty, value); PrecipitationTextBox.Text = Precipitation.ToString("0") + "%"; }
+            set { SetValue(PrecipitationProperty, value); }
         }
         public static readonly DependencyProperty PrecipitationProperty =
             DependencyProperty.Register("Precipitation", typeof(int), typeof(SidebarWeatherItem), new PropertyMetadata(default(int)));
@@ -67,8 +67,11 @@ namespace DropSun.Views.Controls
         public Model.Weather.Weather Weather
         {
             get { return (Model.Weather.Weather)GetValue(WeatherProperty); }
-            set { 
+            set {
                 SetValue(WeatherProperty, value);
+
+                TemperatureTextBox.Text = ((double)Weather.Forecast.Current.Temperature).ToString("0.0") + Weather.Forecast.CurrentUnits.Temperature;
+                PrecipitationTextBox.Text = ((double)Weather.Forecast.Current.Precipitation).ToString("0") + Weather.Forecast.CurrentUnits.Precipitation;
 
                 System.Drawing.Color color = new();
                 
