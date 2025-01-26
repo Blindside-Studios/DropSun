@@ -22,9 +22,20 @@ namespace DropSun.Model.Geolocation
                 var version = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version;
                 _httpClient.DefaultRequestHeaders.UserAgent.ParseAdd($"DropSun/{version} (Blindside-Studios; WeatherApp/LocationQuery)");
                 Debug.WriteLine(_httpClient.DefaultRequestHeaders.UserAgent);
-                //string jsonResponse = await _httpClient.GetStringAsync(url);
-                //var results = JsonSerializer.Deserialize<List<NominatimGeolocation>>(jsonResponse);
-                return null;//results ?? new List<NominatimGeolocation>();
+                string jsonConfirmation = await _httpClient.GetStringAsync("https://blindside-studios.github.io/DropSun/config.json");
+                var confirmation = JsonSerializer.Deserialize<ConfigCall>(jsonConfirmation);
+                if (confirmation.AreAPICallsAllowed == true)
+                {
+                    Debug.WriteLine("received confirmation");
+                    string jsonResponse = await _httpClient.GetStringAsync(url);
+                    var results = JsonSerializer.Deserialize<List<NominatimGeolocation>>(jsonResponse);
+                    return results ?? new List<NominatimGeolocation>();
+                }
+                else
+                {
+                    Debug.WriteLine("denied");
+                    return null;
+                }
             }
             catch (Exception ex)
             {
@@ -46,7 +57,7 @@ namespace DropSun.Model.Geolocation
         public string OsmType { get; set; }
 
         [JsonPropertyName("osm_id")]
-        public string OsmId { get; set; }
+        public int OsmId { get; set; }
 
         [JsonPropertyName("lat")]
         public string Lat { get; set; }
@@ -77,5 +88,11 @@ namespace DropSun.Model.Geolocation
 
         [JsonPropertyName("boundingbox")]
         public string[] BoundingBox { get; set; }
+    }
+
+    class ConfigCall
+    {
+        [JsonPropertyName("allow_calls_to_nominatim")]
+        public bool AreAPICallsAllowed { get; set; }
     }
 }
