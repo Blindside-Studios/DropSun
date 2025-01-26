@@ -1,3 +1,4 @@
+using DropSun.Model.Geolocation;
 using DropSun.Views;
 using Microsoft.UI.Input;
 using Microsoft.UI.Windowing;
@@ -10,9 +11,11 @@ using Microsoft.UI.Xaml.Media;
 using Microsoft.UI.Xaml.Navigation;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Threading.Tasks;
 using Windows.ApplicationModel;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
@@ -141,12 +144,6 @@ namespace DropSun
             wrapperPage.addDebugLocation("North Pole", Model.Weather.Condition.Snowy);
         }
 
-        private void TitleBarSearchBox_QuerySubmitted(AutoSuggestBox sender, AutoSuggestBoxQuerySubmittedEventArgs args)
-        {
-            var wrapperPage = ContentFrame.Content as WrapperPage;
-            wrapperPage.addLocation(args.QueryText);
-        }
-
         private void SidebarButton_PointerEntered(object sender, PointerRoutedEventArgs e)
         {
             AnimatedIcon.SetState(this.SidebarAnimatedIcon, "PointerOver");
@@ -161,6 +158,46 @@ namespace DropSun
         {
             var wrapperPage = ContentFrame.Content as WrapperPage;
             wrapperPage.toggleSidebarState();
+        }
+
+        private async void TitleBarSearchBox_TextChanged(AutoSuggestBox sender, AutoSuggestBoxTextChangedEventArgs args)
+        {
+            if (args.Reason == AutoSuggestionBoxTextChangeReason.UserInput)
+            {
+                await Task.Delay(1200);
+                // only call the API when the text is still the same a second later to prevent bombarding with API calls while typing
+                if (args.CheckCurrent())
+                {
+                    string query = sender.Text;
+
+                    if (!string.IsNullOrWhiteSpace(query))
+                    {
+                        System.Diagnostics.Debug.WriteLine(query);
+                        var suggestions = await GeoLookup.SearchLocationsAsync(query);
+
+                        sender.ItemsSource = new ObservableCollection<string>(
+                            suggestions.ConvertAll(s => s.DisplayName) // Show display names
+                        );
+                    }
+                }
+            }
+        }
+
+        private void TitleBarSearchBox_QuerySubmitted(AutoSuggestBox sender, AutoSuggestBoxQuerySubmittedEventArgs args)
+        {
+            string selectedItem = args.ChosenSuggestion as string;
+
+            if (selectedItem != null)
+            {
+                Console.WriteLine($"User selected: {selectedItem}");
+            }
+            else
+            {
+                Console.WriteLine($"User searched for: {args.QueryText}");
+            }
+
+            //var wrapperPage = ContentFrame.Content as WrapperPage;
+            //wrapperPage.addLocation(args.QueryText);
         }
     }
 }

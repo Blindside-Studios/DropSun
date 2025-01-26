@@ -62,6 +62,7 @@
                     x:Uid="GlobalSearchBox"
                     Grid.Column="5" 
                     QueryIcon="Find"
+                    TextChanged="TitleBarSearchBox_TextChanged"
                     QuerySubmitted="TitleBarSearchBox_QuerySubmitted"
                     VerticalAlignment="Center"
                     MaxWidth="600"/>
