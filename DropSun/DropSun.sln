@@ -5,6 +5,10 @@ VisualStudioVersion = 17.9.34714.143
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DropSun", "DropSun.csproj", "{3064341D-4178-4C8F-96A4-68D548318443}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pikouna Engine", "..\..\Pikouna-Engine\Pikouna Engine\Pikouna Engine\Pikouna Engine.csproj", "{03D3557F-F7C0-4DAF-A078-0EED8A953BB9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ozora", "..\..\Ozora-Engine\Ozora-Engine\Ozora\Ozora.csproj", "{23F7275D-C9E9-4B35-9C99-DAC42D938C94}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|ARM64 = Debug|ARM64
@@ -33,6 +37,30 @@ Global
 		{3064341D-4178-4C8F-96A4-68D548318443}.Release|x86.ActiveCfg = Release|x86
 		{3064341D-4178-4C8F-96A4-68D548318443}.Release|x86.Build.0 = Release|x86
 		{3064341D-4178-4C8F-96A4-68D548318443}.Release|x86.Deploy.0 = Release|x86
+		{03D3557F-F7C0-4DAF-A078-0EED8A953BB9}.Debug|ARM64.ActiveCfg = Debug|Any CPU
+		{03D3557F-F7C0-4DAF-A078-0EED8A953BB9}.Debug|ARM64.Build.0 = Debug|Any CPU
+		{03D3557F-F7C0-4DAF-A078-0EED8A953BB9}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{03D3557F-F7C0-4DAF-A078-0EED8A953BB9}.Debug|x64.Build.0 = Debug|Any CPU
+		{03D3557F-F7C0-4DAF-A078-0EED8A953BB9}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{03D3557F-F7C0-4DAF-A078-0EED8A953BB9}.Debug|x86.Build.0 = Debug|Any CPU
+		{03D3557F-F7C0-4DAF-A078-0EED8A953BB9}.Release|ARM64.ActiveCfg = Release|Any CPU
+		{03D3557F-F7C0-4DAF-A078-0EED8A953BB9}.Release|ARM64.Build.0 = Release|Any CPU
+		{03D3557F-F7C0-4DAF-A078-0EED8A953BB9}.Release|x64.ActiveCfg = Release|Any CPU
+		{03D3557F-F7C0-4DAF-A078-0EED8A953BB9}.Release|x64.Build.0 = Release|Any CPU
+		{03D3557F-F7C0-4DAF-A078-0EED8A953BB9}.Release|x86.ActiveCfg = Release|Any CPU
+		{03D3557F-F7C0-4DAF-A078-0EED8A953BB9}.Release|x86.Build.0 = Release|Any CPU
+		{23F7275D-C9E9-4B35-9C99-DAC42D938C94}.Debug|ARM64.ActiveCfg = Debug|Any CPU
+		{23F7275D-C9E9-4B35-9C99-DAC42D938C94}.Debug|ARM64.Build.0 = Debug|Any CPU
+		{23F7275D-C9E9-4B35-9C99-DAC42D938C94}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{23F7275D-C9E9-4B35-9C99-DAC42D938C94}.Debug|x64.Build.0 = Debug|Any CPU
+		{23F7275D-C9E9-4B35-9C99-DAC42D938C94}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{23F7275D-C9E9-4B35-9C99-DAC42D938C94}.Debug|x86.Build.0 = Debug|Any CPU
+		{23F7275D-C9E9-4B35-9C99-DAC42D938C94}.Release|ARM64.ActiveCfg = Release|Any CPU
+		{23F7275D-C9E9-4B35-9C99-DAC42D938C94}.Release|ARM64.Build.0 = Release|Any CPU
+		{23F7275D-C9E9-4B35-9C99-DAC42D938C94}.Release|x64.ActiveCfg = Release|Any CPU
+		{23F7275D-C9E9-4B35-9C99-DAC42D938C94}.Release|x64.Build.0 = Release|Any CPU
+		{23F7275D-C9E9-4B35-9C99-DAC42D938C94}.Release|x86.ActiveCfg = Release|Any CPU
+		{23F7275D-C9E9-4B35-9C99-DAC42D938C94}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

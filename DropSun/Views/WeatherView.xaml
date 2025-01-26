@@ -9,7 +9,7 @@
     mc:Ignorable="d"
     Background="Transparent">
 
-    <Grid x:Name="ContentGrid" PointerMoved="ContentGrid_PointerMoved">
+    <Grid x:Name="ContentGrid" PointerMoved="ContentGrid_PointerMoved" PointerExited="ContentGrid_PointerExited" PointerEntered="ContentGrid_PointerEntered">
         <Frame x:Name="ContentFrame" Content="Background" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
         <Frame x:Name="GeneralFrame" Content="General" Margin="50,50,0,0" HorizontalAlignment="Left" VerticalAlignment="Stretch"/>
     </Grid>

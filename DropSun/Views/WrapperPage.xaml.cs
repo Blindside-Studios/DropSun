@@ -169,5 +169,23 @@ namespace DropSun.Views
         {
             await Model.Weather.ObtainWeather.FromOpenMeteo(ExampleCityTextBox.Text);
         }
+
+        private void LocationsListView_RightTapped(object sender, RightTappedRoutedEventArgs e)
+        {
+            if (ExampleCityTextBox.Visibility == Visibility.Collapsed)
+            {
+                ExampleCityTextBox.Visibility = Visibility.Visible;
+                ConfirmCityButton.Visibility = Visibility.Visible;
+                ShowSunnyButton.Visibility = Visibility.Visible;
+                ShowRainButton.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                ExampleCityTextBox.Visibility = Visibility.Collapsed;
+                ConfirmCityButton.Visibility = Visibility.Collapsed;
+                ShowSunnyButton.Visibility = Visibility.Collapsed;
+                ShowRainButton.Visibility = Visibility.Collapsed;
+            }
+        }
     }
 }

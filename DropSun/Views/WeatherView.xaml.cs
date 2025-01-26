@@ -14,6 +14,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Pikouna_Engine;
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -29,57 +30,29 @@ namespace DropSun.Views
             WeatherState.Instance.PropertyChanged += Weather_PropertyChanged;
         }
 
-        private void Weather_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
-        {
-            switch (e.PropertyName)
-            {
-                case nameof(WeatherState.Instance.Condition):
-                    updateBackground();
-                    break;
-                case nameof(WeatherState.Instance.Forecast):
-                    // update weather display here
-                    break;
-                default:
-                    break;
-            }
-        }
-
         private void WeatherView_Loaded(object sender, RoutedEventArgs e)
         {
-            updateBackground();
+            ContentFrame.NavigateToType(typeof(Pikouna_Engine.WeatherView), null, null);
         }
 
-        private void updateBackground()
+        private void Weather_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
         {
-            ViewRenderingModel.Instance.ReceiverGridHeight = Convert.ToInt32(ContentGrid.ActualHeight);
-            ViewRenderingModel.Instance.ReceiverGridWidth = Convert.ToInt32(ContentGrid.ActualWidth);
+            // use this later to update the properties in the view, unless I expand this into another view model, at which point this can be accessed throughout
+        }
 
-            FrameNavigationOptions navOptions = new FrameNavigationOptions();
-            if (WeatherState.Instance.Condition == Model.Weather.Condition.Sunny)
-            {
+        private void ContentGrid_PointerEntered(object sender, PointerRoutedEventArgs e)
+        {
+            Pikouna_Engine.OzoraViewModel.Instance.MouseEngaged = true;
+        }
 
-                Type pageType = typeof(Conditions.Rendered.Sunny);
-                ContentFrame.NavigateToType(pageType, null, navOptions);
-            }
-            else
-            {
-                Type pageType = typeof(Conditions.Rendered.Rainy);
-                ContentFrame.NavigateToType(pageType, null, navOptions);
-            }
-
-            GeneralFrame.Navigate(typeof(General), this);
-
-            WeatherState.Instance.Condition = WeatherState.Instance.Condition;
-            WeatherState.Instance.TemperatureDouble = 23.5;
+        private void ContentGrid_PointerExited(object sender, PointerRoutedEventArgs e)
+        {
+            Pikouna_Engine.OzoraViewModel.Instance.MouseEngaged = false;
         }
 
         private void ContentGrid_PointerMoved(object sender, PointerRoutedEventArgs e)
         {
-            // first update the stored grid height and width in case something changed
-            ViewRenderingModel.Instance.ReceiverGridHeight = Convert.ToInt32(ContentGrid.ActualHeight);
-            ViewRenderingModel.Instance.ReceiverGridWidth = Convert.ToInt32(ContentGrid.ActualWidth);
-            // then update the ViewModel with new information, for which it needs the information in the above line
-            ViewRenderingModel.Instance.CursorPosition = e.GetCurrentPoint(ContentGrid).Position;
+            Pikouna_Engine.OzoraViewModel.Instance.MousePosition = e.GetCurrentPoint(ContentGrid).Position;
         }
     }
 }
