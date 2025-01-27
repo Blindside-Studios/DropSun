@@ -16,16 +16,10 @@
         </Grid.ColumnDefinitions>
 
         <Grid x:Name="SidebarContainer" Grid.Column="0" Width="270">
-            <ListView x:Name="LocationsListView" Grid.Column="0" HorizontalAlignment="Right" Width="250" VerticalAlignment="Stretch" SelectionMode="None" RightTapped="LocationsListView_RightTapped">
-                <TextBox x:Name="ExampleCityTextBox" Visibility="Collapsed"/>
-                <Button x:Name="ConfirmCityButton" Content="ObtainWeather" Click="ConfirmCityButton_Click" Visibility="Collapsed"/>
-                <Button x:Name="ShowSunnyButton" Content="ForceSunny" Click="ShowSunnyButton_Click" Visibility="Collapsed"/>
-                <Button x:Name="ShowRainButton" Content="ForceRainy" Click="ShowRainButton_Click" Visibility="Collapsed"/>
-            </ListView>
+            <ListView x:Name="LocationsListView" Grid.Column="0" HorizontalAlignment="Right" Width="250" VerticalAlignment="Stretch" SelectionMode="None"/>
         </Grid>
 
         <Grid Grid.Column="1">
-            <Rectangle Fill="{StaticResource SolidBackgroundFillColorBaseBrush}" Margin="5,0,5,5" RadiusX="3" RadiusY="3"/>
             <Frame x:Name="ContentFrame" Content="WeatherView" Margin="5,0,5,5" CornerRadius="3"/>
         </Grid>
     </Grid>
