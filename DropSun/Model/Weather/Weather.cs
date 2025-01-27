@@ -10,22 +10,8 @@ namespace DropSun.Model.Weather
 {
     public class Weather : INotifyPropertyChanged
     {
-        private Condition _conditions;
-        public Condition Conditions
-        {
-            get => _conditions;
-            set
-            {
-                if (_conditions != value)
-                {
-                    _conditions = value;
-                    OnPropertyChanged(nameof(Conditions));
-                }
-            }
-        }
-
-        private WeatherForecast _forecast;
-        public WeatherForecast Forecast
+        private WeatherResponse _forecast;
+        public WeatherResponse Forecast
         {
             get => _forecast;
             set

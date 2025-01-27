@@ -160,6 +160,8 @@ namespace DropSun
             wrapperPage.toggleSidebarState();
         }
 
+        private List<InternalGeolocation> _suggestions = new();
+
         private async void TitleBarSearchBox_TextChanged(AutoSuggestBox sender, AutoSuggestBoxTextChangedEventArgs args)
         {
             if (args.Reason == AutoSuggestionBoxTextChangeReason.UserInput)
@@ -174,6 +176,7 @@ namespace DropSun
                     {
                         System.Diagnostics.Debug.WriteLine(query);
                         var suggestions = GeoLookup.SearchLocations(query);
+                        _suggestions = suggestions;
                         sender.ItemsSource = new ObservableCollection<string>(
                             suggestions.ConvertAll(s => $"{s.name}, {s.state_code}, {s.country_code}") // Show display names
                         );
@@ -190,19 +193,33 @@ namespace DropSun
 
         private void TitleBarSearchBox_QuerySubmitted(AutoSuggestBox sender, AutoSuggestBoxQuerySubmittedEventArgs args)
         {
-            string selectedItem = args.ChosenSuggestion as string;
+            InternalGeolocation selectedLocation = null;
 
-            if (selectedItem != null)
+            if (args.ChosenSuggestion != null)
             {
-                Console.WriteLine($"User selected: {selectedItem}");
+                string chosen = args.ChosenSuggestion.ToString();
+                selectedLocation = _suggestions.Find(
+                    s => $"{s.name}, {s.state_code}, {s.country_code}" == chosen
+                );
+            }
+            else if (!string.IsNullOrWhiteSpace(args.QueryText))
+            {
+                selectedLocation = _suggestions.Find(
+                    s => s.name.Equals(args.QueryText, StringComparison.OrdinalIgnoreCase)
+                );
+            }
+
+            if (selectedLocation != null)
+            {
+                System.Diagnostics.Debug.WriteLine($"Selected: {selectedLocation.name}, {selectedLocation.state_code}, {selectedLocation.country_code}");
+
+                var wrapperPage = ContentFrame.Content as WrapperPage;
+                wrapperPage.addLocation(selectedLocation);
             }
             else
             {
-                Console.WriteLine($"User searched for: {args.QueryText}");
+                System.Diagnostics.Debug.WriteLine("No matching location found.");
             }
-
-            //var wrapperPage = ContentFrame.Content as WrapperPage;
-            //wrapperPage.addLocation(args.QueryText);
         }
     }
 }

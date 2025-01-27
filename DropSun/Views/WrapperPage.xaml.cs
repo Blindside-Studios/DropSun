@@ -1,3 +1,4 @@
+using DropSun.Model.Geolocation;
 using DropSun.Model.Weather;
 using DropSun.Views.Controls;
 using Microsoft.UI.Xaml;
@@ -35,29 +36,28 @@ namespace DropSun.Views
             this.InitializeComponent();
         }
 
-        public async void addLocation(string location)
+        public async void addLocation(InternalGeolocation SelectedLocation)
         {
             SidebarWeatherItem weatherItem = new()
             {
-                Location = location,
+                Location = SelectedLocation.name,
                 Temperature = 0,
                 Precipitation = 0,
             };
-            /*weatherItem.Weather = new Weather()
-            {
-                Conditions = Model.Weather.Condition.NotYetAvailable,
-                Forecast = null
-            };*/
+            //weatherItem.Weather = new Weather()
+            //{
+            //    Forecast = null
+            //};
             LocationsListView.Items.Add(weatherItem);
-            
-            var weatherForecast = await Model.Weather.ObtainWeather.FromOpenMeteo(location);
-            weatherItem.Temperature = (double)weatherForecast.Current.Temperature;
-            weatherItem.Precipitation = (int)(weatherForecast.Current.Precipitation * 100);
+
+            var weatherForecast = await OpenMeteoAPI.GetWeatherAsync(SelectedLocation.latitude, SelectedLocation.longitude);
+            //Debug.WriteLine(weatherForecast.ToString());
             weatherItem.Weather = new Weather()
             {
                 Forecast = weatherForecast,
-                Conditions = Weather.getCondition(weatherForecast)
             };
+            weatherItem.Temperature = (double)weatherForecast.Current.Temperature2M;
+            weatherItem.Precipitation = (int)weatherForecast.Current.Precipitation;
         }
 
         public void addDebugLocation(string location, Condition condition)
@@ -71,9 +71,7 @@ namespace DropSun.Views
             weatherItem.Weather = new Weather()
             {
                 Forecast = null,
-                Conditions = condition
             };
-            weatherItem.Weather.Conditions = condition;
             weatherItem.Weather.Forecast = null;
             LocationsListView.Items.Add(weatherItem);
         }
@@ -167,7 +165,7 @@ namespace DropSun.Views
 
         private async void ConfirmCityButton_Click(object sender, RoutedEventArgs e)
         {
-            await Model.Weather.ObtainWeather.FromOpenMeteo(ExampleCityTextBox.Text);
+            //await Model.Weather.ObtainWeather.FromOpenMeteo(ExampleCityTextBox.Text);
         }
 
         private void LocationsListView_RightTapped(object sender, RightTappedRoutedEventArgs e)

@@ -31,8 +31,8 @@ namespace DropSun.Model.ViewModels
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
-        private WeatherForecast _forecast;
-        public WeatherForecast Forecast
+        private WeatherResponse _forecast;
+        public WeatherResponse Forecast
         {
             get => _forecast;
             set

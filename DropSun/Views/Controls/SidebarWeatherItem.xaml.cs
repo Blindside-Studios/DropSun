@@ -11,6 +11,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using Windows.ApplicationModel.Activation;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI;
@@ -32,7 +33,6 @@ namespace DropSun.Views.Controls
         private void SidebarWeatherItem_PointerPressed(object sender, PointerRoutedEventArgs e)
         {
             Model.ViewModels.WeatherState.Instance.Forecast = Weather.Forecast;
-            Model.ViewModels.WeatherState.Instance.Condition = Weather.Conditions;
         }
 
         private void SidebarWeatherItem_Loaded(object sender, RoutedEventArgs e)
@@ -70,22 +70,60 @@ namespace DropSun.Views.Controls
             set {
                 SetValue(WeatherProperty, value);
 
-                TemperatureTextBox.Text = ((double)Weather.Forecast.Current.Temperature).ToString("0.0") + Weather.Forecast.CurrentUnits.Temperature;
-                PrecipitationTextBox.Text = ((double)Weather.Forecast.Current.Precipitation).ToString("0") + Weather.Forecast.CurrentUnits.Precipitation;
+                TemperatureTextBox.Text = ((double)value.Forecast.Current.Temperature2M).ToString() + value.Forecast.CurrentUnits.Temperature2M;
+                PrecipitationTextBox.Text = ((double)value.Forecast.Current.Precipitation).ToString() + value.Forecast.CurrentUnits.Precipitation;
 
                 System.Drawing.Color color = new();
                 
-                switch (value.Conditions)
+                switch (value.Forecast.Current.WeatherCode)
                 {
-                    case Model.Weather.Condition.NotYetAvailable:
-                        break;
-                    case Model.Weather.Condition.Sunny:
+                    // taken these code from here https://open-meteo.com/en/docs#:~:text=WMO%20Weather%20interpretation%20codes%20(WW)
+                    case 0:
+                    case 1:
+                    case 2:
+                    case 3:
+                        // clear
                         color = System.Drawing.Color.DodgerBlue;
                         break;
-                    case Model.Weather.Condition.Rainy:
-                        color = System.Drawing.Color.DarkGray;
+                    case 45:
+                    case 48:
+                        // fog
+                        color = System.Drawing.Color.DeepSkyBlue;
+                        break;
+                    case 51:
+                    case 53:
+                    case 55:
+                        // drizzle
+                        color = System.Drawing.Color.SlateGray;
+                        break;
+                    case 56:
+                    case 57:
+                        // freezing drizzle
+                        color = System.Drawing.Color.DimGray;
+                        break;
+                    case 61:
+                    case 63:
+                    case 65:
+                        // rain
+                        color = System.Drawing.Color.SteelBlue;
+                        break;
+                    case 66:
+                    case 67:
+                        // freezing rain
+                        color = System.Drawing.Color.DarkSlateBlue;
+                        break;
+                    case 71:
+                    case 73:
+                    case 75:
+                        // snow fall
+                        color = System.Drawing.Color.LightGray;
+                        break;
+                    case 77:
+                        // snow grains
+                        color = System.Drawing.Color.LightSlateGray;
                         break;
                     default:
+                        color = System.Drawing.Color.Lime;
                         break;
                 }
 

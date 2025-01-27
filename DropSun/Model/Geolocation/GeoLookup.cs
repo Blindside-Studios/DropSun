@@ -31,7 +31,7 @@ namespace DropSun.Model.Geolocation
                 connection.Open();
 
                 // Define your priority countries
-                var priorityCountries = new List<string> { "DE", "US", "FR", "GB" };
+                var priorityCountries = new List<string> { "DE", "GB", "FR", "US" };
 
                 // Generate SQL CASE statement dynamically based on priorityCountries
                 string priorityCase = string.Join(" ",
@@ -115,7 +115,7 @@ namespace DropSun.Model.Geolocation
         }
     }
 
-    class InternalGeolocation
+    public class InternalGeolocation
     {
         public int id { get; set; }
         public string name { get; set; }
