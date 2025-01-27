@@ -1,3 +1,4 @@
+using DropSun.Model.Weather;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Controls.Primitives;
@@ -32,7 +33,7 @@ namespace DropSun.Views.Controls
 
         private void SidebarWeatherItem_PointerPressed(object sender, PointerRoutedEventArgs e)
         {
-            Model.ViewModels.WeatherState.Instance.Forecast = Weather.Forecast;
+            Model.ViewModels.WeatherState.Instance.Forecast = Weather;
         }
 
         private void SidebarWeatherItem_Loaded(object sender, RoutedEventArgs e)
@@ -64,18 +65,18 @@ namespace DropSun.Views.Controls
         public static readonly DependencyProperty PrecipitationProperty =
             DependencyProperty.Register("Precipitation", typeof(int), typeof(SidebarWeatherItem), new PropertyMetadata(default(int)));
 
-        public Model.Weather.Weather Weather
+        public OpenMeteoWeatherOverview Weather
         {
-            get { return (Model.Weather.Weather)GetValue(WeatherProperty); }
+            get { return (Model.Weather.OpenMeteoWeatherOverview)GetValue(WeatherProperty); }
             set {
                 SetValue(WeatherProperty, value);
 
-                TemperatureTextBox.Text = ((double)value.Forecast.Current.Temperature2M).ToString() + value.Forecast.CurrentUnits.Temperature2M;
-                PrecipitationTextBox.Text = ((double)value.Forecast.Current.Precipitation).ToString() + value.Forecast.CurrentUnits.Precipitation;
+                TemperatureTextBox.Text = ((double)value.Current.Temperature2M).ToString() + value.CurrentUnits.Temperature2M;
+                PrecipitationTextBox.Text = ((double)value.Current.Precipitation).ToString() + value.CurrentUnits.Precipitation;
 
                 System.Drawing.Color color = new();
                 
-                switch (value.Forecast.Current.WeatherCode)
+                switch (value.Current.WeatherCode)
                 {
                     // taken these code from here https://open-meteo.com/en/docs#:~:text=WMO%20Weather%20interpretation%20codes%20(WW)
                     case 0:
@@ -131,6 +132,6 @@ namespace DropSun.Views.Controls
             }
         }
         public static readonly DependencyProperty WeatherProperty =
-            DependencyProperty.Register("Weather", typeof(Model.Weather.Weather), typeof(SidebarWeatherItem), new PropertyMetadata(default(Model.Weather.Weather)));
+            DependencyProperty.Register("Weather", typeof(OpenMeteoWeatherOverview), typeof(SidebarWeatherItem), new PropertyMetadata(default(OpenMeteoWeatherOverview)));
     }
 }

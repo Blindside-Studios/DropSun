@@ -15,7 +15,7 @@ namespace DropSun.Model.Weather
 {
     internal class OpenMeteoAPI
     {
-        public static async Task<WeatherResponse> GetWeatherAsync(double latitude, double longitude)
+        public static async Task<OpenMeteoWeatherOverview> GetWeatherAsync(double latitude, double longitude)
         {
             string latitudeString = latitude.ToString(System.Globalization.CultureInfo.InvariantCulture);
             string longitudeString = longitude.ToString(System.Globalization.CultureInfo.InvariantCulture);
@@ -26,7 +26,7 @@ namespace DropSun.Model.Weather
                 var version = System.Reflection.Assembly.GetExecutingAssembly().GetName().Version;
                 _httpClient.DefaultRequestHeaders.UserAgent.ParseAdd($"DropSun/{version} (Blindside-Studios; WeatherApp/OverviewQuery)");
                 string jsonResponse = await _httpClient.GetStringAsync(url);
-                var results = JsonSerializer.Deserialize<WeatherResponse>(jsonResponse);
+                var results = JsonSerializer.Deserialize<OpenMeteoWeatherOverview>(jsonResponse);
                 return results;
             }
             catch (Exception ex)
@@ -34,32 +34,10 @@ namespace DropSun.Model.Weather
                 Debug.WriteLine($"Error fetching data: {ex.Message}");
                 return null;
             }
-
-
-
-
-
-
-
-            /*var uriBuilder = new UriBuilder("https://api.open-meteo.com/v1/forecast")
-            {
-                Query = $"latitude={latitude}&longitude={longitude}&current=temperature_2m,relative_humidity_2m,apparent_temperature,is_day,precipitation,rain,showers,snowfall,weather_code,cloud_cover,pressure_msl,surface_pressure,wind_speed_10m,wind_direction_10m,wind_gusts_10m&hourly=temperature_2m,apparent_temperature,precipitation_probability,weather_code,visibility,wind_speed_10m,is_day&daily=weather_code,temperature_2m_max,temperature_2m_min,apparent_temperature_max,apparent_temperature_min,precipitation_sum&timezone=Europe%2FBerlin&forecast_hours=6"
-            };
-
-            using HttpClient client = new();
-            HttpResponseMessage response = await client.GetAsync(uriBuilder.Uri);
-
-            if (response.IsSuccessStatusCode)
-            {
-                string json = await response.Content.ReadAsStringAsync();
-                return JsonSerializer.Deserialize<WeatherResponse>(json);
-            }
-
-            throw new Exception("Failed to fetch weather data.");*/
         }
     }
 
-    public class WeatherResponse
+    public class OpenMeteoWeatherOverview
     {
         [JsonPropertyName("latitude")]
         public double Latitude { get; set; }

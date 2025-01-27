@@ -30,8 +30,8 @@ namespace DropSun.Model.ViewModels
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
-        private WeatherResponse _forecast;
-        public WeatherResponse Forecast
+        private OpenMeteoWeatherOverview _forecast;
+        public OpenMeteoWeatherOverview Forecast
         {
             get => _forecast;
             set
@@ -40,21 +40,8 @@ namespace DropSun.Model.ViewModels
                 {
                     _forecast = value;
                     OnPropertyChanged(nameof(Forecast));
-                }
-            }
-        }
-
-        private double _temperatureDouble;
-        public double TemperatureDouble
-        {
-            get => _temperatureDouble;
-            set
-            {
-                if (_temperatureDouble != value)
-                {
-                    _temperatureDouble = value;
-                    OnPropertyChanged(nameof(TemperatureDouble));
-                    TemperatureString = TemperatureDouble.ToString() + " °C";
+                    TemperatureString = value.Current.Temperature2M + " " + value.CurrentUnits.Temperature2M;
+                    ApparentTemperatureString = value.Current.ApparentTemperature + " " + value.CurrentUnits.ApparentTemperature;
                 }
             }
         }
@@ -69,6 +56,20 @@ namespace DropSun.Model.ViewModels
                 {
                     _temperatureString = value;
                     OnPropertyChanged(nameof(TemperatureString));
+                }
+            }
+        }
+
+        private string _apparentTemperatureString;
+        public string ApparentTemperatureString
+        {
+            get => _apparentTemperatureString;
+            set
+            {
+                if (_apparentTemperatureString != value)
+                {
+                    _apparentTemperatureString = value;
+                    OnPropertyChanged(nameof(ApparentTemperatureString));
                 }
             }
         }

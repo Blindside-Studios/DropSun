@@ -52,10 +52,7 @@ namespace DropSun.Views
 
             var weatherForecast = await OpenMeteoAPI.GetWeatherAsync(SelectedLocation.latitude, SelectedLocation.longitude);
             //Debug.WriteLine(weatherForecast.ToString());
-            weatherItem.Weather = new Weather()
-            {
-                Forecast = weatherForecast,
-            };
+            weatherItem.Weather = weatherForecast;
             weatherItem.Temperature = (double)weatherForecast.Current.Temperature2M;
             weatherItem.Precipitation = (int)weatherForecast.Current.Precipitation;
         }
@@ -68,11 +65,7 @@ namespace DropSun.Views
                 Temperature = 20.5,
                 Precipitation = 21,
             };
-            weatherItem.Weather = new Weather()
-            {
-                Forecast = null,
-            };
-            weatherItem.Weather.Forecast = null;
+            weatherItem.Weather = null;
             LocationsListView.Items.Add(weatherItem);
         }
 
