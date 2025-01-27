@@ -166,6 +166,7 @@ namespace DropSun
         {
             if (args.Reason == AutoSuggestionBoxTextChangeReason.UserInput)
             {
+                sender.ItemsSource = null;
                 await Task.Delay(500);
                 // only call the API when the text is still the same a second later to prevent bombarding with API calls while typing
                 if (args.CheckCurrent())
@@ -193,6 +194,9 @@ namespace DropSun
 
         private void TitleBarSearchBox_QuerySubmitted(AutoSuggestBox sender, AutoSuggestBoxQuerySubmittedEventArgs args)
         {
+            sender.ItemsSource = null;
+            sender.Text = "";
+            
             InternalGeolocation selectedLocation = null;
 
             if (args.ChosenSuggestion != null)
