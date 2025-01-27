@@ -164,7 +164,7 @@ namespace DropSun
         {
             if (args.Reason == AutoSuggestionBoxTextChangeReason.UserInput)
             {
-                await Task.Delay(1200);
+                await Task.Delay(500);
                 // only call the API when the text is still the same a second later to prevent bombarding with API calls while typing
                 if (args.CheckCurrent())
                 {
@@ -173,11 +173,16 @@ namespace DropSun
                     if (!string.IsNullOrWhiteSpace(query))
                     {
                         System.Diagnostics.Debug.WriteLine(query);
-                        var suggestions = await GeoLookup.SearchLocationsAsync(query);
+                        var suggestions = GeoLookup.SearchLocations(query);
+                        sender.ItemsSource = new ObservableCollection<string>(
+                            suggestions.ConvertAll(s => $"{s.name}, {s.state_code}, {s.country_code}") // Show display names
+                        );
+
+                        /*var suggestions = await GeoLookup.SearchLocationsAsync(query);
 
                         sender.ItemsSource = new ObservableCollection<string>(
                             suggestions.ConvertAll(s => s.DisplayName) // Show display names
-                        );
+                        );*/
                     }
                 }
             }

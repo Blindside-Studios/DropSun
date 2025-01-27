@@ -7,12 +7,75 @@ using System.Net.Http;
 using System.Text.Json;
 using System.Diagnostics;
 using System.Text.Json.Serialization;
+using Microsoft.Data.Sqlite;
+using Windows.Storage;
+using Microsoft.Windows.ApplicationModel.Resources;
 
 namespace DropSun.Model.Geolocation
 {
     class GeoLookup
     {
         private static readonly HttpClient _httpClient = new HttpClient();
+
+        private static readonly string _databasePath = System.IO.Path.Combine(AppContext.BaseDirectory, "Model/Geolocation/locations.sqlite3");
+
+        public static List<InternalGeolocation> SearchLocations(string query)
+        {
+            var results = new List<InternalGeolocation>();
+
+            // Construct the connection string
+            string connectionString = $"Data Source={_databasePath}";
+
+            using (var connection = new SqliteConnection(connectionString))
+            {
+                connection.Open();
+
+                // Define your priority countries
+                var priorityCountries = new List<string> { "DE", "US", "FR", "GB" };
+
+                // Generate SQL CASE statement dynamically based on priorityCountries
+                string priorityCase = string.Join(" ",
+                    priorityCountries.Select((country, index) => $"WHEN country_code = '{country}' THEN {index + 1}")
+                );
+
+                // SQL query to filter cities by name and sort by priority countries
+                string sqlQuery = $@"
+        SELECT id, name, state_code, country_code, latitude, longitude 
+        FROM cities
+        WHERE name LIKE @query
+        ORDER BY 
+            CASE {priorityCase} ELSE {priorityCountries.Count + 1} END, -- Sort by priority countries
+            name ASC; -- Then sort alphabetically";
+
+                using (var command = new SqliteCommand(sqlQuery, connection))
+                {
+                    // Add parameter to prevent SQL injection
+                    command.Parameters.AddWithValue("@query", $"%{query}%");
+
+                    using (var reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            var city = new InternalGeolocation
+                            {
+                                id = reader.GetInt32(0),
+                                name = reader.GetString(1),
+                                state_code = reader.GetString(2),
+                                country_code = reader.GetString(3),//GetCountryName(reader.GetString(3)),
+                                latitude = reader.GetDouble(4),
+                                longitude = reader.GetDouble(5)
+                            };
+                            results.Add(city);
+                        }
+                    }
+                }
+
+                connection.Close();
+            }
+
+
+            return results;
+        }
 
         public static async Task<List<NominatimGeolocation>> SearchLocationsAsync(string query)
         {
@@ -43,8 +106,25 @@ namespace DropSun.Model.Geolocation
                 return new List<NominatimGeolocation>();
             }
         }
+
+        public static string GetCountryName(string countryCode)
+        {
+            // TODO: Fix loading resources!
+            ResourceLoader _resourceLoader = new ResourceLoader();
+            return _resourceLoader.GetString(countryCode);
+        }
     }
 
+    class InternalGeolocation
+    {
+        public int id { get; set; }
+        public string name { get; set; }
+        public string state_code { get; set; }
+        public string country_code { get; set; }
+        public double latitude { get; set; }
+        public double longitude { get; set; }
+    }
+    
     class NominatimGeolocation
     {
         [JsonPropertyName("place_id")]
