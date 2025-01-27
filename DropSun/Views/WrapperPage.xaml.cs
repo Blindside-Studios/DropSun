@@ -28,6 +28,7 @@ namespace DropSun.Views
 
         private void WrapperPage_Loaded(object sender, RoutedEventArgs e)
         {
+            ContentFrame.CornerRadius = new Microsoft.UI.Xaml.CornerRadius(8, 8, 3, 8);
             FrameNavigationOptions navOptions = new FrameNavigationOptions();
             navOptions.TransitionInfoOverride = new DrillInNavigationTransitionInfo();
             Type pageType = typeof(WeatherView);
@@ -65,8 +66,16 @@ namespace DropSun.Views
 
         public void toggleSidebarState()
         {
-            if (isSideBarExpanded) collapseSidebar();
-            else expandSidebar();
+            if (isSideBarExpanded)
+            {
+                collapseSidebar();
+                ContentFrame.CornerRadius = new Microsoft.UI.Xaml.CornerRadius(8, 8, 3, 3);
+            }
+            else
+            {
+                expandSidebar();
+                ContentFrame.CornerRadius = new Microsoft.UI.Xaml.CornerRadius(8, 8, 3, 8);
+            }
         }
 
         public void expandSidebar()

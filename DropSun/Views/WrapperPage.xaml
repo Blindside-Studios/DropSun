@@ -20,7 +20,7 @@
         </Grid>
 
         <Grid Grid.Column="1">
-            <Frame x:Name="ContentFrame" Content="WeatherView" Margin="5,0,5,5" CornerRadius="3"/>
+            <Frame x:Name="ContentFrame" Content="WeatherView" Margin="5,0,5,5"/>
         </Grid>
     </Grid>
 </Page>
