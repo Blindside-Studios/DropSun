@@ -1,5 +1,4 @@
-﻿using OpenMeteo;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -22,13 +21,6 @@ namespace DropSun.Model.Weather
                     OnPropertyChanged(nameof(Forecast));
                 }
             }
-        }
-
-        public static Condition getCondition(WeatherForecast forecast)
-        {
-            if (forecast.Current.Precipitation == 0) return Condition.Sunny;
-            else if (forecast.Current.Rain > 0) return Condition.Rainy;
-            else return Condition.NotYetAvailable;            
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

@@ -60,7 +60,7 @@ namespace DropSun.Views
             weatherItem.Precipitation = (int)weatherForecast.Current.Precipitation;
         }
 
-        public void addDebugLocation(string location, Condition condition)
+        public void addDebugLocation(string location)
         {
             SidebarWeatherItem weatherItem = new()
             {
@@ -145,7 +145,6 @@ namespace DropSun.Views
 
         private void ShowSunnyButton_Click(object sender, RoutedEventArgs e)
         {
-            Model.ViewModels.WeatherState.Instance.Condition = Condition.Sunny;
             Model.ViewModels.WeatherState.Instance.Forecast = null;
             FrameNavigationOptions navOptions = new FrameNavigationOptions();
             navOptions.TransitionInfoOverride = new DrillInNavigationTransitionInfo();
@@ -155,7 +154,6 @@ namespace DropSun.Views
 
         private void ShowRainButton_Click(object sender, RoutedEventArgs e)
         {
-            Model.ViewModels.WeatherState.Instance.Condition = Condition.Rainy;
             Model.ViewModels.WeatherState.Instance.Forecast = null;
             FrameNavigationOptions navOptions = new FrameNavigationOptions();
             navOptions.TransitionInfoOverride = new DrillInNavigationTransitionInfo();

@@ -26,31 +26,7 @@
     <Page Update="Themes\Generic.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\Conditions\Sunny\SwingingGrass.xaml">
-      <SubType>Designer</SubType>
-    </Page>
     <Page Update="Views\WeatherCards\General.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Views\Conditions\Rainy\RainDrops.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Views\Conditions\Rendered\Rainy.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Views\Conditions\Sunny\StarSky.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Views\Conditions\Sunny\Ground.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Views\Conditions\Rendered\Sunny.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Views\Conditions\Sunny\Sun.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Views\Conditions\Sunny\BlueSky.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\WeatherView.xaml">

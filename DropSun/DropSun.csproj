@@ -22,14 +22,6 @@
     <Content Remove="Assets\Application\WeatherObjects\Star.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Remove="Views\Conditions\Rainy\RainDrops.xaml" />
-    <None Remove="Views\Conditions\Rendered\Rainy.xaml" />
-    <None Remove="Views\Conditions\Rendered\Sunny.xaml" />
-    <None Remove="Views\Conditions\Sunny\BlueSky.xaml" />
-    <None Remove="Views\Conditions\Sunny\Ground.xaml" />
-    <None Remove="Views\Conditions\Sunny\StarSky.xaml" />
-    <None Remove="Views\Conditions\Sunny\Sun.xaml" />
-    <None Remove="Views\Conditions\Sunny\SwingingGrass.xaml" />
     <None Remove="Views\Controls\SidebarWeatherItem.xaml" />
     <None Remove="Views\WeatherCards\General.xaml" />
     <None Remove="Views\WeatherView.xaml" />
@@ -49,8 +41,6 @@
     <PackageReference Include="Microsoft.Data.Sqlite" Version="9.0.1" />
     <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.6.250108002" />
     <PackageReference Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.26100.1742" />
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
-    <PackageReference Include="OpenMeteo.dotnet" Version="2.0.0" />
     <PackageReference Include="System.Text.Json" Version="9.0.1" />
     <Manifest Include="$(ApplicationManifest)" />
   </ItemGroup>
@@ -105,29 +95,7 @@
     <Page Update="Views\Controls\SidebarWeatherItem.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Update="Views\Conditions\Sunny\SwingingGrass.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Update="Views\WeatherCards\General.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Update="Views\Conditions\Rainy\RainDrops.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Update="Views\Conditions\Rendered\Rainy.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Update="Views\Conditions\Sunny\StarSky.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-  </ItemGroup>
-  <ItemGroup>
-    <Page Update="Views\Conditions\Sunny\Ground.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-  </ItemGroup>
-  <ItemGroup>
-    <Page Update="Views\Conditions\Sunny\Sun.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
@@ -138,16 +106,6 @@
   </ItemGroup>
   <ItemGroup>
     <Page Update="Views\WrapperPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-  </ItemGroup>
-  <ItemGroup>
-    <Page Update="Views\Conditions\Sunny\BlueSky.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-  </ItemGroup>
-  <ItemGroup>
-    <Page Update="Views\Conditions\Rendered\Sunny.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>

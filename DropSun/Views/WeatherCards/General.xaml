@@ -12,8 +12,8 @@
 
     <Grid>
         <StackPanel>
-            <TextBlock Text="{x:Bind vm:WeatherState.Instance.ConditionDescription, Mode=OneWay}" Style="{StaticResource TitleTextBlockStyle}"/>
-            <TextBlock Text="{x:Bind vm:WeatherState.Instance.TemperatureString, Mode=OneWay}" Style="{StaticResource DisplayTextBlockStyle}"/>
+            <TextBlock Text="{x:Bind vm:WeatherState.Instance.Forecast.Current.Temperature2M, Mode=OneWay}" Style="{StaticResource TitleTextBlockStyle}"/>
+            <TextBlock Text="{x:Bind vm:WeatherState.Instance.Forecast.Current.ApparentTemperature, Mode=OneWay}" Style="{StaticResource DisplayTextBlockStyle}"/>
         </StackPanel>
     </Grid>
 </Page>

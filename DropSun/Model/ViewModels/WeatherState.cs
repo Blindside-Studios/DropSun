@@ -1,5 +1,4 @@
 ﻿using DropSun.Model.Weather;
-using OpenMeteo;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -41,48 +40,6 @@ namespace DropSun.Model.ViewModels
                 {
                     _forecast = value;
                     OnPropertyChanged(nameof(Forecast));
-                }
-            }
-        }
-
-
-        private Condition _condition;
-        public Condition Condition
-        {
-            get => _condition;
-            set
-            {
-                if (_condition != value)
-                {
-                    _condition = value;
-                    OnPropertyChanged(nameof(Condition));
-                    switch (_condition)
-                    {
-                        case Condition.Sunny:
-                            ConditionDescription = "Sunny";
-                            break;
-                        case Condition.Rainy:
-                            ConditionDescription = "Rainy";
-                            break;
-                        default:
-                            ConditionDescription = "Unknown Condition";
-                            break;
-                    }
-                }
-            }
-        }
-
-
-        private string _conditionDescription;
-        public string ConditionDescription
-        {
-            get => _conditionDescription;
-            set
-            {
-                if (_conditionDescription != value)
-                {
-                    _conditionDescription = value;
-                    OnPropertyChanged(nameof(ConditionDescription));
                 }
             }
         }
