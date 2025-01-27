@@ -34,6 +34,16 @@ namespace DropSun.Views
         public WrapperPage()
         {
             this.InitializeComponent();
+            this.Loaded += WrapperPage_Loaded;
+        }
+
+        private void WrapperPage_Loaded(object sender, RoutedEventArgs e)
+        {
+            FrameNavigationOptions navOptions = new FrameNavigationOptions();
+            navOptions.TransitionInfoOverride = new DrillInNavigationTransitionInfo();
+            Type pageType = typeof(WeatherView);
+            ContentFrame.NavigateToType(pageType, null, navOptions);
+            
         }
 
         public async void addLocation(InternalGeolocation SelectedLocation)

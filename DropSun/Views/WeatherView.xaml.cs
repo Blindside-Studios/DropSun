@@ -33,6 +33,7 @@ namespace DropSun.Views
         private void WeatherView_Loaded(object sender, RoutedEventArgs e)
         {
             ContentFrame.NavigateToType(typeof(Pikouna_Engine.WeatherView), null, null);
+            GeneralFrame.NavigateToType(typeof(WeatherCards.General), null, null);
         }
 
         private void Weather_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
