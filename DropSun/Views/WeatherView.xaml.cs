@@ -48,14 +48,14 @@ namespace DropSun.Views
             ContentFrame.NavigateToType(typeof(Pikouna_Engine.WeatherView), null, null);
             GeneralFrame.NavigateToType(typeof(WeatherCards.General), null, null);
 
-            WeatherCards = new ObservableCollection<WeatherCard>
+            /*WeatherCards = new ObservableCollection<WeatherCard>
             {
                 new WeatherCard { PageType = typeof(BlankCard), ColumnSpan = 1, RowSpan = 1, Width = 300, Height = 300 },
                 new WeatherCard { PageType = typeof(BlankCard), ColumnSpan = 2, RowSpan = 1, Width = 620, Height = 300 },
                 new WeatherCard { PageType = typeof(BlankCard), ColumnSpan = 1, RowSpan = 1, Width = 300, Height = 300 },
                 new WeatherCard { PageType = typeof(BlankCard), ColumnSpan = 1, RowSpan = 1, Width = 300, Height = 300 }
             };
-            WidgetSpawner.ItemsSource = WeatherCards;
+            WidgetSpawner.ItemsSource = WeatherCards;*/
         }
 
         private void Weather_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)

@@ -218,7 +218,7 @@ namespace DropSun
                 System.Diagnostics.Debug.WriteLine($"Selected: {selectedLocation.name}, {selectedLocation.state_code}, {selectedLocation.country_code}");
 
                 var wrapperPage = ContentFrame.Content as WrapperPage;
-                wrapperPage.addLocation(selectedLocation);
+                wrapperPage.addLocation(selectedLocation, true);
             }
             else
             {

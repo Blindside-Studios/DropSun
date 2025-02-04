@@ -15,19 +15,6 @@
         <ScrollView x:Name="ItemsScrollView">
             <StackPanel Orientation="Vertical">
                 <!-- <Border x:Name="ContentTopBorder" Height="350"/> -->
-                <ItemsControl x:Name="WidgetSpawner" ItemsSource="{Binding WeatherCards}">
-                    <ItemsControl.ItemsPanel>
-                        <ItemsPanelTemplate>
-                            <VariableSizedWrapGrid Orientation="Horizontal" MaximumRowsOrColumns="4" ItemHeight="320" ItemWidth="320"/>
-                        </ItemsPanelTemplate>
-                    </ItemsControl.ItemsPanel>
-
-                    <ItemsControl.ItemTemplate>
-                        <DataTemplate>
-                            <Frame VariableSizedWrapGrid.RowSpan="{Binding RowSpan}" VariableSizedWrapGrid.ColumnSpan="{Binding ColumnSpan}" SourcePageType="{Binding PageType}" Width="{Binding Width}" Height="{Binding Height}" Margin="10" CornerRadius="8"/>
-                        </DataTemplate>
-                    </ItemsControl.ItemTemplate>
-                </ItemsControl>
             </StackPanel>
         </ScrollView>
     </Grid>
