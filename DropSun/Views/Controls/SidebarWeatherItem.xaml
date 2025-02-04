@@ -20,58 +20,67 @@
 
         <Grid Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Stretch">
             <Grid.RowDefinitions>
-                <RowDefinition Height="27"/>
-                <RowDefinition Height="21"/>
+                <RowDefinition Height="4"/>
+                <RowDefinition Height="28"/>
+                <RowDefinition Height="8"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="4"/>
             </Grid.RowDefinitions>
+
+            <Grid Grid.Row="1" HorizontalAlignment="Stretch">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="10"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="10"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="10"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock  x:Name="LocationTextBox" 
+                            Grid.Column="1"
+                            Style="{StaticResource SubtitleTextBlockStyle}" 
+                            Text="{Binding Location, RelativeSource={RelativeSource Mode=TemplatedParent}}" 
+                            VerticalAlignment="Top"
+                            HorizontalAlignment="Left"/>
+                <TextBlock  x:Name="TemperatureTextBox" 
+                            Grid.Column="3"
+                            Style="{StaticResource SubtitleTextBlockStyle}" 
+                            VerticalAlignment="Top"/>
+            </Grid>
+
+            <Grid Grid.Row="3" HorizontalAlignment="Stretch" Opacity="0.75">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="10"/>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="10"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="10"/>
+                </Grid.ColumnDefinitions>
+                <FontIcon   Glyph="&#xE706;" FontSize="14"
+                            Grid.Column="1"
+                            VerticalAlignment="Center"/>
+                <TextBlock  x:Name="ConditionsTextBox" 
+                            Grid.Column="2"
+                            Style="{StaticResource BodyTextBlockStyle}" 
+                            VerticalAlignment="Top"
+                            HorizontalAlignment="Left"
+                            Margin="5,0,0,0"/>
+                <FontIcon   Glyph="&#xEB42;" FontSize="14"
+                            Grid.Column="4"
+                            VerticalAlignment="Center"/>
+                <TextBlock  x:Name="PrecipitationTextBox" 
+                            Grid.Column="5"
+                            Style="{StaticResource BodyTextBlockStyle}" 
+                            VerticalAlignment="Top"
+                            Margin="5,0,0,0"/>
+            </Grid>
         </Grid>
 
-        <Grid Grid.Row="0" HorizontalAlignment="Stretch">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="Auto"/>
-            </Grid.ColumnDefinitions>
-            <TextBlock  x:Name="LocationTextBox" 
-                        Grid.Column="0"
-                        Style="{StaticResource SubtitleTextBlockStyle}" 
-                        Text="{Binding Location, RelativeSource={RelativeSource Mode=TemplatedParent}}" 
-                        VerticalAlignment="Center"
-                        HorizontalAlignment="Left"/>
-            <TextBlock  x:Name="TemperatureTextBox" 
-                        Grid.Column="1"
-                        Style="{StaticResource SubtitleTextBlockStyle}" 
-                        VerticalAlignment="Center"/>
-        </Grid>
 
-        <Grid Grid.Row="1" HorizontalAlignment="Stretch">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto" />
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="Auto" />
-            </Grid.ColumnDefinitions>
-            <FontIcon   Glyph="&#xE706;" FontSize="15"
-                        Grid.Column="0"
-                        VerticalAlignment="Center"/>
-            <TextBlock  x:Name="ConditionsTextBox" 
-                        Grid.Column="1"
-                        Style="{StaticResource BodyTextBlockStyle}" 
-                        VerticalAlignment="Center"
-                        HorizontalAlignment="Left"
-                        Margin="5,0,0,0"/>
-            <FontIcon   Glyph="&#xEB42;" FontSize="15"
-                        Grid.Column="2"
-                        VerticalAlignment="Center"/>
-            <TextBlock  x:Name="PrecipitationTextBox" 
-                        Grid.Column="3"
-                        Style="{StaticResource BodyTextBlockStyle}" 
-                        VerticalAlignment="Center"
-                        Margin="5,0,0,0"/>
-        </Grid>
 
-        
-        
-        
-        
+
+
         <!--<Grid Grid.Column="1" VerticalAlignment="Center">
             <Grid.RowDefinitions>
                 <RowDefinition Height="25"/>

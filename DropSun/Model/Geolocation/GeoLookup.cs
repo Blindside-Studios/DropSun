@@ -9,7 +9,8 @@ using System.Diagnostics;
 using System.Text.Json.Serialization;
 using Microsoft.Data.Sqlite;
 using Windows.Storage;
-using Microsoft.Windows.ApplicationModel.Resources;
+using Windows.ApplicationModel.Resources;
+using System.ComponentModel.Design;
 
 namespace DropSun.Model.Geolocation
 {
@@ -61,7 +62,7 @@ namespace DropSun.Model.Geolocation
                                 id = reader.GetInt32(0),
                                 name = reader.GetString(1),
                                 state_code = reader.GetString(2),
-                                country_code = reader.GetString(3),//GetCountryName(reader.GetString(3)),
+                                country_code = GetCountryName(reader.GetString(3)),
                                 latitude = reader.GetDouble(4),
                                 longitude = reader.GetDouble(5)
                             };
@@ -109,9 +110,11 @@ namespace DropSun.Model.Geolocation
 
         public static string GetCountryName(string countryCode)
         {
-            // TODO: Fix loading resources!
+            // TODO: Fix loading resources! This loads empty strings!
             ResourceLoader _resourceLoader = new ResourceLoader();
-            return _resourceLoader.GetString(countryCode);
+            string countryName = _resourceLoader.GetString($"Countries/{countryCode}");
+            if (!string.IsNullOrEmpty(countryName)) return countryName;
+            else return countryCode;
         }
     }
 
