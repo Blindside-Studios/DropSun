@@ -19,7 +19,7 @@
             <Frame x:Name="ContentFrame" Content="WeatherView" Margin="0,0,5,5"/>
         </Grid>
 
-        <Grid x:Name="SidebarContainer" Grid.Column="0" Width="275" Clip="{x:Null}">
+        <Grid x:Name="SidebarContainer" Grid.Column="0" Width="275" Clip="{x:Null}" RightTapped="SidebarContainer_RightTapped" DoubleTapped="SidebarContainer_DoubleTapped">
             <ScrollView x:Name="LocationsScrollViewer" Width="255" HorizontalAlignment="Right" VerticalAlignment="Stretch" Margin="5,0,0,0" Clip="{x:Null}">
                 <StackPanel x:Name="LocationsStackPanel" Grid.Column="0" HorizontalAlignment="Right" Width="245" Margin="0,-5,5,0" Clip="{x:Null}"/>
             </ScrollView>

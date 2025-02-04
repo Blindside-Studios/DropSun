@@ -9,6 +9,7 @@ using Microsoft.UI.Xaml.Media;
 using Microsoft.UI.Xaml.Media.Animation;
 using Microsoft.UI.Xaml.Navigation;
 using System;
+using System.Linq;
 using Windows.Foundation;
 
 // To learn more about WinUI, the WinUI project structure,
@@ -214,6 +215,33 @@ namespace DropSun.Views
 
             currentAnimation = sb;
             sb.Begin();
+        }
+
+        private void SidebarContainer_RightTapped(object sender, Microsoft.UI.Xaml.Input.RightTappedRoutedEventArgs e)
+        {
+            Random rnd = new Random();
+            SidebarWeatherItem weatherItem = new()
+            {
+                Location = $"Location {LocationsStackPanel.Children.Count().ToString()}",                
+            };
+
+            Frame frame = new Frame();
+            frame.Content = weatherItem;
+
+            var weatherForecast = new OpenMeteoWeatherOverview { 
+                Current = new CurrentWeather { WeatherCode = 0, Temperature2M = 15, Precipitation = 0 },
+                CurrentUnits = new CurrentUnits { Temperature2M = "°C", Precipitation = "mm" }
+            };
+            weatherItem.Weather = weatherForecast;
+            weatherItem.Temperature = 5;
+            weatherItem.Precipitation = 0;
+            
+            animateItem(frame);
+        }
+
+        private void SidebarContainer_DoubleTapped(object sender, Microsoft.UI.Xaml.Input.DoubleTappedRoutedEventArgs e)
+        {
+            LocationsStackPanel.Children.Clear();
         }
     }
 }
