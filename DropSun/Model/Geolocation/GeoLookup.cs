@@ -31,22 +31,15 @@ namespace DropSun.Model.Geolocation
             {
                 connection.Open();
 
-                // Define your priority countries
-                var priorityCountries = new List<string> { "DE", "GB", "FR", "US" };
-
-                // Generate SQL CASE statement dynamically based on priorityCountries
-                string priorityCase = string.Join(" ",
-                    priorityCountries.Select((country, index) => $"WHEN country_code = '{country}' THEN {index + 1}")
-                );
-
-                // SQL query to filter cities by name and sort by priority countries
-                string sqlQuery = $@"
-        SELECT id, name, state_code, country_code, latitude, longitude 
-        FROM cities
-        WHERE name LIKE @query
-        ORDER BY 
-            CASE {priorityCase} ELSE {priorityCountries.Count + 1} END, -- Sort by priority countries
-            name ASC; -- Then sort alphabetically";
+                // SQL query to filter cities by name and sort by shortest WikiDataId, placing empty IDs last
+                string sqlQuery = @"
+SELECT id, name, state_code, country_code, latitude, longitude, wikiDataId 
+FROM cities
+WHERE name LIKE @query
+ORDER BY 
+    CASE WHEN wikiDataId = '' OR wikiDataId IS NULL THEN 1 ELSE 0 END, -- Push empty WikiDataIds to the bottom
+    LENGTH(wikiDataId) ASC,  -- Then sort by shortest WikiDataId first
+    name ASC; -- Finally, sort alphabetically";
 
                 using (var command = new SqliteCommand(sqlQuery, connection))
                 {
@@ -73,7 +66,6 @@ namespace DropSun.Model.Geolocation
 
                 connection.Close();
             }
-
 
             return results;
         }
