@@ -8,11 +8,13 @@ using Microsoft.UI.Xaml.Media;
 using Microsoft.UI.Xaml.Navigation;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.ApplicationModel.Activation;
+using Windows.ApplicationModel.Resources;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI;
@@ -73,9 +75,12 @@ namespace DropSun.Views.Controls
 
                 TemperatureTextBox.Text = ((double)value.Current.Temperature2M).ToString() + value.CurrentUnits.Temperature2M;
                 PrecipitationTextBox.Text = ((double)value.Current.Precipitation).ToString() + value.CurrentUnits.Precipitation;
+                ResourceLoader _resourceLoader = new ResourceLoader();
+                Debug.WriteLine($"WeatherDescriptions.{value.GetWeatherDescription().ToString()}");
+                ConditionsTextBox.Text = _resourceLoader.GetString($"WeatherDescriptions.{value.GetWeatherDescription().ToString()}");
 
                 System.Drawing.Color color = new();
-                
+
                 switch (value.Current.WeatherCode)
                 {
                     // taken these code from here https://open-meteo.com/en/docs#:~:text=WMO%20Weather%20interpretation%20codes%20(WW)

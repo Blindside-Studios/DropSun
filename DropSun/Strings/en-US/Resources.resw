@@ -124,4 +124,88 @@
     <value>DropSun</value>
     <comment>App name - only for translation into different character sets</comment>
   </data>
+  <data name="WeatherDescriptions.ClearSky" xml:space="preserve">
+    <value>Clear Sky</value>
+  </data>
+  <data name="WeatherDescriptions.MainlyClear" xml:space="preserve">
+    <value>Mainly Clear</value>
+  </data>
+  <data name="WeatherDescriptions.PartlyCloudy" xml:space="preserve">
+    <value>Partly Cloudy</value>
+  </data>
+  <data name="WeatherDescriptions.Overcast" xml:space="preserve">
+    <value>Overcast</value>
+  </data>
+  <data name="WeatherDescriptions.Fog" xml:space="preserve">
+    <value>Fog</value>
+  </data>
+  <data name="WeatherDescriptions.DepositingRimeFog" xml:space="preserve">
+    <value>Depositing Rime Fog</value>
+  </data>
+  <data name="WeatherDescriptions.DrizzleLight" xml:space="preserve">
+    <value>Light Drizzle</value>
+  </data>
+  <data name="WeatherDescriptions.DrizzleModerate" xml:space="preserve">
+    <value>Moderate Drizzle</value>
+  </data>
+  <data name="WeatherDescriptions.DrizzleDense" xml:space="preserve">
+    <value>Dense Drizzle</value>
+  </data>
+  <data name="WeatherDescriptions.FreezingDrizzleLight" xml:space="preserve">
+    <value>Light Freezing Drizzle</value>
+  </data>
+  <data name="WeatherDescriptions.FreezingDrizzleDense" xml:space="preserve">
+    <value>Dense Freezing Drizzle</value>
+  </data>
+  <data name="WeatherDescriptions.RainSlight" xml:space="preserve">
+    <value>Slight Rain</value>
+  </data>
+  <data name="WeatherDescriptions.RainModerate" xml:space="preserve">
+    <value>Moderate Rain</value>
+  </data>
+  <data name="WeatherDescriptions.RainHeavy" xml:space="preserve">
+    <value>Heavy Rain</value>
+  </data>
+  <data name="WeatherDescriptions.FreezingRainLight" xml:space="preserve">
+    <value>Light Freezing Rain</value>
+  </data>
+  <data name="WeatherDescriptions.FreezingRainHeavy" xml:space="preserve">
+    <value>Heavy Freezing Rain</value>
+  </data>
+  <data name="WeatherDescriptions.SnowFallSlight" xml:space="preserve">
+    <value>Slight Snow Fall</value>
+  </data>
+  <data name="WeatherDescriptions.SnowFallModerate" xml:space="preserve">
+    <value>Moderate Snow Fall</value>
+  </data>
+  <data name="WeatherDescriptions.SnowFallHeavy" xml:space="preserve">
+    <value>Heavy Snow Fall</value>
+  </data>
+  <data name="WeatherDescriptions.SnowGrains" xml:space="preserve">
+    <value>Snow Grains</value>
+  </data>
+  <data name="WeatherDescriptions.RainShowersSlight" xml:space="preserve">
+    <value>Slight Rain Showers</value>
+  </data>
+  <data name="WeatherDescriptions.RainShowersModerate" xml:space="preserve">
+    <value>Moderate Rain Showers</value>
+  </data>
+  <data name="WeatherDescriptions.RainShowersViolent" xml:space="preserve">
+    <value>Violent Rain Showers</value>
+  </data>
+  <data name="WeatherDescriptions.SnowShowersSlight" xml:space="preserve">
+    <value>Slight Snow Showers</value>
+  </data>
+  <data name="WeatherDescriptions.SnowShowersHeavy" xml:space="preserve">
+    <value>Heavy Snow Showers</value>
+  </data>
+  <data name="WeatherDescriptions.ThunderstormSlightOrModerate" xml:space="preserve">
+    <value>Moderate Thunderstorm</value>
+  </data>
+  <data name="WeatherDescriptions.ThunderstormWithHailSlight" xml:space="preserve">
+    <value>Slight Thunderstorm with Hail</value>
+  </data>
+  <data name="WeatherDescriptions.ThunderstormWithHailHeavy" xml:space="preserve">
+    <value>Heavy Thunderstorm with Hail</value>
+  </data>
 </root>

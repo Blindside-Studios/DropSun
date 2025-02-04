@@ -117,22 +117,22 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="DE" xml:space="preserve">
+  <data name="Countries.DE" xml:space="preserve">
     <value>Germany</value>
   </data>
-  <data name="FR" xml:space="preserve">
+  <data name="Countries.FR" xml:space="preserve">
     <value>France</value>
   </data>
-  <data name="GB" xml:space="preserve">
+  <data name="Countries.GB" xml:space="preserve">
     <value>United Kingdom</value>
   </data>
-  <data name="IN" xml:space="preserve">
+  <data name="Countries.IN" xml:space="preserve">
     <value>India</value>
   </data>
-  <data name="JP" xml:space="preserve">
+  <data name="Countries.JP" xml:space="preserve">
     <value>Japan</value>
   </data>
-  <data name="US" xml:space="preserve">
+  <data name="Countries.US" xml:space="preserve">
     <value>United States</value>
   </data>
 </root>

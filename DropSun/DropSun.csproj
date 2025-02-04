@@ -23,6 +23,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Remove="Views\Controls\SidebarWeatherItem.xaml" />
+    <None Remove="Views\WeatherCards\BlankCard.xaml" />
     <None Remove="Views\WeatherCards\General.xaml" />
     <None Remove="Views\WeatherView.xaml" />
     <None Remove="Views\WrapperPage.xaml" />
@@ -92,6 +93,9 @@
     <None Update="Model\Geolocation\locations.sqlite3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <Page Update="Views\WeatherCards\BlankCard.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Update="Views\Controls\SidebarWeatherItem.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>

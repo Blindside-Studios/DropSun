@@ -12,5 +12,23 @@
     <Grid x:Name="ContentGrid" PointerMoved="ContentGrid_PointerMoved" PointerExited="ContentGrid_PointerExited" PointerEntered="ContentGrid_PointerEntered">
         <Frame x:Name="ContentFrame" Content="Background" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
         <Frame x:Name="GeneralFrame" Content="General" Margin="50,50,0,0" HorizontalAlignment="Left" VerticalAlignment="Stretch"/>
+        <ScrollView x:Name="ItemsScrollView">
+            <StackPanel Orientation="Vertical">
+                <!-- <Border x:Name="ContentTopBorder" Height="350"/> -->
+                <ItemsControl x:Name="WidgetSpawner" ItemsSource="{Binding WeatherCards}">
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <VariableSizedWrapGrid Orientation="Horizontal" MaximumRowsOrColumns="4" ItemHeight="320" ItemWidth="320"/>
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <Frame VariableSizedWrapGrid.RowSpan="{Binding RowSpan}" VariableSizedWrapGrid.ColumnSpan="{Binding ColumnSpan}" SourcePageType="{Binding PageType}" Width="{Binding Width}" Height="{Binding Height}" Margin="10" CornerRadius="8"/>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </StackPanel>
+        </ScrollView>
     </Grid>
 </Page>

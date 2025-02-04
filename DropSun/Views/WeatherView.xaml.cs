@@ -15,14 +15,27 @@ using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Pikouna_Engine;
+using System.Collections.ObjectModel;
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
 
 namespace DropSun.Views
 {
+    public class WeatherCard
+    {
+        public Type PageType { get; set; }
+        public int ColumnSpan { get; set; }
+        public int RowSpan { get; set; }
+        public int Width { get; set; }
+        public int Height { get; set; }
+    }
+
     public sealed partial class WeatherView : Page
     {
+        public ObservableCollection<WeatherCard> WeatherCards { get; set; }
+
+
         public WeatherView()
         {
             this.InitializeComponent();
@@ -34,6 +47,15 @@ namespace DropSun.Views
         {
             ContentFrame.NavigateToType(typeof(Pikouna_Engine.WeatherView), null, null);
             GeneralFrame.NavigateToType(typeof(WeatherCards.General), null, null);
+
+            WeatherCards = new ObservableCollection<WeatherCard>
+            {
+                new WeatherCard { PageType = typeof(BlankCard), ColumnSpan = 1, RowSpan = 1, Width = 300, Height = 300 },
+                new WeatherCard { PageType = typeof(BlankCard), ColumnSpan = 2, RowSpan = 1, Width = 620, Height = 300 },
+                new WeatherCard { PageType = typeof(BlankCard), ColumnSpan = 1, RowSpan = 1, Width = 300, Height = 300 },
+                new WeatherCard { PageType = typeof(BlankCard), ColumnSpan = 1, RowSpan = 1, Width = 300, Height = 300 }
+            };
+            WidgetSpawner.ItemsSource = WeatherCards;
         }
 
         private void Weather_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)

@@ -16,9 +16,63 @@
 
         <Frame x:Name="SkyFrame"/>
 
-        <FontIcon Glyph="&#xE706;" Grid.Column="0" FontSize="38" Margin="10,10,10,10"/>
+        <!--<FontIcon Glyph="&#xE706;" Grid.Column="0" FontSize="38" Margin="10,10,10,10"/>-->
+
+        <Grid Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Stretch">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="27"/>
+                <RowDefinition Height="21"/>
+            </Grid.RowDefinitions>
+        </Grid>
+
+        <Grid Grid.Row="0" HorizontalAlignment="Stretch">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock  x:Name="LocationTextBox" 
+                        Grid.Column="0"
+                        Style="{StaticResource SubtitleTextBlockStyle}" 
+                        Text="{Binding Location, RelativeSource={RelativeSource Mode=TemplatedParent}}" 
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Left"/>
+            <TextBlock  x:Name="TemperatureTextBox" 
+                        Grid.Column="1"
+                        Style="{StaticResource SubtitleTextBlockStyle}" 
+                        VerticalAlignment="Center"/>
+        </Grid>
+
+        <Grid Grid.Row="1" HorizontalAlignment="Stretch">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <FontIcon   Glyph="&#xE706;" FontSize="15"
+                        Grid.Column="0"
+                        VerticalAlignment="Center"/>
+            <TextBlock  x:Name="ConditionsTextBox" 
+                        Grid.Column="1"
+                        Style="{StaticResource BodyTextBlockStyle}" 
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Left"
+                        Margin="5,0,0,0"/>
+            <FontIcon   Glyph="&#xEB42;" FontSize="15"
+                        Grid.Column="2"
+                        VerticalAlignment="Center"/>
+            <TextBlock  x:Name="PrecipitationTextBox" 
+                        Grid.Column="3"
+                        Style="{StaticResource BodyTextBlockStyle}" 
+                        VerticalAlignment="Center"
+                        Margin="5,0,0,0"/>
+        </Grid>
+
         
-        <Grid Grid.Column="1" VerticalAlignment="Center">
+        
+        
+        
+        <!--<Grid Grid.Column="1" VerticalAlignment="Center">
             <Grid.RowDefinitions>
                 <RowDefinition Height="25"/>
                 <RowDefinition Height="23"/>
@@ -56,6 +110,6 @@
                             VerticalAlignment="Center"
                             Margin="5,0,0,0"/>
             </Grid>
-        </Grid>
+        </Grid>-->
     </Grid>
 </UserControl>
