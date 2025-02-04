@@ -1,0 +1,390 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>  
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+            <xsd:complexType>
+                <xsd:choice maxOccurs="unbounded">
+                    <xsd:element name="data">
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+                            </xsd:sequence>
+                            <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+                            <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+                            <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+                        </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="resheader">
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                            </xsd:sequence>
+                            <xsd:attribute name="name" type="xsd:string" use="required" />
+                        </xsd:complexType>
+                    </xsd:element>
+                </xsd:choice>
+            </xsd:complexType>
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+  <data name="US/AL" xml:space="preserve">
+    <value>Alabama</value>
+  </data>
+  <data name="US/AK" xml:space="preserve">
+    <value>Alaska</value>
+  </data>
+  <data name="US/AZ" xml:space="preserve">
+    <value>Arizona</value>
+  </data>
+  <data name="US/AR" xml:space="preserve">
+    <value>Arkansas</value>
+  </data>
+  <data name="US/CA" xml:space="preserve">
+    <value>California</value>
+  </data>
+  <data name="US/CO" xml:space="preserve">
+    <value>Colorado</value>
+  </data>
+  <data name="US/CT" xml:space="preserve">
+    <value>Connecticut</value>
+  </data>
+  <data name="US/DE" xml:space="preserve">
+    <value>Delaware</value>
+  </data>
+  <data name="US/FL" xml:space="preserve">
+    <value>Florida</value>
+  </data>
+  <data name="US/GA" xml:space="preserve">
+    <value>Georgia</value>
+  </data>
+  <data name="US/HI" xml:space="preserve">
+    <value>Hawaii</value>
+  </data>
+  <data name="US/ID" xml:space="preserve">
+    <value>Idaho</value>
+  </data>
+  <data name="US/IL" xml:space="preserve">
+    <value>Illinois</value>
+  </data>
+  <data name="US/IN" xml:space="preserve">
+    <value>Indiana</value>
+  </data>
+  <data name="US/IA" xml:space="preserve">
+    <value>Iowa</value>
+  </data>
+  <data name="US/KS" xml:space="preserve">
+    <value>Kansas</value>
+  </data>
+  <data name="US/KY" xml:space="preserve">
+    <value>Kentucky</value>
+  </data>
+  <data name="US/LA" xml:space="preserve">
+    <value>Louisiana</value>
+  </data>
+  <data name="US/ME" xml:space="preserve">
+    <value>Maine</value>
+  </data>
+  <data name="US/MD" xml:space="preserve">
+    <value>Maryland</value>
+  </data>
+  <data name="US/MA" xml:space="preserve">
+    <value>Massachusetts</value>
+  </data>
+  <data name="US/MI" xml:space="preserve">
+    <value>Michigan</value>
+  </data>
+  <data name="US/MN" xml:space="preserve">
+    <value>Minnesota</value>
+  </data>
+  <data name="US/MS" xml:space="preserve">
+    <value>Mississippi</value>
+  </data>
+  <data name="US/MO" xml:space="preserve">
+    <value>Missouri</value>
+  </data>
+  <data name="US/MT" xml:space="preserve">
+    <value>Montana</value>
+  </data>
+  <data name="US/NE" xml:space="preserve">
+    <value>Nebraska</value>
+  </data>
+  <data name="US/NV" xml:space="preserve">
+    <value>Nevada</value>
+  </data>
+  <data name="US/NH" xml:space="preserve">
+    <value>New Hampshire</value>
+  </data>
+  <data name="US/NJ" xml:space="preserve">
+    <value>New Jersey</value>
+  </data>
+  <data name="US/NM" xml:space="preserve">
+    <value>New Mexico</value>
+  </data>
+  <data name="US/NY" xml:space="preserve">
+    <value>New York</value>
+  </data>
+  <data name="US/NC" xml:space="preserve">
+    <value>North Carolina</value>
+  </data>
+  <data name="US/ND" xml:space="preserve">
+    <value>North Dakota</value>
+  </data>
+  <data name="US/OH" xml:space="preserve">
+    <value>Ohio</value>
+  </data>
+  <data name="US/OK" xml:space="preserve">
+    <value>Oklahoma</value>
+  </data>
+  <data name="US/OR" xml:space="preserve">
+    <value>Oregon</value>
+  </data>
+  <data name="US/PA" xml:space="preserve">
+    <value>Pennsylvania</value>
+  </data>
+  <data name="US/RI" xml:space="preserve">
+    <value>Rhode Island</value>
+  </data>
+  <data name="US/SC" xml:space="preserve">
+    <value>South Carolina</value>
+  </data>
+  <data name="US/SD" xml:space="preserve">
+    <value>South Dakota</value>
+  </data>
+  <data name="US/TN" xml:space="preserve">
+    <value>Tennessee</value>
+  </data>
+  <data name="US/TX" xml:space="preserve">
+    <value>Texas</value>
+  </data>
+  <data name="US/UT" xml:space="preserve">
+    <value>Utah</value>
+  </data>
+  <data name="US/VT" xml:space="preserve">
+    <value>Vermont</value>
+  </data>
+  <data name="US/VA" xml:space="preserve">
+    <value>Virginia</value>
+  </data>
+  <data name="US/WA" xml:space="preserve">
+    <value>Washington</value>
+  </data>
+  <data name="US/WV" xml:space="preserve">
+    <value>West Virginia</value>
+  </data>
+  <data name="US/WI" xml:space="preserve">
+    <value>Wisconsin</value>
+  </data>
+  <data name="US/WY" xml:space="preserve">
+    <value>Wyoming</value>
+  </data>
+  <data name="DE/BW" xml:space="preserve">
+    <value>Baden-Württemberg</value>
+  </data>
+  <data name="DE/BY" xml:space="preserve">
+    <value>Bavaria</value>
+  </data>
+  <data name="DE/BE" xml:space="preserve">
+    <value>Berlin</value>
+  </data>
+  <data name="DE/BB" xml:space="preserve">
+    <value>Brandenburg</value>
+  </data>
+  <data name="DE/HB" xml:space="preserve">
+    <value>Bremen</value>
+  </data>
+  <data name="DE/HH" xml:space="preserve">
+    <value>Hamburg</value>
+  </data>
+  <data name="DE/HE" xml:space="preserve">
+    <value>Hesse</value>
+  </data>
+  <data name="DE/MV" xml:space="preserve">
+    <value>Mecklenburg-Western Pomerania</value>
+  </data>
+  <data name="DE/NI" xml:space="preserve">
+    <value>Lower Saxony</value>
+  </data>
+  <data name="DE/NW" xml:space="preserve">
+    <value>North Rhine-Westphalia</value>
+  </data>
+  <data name="DE/RP" xml:space="preserve">
+    <value>Rhineland-Palatinate</value>
+  </data>
+  <data name="DE/SL" xml:space="preserve">
+    <value>Saarland</value>
+  </data>
+  <data name="DE/SN" xml:space="preserve">
+    <value>Saxony</value>
+  </data>
+  <data name="DE/ST" xml:space="preserve">
+    <value>Saxony-Anhalt</value>
+  </data>
+  <data name="DE/SH" xml:space="preserve">
+    <value>Schleswig-Holstein</value>
+  </data>
+  <data name="DE/TH" xml:space="preserve">
+    <value>Thuringia</value>
+  </data>
+  <data name="ES/AN" xml:space="preserve">
+    <value>Andalusia</value>
+  </data>
+  <data name="ES/AR" xml:space="preserve">
+    <value>Aragon</value>
+  </data>
+  <data name="ES/AS" xml:space="preserve">
+    <value>Asturias</value>
+  </data>
+  <data name="ES/CN" xml:space="preserve">
+    <value>Canary Islands</value>
+  </data>
+  <data name="ES/CB" xml:space="preserve">
+    <value>Cantabria</value>
+  </data>
+  <data name="ES/CL" xml:space="preserve">
+    <value>Castile and León</value>
+  </data>
+  <data name="ES/CM" xml:space="preserve">
+    <value>Castilla-La Mancha</value>
+  </data>
+  <data name="ES/CT" xml:space="preserve">
+    <value>Catalonia</value>
+  </data>
+  <data name="ES/EX" xml:space="preserve">
+    <value>Extremadura</value>
+  </data>
+  <data name="ES/GA" xml:space="preserve">
+    <value>Galicia</value>
+  </data>
+  <data name="ES/IB" xml:space="preserve">
+    <value>Balearic Islands</value>
+  </data>
+  <data name="ES/RI" xml:space="preserve">
+    <value>La Rioja</value>
+  </data>
+  <data name="ES/MD" xml:space="preserve">
+    <value>Madrid</value>
+  </data>
+  <data name="ES/MC" xml:space="preserve">
+    <value>Murcia</value>
+  </data>
+  <data name="ES/NC" xml:space="preserve">
+    <value>Navarre</value>
+  </data>
+  <data name="ES/PV" xml:space="preserve">
+    <value>Basque Country</value>
+  </data>
+  <data name="ES/VC" xml:space="preserve">
+    <value>Valencian Community</value>
+  </data>
+  <data name="IT/AB" xml:space="preserve">
+    <value>Abruzzo</value>
+  </data>
+  <data name="IT/BA" xml:space="preserve">
+    <value>Basilicata</value>
+  </data>
+  <data name="IT/CN" xml:space="preserve">
+    <value>Calabria</value>
+  </data>
+  <data name="IT/CM" xml:space="preserve">
+    <value>Campania</value>
+  </data>
+  <data name="IT/EM" xml:space="preserve">
+    <value>Emilia-Romagna</value>
+  </data>
+  <data name="IT/FV" xml:space="preserve">
+    <value>Friuli Venezia Giulia</value>
+  </data>
+  <data name="IT/LZ" xml:space="preserve">
+    <value>Lazio</value>
+  </data>
+  <data name="IT/LG" xml:space="preserve">
+    <value>Liguria</value>
+  </data>
+  <data name="IT/LO" xml:space="preserve">
+    <value>Lombardy</value>
+  </data>
+  <data name="IT/MA" xml:space="preserve">
+    <value>Marche</value>
+  </data>
+  <data name="IT/MO" xml:space="preserve">
+    <value>Molise</value>
+  </data>
+  <data name="IT/PA" xml:space="preserve">
+    <value>Piedmont</value>
+  </data>
+  <data name="IT/PZ" xml:space="preserve">
+    <value>Apulia</value>
+  </data>
+  <data name="IT/SR" xml:space="preserve">
+    <value>Sardinia</value>
+  </data>
+  <data name="IT/SI" xml:space="preserve">
+    <value>Sicily</value>
+  </data>
+  <data name="IT/TR" xml:space="preserve">
+    <value>Trentino-South Tyrol</value>
+  </data>
+  <data name="IT/TU" xml:space="preserve">
+    <value>Tuscany</value>
+  </data>
+  <data name="IT/UM" xml:space="preserve">
+    <value>Umbria</value>
+  </data>
+  <data name="IT/VA" xml:space="preserve">
+    <value>Aosta Valley</value>
+  </data>
+  <data name="IT/VN" xml:space="preserve">
+    <value>Veneto</value>
+  </data>
+  <data name="FR/ARA" xml:space="preserve">
+    <value>Auvergne-Rhône-Alpes</value>
+  </data>
+  <data name="FR/BFC" xml:space="preserve">
+    <value>Bourgogne-Franche-Comté</value>
+  </data>
+  <data name="FR/BRE" xml:space="preserve">
+    <value>Brittany</value>
+  </data>
+  <data name="FR/CVL" xml:space="preserve">
+    <value>Centre-Val de Loire</value>
+  </data>
+  <data name="FR/COR" xml:space="preserve">
+    <value>Corsica</value>
+  </data>
+  <data name="FR/GES" xml:space="preserve">
+    <value>Grand Est</value>
+  </data>
+  <data name="FR/HDF" xml:space="preserve">
+    <value>Hauts-de-France</value>
+  </data>
+  <data name="FR/IDF" xml:space="preserve">
+    <value>Île-de-France</value>
+  </data>
+  <data name="FR/NOR" xml:space="preserve">
+    <value>Normandy</value>
+  </data>
+  <data name="FR/NAQ" xml:space="preserve">
+    <value>Nouvelle-Aquitaine</value>
+  </data>
+  <data name="FR/OCC" xml:space="preserve">
+    <value>Occitanie</value>
+  </data>
+  <data name="FR/PAC" xml:space="preserve">
+    <value>Provence-Alpes-Côte d'Azur</value>
+  </data>
+  <data name="FR/PDL" xml:space="preserve">
+    <value>Pays de la Loire</value>
+  </data>
+</root>

@@ -138,4 +138,100 @@
   <data name="US" xml:space="preserve">
     <value>United States</value>
   </data>
+  <data name="CN" xml:space="preserve">
+    <value>China</value>
+  </data>
+  <data name="RU" xml:space="preserve">
+    <value>Russia</value>
+  </data>
+  <data name="IN" xml:space="preserve">
+    <value>India</value>
+  </data>
+  <data name="BR" xml:space="preserve">
+    <value>Brazil</value>
+  </data>
+  <data name="AU" xml:space="preserve">
+    <value>Australia</value>
+  </data>
+  <data name="CA" xml:space="preserve">
+    <value>Canada</value>
+  </data>
+  <data name="MX" xml:space="preserve">
+    <value>Mexico</value>
+  </data>
+  <data name="KR" xml:space="preserve">
+    <value>South Korea</value>
+  </data>
+  <data name="ZA" xml:space="preserve">
+    <value>South Africa</value>
+  </data>
+  <data name="AR" xml:space="preserve">
+    <value>Argentina</value>
+  </data>
+  <data name="NL" xml:space="preserve">
+    <value>Netherlands</value>
+  </data>
+  <data name="SE" xml:space="preserve">
+    <value>Sweden</value>
+  </data>
+  <data name="NO" xml:space="preserve">
+    <value>Norway</value>
+  </data>
+  <data name="FI" xml:space="preserve">
+    <value>Finland</value>
+  </data>
+  <data name="DK" xml:space="preserve">
+    <value>Denmark</value>
+  </data>
+  <data name="PL" xml:space="preserve">
+    <value>Poland</value>
+  </data>
+  <data name="CH" xml:space="preserve">
+    <value>Switzerland</value>
+  </data>
+  <data name="AT" xml:space="preserve">
+    <value>Austria</value>
+  </data>
+  <data name="BE" xml:space="preserve">
+    <value>Belgium</value>
+  </data>
+  <data name="PT" xml:space="preserve">
+    <value>Portugal</value>
+  </data>
+  <data name="GR" xml:space="preserve">
+    <value>Greece</value>
+  </data>
+  <data name="TR" xml:space="preserve">
+    <value>Turkey</value>
+  </data>
+  <data name="IE" xml:space="preserve">
+    <value>Ireland</value>
+  </data>
+  <data name="NZ" xml:space="preserve">
+    <value>New Zealand</value>
+  </data>
+  <data name="UA" xml:space="preserve">
+    <value>Ukraine</value>
+  </data>
+  <data name="TH" xml:space="preserve">
+    <value>Thailand</value>
+  </data>
+  <data name="SG" xml:space="preserve">
+    <value>Singapore</value>
+  </data>
+  <data name="MY" xml:space="preserve">
+    <value>Malaysia</value>
+  </data>
+  <data name="PH" xml:space="preserve">
+    <value>Philippines</value>
+  </data>
+  <data name="ID" xml:space="preserve">
+    <value>Indonesia</value>
+  </data>
+  <data name="EG" xml:space="preserve">
+    <value>Egypt</value>
+  </data>
+  <data name="SA" xml:space="preserve">
+    <value>Saudi Arabia</value>
+  </data>
 </root>

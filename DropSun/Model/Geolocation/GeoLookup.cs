@@ -61,7 +61,7 @@ namespace DropSun.Model.Geolocation
                             {
                                 id = reader.GetInt32(0),
                                 name = reader.GetString(1),
-                                state_code = reader.GetString(2),
+                                state_code = GetStateName(reader.GetString(3), reader.GetString(2)),
                                 country_code = GetCountryName(reader.GetString(3)),
                                 latitude = reader.GetDouble(4),
                                 longitude = reader.GetDouble(5)
@@ -110,11 +110,18 @@ namespace DropSun.Model.Geolocation
 
         public static string GetCountryName(string countryCode)
         {
-            // TODO: Fix loading resources! This loads empty strings!
             ResourceLoader _resourceLoader = ResourceLoader.GetForViewIndependentUse("Countries");
             string countryName = _resourceLoader.GetString(countryCode);
             if (!string.IsNullOrEmpty(countryName)) return countryName;
             else return countryCode;
+        }
+
+        public static string GetStateName(string countryCode, string stateCode)
+        {
+            ResourceLoader _resourceLoader = ResourceLoader.GetForViewIndependentUse("CountryStates");
+            string stateName = _resourceLoader.GetString($"{countryCode}/{stateCode}");
+            if (!string.IsNullOrEmpty(stateName)) return stateName;
+            else return stateCode;
         }
     }
 
