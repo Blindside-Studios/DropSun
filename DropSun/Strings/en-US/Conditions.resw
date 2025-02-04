@@ -117,11 +117,88 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="GlobalSearchBox.PlaceholderText" xml:space="preserve">
-    <value>Type here to add a location...</value>
+  <data name="ClearSky" xml:space="preserve">
+    <value>Clear Sky</value>
   </data>
-  <data name="TitleBar.Text" xml:space="preserve">
-    <value>DropSun</value>
-    <comment>App name - only for translation into different character sets</comment>
+  <data name="MainlyClear" xml:space="preserve">
+    <value>Mainly Clear</value>
+  </data>
+  <data name="PartlyCloudy" xml:space="preserve">
+    <value>Partly Cloudy</value>
+  </data>
+  <data name="Overcast" xml:space="preserve">
+    <value>Overcast</value>
+  </data>
+  <data name="Fog" xml:space="preserve">
+    <value>Fog</value>
+  </data>
+  <data name="DepositingRimeFog" xml:space="preserve">
+    <value>Depositing Rime Fog</value>
+  </data>
+  <data name="DrizzleLight" xml:space="preserve">
+    <value>Light Drizzle</value>
+  </data>
+  <data name="DrizzleModerate" xml:space="preserve">
+    <value>Moderate Drizzle</value>
+  </data>
+  <data name="DrizzleDense" xml:space="preserve">
+    <value>Dense Drizzle</value>
+  </data>
+  <data name="FreezingDrizzleLight" xml:space="preserve">
+    <value>Light Freezing Drizzle</value>
+  </data>
+  <data name="FreezingDrizzleDense" xml:space="preserve">
+    <value>Dense Freezing Drizzle</value>
+  </data>
+  <data name="RainSlight" xml:space="preserve">
+    <value>Slight Rain</value>
+  </data>
+  <data name="RainModerate" xml:space="preserve">
+    <value>Moderate Rain</value>
+  </data>
+  <data name="RainHeavy" xml:space="preserve">
+    <value>Heavy Rain</value>
+  </data>
+  <data name="FreezingRainLight" xml:space="preserve">
+    <value>Light Freezing Rain</value>
+  </data>
+  <data name="FreezingRainHeavy" xml:space="preserve">
+    <value>Heavy Freezing Rain</value>
+  </data>
+  <data name="SnowFallSlight" xml:space="preserve">
+    <value>Slight Snow Fall</value>
+  </data>
+  <data name="SnowFallModerate" xml:space="preserve">
+    <value>Moderate Snow Fall</value>
+  </data>
+  <data name="SnowFallHeavy" xml:space="preserve">
+    <value>Heavy Snow Fall</value>
+  </data>
+  <data name="SnowGrains" xml:space="preserve">
+    <value>Snow Grains</value>
+  </data>
+  <data name="RainShowersSlight" xml:space="preserve">
+    <value>Slight Rain Showers</value>
+  </data>
+  <data name="RainShowersModerate" xml:space="preserve">
+    <value>Moderate Rain Showers</value>
+  </data>
+  <data name="RainShowersViolent" xml:space="preserve">
+    <value>Violent Rain Showers</value>
+  </data>
+  <data name="SnowShowersSlight" xml:space="preserve">
+    <value>Slight Snow Showers</value>
+  </data>
+  <data name="SnowShowersHeavy" xml:space="preserve">
+    <value>Heavy Snow Showers</value>
+  </data>
+  <data name="ThunderstormSlightOrModerate" xml:space="preserve">
+    <value>Moderate Thunderstorm</value>
+  </data>
+  <data name="WeatherDescriptions/ThunderstormWithHailSlight" xml:space="preserve">
+    <value>Slight Thunderstorm with Hail</value>
+  </data>
+  <data name="ThunderstormWithHailHeavy" xml:space="preserve">
+    <value>Heavy Thunderstorm with Hail</value>
   </data>
 </root>

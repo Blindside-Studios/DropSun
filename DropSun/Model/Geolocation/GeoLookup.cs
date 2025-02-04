@@ -111,8 +111,8 @@ namespace DropSun.Model.Geolocation
         public static string GetCountryName(string countryCode)
         {
             // TODO: Fix loading resources! This loads empty strings!
-            ResourceLoader _resourceLoader = new ResourceLoader();
-            string countryName = _resourceLoader.GetString($"Countries/{countryCode}");
+            ResourceLoader _resourceLoader = ResourceLoader.GetForViewIndependentUse("Countries");
+            string countryName = _resourceLoader.GetString(countryCode);
             if (!string.IsNullOrEmpty(countryName)) return countryName;
             else return countryCode;
         }

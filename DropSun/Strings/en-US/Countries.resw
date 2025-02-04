@@ -117,11 +117,25 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="GlobalSearchBox.PlaceholderText" xml:space="preserve">
-    <value>Type here to add a location...</value>
+  <data name="DE" xml:space="preserve">
+    <value>Germany</value>
   </data>
-  <data name="TitleBar.Text" xml:space="preserve">
-    <value>DropSun</value>
-    <comment>App name - only for translation into different character sets</comment>
+  <data name="ES" xml:space="preserve">
+    <value>Spain</value>
+  </data>
+  <data name="FR" xml:space="preserve">
+    <value>France</value>
+  </data>
+  <data name="GB" xml:space="preserve">
+    <value>United Kingdom</value>
+  </data>
+  <data name="IT" xml:space="preserve">
+    <value>Italy</value>
+  </data>
+  <data name="JP" xml:space="preserve">
+    <value>Japan</value>
+  </data>
+  <data name="US" xml:space="preserve">
+    <value>United States</value>
   </data>
 </root>

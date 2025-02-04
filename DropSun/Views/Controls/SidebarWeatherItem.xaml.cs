@@ -75,9 +75,8 @@ namespace DropSun.Views.Controls
 
                 TemperatureTextBox.Text = ((double)value.Current.Temperature2M).ToString() + value.CurrentUnits.Temperature2M;
                 PrecipitationTextBox.Text = ((double)value.Current.Precipitation).ToString() + value.CurrentUnits.Precipitation;
-                ResourceLoader _resourceLoader = new ResourceLoader();
-                Debug.WriteLine($"WeatherDescriptions/{value.GetWeatherDescription().ToString()} loaded {_resourceLoader.GetString($"WeatherDescriptions/{value.GetWeatherDescription().ToString()}")}");
-                ConditionsTextBox.Text = _resourceLoader.GetString($"WeatherDescriptions/{value.GetWeatherDescription().ToString()}");
+                ResourceLoader _resourceLoader = ResourceLoader.GetForViewIndependentUse("Conditions");
+                ConditionsTextBox.Text = _resourceLoader.GetString(value.GetWeatherDescription().ToString());
 
                 System.Drawing.Color color = new();
 
