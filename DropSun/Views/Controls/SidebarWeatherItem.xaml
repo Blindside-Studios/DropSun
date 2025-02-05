@@ -52,8 +52,7 @@
                     <ColumnDefinition Width="10"/>
                     <ColumnDefinition Width="Auto" />
                     <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="10"/>
-                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition x:Name="HighLowSpacer" Width="10"/>
                     <ColumnDefinition Width="Auto" />
                     <ColumnDefinition Width="10"/>
                 </Grid.ColumnDefinitions>
@@ -66,11 +65,8 @@
                             VerticalAlignment="Top"
                             HorizontalAlignment="Left"
                             Margin="5,0,0,0"/>
-                <FontIcon   Glyph="&#xEB42;" FontSize="14"
+                <TextBlock  x:Name="HighLowTextBox" 
                             Grid.Column="4"
-                            VerticalAlignment="Center"/>
-                <TextBlock  x:Name="PrecipitationTextBox" 
-                            Grid.Column="5"
                             Style="{StaticResource BodyTextBlockStyle}" 
                             VerticalAlignment="Top"
                             Margin="5,0,0,0"/>

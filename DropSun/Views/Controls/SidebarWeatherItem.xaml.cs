@@ -13,6 +13,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Threading.Tasks;
 using Windows.ApplicationModel.Activation;
 using Windows.ApplicationModel.Resources;
 using Windows.Foundation;
@@ -36,6 +37,7 @@ namespace DropSun.Views.Controls
         private void SidebarWeatherItem_PointerPressed(object sender, PointerRoutedEventArgs e)
         {
             Model.ViewModels.WeatherState.Instance.Forecast = Weather;
+            Model.ViewModels.WeatherState.Instance.Location = Location;
         }
 
         private void SidebarWeatherItem_Loaded(object sender, RoutedEventArgs e)
@@ -43,13 +45,13 @@ namespace DropSun.Views.Controls
             //SkyFrame.NavigateToType(typeof(Views.Conditions.Sunny.BlueSky), null, null);
         }
 
-        public string Location
+        public Model.Geolocation.InternalGeolocation Location
         {
-            get { return (string)GetValue(LocationProperty); }
-            set { SetValue(LocationProperty, value); LocationTextBox.Text = value; }
+            get { return (Model.Geolocation.InternalGeolocation)GetValue(LocationProperty); }
+            set { SetValue(LocationProperty, value); LocationTextBox.Text = value.name; }
         }
         public static readonly DependencyProperty LocationProperty =
-            DependencyProperty.Register("Location", typeof(string), typeof(SidebarWeatherItem), new PropertyMetadata(default(string)));
+            DependencyProperty.Register("Location", typeof(string), typeof(SidebarWeatherItem), new PropertyMetadata(default(Model.Geolocation.InternalGeolocation)));
 
         public double Temperature
         {
@@ -74,9 +76,15 @@ namespace DropSun.Views.Controls
                 SetValue(WeatherProperty, value);
 
                 TemperatureTextBox.Text = ((double)value.Current.Temperature2M).ToString() + value.CurrentUnits.Temperature2M;
-                PrecipitationTextBox.Text = ((double)value.Current.Precipitation).ToString() + value.CurrentUnits.Precipitation;
-                ResourceLoader _resourceLoader = ResourceLoader.GetForViewIndependentUse("Conditions");
-                ConditionsTextBox.Text = _resourceLoader.GetString(value.GetWeatherDescription().ToString());
+                
+                ResourceLoader _resourceLoader = ResourceLoader.GetForViewIndependentUse();
+                ResourceLoader _conditionsResourceLoader = ResourceLoader.GetForViewIndependentUse("Conditions");
+
+                double minTemperature = (double)Math.Round(value.Daily.ApparentTemperatureMin[0]);
+                double maxTemperature = (double)Math.Round(value.Daily.ApparentTemperatureMax[0]);
+                string temperatureUnit = (string)value.CurrentUnits.Temperature2M;
+                HighLowTextBox.Text = string.Format(_resourceLoader.GetString("Weather/HighLowShort"), maxTemperature, minTemperature, temperatureUnit);
+                ConditionsTextBox.Text = _conditionsResourceLoader.GetString(value.GetWeatherDescription().ToString());
 
                 System.Drawing.Color color = new();
 
@@ -128,14 +136,44 @@ namespace DropSun.Views.Controls
                         color = System.Drawing.Color.LightSlateGray;
                         break;
                     default:
-                        color = System.Drawing.Color.Lime;
+                        color = System.Drawing.Color.DarkGray;
                         break;
                 }
-
                 BackgroundColor.Background = new SolidColorBrush(Windows.UI.Color.FromArgb(color.A, color.R, color.G, color.B));
+                checkForTrimming();
             }
         }
         public static readonly DependencyProperty WeatherProperty =
             DependencyProperty.Register("Weather", typeof(OpenMeteoWeatherOverview), typeof(SidebarWeatherItem), new PropertyMetadata(default(OpenMeteoWeatherOverview)));
+    
+        private async void checkForTrimming()
+        {
+            // separate method because you can't make the setter async - hacky workaround number 3244
+            await Task.Delay(100);
+            if (ConditionsTextBox.IsTextTrimmed)
+            {
+                ResourceLoader _resourceLoader = ResourceLoader.GetForViewIndependentUse();
+
+                double maxTemperature = (double)Math.Round(Weather.Daily.ApparentTemperatureMax[0]);
+                string temperatureUnit = (string)Weather.CurrentUnits.Temperature2M;
+                HighLowTextBox.Text = string.Format(_resourceLoader.GetString("Weather/HighLowMinimal"), maxTemperature, temperatureUnit);
+
+                await Task.Delay(100);
+                if (ConditionsTextBox.IsTextTrimmed)
+                {
+                    HighLowTextBox.Text = "";
+
+                    await Task.Delay(100);
+                    if (ConditionsTextBox.IsTextTrimmed)
+                    {
+                        ToolTip toolTip = new ToolTip();
+                        toolTip.Content = ConditionsTextBox.Text;
+                        ToolTipService.SetToolTip(ConditionsTextBox, toolTip);
+                    }
+                }
+                else ToolTipService.SetToolTip(ConditionsTextBox, null);
+            }
+            else ToolTipService.SetToolTip(ConditionsTextBox, null);
+        }
     }
 }

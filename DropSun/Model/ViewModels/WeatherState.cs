@@ -40,36 +40,20 @@ namespace DropSun.Model.ViewModels
                 {
                     _forecast = value;
                     OnPropertyChanged(nameof(Forecast));
-                    TemperatureString = value.Current.Temperature2M + " " + value.CurrentUnits.Temperature2M;
-                    ApparentTemperatureString = value.Current.ApparentTemperature + " " + value.CurrentUnits.ApparentTemperature;
                 }
             }
         }
 
-        private string _temperatureString;
-        public string TemperatureString
+        private Geolocation.InternalGeolocation _location;
+        public Geolocation.InternalGeolocation Location
         {
-            get => _temperatureString;
+            get => _location;
             set
             {
-                if (_temperatureString != value)
+                if (_location != value)
                 {
-                    _temperatureString = value;
-                    OnPropertyChanged(nameof(TemperatureString));
-                }
-            }
-        }
-
-        private string _apparentTemperatureString;
-        public string ApparentTemperatureString
-        {
-            get => _apparentTemperatureString;
-            set
-            {
-                if (_apparentTemperatureString != value)
-                {
-                    _apparentTemperatureString = value;
-                    OnPropertyChanged(nameof(ApparentTemperatureString));
+                    _location = value;
+                    OnPropertyChanged(nameof(Location));
                 }
             }
         }

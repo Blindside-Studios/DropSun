@@ -124,4 +124,12 @@
     <value>DropSun</value>
     <comment>App name - only for translation into different character sets</comment>
   </data>
+  <data name="Weather/HighLowMinimal" xml:space="preserve">
+    <value>H:{0}{1}</value>
+    <comment>0 is the highest temperature, 1 is the unit.</comment>
+  </data>
+  <data name="Weather/HighLowShort" xml:space="preserve">
+    <value>H:{0}{2} L:{1}{2}</value>
+    <comment>0 is the highest temperature, 1 is the lowest and 2 is the unit in which the temperature is measured.</comment>
+  </data>
 </root>

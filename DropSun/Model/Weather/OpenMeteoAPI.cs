@@ -35,6 +35,11 @@ namespace DropSun.Model.Weather
                 return null;
             }
         }
+
+        public static OpenMeteoWeatherOverview GetWeatherFromJSON(string json)
+        {
+            return JsonSerializer.Deserialize<OpenMeteoWeatherOverview>(json);
+        }
     }
 
     public class OpenMeteoWeatherOverview
