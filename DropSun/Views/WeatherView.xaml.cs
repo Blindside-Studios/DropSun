@@ -17,6 +17,7 @@ using Windows.Foundation.Collections;
 using Pikouna_Engine;
 using System.Collections.ObjectModel;
 using ShinGrid;
+using System.Threading.Tasks;
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -48,8 +49,6 @@ namespace DropSun.Views
             ContentFrame.NavigateToType(typeof(Pikouna_Engine.WeatherView), null, null);
             updatePusherSize();
             loadGridWeatherCards();
-            ShinGridContainerFrame.NavigateToType(typeof(ShinGrid.ShinGrid), null, null);
-            ShinGridViewModel.Instance.HeightChanged += Instance_HeightChanged;
         }
 
         private void Instance_HeightChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
@@ -71,6 +70,8 @@ namespace DropSun.Views
                 new PanelInstance { PageType = typeof(BlankCard), Index = 4 },
                 new PanelInstance { PageType = typeof(BlankCard), Index = 5 },
             };
+            ShinGridContainerFrame.NavigateToType(typeof(ShinGrid.ShinGrid), null, null);
+            ShinGridViewModel.Instance.HeightChanged += Instance_HeightChanged;
         }
 
         private void ContentGrid_PointerEntered(object sender, PointerRoutedEventArgs e)
