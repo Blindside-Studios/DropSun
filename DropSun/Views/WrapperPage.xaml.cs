@@ -13,6 +13,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Windows.Foundation;
+using Windows.UI.ViewManagement;
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -54,6 +55,7 @@ namespace DropSun.Views
 
             Frame frame = new Frame();
             frame.Content = weatherItem;
+            frame.Tag = SelectedLocation;
 
             var weatherForecast = await OpenMeteoAPI.GetWeatherAsync(SelectedLocation.latitude, SelectedLocation.longitude);
             weatherItem.Weather = weatherForecast;
@@ -66,10 +68,11 @@ namespace DropSun.Views
 
         private void animateItem(Frame frame)
         {
-            frame.Opacity = 1; // change this to 0 later for an animation
+            frame.Opacity = 1;
             LocationsStackPanel.Children.Add(frame);
 
-            animateAddedItem(frame);
+            var uiSettings = new UISettings();
+            if (uiSettings.AnimationsEnabled) animateAddedItem(frame);
         }
 
         private async void animateAddedItem(Frame frame)
@@ -134,7 +137,7 @@ namespace DropSun.Views
             int i = 1;
             foreach(Frame otherFrame in listOfFrames)
             {
-                rippleOtherItems(otherFrame, i);
+                rippleOtherItems(otherFrame, i * 2);
                 await Task.Delay(150);
                 i++;
             }
@@ -185,18 +188,6 @@ namespace DropSun.Views
             sb.Begin();
         }
 
-        public void addDebugLocation(string location)
-        {
-            SidebarWeatherItem weatherItem = new()
-            {
-                Location = location,
-                Temperature = 20.5,
-                Precipitation = 21,
-            };
-            weatherItem.Weather = null;
-            LocationsStackPanel.Children.Add(weatherItem);
-        }
-
         public void toggleSidebarState()
         {
             if (isSideBarExpanded)
@@ -218,28 +209,33 @@ namespace DropSun.Views
             {
                 currentAnimation.Stop();
             }
-            
-            Duration duration = new Duration(TimeSpan.FromSeconds(0.4));
-            BackEase backEase = new BackEase();
-            backEase.EasingMode = EasingMode.EaseOut;
-            backEase.Amplitude = 0.4;
 
-            DoubleAnimation doubleAnimation = new DoubleAnimation();
-            doubleAnimation.Duration = duration;
-            doubleAnimation.From = SidebarContainer.ActualWidth;
-            doubleAnimation.To = 275;
-            doubleAnimation.EnableDependentAnimation = true;
-            doubleAnimation.EasingFunction = backEase;
+            var uiSettings = new UISettings();
+            if (uiSettings.AnimationsEnabled)
+            {
+                Duration duration = new Duration(TimeSpan.FromSeconds(0.4));
+                BackEase backEase = new BackEase();
+                backEase.EasingMode = EasingMode.EaseOut;
+                backEase.Amplitude = 0.2;
 
-            Storyboard sb = new Storyboard();
-            sb.Duration = duration;
-            sb.Children.Add(doubleAnimation);
+                DoubleAnimation doubleAnimation = new DoubleAnimation();
+                doubleAnimation.Duration = duration;
+                doubleAnimation.From = SidebarContainer.ActualWidth;
+                doubleAnimation.To = 275;
+                doubleAnimation.EnableDependentAnimation = true;
+                doubleAnimation.EasingFunction = backEase;
 
-            Storyboard.SetTarget(doubleAnimation, SidebarContainer);
-            Storyboard.SetTargetProperty(doubleAnimation, new PropertyPath("Width").Path);
+                Storyboard sb = new Storyboard();
+                sb.Duration = duration;
+                sb.Children.Add(doubleAnimation);
 
-            currentAnimation = sb;
-            sb.Begin();
+                Storyboard.SetTarget(doubleAnimation, SidebarContainer);
+                Storyboard.SetTargetProperty(doubleAnimation, new PropertyPath("Width").Path);
+
+                currentAnimation = sb;
+                sb.Begin();
+            }
+            else SidebarContainer.Width = 275;
         }
 
         public void collapseSidebar()
@@ -250,26 +246,31 @@ namespace DropSun.Views
                 currentAnimation.Stop();
             }
 
-            Duration duration = new Duration(TimeSpan.FromSeconds(0.3));
-            var ease = new CircleEase();
-            ease.EasingMode = EasingMode.EaseInOut;
+            var uiSettings = new UISettings();
+            if (uiSettings.AnimationsEnabled)
+            {
+                Duration duration = new Duration(TimeSpan.FromSeconds(0.3));
+                var ease = new CircleEase();
+                ease.EasingMode = EasingMode.EaseInOut;
 
-            DoubleAnimation doubleAnimation = new DoubleAnimation();
-            doubleAnimation.Duration = duration;
-            doubleAnimation.From = SidebarContainer.ActualWidth;
-            doubleAnimation.To = 25;
-            doubleAnimation.EnableDependentAnimation = true;
-            doubleAnimation.EasingFunction = ease;
+                DoubleAnimation doubleAnimation = new DoubleAnimation();
+                doubleAnimation.Duration = duration;
+                doubleAnimation.From = SidebarContainer.ActualWidth;
+                doubleAnimation.To = 25;
+                doubleAnimation.EnableDependentAnimation = true;
+                doubleAnimation.EasingFunction = ease;
 
-            Storyboard sb = new Storyboard();
-            sb.Duration = duration;
-            sb.Children.Add(doubleAnimation);
+                Storyboard sb = new Storyboard();
+                sb.Duration = duration;
+                sb.Children.Add(doubleAnimation);
 
-            Storyboard.SetTarget(doubleAnimation, SidebarContainer);
-            Storyboard.SetTargetProperty(doubleAnimation, new PropertyPath("Width").Path);
+                Storyboard.SetTarget(doubleAnimation, SidebarContainer);
+                Storyboard.SetTargetProperty(doubleAnimation, new PropertyPath("Width").Path);
 
-            currentAnimation = sb;
-            sb.Begin();
+                currentAnimation = sb;
+                sb.Begin();
+            }
+            else SidebarContainer.Width = 25;
         }
 
         private void SidebarContainer_RightTapped(object sender, Microsoft.UI.Xaml.Input.RightTappedRoutedEventArgs e)
@@ -297,6 +298,11 @@ namespace DropSun.Views
         private void SidebarContainer_DoubleTapped(object sender, Microsoft.UI.Xaml.Input.DoubleTappedRoutedEventArgs e)
         {
             LocationsStackPanel.Children.Clear();
+        }
+
+        private void saveSidebarState()
+        {
+
         }
     }
 }

@@ -139,9 +139,6 @@ namespace DropSun
         private void Settings_Click(object sender, RoutedEventArgs e)
         {
             var wrapperPage = ContentFrame.Content as WrapperPage;
-            wrapperPage.addDebugLocation("San Francisco");
-            wrapperPage.addDebugLocation("London");
-            wrapperPage.addDebugLocation("North Pole");
         }
 
         private void SidebarButton_PointerEntered(object sender, PointerRoutedEventArgs e)
