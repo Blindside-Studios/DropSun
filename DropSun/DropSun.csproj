@@ -12,19 +12,13 @@
     <EnableMsixTooling>true</EnableMsixTooling>
   </PropertyGroup>
   <ItemGroup>
-    <Content Remove="Assets\Application\CursorObjects\Umbrella.png" />
-    <Content Remove="Assets\Application\Sky\BlueSkyGradient.png" />
-    <Content Remove="Assets\Application\Sky\EveningSkyGradient.png" />
-    <Content Remove="Assets\Application\Sky\NightSkyGradient.png" />
-    <Content Remove="Assets\Application\Sky\RainSky.png" />
-    <Content Remove="Assets\Application\WeatherObjects\GrassBlade.png" />
-    <Content Remove="Assets\Application\WeatherObjects\Raindrop.png" />
-    <Content Remove="Assets\Application\WeatherObjects\Star.png" />
+    <Content Remove="Assets\Source\AppIcon\DropSunIcon.svg" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Views\Controls\SidebarWeatherItem.xaml" />
     <None Remove="Views\WeatherCards\BlankCard.xaml" />
-    <None Remove="Views\WeatherCards\General.xaml" />
+    <None Remove="Views\WeatherCards\ForecastCard.xaml" />
+    <None Remove="Views\WeatherCards\OverviewCard.xaml" />
     <None Remove="Views\WeatherView.xaml" />
     <None Remove="Views\WrapperPage.xaml" />
   </ItemGroup>
@@ -56,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Pikouna-Engine\Pikouna Engine\Pikouna Engine\Pikouna Engine.csproj" />
+    <ProjectReference Include="..\..\ShinGrid\ShinGrid\ShinGrid\ShinGrid.csproj" />
   </ItemGroup>
   <ItemGroup>
     <Content Update="Assets\StoreLogo.scale-200.png">
@@ -66,40 +61,19 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <None Update="Assets\Application\CursorObjects\Umbrella.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Assets\Application\Sky\BlueSkyGradient.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Assets\Application\Sky\EveningSkyGradient.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Assets\Application\Sky\NightSkyGradient.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Assets\Application\Sky\RainSky.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Assets\Application\WeatherObjects\GrassBlade.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Assets\Application\WeatherObjects\Raindrop.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Assets\Application\WeatherObjects\Star.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
     <None Update="Model\Geolocation\locations.sqlite3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <Page Update="Views\WeatherCards\ForecastCard.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="Views\WeatherCards\OverviewCard.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Update="Views\WeatherCards\BlankCard.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Update="Views\Controls\SidebarWeatherItem.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Update="Views\WeatherCards\General.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>

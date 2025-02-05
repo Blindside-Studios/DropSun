@@ -16,6 +16,7 @@ using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Pikouna_Engine;
 using System.Collections.ObjectModel;
+using ShinGrid;
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -40,27 +41,30 @@ namespace DropSun.Views
         {
             this.InitializeComponent();
             this.Loaded += WeatherView_Loaded;
-            WeatherState.Instance.PropertyChanged += Weather_PropertyChanged;
         }
 
         private void WeatherView_Loaded(object sender, RoutedEventArgs e)
         {
             ContentFrame.NavigateToType(typeof(Pikouna_Engine.WeatherView), null, null);
-            GeneralFrame.NavigateToType(typeof(WeatherCards.General), null, null);
-
-            /*WeatherCards = new ObservableCollection<WeatherCard>
-            {
-                new WeatherCard { PageType = typeof(BlankCard), ColumnSpan = 1, RowSpan = 1, Width = 300, Height = 300 },
-                new WeatherCard { PageType = typeof(BlankCard), ColumnSpan = 2, RowSpan = 1, Width = 620, Height = 300 },
-                new WeatherCard { PageType = typeof(BlankCard), ColumnSpan = 1, RowSpan = 1, Width = 300, Height = 300 },
-                new WeatherCard { PageType = typeof(BlankCard), ColumnSpan = 1, RowSpan = 1, Width = 300, Height = 300 }
-            };
-            WidgetSpawner.ItemsSource = WeatherCards;*/
+            updatePusherSize();
+            loadGridWeatherCards();
+            ShinGridContainerFrame.NavigateToType(typeof(ShinGrid.ShinGrid), null, null);
         }
 
-        private void Weather_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
+        private void loadGridWeatherCards()
         {
-            // use this later to update the properties in the view, unless I expand this into another view model, at which point this can be accessed throughout
+            ShinGridViewModel.Instance.ColumnWidth = 200;
+            ShinGridViewModel.Instance.RowHeight = 200;
+            ShinGridViewModel.Instance.CornerRadius = 8;
+            ShinGridViewModel.Instance.PanelInstances = new List<PanelInstance>()
+            {
+                new PanelInstance { PageType = typeof(OverviewCard), Index = 0, ColumnSpan = 2 },
+                new PanelInstance { PageType = typeof(ForecastCard), Index = 1, ColumnSpan = 3 },
+                new PanelInstance { PageType = typeof(BlankCard), Index = 2 },
+                new PanelInstance { PageType = typeof(BlankCard), Index = 3 },
+                new PanelInstance { PageType = typeof(BlankCard), Index = 4 },
+                new PanelInstance { PageType = typeof(BlankCard), Index = 5 },
+            };
         }
 
         private void ContentGrid_PointerEntered(object sender, PointerRoutedEventArgs e)
@@ -76,6 +80,16 @@ namespace DropSun.Views
         private void ContentGrid_PointerMoved(object sender, PointerRoutedEventArgs e)
         {
             Pikouna_Engine.OzoraViewModel.Instance.MousePosition = e.GetCurrentPoint(ContentGrid).Position;
+        }
+
+        private void ContentGrid_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
+            updatePusherSize();
+        }
+
+        private void updatePusherSize()
+        {
+            ContentTopBorder.Height = ContentGrid.ActualHeight - 210;
         }
     }
 }

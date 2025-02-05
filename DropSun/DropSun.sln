@@ -7,7 +7,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DropSun", "DropSun.csproj",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pikouna Engine", "..\..\Pikouna-Engine\Pikouna Engine\Pikouna Engine\Pikouna Engine.csproj", "{03D3557F-F7C0-4DAF-A078-0EED8A953BB9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ozora", "..\..\Ozora-Engine\Ozora-Engine\Ozora\Ozora.csproj", "{23F7275D-C9E9-4B35-9C99-DAC42D938C94}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShinGrid", "..\..\ShinGrid\ShinGrid\ShinGrid\ShinGrid.csproj", "{77E9A918-178C-41AB-8C5B-6806B67552D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ozora", "..\..\Ozora-Engine\Ozora-Engine\Ozora\Ozora.csproj", "{F6229152-444E-4B6D-B020-73AA38CC4837}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -49,18 +51,30 @@ Global
 		{03D3557F-F7C0-4DAF-A078-0EED8A953BB9}.Release|x64.Build.0 = Release|Any CPU
 		{03D3557F-F7C0-4DAF-A078-0EED8A953BB9}.Release|x86.ActiveCfg = Release|Any CPU
 		{03D3557F-F7C0-4DAF-A078-0EED8A953BB9}.Release|x86.Build.0 = Release|Any CPU
-		{23F7275D-C9E9-4B35-9C99-DAC42D938C94}.Debug|ARM64.ActiveCfg = Debug|Any CPU
-		{23F7275D-C9E9-4B35-9C99-DAC42D938C94}.Debug|ARM64.Build.0 = Debug|Any CPU
-		{23F7275D-C9E9-4B35-9C99-DAC42D938C94}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{23F7275D-C9E9-4B35-9C99-DAC42D938C94}.Debug|x64.Build.0 = Debug|Any CPU
-		{23F7275D-C9E9-4B35-9C99-DAC42D938C94}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{23F7275D-C9E9-4B35-9C99-DAC42D938C94}.Debug|x86.Build.0 = Debug|Any CPU
-		{23F7275D-C9E9-4B35-9C99-DAC42D938C94}.Release|ARM64.ActiveCfg = Release|Any CPU
-		{23F7275D-C9E9-4B35-9C99-DAC42D938C94}.Release|ARM64.Build.0 = Release|Any CPU
-		{23F7275D-C9E9-4B35-9C99-DAC42D938C94}.Release|x64.ActiveCfg = Release|Any CPU
-		{23F7275D-C9E9-4B35-9C99-DAC42D938C94}.Release|x64.Build.0 = Release|Any CPU
-		{23F7275D-C9E9-4B35-9C99-DAC42D938C94}.Release|x86.ActiveCfg = Release|Any CPU
-		{23F7275D-C9E9-4B35-9C99-DAC42D938C94}.Release|x86.Build.0 = Release|Any CPU
+		{77E9A918-178C-41AB-8C5B-6806B67552D9}.Debug|ARM64.ActiveCfg = Debug|Any CPU
+		{77E9A918-178C-41AB-8C5B-6806B67552D9}.Debug|ARM64.Build.0 = Debug|Any CPU
+		{77E9A918-178C-41AB-8C5B-6806B67552D9}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{77E9A918-178C-41AB-8C5B-6806B67552D9}.Debug|x64.Build.0 = Debug|Any CPU
+		{77E9A918-178C-41AB-8C5B-6806B67552D9}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{77E9A918-178C-41AB-8C5B-6806B67552D9}.Debug|x86.Build.0 = Debug|Any CPU
+		{77E9A918-178C-41AB-8C5B-6806B67552D9}.Release|ARM64.ActiveCfg = Release|Any CPU
+		{77E9A918-178C-41AB-8C5B-6806B67552D9}.Release|ARM64.Build.0 = Release|Any CPU
+		{77E9A918-178C-41AB-8C5B-6806B67552D9}.Release|x64.ActiveCfg = Release|Any CPU
+		{77E9A918-178C-41AB-8C5B-6806B67552D9}.Release|x64.Build.0 = Release|Any CPU
+		{77E9A918-178C-41AB-8C5B-6806B67552D9}.Release|x86.ActiveCfg = Release|Any CPU
+		{77E9A918-178C-41AB-8C5B-6806B67552D9}.Release|x86.Build.0 = Release|Any CPU
+		{F6229152-444E-4B6D-B020-73AA38CC4837}.Debug|ARM64.ActiveCfg = Debug|Any CPU
+		{F6229152-444E-4B6D-B020-73AA38CC4837}.Debug|ARM64.Build.0 = Debug|Any CPU
+		{F6229152-444E-4B6D-B020-73AA38CC4837}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{F6229152-444E-4B6D-B020-73AA38CC4837}.Debug|x64.Build.0 = Debug|Any CPU
+		{F6229152-444E-4B6D-B020-73AA38CC4837}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F6229152-444E-4B6D-B020-73AA38CC4837}.Debug|x86.Build.0 = Debug|Any CPU
+		{F6229152-444E-4B6D-B020-73AA38CC4837}.Release|ARM64.ActiveCfg = Release|Any CPU
+		{F6229152-444E-4B6D-B020-73AA38CC4837}.Release|ARM64.Build.0 = Release|Any CPU
+		{F6229152-444E-4B6D-B020-73AA38CC4837}.Release|x64.ActiveCfg = Release|Any CPU
+		{F6229152-444E-4B6D-B020-73AA38CC4837}.Release|x64.Build.0 = Release|Any CPU
+		{F6229152-444E-4B6D-B020-73AA38CC4837}.Release|x86.ActiveCfg = Release|Any CPU
+		{F6229152-444E-4B6D-B020-73AA38CC4837}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

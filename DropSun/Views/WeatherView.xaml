@@ -9,12 +9,12 @@
     mc:Ignorable="d"
     Background="Transparent">
 
-    <Grid x:Name="ContentGrid" PointerMoved="ContentGrid_PointerMoved" PointerExited="ContentGrid_PointerExited" PointerEntered="ContentGrid_PointerEntered">
+    <Grid x:Name="ContentGrid" PointerMoved="ContentGrid_PointerMoved" PointerExited="ContentGrid_PointerExited" PointerEntered="ContentGrid_PointerEntered" SizeChanged="ContentGrid_SizeChanged">
         <Frame x:Name="ContentFrame" Content="Background" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
-        <Frame x:Name="GeneralFrame" Content="General" Margin="50,50,0,0" HorizontalAlignment="Left" VerticalAlignment="Stretch"/>
         <ScrollView x:Name="ItemsScrollView">
             <StackPanel Orientation="Vertical">
-                <!-- <Border x:Name="ContentTopBorder" Height="350"/> -->
+                <Border x:Name="ContentTopBorder" Height="350"/>
+                <Frame x:Name="ShinGridContainerFrame" HorizontalAlignment="Stretch"/>
             </StackPanel>
         </ScrollView>
     </Grid>
