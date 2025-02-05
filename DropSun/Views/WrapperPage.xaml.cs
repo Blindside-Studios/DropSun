@@ -213,17 +213,16 @@ namespace DropSun.Views
             var uiSettings = new UISettings();
             if (uiSettings.AnimationsEnabled)
             {
-                Duration duration = new Duration(TimeSpan.FromSeconds(0.4));
-                BackEase backEase = new BackEase();
-                backEase.EasingMode = EasingMode.EaseOut;
-                backEase.Amplitude = 0.2;
+                Duration duration = new Duration(TimeSpan.FromSeconds(0.3));
+                CircleEase circleEase = new CircleEase();
+                circleEase.EasingMode = EasingMode.EaseInOut;
 
                 DoubleAnimation doubleAnimation = new DoubleAnimation();
                 doubleAnimation.Duration = duration;
                 doubleAnimation.From = SidebarContainer.ActualWidth;
                 doubleAnimation.To = 275;
                 doubleAnimation.EnableDependentAnimation = true;
-                doubleAnimation.EasingFunction = backEase;
+                doubleAnimation.EasingFunction = circleEase;
 
                 Storyboard sb = new Storyboard();
                 sb.Duration = duration;

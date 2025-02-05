@@ -12,6 +12,9 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Composition;
+using Microsoft.UI.Composition;
+using Microsoft.UI.Xaml.Hosting;
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -26,6 +29,12 @@ namespace DropSun.Views.WeatherCards
         public OverviewCard()
         {
             this.InitializeComponent();
+            this.Loaded += OverviewCard_Loaded;
+        }
+
+        private void OverviewCard_Loaded(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
