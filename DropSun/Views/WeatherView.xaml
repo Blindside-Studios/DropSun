@@ -11,11 +11,15 @@
 
     <Grid x:Name="ContentGrid" PointerMoved="ContentGrid_PointerMoved" PointerExited="ContentGrid_PointerExited" PointerEntered="ContentGrid_PointerEntered" SizeChanged="ContentGrid_SizeChanged">
         <Frame x:Name="ContentFrame" Content="Background" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
-        <ScrollView x:Name="ItemsScrollView">
-            <StackPanel Orientation="Vertical">
-                <Border x:Name="ContentTopBorder" Height="350"/>
-                <Frame x:Name="ShinGridContainerFrame" HorizontalAlignment="Stretch"/>
-            </StackPanel>
-        </ScrollView>
+        <ScrollViewer x:Name="ItemsScrollView">
+            <Grid VerticalAlignment="Bottom">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Rectangle x:Name="ContentTopBorder" Grid.Row="0" Fill="Transparent" Height="350"/>
+                <Frame x:Name="ShinGridContainerFrame" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+            </Grid>
+        </ScrollViewer>
     </Grid>
 </Page>
