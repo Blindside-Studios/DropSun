@@ -49,6 +49,12 @@ namespace DropSun.Views
             updatePusherSize();
             loadGridWeatherCards();
             ShinGridContainerFrame.NavigateToType(typeof(ShinGrid.ShinGrid), null, null);
+            ShinGridViewModel.Instance.HeightChanged += Instance_HeightChanged;
+        }
+
+        private void Instance_HeightChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
+        {
+            ShinGridContainerFrame.Height = ShinGridViewModel.Instance.FinalHeight;
         }
 
         private void loadGridWeatherCards()

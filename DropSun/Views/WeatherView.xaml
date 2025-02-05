@@ -12,7 +12,7 @@
     <Grid x:Name="ContentGrid" PointerMoved="ContentGrid_PointerMoved" PointerExited="ContentGrid_PointerExited" PointerEntered="ContentGrid_PointerEntered" SizeChanged="ContentGrid_SizeChanged">
         <Frame x:Name="ContentFrame" Content="Background" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
         <ScrollViewer x:Name="ItemsScrollView">
-            <Grid VerticalAlignment="Bottom">
+            <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
