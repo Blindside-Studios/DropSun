@@ -15,6 +15,8 @@ namespace DropSun.Model.Weather
 {
     internal class OpenMeteoAPI
     {
+        // docs link: https://open-meteo.com/en/docs#current=temperature_2m,relative_humidity_2m,apparent_temperature,is_day,precipitation,rain,showers,snowfall,weather_code,cloud_cover,pressure_msl,surface_pressure,wind_speed_10m,wind_direction_10m,wind_gusts_10m&hourly=temperature_2m,apparent_temperature,precipitation_probability,weather_code,visibility,wind_speed_10m,is_day&daily=weather_code,temperature_2m_max,temperature_2m_min,apparent_temperature_max,apparent_temperature_min,precipitation_sum&timezone=Europe%2FBerlin&forecast_hours=6
+
         public static async Task<OpenMeteoWeatherOverview> GetWeatherAsync(double latitude, double longitude)
         {
             string latitudeString = latitude.ToString(System.Globalization.CultureInfo.InvariantCulture);

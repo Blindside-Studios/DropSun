@@ -121,6 +121,15 @@
     <value>Feels like {0}{1}</value>
     <comment>0 is the temperature, 1 is the unit (°)</comment>
   </data>
+  <data name="GeneralWidgetHumidityTextBlock.Text" xml:space="preserve">
+    <value>Humidity</value>
+  </data>
+  <data name="GeneralWidgetSurfacePressureTextBlock.Text" xml:space="preserve">
+    <value>Pressure</value>
+  </data>
+  <data name="GeneralWidgetSurfacePressureTextBlock.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Air pressure at ground level</value>
+  </data>
   <data name="GlobalSearchBox.PlaceholderText" xml:space="preserve">
     <value>Type here to add a location...</value>
   </data>

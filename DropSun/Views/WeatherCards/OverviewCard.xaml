@@ -98,11 +98,26 @@
                 <RowDefinition Height="0"/>
                 <RowDefinition Height="16"/>
             </Grid.RowDefinitions>
-            <TextBlock x:Name="AQIValueTextBlock" Grid.Column="0" HorizontalAlignment="Center" Grid.Row="0" Style="{StaticResource BodyStrongTextBlockStyle}" Text="40"/>
-            <TextBlock x:Name="AQINameTextBlock" Grid.Column="0" HorizontalAlignment="Center" Grid.Row="2" Style="{StaticResource CaptionTextBlockStyle}" Text="AQI"/>
+            <Grid Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Column="0" Style="{StaticResource BodyStrongTextBlockStyle}" Text="{x:Bind vm:WeatherState.Instance.Forecast.Current.RelativeHumidity2M, Mode=OneWay}"/>
+                <TextBlock Grid.Column="1" Style="{StaticResource BodyStrongTextBlockStyle}" Text="{x:Bind vm:WeatherState.Instance.Forecast.CurrentUnits.RelativeHumidity2M, Mode=OneWay}"/>
+            </Grid>
+            <TextBlock x:Name="GeneralWidgetHumidityTextBlock" x:Uid="GeneralWidgetHumidityTextBlock" Grid.Column="0" HorizontalAlignment="Center" Grid.Row="2" Style="{StaticResource CaptionTextBlockStyle}"/>
 
-            <TextBlock x:Name="UVIValueTextBlock" Grid.Column="1" HorizontalAlignment="Center" Grid.Row="0" Style="{StaticResource BodyStrongTextBlockStyle}" Text="0"/>
-            <TextBlock x:Name="UVINameTextBlock" Grid.Column="1" HorizontalAlignment="Center" Grid.Row="2" Style="{StaticResource CaptionTextBlockStyle}" Text="UV INDEX"/>
+            <Grid Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="3"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Column="0" Style="{StaticResource BodyStrongTextBlockStyle}" Text="{x:Bind vm:WeatherState.Instance.Forecast.Current.SurfacePressure, Mode=OneWay}"/>
+                <TextBlock Grid.Column="2" Style="{StaticResource BodyStrongTextBlockStyle}" Text="{x:Bind vm:WeatherState.Instance.Forecast.CurrentUnits.SurfacePressure, Mode=OneWay}"/>
+            </Grid>
+            <TextBlock x:Name="GeneralWidgetSurfacePressureTextBlock" x:Uid="GeneralWidgetSurfacePressureTextBlock" Grid.Column="1" HorizontalAlignment="Center" Grid.Row="2" Style="{StaticResource CaptionTextBlockStyle}"/>
 
             <TextBlock x:Name="HighTempTextBlock" Grid.Column="2" HorizontalAlignment="Center" Grid.Row="0" Style="{StaticResource BodyStrongTextBlockStyle}" Text="H: 17°"/>
             <TextBlock x:Name="LowTempTextBlock" Grid.Column="2" HorizontalAlignment="Center" Grid.Row="2" Style="{StaticResource CaptionTextBlockStyle}" Text="L: 6°"/>
