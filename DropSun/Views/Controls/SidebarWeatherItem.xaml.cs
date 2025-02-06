@@ -1,3 +1,4 @@
+using DropSun.Model.Geolocation;
 using DropSun.Model.Weather;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
@@ -48,7 +49,14 @@ namespace DropSun.Views.Controls
         public Model.Geolocation.InternalGeolocation Location
         {
             get { return (Model.Geolocation.InternalGeolocation)GetValue(LocationProperty); }
-            set { SetValue(LocationProperty, value); LocationTextBox.Text = value.name; }
+            set { 
+                SetValue(LocationProperty, value); 
+                LocationTextBox.Text = value.name; 
+                SubLocationTextBox.Text = GeoLookup.GetCountryName(Location.country_code);
+                ToolTip toolTip = new ToolTip();
+                toolTip.Content = $"{Location.name}, {GeoLookup.GetStateName(Location.country_code, Location.state_code)}, {GeoLookup.GetCountryName(Location.country_code)}";
+                ToolTipService.SetToolTip(LocationStackPanel, toolTip);
+            }
         }
         public static readonly DependencyProperty LocationProperty =
             DependencyProperty.Register("Location", typeof(string), typeof(SidebarWeatherItem), new PropertyMetadata(default(Model.Geolocation.InternalGeolocation)));
@@ -75,14 +83,14 @@ namespace DropSun.Views.Controls
             set {
                 SetValue(WeatherProperty, value);
 
-                TemperatureTextBox.Text = ((double)value.Current.Temperature2M).ToString() + value.CurrentUnits.Temperature2M;
+                TemperatureTextBox.Text = ((double)value.Current.Temperature2M).ToString() + value.CurrentUnits.Temperature2M[0];
                 
                 ResourceLoader _resourceLoader = ResourceLoader.GetForViewIndependentUse();
                 ResourceLoader _conditionsResourceLoader = ResourceLoader.GetForViewIndependentUse("Conditions");
 
                 double minTemperature = (double)Math.Round(value.Daily.ApparentTemperatureMin[0]);
                 double maxTemperature = (double)Math.Round(value.Daily.ApparentTemperatureMax[0]);
-                string temperatureUnit = (string)value.CurrentUnits.Temperature2M;
+                char temperatureUnit = value.CurrentUnits.Temperature2M[0];
                 HighLowTextBox.Text = string.Format(_resourceLoader.GetString("Weather/HighLowShort"), maxTemperature, minTemperature, temperatureUnit);
                 ConditionsTextBox.Text = _conditionsResourceLoader.GetString(value.GetWeatherDescription().ToString());
 
@@ -154,14 +162,22 @@ namespace DropSun.Views.Controls
             {
                 ResourceLoader _resourceLoader = ResourceLoader.GetForViewIndependentUse();
 
+                double minTemperature = (double)Math.Round(Weather.Daily.ApparentTemperatureMin[0]);
                 double maxTemperature = (double)Math.Round(Weather.Daily.ApparentTemperatureMax[0]);
-                string temperatureUnit = (string)Weather.CurrentUnits.Temperature2M;
-                HighLowTextBox.Text = string.Format(_resourceLoader.GetString("Weather/HighLowMinimal"), maxTemperature, temperatureUnit);
+                char temperatureUnit = Weather.CurrentUnits.Temperature2M[0];
+                string highString = string.Format(_resourceLoader.GetString("Weather/HighLowMinimal"), maxTemperature, temperatureUnit);
+                string highLowString = string.Format(_resourceLoader.GetString("Weather/HighLowShort"), maxTemperature, minTemperature, temperatureUnit);
+
+                HighLowTextBox.Text = highString;
+                ToolTip temperatureTooltip = new ToolTip();
+                temperatureTooltip.Content = highLowString;
+                ToolTipService.SetToolTip(HighLowTextBox, temperatureTooltip);
 
                 await Task.Delay(100);
                 if (ConditionsTextBox.IsTextTrimmed)
                 {
                     HighLowTextBox.Text = "";
+                    ToolTipService.SetToolTip(TemperatureTextBox, temperatureTooltip);
 
                     await Task.Delay(100);
                     if (ConditionsTextBox.IsTextTrimmed)
@@ -171,9 +187,9 @@ namespace DropSun.Views.Controls
                         ToolTipService.SetToolTip(ConditionsTextBox, toolTip);
                     }
                 }
-                else ToolTipService.SetToolTip(ConditionsTextBox, null);
+                else { ToolTipService.SetToolTip(ConditionsTextBox, null); ToolTipService.SetToolTip(TemperatureTextBox, null); }
             }
-            else ToolTipService.SetToolTip(ConditionsTextBox, null);
+            else { ToolTipService.SetToolTip(ConditionsTextBox, null); ToolTipService.SetToolTip(TemperatureTextBox, null); ToolTipService.SetToolTip(HighLowTextBox, null); }
         }
     }
 }

@@ -21,10 +21,10 @@
         <Grid Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Stretch">
             <Grid.RowDefinitions>
                 <RowDefinition Height="4"/>
-                <RowDefinition Height="28"/>
-                <RowDefinition Height="8"/>
+                <RowDefinition Height="45"/>
                 <RowDefinition Height="20"/>
-                <RowDefinition Height="4"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="8"/>
             </Grid.RowDefinitions>
 
             <Grid Grid.Row="1" HorizontalAlignment="Stretch">
@@ -35,15 +35,22 @@
                     <ColumnDefinition Width="Auto"/>
                     <ColumnDefinition Width="10"/>
                 </Grid.ColumnDefinitions>
-                <TextBlock  x:Name="LocationTextBox" 
-                            Grid.Column="1"
-                            Style="{StaticResource SubtitleTextBlockStyle}" 
-                            Text="{Binding Location, RelativeSource={RelativeSource Mode=TemplatedParent}}" 
-                            VerticalAlignment="Top"
-                            HorizontalAlignment="Left"/>
+                <StackPanel x:Name="LocationStackPanel" Grid.Column="1">
+                    <TextBlock  x:Name="LocationTextBox" 
+                                Style="{StaticResource SubtitleTextBlockStyle}" 
+                                Text="{Binding Location, RelativeSource={RelativeSource Mode=TemplatedParent}}" 
+                                VerticalAlignment="Top"
+                                HorizontalAlignment="Left"/>
+                    <TextBlock  x:Name="SubLocationTextBox" 
+                                Style="{StaticResource CaptionTextBlockStyle}" 
+                                Text="{Binding Location, RelativeSource={RelativeSource Mode=TemplatedParent}}" 
+                                Opacity="0.5"
+                                VerticalAlignment="Top"
+                                HorizontalAlignment="Left"/>
+                </StackPanel>
                 <TextBlock  x:Name="TemperatureTextBox" 
                             Grid.Column="3"
-                            Style="{StaticResource SubtitleTextBlockStyle}" 
+                            Style="{StaticResource TitleTextBlockStyle}" 
                             VerticalAlignment="Top"/>
             </Grid>
 
