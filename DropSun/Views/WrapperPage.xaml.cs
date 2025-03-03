@@ -193,12 +193,12 @@ namespace DropSun.Views
             if (isSideBarExpanded)
             {
                 collapseSidebar();
-                ContentFrame.CornerRadius = new Microsoft.UI.Xaml.CornerRadius(8, 8, 3, 3);
+                ContentFrame.CornerRadius = new Microsoft.UI.Xaml.CornerRadius(8, 8, 4, 4);
             }
             else
             {
                 expandSidebar();
-                ContentFrame.CornerRadius = new Microsoft.UI.Xaml.CornerRadius(8, 8, 3, 8);
+                ContentFrame.CornerRadius = new Microsoft.UI.Xaml.CornerRadius(8, 8, 4, 8);
             }
         }
 
@@ -220,7 +220,7 @@ namespace DropSun.Views
                 DoubleAnimation doubleAnimation = new DoubleAnimation();
                 doubleAnimation.Duration = duration;
                 doubleAnimation.From = SidebarContainer.ActualWidth;
-                doubleAnimation.To = 275;
+                doubleAnimation.To = 299;
                 doubleAnimation.EnableDependentAnimation = true;
                 doubleAnimation.EasingFunction = circleEase;
 
@@ -234,7 +234,7 @@ namespace DropSun.Views
                 currentAnimation = sb;
                 sb.Begin();
             }
-            else SidebarContainer.Width = 275;
+            else SidebarContainer.Width = 299;
         }
 
         public void collapseSidebar()
@@ -255,7 +255,7 @@ namespace DropSun.Views
                 DoubleAnimation doubleAnimation = new DoubleAnimation();
                 doubleAnimation.Duration = duration;
                 doubleAnimation.From = SidebarContainer.ActualWidth;
-                doubleAnimation.To = 25;
+                doubleAnimation.To = 24;
                 doubleAnimation.EnableDependentAnimation = true;
                 doubleAnimation.EasingFunction = ease;
 
@@ -269,7 +269,7 @@ namespace DropSun.Views
                 currentAnimation = sb;
                 sb.Begin();
             }
-            else SidebarContainer.Width = 25;
+            else SidebarContainer.Width = 24;
         }
 
         private void SidebarContainer_RightTapped(object sender, Microsoft.UI.Xaml.Input.RightTappedRoutedEventArgs e)
