@@ -39,6 +39,10 @@ namespace DropSun.Views.Controls
         {
             Model.ViewModels.WeatherState.Instance.Forecast = Weather;
             Model.ViewModels.WeatherState.Instance.Location = Location;
+            Pikouna_Engine.WeatherViewModel.Instance.CloudCoverageExternal = Weather.Current.CloudCover;
+            Pikouna_Engine.WeatherViewModel.Instance.Showers = Weather.Current.Showers;
+            Pikouna_Engine.WeatherViewModel.Instance.WindSpeed = Weather.Current.WindSpeed10M;
+            Pikouna_Engine.WeatherViewModel.Instance.Snow = Weather.Current.Snowfall;
         }
 
         private void SidebarWeatherItem_Loaded(object sender, RoutedEventArgs e)

@@ -118,11 +118,13 @@ namespace DropSun
             {
                 TitleBarTextBlock.Foreground =
                     (SolidColorBrush)App.Current.Resources["WindowCaptionForegroundDisabled"];
+                Pikouna_Engine.ApplicationViewModel.Instance.CanPlayAnimations = false;
             }
             else
             {
                 TitleBarTextBlock.Foreground =
                     (SolidColorBrush)App.Current.Resources["WindowCaptionForeground"];
+                Pikouna_Engine.ApplicationViewModel.Instance.CanPlayAnimations = true;
             }
         }
 
