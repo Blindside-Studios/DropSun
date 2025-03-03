@@ -18,11 +18,11 @@
 
         <!--<FontIcon Glyph="&#xE706;" Grid.Column="0" FontSize="38" Margin="10,10,10,10"/>-->
 
-        <Grid Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Stretch">
+        <Grid Grid.Column="1" Margin="6" VerticalAlignment="Center" HorizontalAlignment="Stretch">
             <Grid.RowDefinitions>
                 <RowDefinition Height="4"/>
                 <RowDefinition Height="45"/>
-                <RowDefinition Height="20"/>
+                <RowDefinition Height="25"/>
                 <RowDefinition Height="20"/>
                 <RowDefinition Height="8"/>
             </Grid.RowDefinitions>

@@ -220,7 +220,7 @@ namespace DropSun.Views
                 DoubleAnimation doubleAnimation = new DoubleAnimation();
                 doubleAnimation.Duration = duration;
                 doubleAnimation.From = SidebarContainer.ActualWidth;
-                doubleAnimation.To = 299;
+                doubleAnimation.To = 349;
                 doubleAnimation.EnableDependentAnimation = true;
                 doubleAnimation.EasingFunction = circleEase;
 
@@ -234,7 +234,7 @@ namespace DropSun.Views
                 currentAnimation = sb;
                 sb.Begin();
             }
-            else SidebarContainer.Width = 299;
+            else SidebarContainer.Width = 349;
         }
 
         public void collapseSidebar()
