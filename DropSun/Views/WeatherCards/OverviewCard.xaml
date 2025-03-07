@@ -7,6 +7,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:vm="using:DropSun.Model.ViewModels"
+    xmlns:atv="using:AnimatedTextView"
     mc:Ignorable="d"
     Background="{ThemeResource AcrylicInAppFillColorDefaultBrush}">
 
@@ -42,11 +43,11 @@
                     <!--For country-->
                     <RowDefinition Height="20"/>
                 </Grid.RowDefinitions>
-                <TextBlock x:Name="CityTextBox" Grid.Row="0" Text="{x:Bind vm:WeatherState.Instance.Location.name, Mode=OneWay}" Style="{StaticResource TitleTextBlockStyle}"/>
+                <atv:TextView x:Name="CityTextBox" Grid.Row="0" Text="{x:Bind vm:WeatherState.Instance.Location.name, Mode=OneWay}" Style="{StaticResource TitleTextBlockStyle}"/>
                 <!--Requires manually getting the actual country name-->
-                <TextBlock x:Name="CountryTextBlock" Grid.Row="2" Style="{StaticResource BodyStrongTextBlockStyle}" Opacity="0.4"/>
+                <atv:TextView x:Name="CountryTextBlock" Grid.Row="2" Style="{StaticResource BodyStrongTextBlockStyle}" Opacity="0.4"/>
             </Grid>
-            <TextBlock x:Name="TemperatureTextBlock" Grid.Column="2" Style="{StaticResource TitleLargeTextBlockStyle}"/>
+            <atv:TextView x:Name="TemperatureTextBlock" Grid.Column="2" Style="{StaticResource TitleLargeTextBlockStyle}"/>
         </Grid>
 
         <Grid x:Name="BasicInfoGrid" Grid.Row="2" Opacity="0.7">
@@ -72,18 +73,18 @@
             </Grid.ColumnDefinitions>
 
             <FontIcon Grid.Column="0" FontSize="16" Glyph="&#xEB42;" VerticalAlignment="Center"/>
-            <TextBlock Grid.Column="2" Text="{x:Bind vm:WeatherState.Instance.Forecast.Current.Precipitation, Mode=OneWay}" Style="{StaticResource SubtitleTextBlockStyle}"/>
-            <TextBlock Grid.Column="3" Text="{x:Bind vm:WeatherState.Instance.Forecast.CurrentUnits.Precipitation, Mode=OneWay}" Style="{StaticResource SubtitleTextBlockStyle}"/>
+            <atv:TextView Grid.Column="2" Text="{x:Bind vm:WeatherState.Instance.Forecast.Current.Precipitation, Mode=OneWay}" Style="{StaticResource SubtitleTextBlockStyle}"/>
+            <atv:TextView Grid.Column="3" Text="{x:Bind vm:WeatherState.Instance.Forecast.CurrentUnits.Precipitation, Mode=OneWay}" Style="{StaticResource SubtitleTextBlockStyle}"/>
 
             <FontIcon Grid.Column="5" FontSize="16" Glyph="&#xE753;" VerticalAlignment="Center"/>
-            <TextBlock Grid.Column="7" Text="{x:Bind vm:WeatherState.Instance.Forecast.Current.CloudCover, Mode=OneWay}" Style="{StaticResource SubtitleTextBlockStyle}"/>
-            <TextBlock Grid.Column="8" Text="{x:Bind vm:WeatherState.Instance.Forecast.CurrentUnits.CloudCover, Mode=OneWay}" Style="{StaticResource SubtitleTextBlockStyle}"/>
+            <atv:TextView Grid.Column="7" Text="{x:Bind vm:WeatherState.Instance.Forecast.Current.CloudCover, Mode=OneWay}" Style="{StaticResource SubtitleTextBlockStyle}"/>
+            <atv:TextView Grid.Column="8" Text="{x:Bind vm:WeatherState.Instance.Forecast.CurrentUnits.CloudCover, Mode=OneWay}" Style="{StaticResource SubtitleTextBlockStyle}"/>
 
             <!--Requires manual input adjustment for apparent temperature-->
-            <TextBlock x:Name="ApparentTemperatureTextBlock" Grid.Column="10" Style="{StaticResource SubtitleTextBlockStyle}"/>
+            <atv:TextView x:Name="ApparentTemperatureTextBlock" Grid.Column="10" Style="{StaticResource SubtitleTextBlockStyle}"/>
         </Grid>
 
-        <TextBlock x:Name="ConditionsTextBox" Grid.Row="4" HorizontalAlignment="Center" Style="{StaticResource SubtitleTextBlockStyle}"/>
+        <atv:TextView x:Name="ConditionsTextBox" Grid.Row="4" HorizontalAlignment="Center" Style="{StaticResource SubtitleTextBlockStyle}"/>
 
         <Rectangle x:Name="Separator" Grid.Row="6" Fill="Gray" Opacity="0.25" Height="2" RadiusX="1" RadiusY="1" VerticalAlignment="Stretch" Margin="10,0,10,0"/>
 
@@ -103,10 +104,10 @@
                     <ColumnDefinition Width="Auto"/>
                     <ColumnDefinition Width="Auto"/>
                 </Grid.ColumnDefinitions>
-                <TextBlock Grid.Column="0" Style="{StaticResource BodyStrongTextBlockStyle}" Text="{x:Bind vm:WeatherState.Instance.Forecast.Current.RelativeHumidity2M, Mode=OneWay}"/>
-                <TextBlock Grid.Column="1" Style="{StaticResource BodyStrongTextBlockStyle}" Text="{x:Bind vm:WeatherState.Instance.Forecast.CurrentUnits.RelativeHumidity2M, Mode=OneWay}"/>
+                <atv:TextView Grid.Column="0" Style="{StaticResource BodyStrongTextBlockStyle}" Text="{x:Bind vm:WeatherState.Instance.Forecast.Current.RelativeHumidity2M, Mode=OneWay}"/>
+                <atv:TextView Grid.Column="1" Style="{StaticResource BodyStrongTextBlockStyle}" Text="{x:Bind vm:WeatherState.Instance.Forecast.CurrentUnits.RelativeHumidity2M, Mode=OneWay}"/>
             </Grid>
-            <TextBlock x:Name="GeneralWidgetHumidityTextBlock" x:Uid="GeneralWidgetHumidityTextBlock" Grid.Column="0" HorizontalAlignment="Center" Grid.Row="2" Style="{StaticResource CaptionTextBlockStyle}"/>
+            <atv:TextView x:Name="GeneralWidgetHumidityTextBlock" x:Uid="GeneralWidgetHumidityTextBlock" Grid.Column="0" HorizontalAlignment="Center" Grid.Row="2" Style="{StaticResource CaptionTextBlockStyle}"/>
 
             <Grid Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center">
                 <Grid.ColumnDefinitions>
@@ -114,13 +115,13 @@
                     <ColumnDefinition Width="3"/>
                     <ColumnDefinition Width="Auto"/>
                 </Grid.ColumnDefinitions>
-                <TextBlock Grid.Column="0" Style="{StaticResource BodyStrongTextBlockStyle}" Text="{x:Bind vm:WeatherState.Instance.Forecast.Current.SurfacePressure, Mode=OneWay}"/>
-                <TextBlock Grid.Column="2" Style="{StaticResource BodyStrongTextBlockStyle}" Text="{x:Bind vm:WeatherState.Instance.Forecast.CurrentUnits.SurfacePressure, Mode=OneWay}"/>
+                <atv:TextView Grid.Column="0" Style="{StaticResource BodyStrongTextBlockStyle}" Text="{x:Bind vm:WeatherState.Instance.Forecast.Current.SurfacePressure, Mode=OneWay}"/>
+                <atv:TextView Grid.Column="2" Style="{StaticResource BodyStrongTextBlockStyle}" Text="{x:Bind vm:WeatherState.Instance.Forecast.CurrentUnits.SurfacePressure, Mode=OneWay}"/>
             </Grid>
-            <TextBlock x:Name="GeneralWidgetSurfacePressureTextBlock" x:Uid="GeneralWidgetSurfacePressureTextBlock" Grid.Column="1" HorizontalAlignment="Center" Grid.Row="2" Style="{StaticResource CaptionTextBlockStyle}"/>
+            <atv:TextView x:Name="GeneralWidgetSurfacePressureTextBlock" x:Uid="GeneralWidgetSurfacePressureTextBlock" Grid.Column="1" HorizontalAlignment="Center" Grid.Row="2" Style="{StaticResource CaptionTextBlockStyle}"/>
 
-            <TextBlock x:Name="HighTempTextBlock" Grid.Column="2" HorizontalAlignment="Center" Grid.Row="0" Style="{StaticResource BodyStrongTextBlockStyle}" Text="H: 17°"/>
-            <TextBlock x:Name="LowTempTextBlock" Grid.Column="2" HorizontalAlignment="Center" Grid.Row="2" Style="{StaticResource CaptionTextBlockStyle}" Text="L: 6°"/>
+            <atv:TextView x:Name="HighTempTextBlock" Grid.Column="2" HorizontalAlignment="Center" Grid.Row="0" Style="{StaticResource BodyStrongTextBlockStyle}" Text="H: 17°"/>
+            <atv:TextView x:Name="LowTempTextBlock" Grid.Column="2" HorizontalAlignment="Center" Grid.Row="2" Style="{StaticResource CaptionTextBlockStyle}" Text="L: 6°"/>
         </Grid>
     </Grid>
 </Page>

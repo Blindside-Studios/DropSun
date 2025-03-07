@@ -49,6 +49,7 @@
     <ProjectCapability Include="Msix" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\AnimatedTextView\AnimatedTextView\AnimatedTextView\AnimatedTextView.csproj" />
     <ProjectReference Include="..\..\Pikouna-Engine\Pikouna Engine\Pikouna Engine\Pikouna Engine.csproj" />
     <ProjectReference Include="..\..\ShinGrid\ShinGrid\ShinGrid\ShinGrid.csproj" />
   </ItemGroup>
