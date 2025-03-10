@@ -43,6 +43,7 @@ namespace DropSun.Views.Controls
             Pikouna_Engine.WeatherViewModel.Instance.Showers = Weather.Current.Showers;
             Pikouna_Engine.WeatherViewModel.Instance.WindSpeed = Weather.Current.WindSpeed10M;
             Pikouna_Engine.WeatherViewModel.Instance.Snow = Weather.Current.Snowfall;
+            Pikouna_Engine.WeatherViewModel.Instance.WeatherType = (Pikouna_Engine.WeatherType)Weather.GetWeatherDescription(); // casting between these works because they have the same names
         }
 
         private void SidebarWeatherItem_Loaded(object sender, RoutedEventArgs e)
