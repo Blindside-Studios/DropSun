@@ -8,75 +8,79 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid x:Name="BackgroundColor" CornerRadius="8" Margin="0,8,0,8">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
+    <Grid x:Name="BackgroundColor" CornerRadius="8" Height="106" Margin="0,8,0,8">
+        <Image x:Name="WeatherPreview" Stretch="None"/>
+        <Rectangle Fill="{ThemeResource SystemControlBackgroundAltHighBrush}" Opacity="0.6" Visibility="Visible"/>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
 
-        <Frame x:Name="SkyFrame"/>
+            <Frame x:Name="SkyFrame"/>
 
-        <!--<FontIcon Glyph="&#xE706;" Grid.Column="0" FontSize="38" Margin="10,10,10,10"/>-->
+            <!--<FontIcon Glyph="&#xE706;" Grid.Column="0" FontSize="38" Margin="10,10,10,10"/>-->
 
-        <Grid Grid.Column="1" Margin="6" VerticalAlignment="Center" HorizontalAlignment="Stretch">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="4"/>
-                <RowDefinition Height="45"/>
-                <RowDefinition Height="25"/>
-                <RowDefinition Height="20"/>
-                <RowDefinition Height="8"/>
-            </Grid.RowDefinitions>
+            <Grid Grid.Column="1" Margin="6" VerticalAlignment="Center" HorizontalAlignment="Stretch">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="8"/>
+                    <RowDefinition Height="45"/>
+                    <RowDefinition Height="25"/>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="8"/>
+                </Grid.RowDefinitions>
 
-            <Grid Grid.Row="1" HorizontalAlignment="Stretch">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="10"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="10"/>
-                    <ColumnDefinition Width="Auto"/>
-                    <ColumnDefinition Width="10"/>
-                </Grid.ColumnDefinitions>
-                <StackPanel x:Name="LocationStackPanel" Grid.Column="1">
-                    <TextBlock  x:Name="LocationTextBox" 
+                <Grid Grid.Row="1" HorizontalAlignment="Stretch">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="10"/>
+                    </Grid.ColumnDefinitions>
+                    <StackPanel x:Name="LocationStackPanel" Grid.Column="1">
+                        <TextBlock  x:Name="LocationTextBox" 
                                 Style="{StaticResource SubtitleTextBlockStyle}" 
                                 Text="{Binding Location, RelativeSource={RelativeSource Mode=TemplatedParent}}" 
                                 VerticalAlignment="Top"
                                 HorizontalAlignment="Left"/>
-                    <TextBlock  x:Name="SubLocationTextBox" 
+                        <TextBlock  x:Name="SubLocationTextBox" 
                                 Style="{StaticResource CaptionTextBlockStyle}" 
                                 Text="{Binding Location, RelativeSource={RelativeSource Mode=TemplatedParent}}" 
                                 Opacity="0.5"
                                 VerticalAlignment="Top"
                                 HorizontalAlignment="Left"/>
-                </StackPanel>
-                <TextBlock  x:Name="TemperatureTextBox" 
+                    </StackPanel>
+                    <TextBlock  x:Name="TemperatureTextBox" 
                             Grid.Column="3"
                             Style="{StaticResource TitleTextBlockStyle}" 
                             VerticalAlignment="Top"/>
-            </Grid>
+                </Grid>
 
-            <Grid Grid.Row="3" HorizontalAlignment="Stretch" Opacity="0.75">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="10"/>
-                    <ColumnDefinition Width="Auto" />
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition x:Name="HighLowSpacer" Width="10"/>
-                    <ColumnDefinition Width="Auto" />
-                    <ColumnDefinition Width="10"/>
-                </Grid.ColumnDefinitions>
-                <FontIcon   Glyph="&#xE706;" FontSize="14"
+                <Grid Grid.Row="3" HorizontalAlignment="Stretch" Opacity="0.75">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition x:Name="HighLowSpacer" Width="10"/>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="10"/>
+                    </Grid.ColumnDefinitions>
+                    <FontIcon   Glyph="&#xE706;" FontSize="14"
                             Grid.Column="1"
                             VerticalAlignment="Center"/>
-                <TextBlock  x:Name="ConditionsTextBox" 
+                    <TextBlock  x:Name="ConditionsTextBox" 
                             Grid.Column="2"
                             Style="{StaticResource BodyTextBlockStyle}" 
                             VerticalAlignment="Top"
                             HorizontalAlignment="Left"
                             Margin="5,0,0,0"/>
-                <TextBlock  x:Name="HighLowTextBox" 
+                    <TextBlock  x:Name="HighLowTextBox" 
                             Grid.Column="4"
                             Style="{StaticResource BodyTextBlockStyle}" 
                             VerticalAlignment="Top"
                             Margin="5,0,0,0"/>
+                </Grid>
             </Grid>
         </Grid>
 

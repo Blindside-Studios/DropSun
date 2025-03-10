@@ -6,6 +6,7 @@ using Microsoft.UI.Xaml.Controls.Primitives;
 using Microsoft.UI.Xaml.Data;
 using Microsoft.UI.Xaml.Input;
 using Microsoft.UI.Xaml.Media;
+using Microsoft.UI.Xaml.Media.Imaging;
 using Microsoft.UI.Xaml.Navigation;
 using System;
 using System.Collections.Generic;
@@ -100,6 +101,9 @@ namespace DropSun.Views.Controls
                 ConditionsTextBox.Text = _conditionsResourceLoader.GetString(value.GetWeatherDescription().ToString());
 
                 System.Drawing.Color color = new();
+
+                string imagePath = $"ms-appx:///Assets/WeatherPreviews/{value.GetWeatherDescription().ToString()}.png";
+                WeatherPreview.Source = new BitmapImage(new Uri(imagePath));
 
                 switch (value.Current.WeatherCode)
                 {

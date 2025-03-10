@@ -13,6 +13,35 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Remove="Assets\Source\AppIcon\DropSunIcon.svg" />
+    <Content Remove="Assets\WeatherPreviews\ClearSky.png" />
+    <Content Remove="Assets\WeatherPreviews\DepositingRimeFog.png" />
+    <Content Remove="Assets\WeatherPreviews\DrizzleDense.png" />
+    <Content Remove="Assets\WeatherPreviews\DrizzleLight.png" />
+    <Content Remove="Assets\WeatherPreviews\DrizzleModerate.png" />
+    <Content Remove="Assets\WeatherPreviews\Fog.png" />
+    <Content Remove="Assets\WeatherPreviews\FreezingDrizzleDense.png" />
+    <Content Remove="Assets\WeatherPreviews\FreezingDrizzleLight.png" />
+    <Content Remove="Assets\WeatherPreviews\FreezingDrizzleModerate.png" />
+    <Content Remove="Assets\WeatherPreviews\FreezingRainHeavy.png" />
+    <Content Remove="Assets\WeatherPreviews\FreezingRainSlight.png" />
+    <Content Remove="Assets\WeatherPreviews\MainlyClear.png" />
+    <Content Remove="Assets\WeatherPreviews\Overcast.png" />
+    <Content Remove="Assets\WeatherPreviews\PartlyCloudy.png" />
+    <Content Remove="Assets\WeatherPreviews\RainHeavy.png" />
+    <Content Remove="Assets\WeatherPreviews\RainModerate.png" />
+    <Content Remove="Assets\WeatherPreviews\RainShowersModerate.png" />
+    <Content Remove="Assets\WeatherPreviews\RainShowersSlight.png" />
+    <Content Remove="Assets\WeatherPreviews\RainShowersViolent.png" />
+    <Content Remove="Assets\WeatherPreviews\RainSlight.png" />
+    <Content Remove="Assets\WeatherPreviews\SnowFallHeavy.png" />
+    <Content Remove="Assets\WeatherPreviews\SnowFallModerate.png" />
+    <Content Remove="Assets\WeatherPreviews\SnowFallSlight.png" />
+    <Content Remove="Assets\WeatherPreviews\SnowGrains.png" />
+    <Content Remove="Assets\WeatherPreviews\SnowShowersHeavy.png" />
+    <Content Remove="Assets\WeatherPreviews\SnowShowersSlight.png" />
+    <Content Remove="Assets\WeatherPreviews\ThunderstormSlightOrModerate.png" />
+    <Content Remove="Assets\WeatherPreviews\ThunderstormWithHailHeavy.png" />
+    <Content Remove="Assets\WeatherPreviews\ThunderstormWithHailSlight.png" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Views\Controls\SidebarWeatherItem.xaml" />
@@ -62,6 +91,93 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <None Update="Assets\WeatherPreviews\ClearSky.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Assets\WeatherPreviews\DepositingRimeFog.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Assets\WeatherPreviews\DrizzleDense.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Assets\WeatherPreviews\DrizzleLight.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Assets\WeatherPreviews\DrizzleModerate.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Assets\WeatherPreviews\Fog.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Assets\WeatherPreviews\FreezingDrizzleDense.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Assets\WeatherPreviews\FreezingDrizzleLight.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Assets\WeatherPreviews\FreezingDrizzleModerate.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Assets\WeatherPreviews\FreezingRainHeavy.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Assets\WeatherPreviews\FreezingRainSlight.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Assets\WeatherPreviews\MainlyClear.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Assets\WeatherPreviews\Overcast.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Assets\WeatherPreviews\PartlyCloudy.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Assets\WeatherPreviews\RainHeavy.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Assets\WeatherPreviews\RainModerate.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Assets\WeatherPreviews\RainShowersModerate.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Assets\WeatherPreviews\RainShowersSlight.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Assets\WeatherPreviews\RainShowersViolent.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Assets\WeatherPreviews\RainSlight.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Assets\WeatherPreviews\SnowFallHeavy.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Assets\WeatherPreviews\SnowFallModerate.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Assets\WeatherPreviews\SnowFallSlight.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Assets\WeatherPreviews\SnowGrains.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Assets\WeatherPreviews\SnowShowersHeavy.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Assets\WeatherPreviews\SnowShowersSlight.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Assets\WeatherPreviews\ThunderstormSlightOrModerate.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Assets\WeatherPreviews\ThunderstormWithHailHeavy.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Assets\WeatherPreviews\ThunderstormWithHailSlight.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="Model\Geolocation\locations.sqlite3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
