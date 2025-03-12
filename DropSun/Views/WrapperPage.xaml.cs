@@ -10,8 +10,11 @@ using Microsoft.UI.Xaml.Media.Animation;
 using Microsoft.UI.Xaml.Navigation;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
+using System.Numerics;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 using Windows.Foundation;
 using Windows.UI.ViewManagement;
 
@@ -32,11 +35,13 @@ namespace DropSun.Views
         {
             this.InitializeComponent();
             this.Loaded += WrapperPage_Loaded;
+            this.PointerMoved += WrapperPage_PointerMoved;
+            this.PointerReleased += WrapperPage_PointerReleased;
         }
 
         private void WrapperPage_Loaded(object sender, RoutedEventArgs e)
         {
-            ContentFrame.CornerRadius = new Microsoft.UI.Xaml.CornerRadius(8, 8, 3, 8);
+            ContentFrame.CornerRadius = new CornerRadius(8, 8, 3, 8);
             FrameNavigationOptions navOptions = new FrameNavigationOptions();
             navOptions.TransitionInfoOverride = new DrillInNavigationTransitionInfo();
             Type pageType = typeof(WeatherView);
@@ -57,6 +62,8 @@ namespace DropSun.Views
             frame.Content = weatherItem;
             frame.Tag = SelectedLocation;
 
+            frame.PointerPressed += Frame_PointerPressed;
+
             var weatherForecast = await OpenMeteoAPI.GetWeatherAsync(SelectedLocation.latitude, SelectedLocation.longitude);
             weatherItem.Weather = weatherForecast;
             weatherItem.Temperature = (double)weatherForecast.Current.Temperature2M;
@@ -64,6 +71,180 @@ namespace DropSun.Views
 
             if (!useAnimation) LocationsStackPanel.Children.Add(frame);
             else animateItem(frame);
+        }
+
+        private bool isAttemptingToDrag = false;
+        private bool canDrag = false;
+        private Vector2 originalPosition;
+        private Vector2 offset;
+        private Frame draggingElement;
+
+        private int originalIndex; // starting position of the dragged item
+        private int targetIndex;   // target drop position
+        private double itemHeight = 122; // every item has the same height, TODO: perhaps make this not hardcoded
+
+        private async void Frame_PointerPressed(object sender, Microsoft.UI.Xaml.Input.PointerRoutedEventArgs e)
+        {
+            isAttemptingToDrag = true;
+            var frame = sender as Frame;
+            var timeDelay = TimeSpan.FromSeconds(0.8);
+            frame.RenderTransform = new CompositeTransform();
+
+            animateScaleOfFrame(frame, 0.75, timeDelay);
+            await Task.Delay(timeDelay);
+            if (isAttemptingToDrag)
+            {
+                var transform = frame.TransformToVisual(null) as GeneralTransform;
+                var elementPos = transform.TransformPoint(new Windows.Foundation.Point(0, 0));
+                originalPosition = new Vector2((float)elementPos.X, (float)elementPos.Y);
+                var pointerPos = e.GetCurrentPoint(null).Position;
+                offset = new Vector2((float)(pointerPos.X - elementPos.X), (float)(pointerPos.Y - elementPos.Y));
+
+                animateScaleOfFrame(frame, 1.2, TimeSpan.FromSeconds(0.2));
+                originalIndex = LocationsStackPanel.Children.IndexOf(frame);
+                draggingElement = frame;
+                canDrag = true;
+            }
+        }
+
+        private void WrapperPage_PointerReleased(object sender, Microsoft.UI.Xaml.Input.PointerRoutedEventArgs e)
+        {
+            if (canDrag && draggingElement != null)
+            {
+                isAttemptingToDrag = false;
+                canDrag = false;
+                var frame = draggingElement;
+                var timeDelay = TimeSpan.FromSeconds(0.25);
+                animateScaleOfFrame(frame, 1, timeDelay);
+
+                draggingElement.ReleasePointerCapture(e.Pointer);
+                draggingElement = null;
+
+                LocationsStackPanel.Children.Move((uint)originalIndex, (uint)targetIndex);
+                foreach (Frame otherFrame in LocationsStackPanel.Children)
+                {
+                    otherFrame.RenderTransform = null;
+                    otherFrame.Translation = new Vector3(0, 0, 0);
+                }
+            }
+        }
+
+        private void animateScaleOfFrame(Frame element, double scale, TimeSpan timeSpan)
+        {
+            if (element.RenderTransform is CompositeTransform transform)
+            {
+                var scaleXAnim = new DoubleAnimation
+                {
+                    To = scale,
+                    Duration = timeSpan,
+                    EasingFunction = new CubicEase { EasingMode = EasingMode.EaseOut }
+                };
+
+                var scaleYAnim = new DoubleAnimation
+                {
+                    To = scale,
+                    Duration = timeSpan,
+                    EasingFunction = new CubicEase { EasingMode = EasingMode.EaseOut }
+                };
+
+                var storyboard = new Storyboard();
+                storyboard.Children.Add(scaleXAnim);
+                storyboard.Children.Add(scaleYAnim);
+
+                Storyboard.SetTarget(scaleXAnim, element);
+                Storyboard.SetTargetProperty(scaleXAnim, "(UIElement.RenderTransform).(CompositeTransform.ScaleX)");
+
+                Storyboard.SetTarget(scaleYAnim, element);
+                Storyboard.SetTargetProperty(scaleYAnim, "(UIElement.RenderTransform).(CompositeTransform.ScaleY)");
+
+                storyboard.Begin();
+            }
+        }
+
+        private void WrapperPage_PointerMoved(object sender, Microsoft.UI.Xaml.Input.PointerRoutedEventArgs e)
+        {
+            if (canDrag && draggingElement != null)
+            {
+                var pointerPos = e.GetCurrentPoint(null).Position;
+
+                double newX = pointerPos.X - offset.X;
+                double newY = pointerPos.Y - offset.Y;
+
+                // make it so the item can't be dragged sideways very far without a force pushing it back, symbolizing the user is mainly meant to drag it up and down.
+                double horizontalOffset = newX - originalPosition.X;
+                var pullBackStrength = 0.1;
+                double correctedX = originalPosition.X + horizontalOffset * (1 / Math.Sqrt(Math.Abs(horizontalOffset) * pullBackStrength));
+
+                if (draggingElement.RenderTransform is CompositeTransform transform)
+                {
+                    transform.TranslateX = correctedX - originalPosition.X;
+                    transform.TranslateY = newY - originalPosition.Y;
+                }
+
+                // calculate where to put the item
+                var relativePointerPos = e.GetCurrentPoint(LocationsStackPanel).Position;
+
+                double rnewX = relativePointerPos.X - offset.X;
+                double rnewY = relativePointerPos.Y - offset.Y;
+
+                // Calculate where the item would be dropped
+                targetIndex = (int)Math.Round(rnewY / itemHeight);
+
+                targetIndex = Math.Clamp(targetIndex, 0, LocationsStackPanel.Children.Count - 1);
+
+                if (draggingElement.RenderTransform is CompositeTransform rtransform)
+                {
+                    rtransform.TranslateX = rnewX - originalPosition.X;
+                    rtransform.TranslateY = rnewY - originalPosition.Y;
+                }
+
+                // Update item shifting
+                //UpdateItemPositions();
+            }
+        }
+
+        private void UpdateItemPositions()
+        {
+            for (int i = 0; i < LocationsStackPanel.Children.Count; i++)
+            {
+                var item = LocationsStackPanel.Children[i];
+
+                if (item == draggingElement) continue;
+
+                item.RenderTransform = new CompositeTransform();
+                if (item.RenderTransform is CompositeTransform transform)
+                {
+                    if (i >= targetIndex && i < originalIndex)
+                    {
+                        AnimateTranslateY(item, item.ActualSize.Y);
+                    }
+                    else if (i <= targetIndex && i > originalIndex)
+                    {
+                        AnimateTranslateY(item, -item.ActualSize.Y);
+                    }
+                    else
+                    {
+                        AnimateTranslateY(item, 0);
+                    }
+                }
+            }
+        }
+
+        private void AnimateTranslateY(UIElement element, double toY, int duration = 300)
+        {
+            var visual = ElementCompositionPreview.GetElementVisual(element);
+            var compositor = visual.Compositor;
+
+            visual.Properties.InsertVector3("Translation", new Vector3(0, 0, 0));
+
+            var animation = compositor.CreateScalarKeyFrameAnimation();
+            animation.InsertKeyFrame(1.0f, (float)toY, compositor.CreateCubicBezierEasingFunction(new Vector2(0.25f, 0.1f), new Vector2(0.25f, 1f)));
+            animation.Duration = TimeSpan.FromMilliseconds(duration);
+            animation.Target = "Translation.Y";
+
+            visual.TransformMatrix = Matrix4x4.CreateTranslation(0, (float)toY, 0);
+
+            visual.StartAnimation("Translation.Y", animation);
         }
 
         private void animateItem(Frame frame)
@@ -135,7 +316,7 @@ namespace DropSun.Views
             await Task.Delay(300);
 
             int i = 1;
-            foreach(Frame otherFrame in listOfFrames)
+            foreach (Frame otherFrame in listOfFrames)
             {
                 rippleOtherItems(otherFrame, i * 2);
                 await Task.Delay(200);
@@ -292,6 +473,8 @@ namespace DropSun.Views
             Frame frame = new Frame();
             frame.Content = weatherItem;
 
+            frame.PointerPressed += Frame_PointerPressed;
+
             weatherItem.Weather = weatherForecast;
             
             animateItem(frame);
@@ -299,6 +482,7 @@ namespace DropSun.Views
 
         private void SidebarContainer_DoubleTapped(object sender, Microsoft.UI.Xaml.Input.DoubleTappedRoutedEventArgs e)
         {
+            foreach (Frame panel in LocationsStackPanel.Children) Debug.WriteLine(panel.ActualHeight);
             LocationsStackPanel.Children.Clear();
         }
 
