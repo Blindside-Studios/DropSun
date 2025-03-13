@@ -153,4 +153,8 @@
     <value>L: {0}{1}</value>
     <comment>Used in the overview card to show the lowest temperature of the day.</comment>
   </data>
+  <data name="WindSpeed10MTextBlock.Text" xml:space="preserve">
+    <value>Wind Speed</value>
+    <comment>The label for the display of the wind speed, measured at a height of 10m above the ground. The 10m label is to be omitted usually in favor of saving space.</comment>
+  </data>
 </root>
