@@ -194,7 +194,7 @@ namespace DropSun.Views
                 targetIndex = Math.Clamp(targetIndex, 0, LocationsStackPanel.Children.Count - 1);
 
                 // Update item shifting
-                //UpdateItemPositions();
+                UpdateItemPositions();
             }
         }
 
@@ -211,15 +211,18 @@ namespace DropSun.Views
                 {
                     if (i >= targetIndex && i < originalIndex)
                     {
-                        AnimateTranslateY(item, item.ActualSize.Y);
+                        item.Translation = new Vector3(0, item.ActualSize.Y, 0);
+                        //AnimateTranslateY(item, item.ActualSize.Y);
                     }
                     else if (i <= targetIndex && i > originalIndex)
                     {
-                        AnimateTranslateY(item, -item.ActualSize.Y);
+                        item.Translation = new Vector3(0, -item.ActualSize.Y, 0);
+                        //AnimateTranslateY(item, -item.ActualSize.Y);
                     }
                     else
                     {
-                        AnimateTranslateY(item, 0);
+                        item.Translation = new Vector3(0, 0, 0);
+                        //AnimateTranslateY(item, 0);
                     }
                 }
             }
