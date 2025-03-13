@@ -94,7 +94,7 @@ namespace DropSun.Views
             var elementPos = transform.TransformPoint(new Windows.Foundation.Point(0, 0));
             originalPosition = new Vector2((float)elementPos.X, (float)elementPos.Y);
             var pointerPos = e.GetCurrentPoint(null).Position;
-            offset = new Vector2((float)(pointerPos.X - elementPos.X - frame.ActualWidth * 0.06), (float)(pointerPos.Y - elementPos.Y - frame.ActualHeight * 0.33));
+            offset = new Vector2((float)(pointerPos.X - elementPos.X), (float)(pointerPos.Y - elementPos.Y));
 
             draggingElement = frame;
                 
@@ -173,8 +173,8 @@ namespace DropSun.Views
 
                 // make it so the item can't be dragged sideways very far without a force pushing it back, symbolizing the user is mainly meant to drag it up and down.
                 double horizontalOffset = newX - originalPosition.X;
-                var pullBackStrength = 0.1;
-                double correctedX = originalPosition.X + horizontalOffset * (1 / Math.Sqrt(Math.Abs(horizontalOffset) * pullBackStrength));
+                var pullBackStrength = 10;
+                double correctedX = originalPosition.X + horizontalOffset * (1 / Math.Sqrt(Math.Abs(horizontalOffset) + pullBackStrength));
 
                 if (draggingElement.RenderTransform is CompositeTransform transform)
                 {
@@ -183,7 +183,7 @@ namespace DropSun.Views
                 }
 
                 // calculate where to put the item
-                var relativePointerPos = e.GetCurrentPoint(LocationsStackPanel).Position;
+                /*var relativePointerPos = e.GetCurrentPoint(LocationsStackPanel).Position;
 
                 double rnewX = relativePointerPos.X - offset.X;
                 double rnewY = relativePointerPos.Y - offset.Y;
@@ -197,7 +197,7 @@ namespace DropSun.Views
                 {
                     rtransform.TranslateX = rnewX - originalPosition.X;
                     rtransform.TranslateY = rnewY - originalPosition.Y;
-                }
+                }*/
 
                 // Update item shifting
                 //UpdateItemPositions();
