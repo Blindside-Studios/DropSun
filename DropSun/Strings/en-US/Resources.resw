@@ -145,4 +145,12 @@
     <value>H: {0}{2}  L: {1}{2}</value>
     <comment>0 is the highest temperature, 1 is the lowest and 2 is the unit in which the temperature is measured.</comment>
   </data>
+  <data name="Weather/TempDailyHighestShort" xml:space="preserve">
+    <value>H: {0}{1}</value>
+    <comment>Used in the overview card to indicate the highest temperature of the day</comment>
+  </data>
+  <data name="Weather/TempDailyLowestShort" xml:space="preserve">
+    <value>L: {0}{1}</value>
+    <comment>Used in the overview card to show the lowest temperature of the day.</comment>
+  </data>
 </root>

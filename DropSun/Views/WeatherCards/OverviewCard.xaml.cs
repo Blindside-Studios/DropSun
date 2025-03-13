@@ -62,6 +62,10 @@ namespace DropSun.Views.WeatherCards
                     WeatherState.Instance.Forecast.CurrentUnits.ApparentTemperature[0].ToString());
                 ApparentTemperatureTextBlock.Text = apparentTemperature;
                 ConditionsTextBox.Text = _conditionsLoader.GetString(WeatherState.Instance.Forecast.GetWeatherDescription().ToString());
+                string highString = string.Format(_loader.GetString("Weather/TempDailyHighestShort"), WeatherState.Instance.Forecast.Daily.Temperature2MMax[0], WeatherState.Instance.Forecast.DailyUnits.Temperature2MMax);
+                string lowString = string.Format(_loader.GetString("Weather/TempDailyLowestShort"), WeatherState.Instance.Forecast.Daily.Temperature2MMin[0], WeatherState.Instance.Forecast.DailyUnits.Temperature2MMin);
+                HighTempTextBlock.Text = highString;
+                LowTempTextBlock.Text = lowString;
             }
         }
     }
