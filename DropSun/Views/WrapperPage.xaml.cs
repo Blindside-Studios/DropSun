@@ -173,8 +173,8 @@ namespace DropSun.Views
 
                 // make it so the item can't be dragged sideways very far without a force pushing it back, symbolizing the user is mainly meant to drag it up and down.
                 double horizontalOffset = newX - originalPosition.X;
-                var pullBackStrength = 10;
-                double correctedX = originalPosition.X + horizontalOffset * (1 / Math.Sqrt(Math.Abs(horizontalOffset) + pullBackStrength));
+                var pullBackStrength = 0.1;
+                double correctedX = originalPosition.X + horizontalOffset * (1 / Math.Sqrt(Math.Abs(horizontalOffset) * pullBackStrength));
 
                 if (draggingElement.RenderTransform is CompositeTransform transform)
                 {
@@ -183,7 +183,7 @@ namespace DropSun.Views
                 }
 
                 // calculate where to put the item
-                /*var relativePointerPos = e.GetCurrentPoint(LocationsStackPanel).Position;
+                var relativePointerPos = e.GetCurrentPoint(LocationsStackPanel).Position;
 
                 double rnewX = relativePointerPos.X - offset.X;
                 double rnewY = relativePointerPos.Y - offset.Y;
@@ -192,12 +192,6 @@ namespace DropSun.Views
                 targetIndex = (int)Math.Round(rnewY / itemHeight);
 
                 targetIndex = Math.Clamp(targetIndex, 0, LocationsStackPanel.Children.Count - 1);
-
-                if (draggingElement.RenderTransform is CompositeTransform rtransform)
-                {
-                    rtransform.TranslateX = rnewX - originalPosition.X;
-                    rtransform.TranslateY = rnewY - originalPosition.Y;
-                }*/
 
                 // Update item shifting
                 //UpdateItemPositions();
