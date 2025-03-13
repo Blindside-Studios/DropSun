@@ -16,6 +16,7 @@ using System.Numerics;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 using Windows.Foundation;
+using Windows.UI.Core;
 using Windows.UI.ViewManagement;
 
 // To learn more about WinUI, the WinUI project structure,
@@ -83,6 +84,8 @@ namespace DropSun.Views
         private int targetIndex;   // target drop position
         private double itemHeight = 122; // every item has the same height, TODO: perhaps make this not hardcoded
 
+        private int lastHoverPosition;
+
         private async void Frame_PointerPressed(object sender, Microsoft.UI.Xaml.Input.PointerRoutedEventArgs e)
         {
             isAttemptingToDrag = true;
@@ -104,6 +107,7 @@ namespace DropSun.Views
             {
                 animateScaleOfFrame(frame, 1.2, TimeSpan.FromSeconds(0.2));
                 originalIndex = LocationsStackPanel.Children.IndexOf(frame);
+                lastHoverPosition = originalIndex;
                 canDrag = true;
             }
         }
@@ -194,7 +198,12 @@ namespace DropSun.Views
                 targetIndex = Math.Clamp(targetIndex, 0, LocationsStackPanel.Children.Count - 1);
 
                 // Update item shifting
-                UpdateItemPositions();
+                if (targetIndex != lastHoverPosition)
+                {
+                    lastHoverPosition = targetIndex;
+                    Debug.WriteLine("Updating Positions");
+                    UpdateItemPositions();
+                }
             }
         }
 
@@ -206,44 +215,74 @@ namespace DropSun.Views
 
                 if (item == draggingElement) continue;
 
-                item.RenderTransform = new CompositeTransform();
-                if (item.RenderTransform is CompositeTransform transform)
+                if (i >= targetIndex && i < originalIndex)
                 {
-                    if (i >= targetIndex && i < originalIndex)
-                    {
-                        item.Translation = new Vector3(0, item.ActualSize.Y, 0);
-                        //AnimateTranslateY(item, item.ActualSize.Y);
-                    }
-                    else if (i <= targetIndex && i > originalIndex)
-                    {
-                        item.Translation = new Vector3(0, -item.ActualSize.Y, 0);
-                        //AnimateTranslateY(item, -item.ActualSize.Y);
-                    }
-                    else
-                    {
-                        item.Translation = new Vector3(0, 0, 0);
-                        //AnimateTranslateY(item, 0);
-                    }
+                    //item.Translation = new Vector3(0, item.ActualSize.Y, 0);
+                    AnimateTranslateY(item, item.ActualSize.Y);
+                }
+                else if (i <= targetIndex && i > originalIndex)
+                {
+                    //item.Translation = new Vector3(0, -item.ActualSize.Y, 0);
+                    AnimateTranslateY(item, -item.ActualSize.Y);
+                }
+                else
+                {
+                    //item.Translation = new Vector3(0, 0, 0);
+                    AnimateTranslateY(item, 0);
                 }
             }
         }
 
-        private void AnimateTranslateY(UIElement element, double toY, int duration = 300)
+        private void AnimateTranslateY(UIElement element, double toY, int duration = 200)
         {
-            var visual = ElementCompositionPreview.GetElementVisual(element);
-            var compositor = visual.Compositor;
+            // get current transform state without resetting
+            var translateTransform = element.RenderTransform as TranslateTransform
+                ?? (element.RenderTransform as TransformGroup)?.Children
+                    .OfType<TranslateTransform>()
+                    .FirstOrDefault();
 
-            visual.Properties.InsertVector3("Translation", new Vector3(0, 0, 0));
+            // preserve existing transforms if present
+            if (translateTransform == null)
+            {
+                translateTransform = new TranslateTransform();
+                element.RenderTransform = element.RenderTransform switch
+                {
+                    TransformGroup existingGroup => new TransformGroup()
+                    {
+                        Children = new TransformCollection() { translateTransform }
+                    },
+                    { } existingTransform => new TransformGroup()
+                    {
+                        Children = { existingTransform, translateTransform }
+                    },
+                    _ => translateTransform
+                };
+            }
 
-            var animation = compositor.CreateScalarKeyFrameAnimation();
-            animation.InsertKeyFrame(1.0f, (float)toY, compositor.CreateCubicBezierEasingFunction(new Vector2(0.25f, 0.1f), new Vector2(0.25f, 1f)));
-            animation.Duration = TimeSpan.FromMilliseconds(duration);
-            animation.Target = "Translation.Y";
+            var currentY = translateTransform.Y;
 
-            visual.TransformMatrix = Matrix4x4.CreateTranslation(0, (float)toY, 0);
+            if (toY != currentY)
+            {
 
-            visual.StartAnimation("Translation.Y", animation);
+                var animation = new DoubleAnimation
+                {
+                    EasingFunction = new ExponentialEase() { Exponent = 3, EasingMode = EasingMode.EaseOut },
+                    From = currentY,
+                    To = toY,
+                    Duration = TimeSpan.FromMilliseconds(duration),
+                    EnableDependentAnimation = true
+                };
+
+                Storyboard.SetTarget(animation, translateTransform);
+                Storyboard.SetTargetProperty(animation, "Y");
+
+                var storyboard = new Storyboard();
+                storyboard.Children.Add(animation);
+
+                storyboard.Begin();
+            }
         }
+
 
         private void animateItem(Frame frame)
         {
