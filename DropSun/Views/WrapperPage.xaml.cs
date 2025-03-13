@@ -90,19 +90,20 @@ namespace DropSun.Views
             var timeDelay = TimeSpan.FromSeconds(0.8);
             frame.RenderTransform = new CompositeTransform();
 
+            var transform = frame.TransformToVisual(null) as GeneralTransform;
+            var elementPos = transform.TransformPoint(new Windows.Foundation.Point(0, 0));
+            originalPosition = new Vector2((float)elementPos.X, (float)elementPos.Y);
+            var pointerPos = e.GetCurrentPoint(null).Position;
+            offset = new Vector2((float)(pointerPos.X - elementPos.X - frame.ActualWidth * 0.06), (float)(pointerPos.Y - elementPos.Y - frame.ActualHeight * 0.33));
+
+            draggingElement = frame;
+                
             animateScaleOfFrame(frame, 0.75, timeDelay);
             await Task.Delay(timeDelay);
-            if (isAttemptingToDrag)
+            if (isAttemptingToDrag && draggingElement == frame)
             {
-                var transform = frame.TransformToVisual(null) as GeneralTransform;
-                var elementPos = transform.TransformPoint(new Windows.Foundation.Point(0, 0));
-                originalPosition = new Vector2((float)elementPos.X, (float)elementPos.Y);
-                var pointerPos = e.GetCurrentPoint(null).Position;
-                offset = new Vector2((float)(pointerPos.X - elementPos.X), (float)(pointerPos.Y - elementPos.Y));
-
                 animateScaleOfFrame(frame, 1.2, TimeSpan.FromSeconds(0.2));
                 originalIndex = LocationsStackPanel.Children.IndexOf(frame);
-                draggingElement = frame;
                 canDrag = true;
             }
         }
