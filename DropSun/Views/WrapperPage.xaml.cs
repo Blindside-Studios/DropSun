@@ -121,8 +121,7 @@ namespace DropSun.Views
                 canDrag = false;
 
                 var frame = draggingElement;
-                var timeDelay = TimeSpan.FromSeconds(0.25);
-                animateScaleOfFrame(frame, 1, timeDelay);
+                var timeDelay = TimeSpan.FromMilliseconds(2000);
 
                 CompositeTransform renderTransform = (CompositeTransform)frame.RenderTransform;
                 var offsetX = renderTransform.TranslateX;
@@ -130,8 +129,7 @@ namespace DropSun.Views
                 var unitsTravelledDownwards = targetIndex - originalIndex;
                 offsetY = renderTransform.TranslateY - unitsTravelledDownwards * frame.ActualHeight;
 
-                /*GeneralTransform transform = frame.TransformToVisual(LocationsStackPanel);
-                Point initialPoint = transform.TransformPoint(new Point(0, 0));*/
+                //animateScaleOfFrame(frame, 1, timeDelay, frame.Scale.X);
 
                 draggingElement.ReleasePointerCapture(e.Pointer);
                 draggingElement = null;
@@ -144,27 +142,26 @@ namespace DropSun.Views
                     otherFrame.Translation = new Vector3(0, 0, 0);
                 }
 
-                /*GeneralTransform newTransform = frame.TransformToVisual(LocationsStackPanel);
-                Point finalPoint = newTransform.TransformPoint(new Point(0, 0));
-
-                Vector3 deltaTranslation = new Vector3(
-                    (float)(finalPoint.X - initialPoint.X),
-                    (float)(finalPoint.Y - initialPoint.Y),
-                    0
-                );*/
-
-                
-
                 // animation
                 Duration duration = new Duration(TimeSpan.FromMilliseconds(400));
 
                 TransformGroup transformGroup = new TransformGroup();
+                ScaleTransform scaleTransform = new ScaleTransform();
                 TranslateTransform translateTransform = new TranslateTransform();
+                transformGroup.Children.Add(scaleTransform);
                 transformGroup.Children.Add(translateTransform);
                 frame.RenderTransform = transformGroup;
 
+                DoubleAnimationUsingKeyFrames scaleXAnimation = new DoubleAnimationUsingKeyFrames { EnableDependentAnimation = true };
+                DoubleAnimationUsingKeyFrames scaleYAnimation = new DoubleAnimationUsingKeyFrames { EnableDependentAnimation = true };
                 DoubleAnimationUsingKeyFrames translateXAnimation = new DoubleAnimationUsingKeyFrames { EnableDependentAnimation = true };
                 DoubleAnimationUsingKeyFrames translateYAnimation = new DoubleAnimationUsingKeyFrames { EnableDependentAnimation = true };
+
+                scaleXAnimation.KeyFrames.Add(new EasingDoubleKeyFrame { KeyTime = TimeSpan.FromSeconds(0), Value = 1.2 });
+                scaleXAnimation.KeyFrames.Add(new EasingDoubleKeyFrame { KeyTime = duration.TimeSpan, Value = 1, EasingFunction = new QuadraticEase { EasingMode = EasingMode.EaseInOut } });
+
+                scaleYAnimation.KeyFrames.Add(new EasingDoubleKeyFrame { KeyTime = TimeSpan.FromSeconds(0), Value = 1.2 });
+                scaleYAnimation.KeyFrames.Add(new EasingDoubleKeyFrame { KeyTime = duration.TimeSpan, Value = 1, EasingFunction = new QuadraticEase { EasingMode = EasingMode.EaseInOut } });
 
                 translateXAnimation.KeyFrames.Add(new EasingDoubleKeyFrame { KeyTime = TimeSpan.FromSeconds(0), Value = offsetX });
                 translateXAnimation.KeyFrames.Add(new EasingDoubleKeyFrame { KeyTime = duration.TimeSpan, Value = 0, EasingFunction = new BackEase { EasingMode = EasingMode.EaseOut, Amplitude = 0.2 } });
@@ -173,8 +170,16 @@ namespace DropSun.Views
                 translateYAnimation.KeyFrames.Add(new EasingDoubleKeyFrame { KeyTime = duration.TimeSpan, Value = 0, EasingFunction = new BackEase { EasingMode = EasingMode.EaseOut, Amplitude = 0.2 } });
 
                 Storyboard sb = new Storyboard { Duration = duration };
+                sb.Children.Add(scaleXAnimation);
+                sb.Children.Add(scaleYAnimation);
                 sb.Children.Add(translateXAnimation);
                 sb.Children.Add(translateYAnimation);
+
+                Storyboard.SetTarget(scaleXAnimation, scaleTransform);
+                Storyboard.SetTargetProperty(scaleXAnimation, "ScaleX");
+
+                Storyboard.SetTarget(scaleYAnimation, scaleTransform);
+                Storyboard.SetTargetProperty(scaleYAnimation, "ScaleY");
 
                 Storyboard.SetTarget(translateXAnimation, translateTransform);
                 Storyboard.SetTargetProperty(translateXAnimation, "X");
@@ -183,26 +188,18 @@ namespace DropSun.Views
                 Storyboard.SetTargetProperty(translateYAnimation, "Y");
 
                 sb.Begin();
-
-
-
-
-                /*// Animate Translation from deltaTranslation to (0,0,0)
-                Storyboard storyboard = new Storyboard();
-                Vector3KeyFrameAnimation animation = Window.Current.Compositor.CreateVector3KeyFrameAnimation();
-                animation.InsertKeyFrame(1.0f, new Vector3(0, 0, 0));
-                animation.Duration = TimeSpan.FromSeconds(0.25);
-                frame.StartAnimation("Translation", animation);*/
             }
         }
 
 
-        private void animateScaleOfFrame(Frame element, double scale, TimeSpan timeSpan)
+        private void animateScaleOfFrame(Frame element, double scale, TimeSpan timeSpan, double from = 1)
         {
             if (element.RenderTransform is CompositeTransform transform)
             {
+                Debug.WriteLine("Scaling into place");
                 var scaleXAnim = new DoubleAnimation
                 {
+                    From = from,
                     To = scale,
                     Duration = timeSpan,
                     EasingFunction = new CubicEase { EasingMode = EasingMode.EaseOut }
@@ -210,6 +207,7 @@ namespace DropSun.Views
 
                 var scaleYAnim = new DoubleAnimation
                 {
+                    From = from,
                     To = scale,
                     Duration = timeSpan,
                     EasingFunction = new CubicEase { EasingMode = EasingMode.EaseOut }
@@ -264,7 +262,6 @@ namespace DropSun.Views
                 if (targetIndex != lastHoverPosition)
                 {
                     lastHoverPosition = targetIndex;
-                    Debug.WriteLine("Updating Positions");
                     UpdateItemPositions();
                 }
             }
