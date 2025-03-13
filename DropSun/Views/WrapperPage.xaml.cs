@@ -5,6 +5,7 @@ using Microsoft.UI.Composition;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Hosting;
+using Microsoft.UI.Xaml.Input;
 using Microsoft.UI.Xaml.Media;
 using Microsoft.UI.Xaml.Media.Animation;
 using Microsoft.UI.Xaml.Navigation;
@@ -112,27 +113,89 @@ namespace DropSun.Views
             }
         }
 
-        private void WrapperPage_PointerReleased(object sender, Microsoft.UI.Xaml.Input.PointerRoutedEventArgs e)
+        private void WrapperPage_PointerReleased(object sender, PointerRoutedEventArgs e)
         {
             if (canDrag && draggingElement != null)
             {
                 isAttemptingToDrag = false;
                 canDrag = false;
+
                 var frame = draggingElement;
                 var timeDelay = TimeSpan.FromSeconds(0.25);
                 animateScaleOfFrame(frame, 1, timeDelay);
+
+                CompositeTransform renderTransform = (CompositeTransform)frame.RenderTransform;
+                var offsetX = renderTransform.TranslateX;
+                var offsetY = renderTransform.TranslateY;
+                var unitsTravelledDownwards = targetIndex - originalIndex;
+                offsetY = renderTransform.TranslateY - unitsTravelledDownwards * frame.ActualHeight;
+
+                /*GeneralTransform transform = frame.TransformToVisual(LocationsStackPanel);
+                Point initialPoint = transform.TransformPoint(new Point(0, 0));*/
 
                 draggingElement.ReleasePointerCapture(e.Pointer);
                 draggingElement = null;
 
                 LocationsStackPanel.Children.Move((uint)originalIndex, (uint)targetIndex);
+
                 foreach (Frame otherFrame in LocationsStackPanel.Children)
                 {
                     otherFrame.RenderTransform = null;
                     otherFrame.Translation = new Vector3(0, 0, 0);
                 }
+
+                /*GeneralTransform newTransform = frame.TransformToVisual(LocationsStackPanel);
+                Point finalPoint = newTransform.TransformPoint(new Point(0, 0));
+
+                Vector3 deltaTranslation = new Vector3(
+                    (float)(finalPoint.X - initialPoint.X),
+                    (float)(finalPoint.Y - initialPoint.Y),
+                    0
+                );*/
+
+                
+
+                // animation
+                Duration duration = new Duration(TimeSpan.FromMilliseconds(400));
+
+                TransformGroup transformGroup = new TransformGroup();
+                TranslateTransform translateTransform = new TranslateTransform();
+                transformGroup.Children.Add(translateTransform);
+                frame.RenderTransform = transformGroup;
+
+                DoubleAnimationUsingKeyFrames translateXAnimation = new DoubleAnimationUsingKeyFrames { EnableDependentAnimation = true };
+                DoubleAnimationUsingKeyFrames translateYAnimation = new DoubleAnimationUsingKeyFrames { EnableDependentAnimation = true };
+
+                translateXAnimation.KeyFrames.Add(new EasingDoubleKeyFrame { KeyTime = TimeSpan.FromSeconds(0), Value = offsetX });
+                translateXAnimation.KeyFrames.Add(new EasingDoubleKeyFrame { KeyTime = duration.TimeSpan, Value = 0, EasingFunction = new BackEase { EasingMode = EasingMode.EaseOut, Amplitude = 0.2 } });
+
+                translateYAnimation.KeyFrames.Add(new EasingDoubleKeyFrame { KeyTime = TimeSpan.FromSeconds(0), Value = offsetY });
+                translateYAnimation.KeyFrames.Add(new EasingDoubleKeyFrame { KeyTime = duration.TimeSpan, Value = 0, EasingFunction = new BackEase { EasingMode = EasingMode.EaseOut, Amplitude = 0.2 } });
+
+                Storyboard sb = new Storyboard { Duration = duration };
+                sb.Children.Add(translateXAnimation);
+                sb.Children.Add(translateYAnimation);
+
+                Storyboard.SetTarget(translateXAnimation, translateTransform);
+                Storyboard.SetTargetProperty(translateXAnimation, "X");
+
+                Storyboard.SetTarget(translateYAnimation, translateTransform);
+                Storyboard.SetTargetProperty(translateYAnimation, "Y");
+
+                sb.Begin();
+
+
+
+
+                /*// Animate Translation from deltaTranslation to (0,0,0)
+                Storyboard storyboard = new Storyboard();
+                Vector3KeyFrameAnimation animation = Window.Current.Compositor.CreateVector3KeyFrameAnimation();
+                animation.InsertKeyFrame(1.0f, new Vector3(0, 0, 0));
+                animation.Duration = TimeSpan.FromSeconds(0.25);
+                frame.StartAnimation("Translation", animation);*/
             }
         }
+
 
         private void animateScaleOfFrame(Frame element, double scale, TimeSpan timeSpan)
         {
