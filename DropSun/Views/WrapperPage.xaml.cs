@@ -40,6 +40,7 @@ namespace DropSun.Views
             this.Loaded += WrapperPage_Loaded;
             this.PointerMoved += WrapperPage_PointerMoved;
             this.PointerReleased += WrapperPage_PointerReleased;
+            this.DoubleTapped += WrapperPage_DoubleTapped;
         }
 
         private void WrapperPage_Loaded(object sender, RoutedEventArgs e)
@@ -84,16 +85,20 @@ namespace DropSun.Views
 
         private int originalIndex; // starting position of the dragged item
         private int targetIndex;   // target drop position
-        private double itemHeight = 122; // every item has the same height, TODO: perhaps make this not hardcoded
 
         private int lastHoverPosition;
+        private int dragIndex = 0;
 
         private async void Frame_PointerPressed(object sender, Microsoft.UI.Xaml.Input.PointerRoutedEventArgs e)
         {
+            dragIndex++;
             isAttemptingToDrag = true;
+            var currentDragIndex = dragIndex;
+
             var frame = sender as Frame;
             var timeDelay = TimeSpan.FromSeconds(0.8);
             frame.RenderTransform = new CompositeTransform();
+            //frame.Translation = new Vector3(frame.Translation.X, frame.Translation.Y, 99999); // ensure it's always rendered on top 
 
             var transform = frame.TransformToVisual(null) as GeneralTransform;
             var elementPos = transform.TransformPoint(new Windows.Foundation.Point(0, 0));
@@ -105,7 +110,7 @@ namespace DropSun.Views
                 
             animateScaleOfFrame(frame, 0.75, timeDelay);
             await Task.Delay(timeDelay);
-            if (isAttemptingToDrag && draggingElement == frame)
+            if (isAttemptingToDrag && draggingElement == frame && dragIndex == currentDragIndex)
             {
                 animateScaleOfFrame(frame, 1.2, TimeSpan.FromSeconds(0.2));
                 originalIndex = LocationsStackPanel.Children.IndexOf(frame);
@@ -118,9 +123,10 @@ namespace DropSun.Views
         {
             if (canDrag && draggingElement != null)
             {
-                isAttemptingToDrag = false;
+                dragIndex++;
                 canDrag = false;
-
+                isAttemptingToDrag = false;
+                
                 var frame = draggingElement;
                 var timeDelay = TimeSpan.FromMilliseconds(2000);
 
@@ -207,25 +213,29 @@ namespace DropSun.Views
                     if (lowerIndex < LocationsStackPanel.Children.Count) rippleOtherItems(LocationsStackPanel.Children[lowerIndex] as Frame, (lowerIndex - rippleOrigin) * 3, false);
                     await Task.Delay(200);
                 }
-                
-                /*if (targetIndex < LocationsStackPanel.Children.Count - 1)
-                {
-                    for (int i = targetIndex + 1; i < LocationsStackPanel.Children.Count(); i++)
-                    {
-                        // ripple downwards
-                        
-                        await Task.Delay(200);
-                    }
-                }
-                if (targetIndex > 0)
-                {
-                    for (int i = targetIndex - 1; i >= 0; i++)
-                    {
-                        // ripple upwards
-                        
-                        await Task.Delay(200);
-                    }
-                }*/
+            }
+            else if (isAttemptingToDrag && draggingElement != null)
+            {
+                dragIndex++;
+                isAttemptingToDrag = false;
+                isAttemptingToDrag = false;
+                canDrag = false;
+                animateScaleOfFrame(draggingElement, 1, TimeSpan.FromSeconds(0.2), 0.9);
+                draggingElement = null;
+
+            }
+        }
+
+        private void WrapperPage_DoubleTapped(object sender, DoubleTappedRoutedEventArgs e)
+        {
+            if (isAttemptingToDrag && draggingElement != null)
+            {
+                dragIndex++;
+                isAttemptingToDrag = false;
+                isAttemptingToDrag = false;
+                canDrag = false;
+                animateScaleOfFrame(draggingElement, 1, TimeSpan.FromSeconds(0.2), 0.9);
+                draggingElement = null;
             }
         }
 
@@ -234,7 +244,6 @@ namespace DropSun.Views
         {
             if (element.RenderTransform is CompositeTransform transform)
             {
-                Debug.WriteLine("Scaling into place");
                 var scaleXAnim = new DoubleAnimation
                 {
                     From = from,
@@ -292,7 +301,7 @@ namespace DropSun.Views
                 double rnewY = relativePointerPos.Y - offset.Y;
 
                 // Calculate where the item would be dropped
-                targetIndex = (int)Math.Round(rnewY / itemHeight);
+                targetIndex = (int)Math.Round(rnewY / draggingElement.ActualHeight);
 
                 targetIndex = Math.Clamp(targetIndex, 0, LocationsStackPanel.Children.Count - 1);
 
@@ -618,7 +627,6 @@ namespace DropSun.Views
 
         private void SidebarContainer_DoubleTapped(object sender, Microsoft.UI.Xaml.Input.DoubleTappedRoutedEventArgs e)
         {
-            foreach (Frame panel in LocationsStackPanel.Children) Debug.WriteLine(panel.ActualHeight);
             LocationsStackPanel.Children.Clear();
         }
 
