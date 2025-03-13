@@ -171,8 +171,8 @@ namespace DropSun.Views.Controls
             {
                 ResourceLoader _resourceLoader = ResourceLoader.GetForViewIndependentUse();
 
-                double minTemperature = (double)Math.Round(Weather.Daily.ApparentTemperatureMin[0]);
-                double maxTemperature = (double)Math.Round(Weather.Daily.ApparentTemperatureMax[0]);
+                double minTemperature = (double)Math.Round(Weather.Daily.Temperature2MMin[0]);
+                double maxTemperature = (double)Math.Round(Weather.Daily.Temperature2MMax[0]);
                 char temperatureUnit = Weather.CurrentUnits.Temperature2M[0];
                 string highString = string.Format(_resourceLoader.GetString("Weather/HighLowMinimal"), maxTemperature, temperatureUnit);
                 string highLowString = string.Format(_resourceLoader.GetString("Weather/HighLowShort"), maxTemperature, minTemperature, temperatureUnit);
