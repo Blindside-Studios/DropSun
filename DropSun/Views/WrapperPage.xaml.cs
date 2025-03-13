@@ -41,6 +41,7 @@ namespace DropSun.Views
             this.PointerMoved += WrapperPage_PointerMoved;
             this.PointerReleased += WrapperPage_PointerReleased;
             this.DoubleTapped += WrapperPage_DoubleTapped;
+            this.PointerExited += WrapperPage_PointerExited;
         }
 
         private void WrapperPage_Loaded(object sender, RoutedEventArgs e)
@@ -119,14 +120,24 @@ namespace DropSun.Views
             }
         }
 
-        private async void WrapperPage_PointerReleased(object sender, PointerRoutedEventArgs e)
+        private void WrapperPage_PointerReleased(object sender, PointerRoutedEventArgs e)
+        {
+            dropItemFromRearranging();
+        }
+
+        private void WrapperPage_PointerExited(object sender, PointerRoutedEventArgs e)
+        {
+            dropItemFromRearranging();
+        }
+
+        private async void dropItemFromRearranging()
         {
             if (canDrag && draggingElement != null)
             {
                 dragIndex++;
                 canDrag = false;
                 isAttemptingToDrag = false;
-                
+
                 var frame = draggingElement;
                 var timeDelay = TimeSpan.FromMilliseconds(2000);
 
@@ -138,7 +149,7 @@ namespace DropSun.Views
 
                 //animateScaleOfFrame(frame, 1, timeDelay, frame.Scale.X);
 
-                draggingElement.ReleasePointerCapture(e.Pointer);
+                //draggingElement.ReleasePointerCapture(e.Pointer);
                 draggingElement = null;
 
                 LocationsStackPanel.Children.Move((uint)originalIndex, (uint)targetIndex);
@@ -202,7 +213,7 @@ namespace DropSun.Views
 
                 // ripple effect
                 var rippleOrigin = targetIndex;
-                for (int i = 1; i< LocationsStackPanel.Children.Count; i++)
+                for (int i = 1; i < LocationsStackPanel.Children.Count; i++)
                 {
                     var upperIndex = rippleOrigin - i; // index is lower, aka items at the top
                     var lowerIndex = rippleOrigin + i; // index is higher, aka items at the bottom
