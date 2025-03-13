@@ -17,6 +17,7 @@ using System.Numerics;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 using Windows.Foundation;
+using Windows.Foundation.Metadata;
 using Windows.UI.Core;
 using Windows.UI.ViewManagement;
 
@@ -113,7 +114,7 @@ namespace DropSun.Views
             }
         }
 
-        private void WrapperPage_PointerReleased(object sender, PointerRoutedEventArgs e)
+        private async void WrapperPage_PointerReleased(object sender, PointerRoutedEventArgs e)
         {
             if (canDrag && draggingElement != null)
             {
@@ -143,7 +144,7 @@ namespace DropSun.Views
                 }
 
                 // animation
-                Duration duration = new Duration(TimeSpan.FromMilliseconds(400));
+                Duration duration = new Duration(TimeSpan.FromMilliseconds(500));
 
                 TransformGroup transformGroup = new TransformGroup();
                 ScaleTransform scaleTransform = new ScaleTransform();
@@ -158,16 +159,18 @@ namespace DropSun.Views
                 DoubleAnimationUsingKeyFrames translateYAnimation = new DoubleAnimationUsingKeyFrames { EnableDependentAnimation = true };
 
                 scaleXAnimation.KeyFrames.Add(new EasingDoubleKeyFrame { KeyTime = TimeSpan.FromSeconds(0), Value = 1.2 });
+                scaleXAnimation.KeyFrames.Add(new EasingDoubleKeyFrame { KeyTime = duration.TimeSpan * 0.4, Value = 0.85, EasingFunction = new QuadraticEase { EasingMode = EasingMode.EaseOut } });
                 scaleXAnimation.KeyFrames.Add(new EasingDoubleKeyFrame { KeyTime = duration.TimeSpan, Value = 1, EasingFunction = new QuadraticEase { EasingMode = EasingMode.EaseInOut } });
 
                 scaleYAnimation.KeyFrames.Add(new EasingDoubleKeyFrame { KeyTime = TimeSpan.FromSeconds(0), Value = 1.2 });
+                scaleYAnimation.KeyFrames.Add(new EasingDoubleKeyFrame { KeyTime = duration.TimeSpan * 0.4, Value = 0.85, EasingFunction = new QuadraticEase { EasingMode = EasingMode.EaseOut } });
                 scaleYAnimation.KeyFrames.Add(new EasingDoubleKeyFrame { KeyTime = duration.TimeSpan, Value = 1, EasingFunction = new QuadraticEase { EasingMode = EasingMode.EaseInOut } });
 
                 translateXAnimation.KeyFrames.Add(new EasingDoubleKeyFrame { KeyTime = TimeSpan.FromSeconds(0), Value = offsetX });
-                translateXAnimation.KeyFrames.Add(new EasingDoubleKeyFrame { KeyTime = duration.TimeSpan, Value = 0, EasingFunction = new BackEase { EasingMode = EasingMode.EaseOut, Amplitude = 0.2 } });
+                translateXAnimation.KeyFrames.Add(new EasingDoubleKeyFrame { KeyTime = duration.TimeSpan * 0.5, Value = 0, EasingFunction = new BackEase { EasingMode = EasingMode.EaseOut, Amplitude = 0.2 } });
 
                 translateYAnimation.KeyFrames.Add(new EasingDoubleKeyFrame { KeyTime = TimeSpan.FromSeconds(0), Value = offsetY });
-                translateYAnimation.KeyFrames.Add(new EasingDoubleKeyFrame { KeyTime = duration.TimeSpan, Value = 0, EasingFunction = new BackEase { EasingMode = EasingMode.EaseOut, Amplitude = 0.2 } });
+                translateYAnimation.KeyFrames.Add(new EasingDoubleKeyFrame { KeyTime = duration.TimeSpan * 0.5, Value = 0, EasingFunction = new BackEase { EasingMode = EasingMode.EaseOut, Amplitude = 0.2 } });
 
                 Storyboard sb = new Storyboard { Duration = duration };
                 sb.Children.Add(scaleXAnimation);
@@ -188,6 +191,41 @@ namespace DropSun.Views
                 Storyboard.SetTargetProperty(translateYAnimation, "Y");
 
                 sb.Begin();
+
+                await Task.Delay(duration.TimeSpan * 0.25);
+
+                // ripple effect
+                var rippleOrigin = targetIndex;
+                for (int i = 1; i< LocationsStackPanel.Children.Count; i++)
+                {
+                    var upperIndex = rippleOrigin - i; // index is lower, aka items at the top
+                    var lowerIndex = rippleOrigin + i; // index is higher, aka items at the bottom
+
+                    // ripple upwards
+                    if (upperIndex >= 0) rippleOtherItems(LocationsStackPanel.Children[upperIndex] as Frame, (rippleOrigin - upperIndex) * 3, true);
+                    // ripple downwards
+                    if (lowerIndex < LocationsStackPanel.Children.Count) rippleOtherItems(LocationsStackPanel.Children[lowerIndex] as Frame, (lowerIndex - rippleOrigin) * 3, false);
+                    await Task.Delay(200);
+                }
+                
+                /*if (targetIndex < LocationsStackPanel.Children.Count - 1)
+                {
+                    for (int i = targetIndex + 1; i < LocationsStackPanel.Children.Count(); i++)
+                    {
+                        // ripple downwards
+                        
+                        await Task.Delay(200);
+                    }
+                }
+                if (targetIndex > 0)
+                {
+                    for (int i = targetIndex - 1; i >= 0; i++)
+                    {
+                        // ripple upwards
+                        
+                        await Task.Delay(200);
+                    }
+                }*/
             }
         }
 
@@ -421,8 +459,9 @@ namespace DropSun.Views
             }
         }
 
-        private void rippleOtherItems(Frame frame, int index)
+        private void rippleOtherItems(Frame frame, int index, bool rippleUpwards = true)
         {
+            var modifier = rippleUpwards ? 1 : -1;
             frame.RenderTransformOrigin = new Point(0.5, 0.5);
             TransformGroup transformGroup = new TransformGroup();
             ScaleTransform scaleTransform = new ScaleTransform();
@@ -446,7 +485,7 @@ namespace DropSun.Views
             scaleYAnimation.KeyFrames.Add(new EasingDoubleKeyFrame { KeyTime = TimeSpan.FromSeconds(1.3), Value = 1, EasingFunction = new BackEase { EasingMode = EasingMode.EaseOut, Amplitude = 0.5 } });
 
             translateYAnimation.KeyFrames.Add(new EasingDoubleKeyFrame { KeyTime = TimeSpan.FromSeconds(0), Value = 0 });
-            translateYAnimation.KeyFrames.Add(new EasingDoubleKeyFrame { KeyTime = TimeSpan.FromSeconds(0.35), Value = -3 / index, EasingFunction = new CubicEase { EasingMode = EasingMode.EaseInOut } });
+            translateYAnimation.KeyFrames.Add(new EasingDoubleKeyFrame { KeyTime = TimeSpan.FromSeconds(0.35), Value = modifier * (- 3 / index), EasingFunction = new CubicEase { EasingMode = EasingMode.EaseInOut } });
             translateYAnimation.KeyFrames.Add(new EasingDoubleKeyFrame { KeyTime = TimeSpan.FromSeconds(1.3), Value = 0, EasingFunction = new BackEase { EasingMode = EasingMode.EaseOut, Amplitude = 0.4 } });
 
             Storyboard sb = new Storyboard { Duration = duration };
