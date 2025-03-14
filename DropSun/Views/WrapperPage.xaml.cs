@@ -296,7 +296,7 @@ namespace DropSun.Views
 
                 // make it so the item can't be dragged sideways very far without a force pushing it back, symbolizing the user is mainly meant to drag it up and down.
                 double horizontalOffset = newX - originalPosition.X;
-                var pullBackStrength = 0.1;
+                var pullBackStrength = 3;
                 double correctedX = originalPosition.X + horizontalOffset * (1 / Math.Sqrt(Math.Abs(horizontalOffset) * pullBackStrength));
 
                 if (draggingElement.RenderTransform is CompositeTransform transform)
