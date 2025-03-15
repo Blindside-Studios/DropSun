@@ -141,6 +141,7 @@ namespace DropSun
         private void Settings_Click(object sender, RoutedEventArgs e)
         {
             var wrapperPage = ContentFrame.Content as WrapperPage;
+            wrapperPage.showSettingsPage();
         }
 
         private void SidebarButton_PointerEntered(object sender, PointerRoutedEventArgs e)

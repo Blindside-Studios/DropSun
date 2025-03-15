@@ -61,7 +61,8 @@ namespace DropSun.Views
             ShinGridViewModel.Instance.ColumnWidth = 200;
             ShinGridViewModel.Instance.RowHeight = 200;
             ShinGridViewModel.Instance.CornerRadius = 8;
-            ShinGridViewModel.Instance.PanelInstances = new List<PanelInstance>()
+            // Only override if it hasn't been overridden before, otherwise this will crash!
+            if (ShinGridViewModel.Instance.PanelInstances == null) ShinGridViewModel.Instance.PanelInstances = new List<PanelInstance>()
             {
                 new PanelInstance { PageType = typeof(OverviewCard), Index = 0, ColumnSpan = 2 },
                 new PanelInstance { PageType = typeof(ForecastCard), Index = 1, ColumnSpan = 3 },

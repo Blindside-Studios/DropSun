@@ -1,5 +1,6 @@
 using DropSun.Model.Geolocation;
 using DropSun.Model.Weather;
+using DropSun.Views.Application;
 using DropSun.Views.Controls;
 using Microsoft.UI.Composition;
 using Microsoft.UI.Xaml;
@@ -33,6 +34,7 @@ namespace DropSun.Views
     {
         private bool isSideBarExpanded = true;
         Storyboard currentAnimation = null;
+        Type _currentlyShownPage;
 
         public WrapperPage()
         {
@@ -51,7 +53,7 @@ namespace DropSun.Views
             navOptions.TransitionInfoOverride = new DrillInNavigationTransitionInfo();
             Type pageType = typeof(WeatherView);
             ContentFrame.NavigateToType(pageType, null, navOptions);
-            
+            _currentlyShownPage = typeof(WeatherView);
         }
 
         public async void addLocation(InternalGeolocation SelectedLocation, bool useAnimation)
@@ -78,6 +80,18 @@ namespace DropSun.Views
             else animateItem(frame);
         }
 
+        public void showSettingsPage()
+        {
+            if (_currentlyShownPage != typeof(SettingsPage))
+            {
+                FrameNavigationOptions navOptions = new FrameNavigationOptions();
+                navOptions.TransitionInfoOverride = new DrillInNavigationTransitionInfo();
+                Type pageType = typeof(SettingsPage);
+                ContentFrame.NavigateToType(pageType, null, navOptions);
+                _currentlyShownPage = typeof(SettingsPage);
+            }
+        }
+
         private bool isAttemptingToDrag = false;
         private bool canDrag = false;
         private Vector2 originalPosition;
@@ -92,6 +106,15 @@ namespace DropSun.Views
 
         private async void Frame_PointerPressed(object sender, Microsoft.UI.Xaml.Input.PointerRoutedEventArgs e)
         {
+            if (_currentlyShownPage != typeof(WeatherView))
+            {
+                FrameNavigationOptions navOptions = new FrameNavigationOptions();
+                navOptions.TransitionInfoOverride = new DrillInNavigationTransitionInfo();
+                Type pageType = typeof(WeatherView);
+                ContentFrame.NavigateToType(pageType, null, navOptions);
+                _currentlyShownPage = typeof(WeatherView);
+            }
+            
             dragIndex++;
             isAttemptingToDrag = true;
             var currentDragIndex = dragIndex;
