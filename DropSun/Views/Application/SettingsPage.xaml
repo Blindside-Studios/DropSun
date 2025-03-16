@@ -13,7 +13,7 @@
         <SplitView x:Name="SettingsSplitView" DisplayMode="Inline" PaneBackground="{ThemeResource LayerFillColorAltBrush}" IsPaneOpen="True" OpenPaneLength="300">
             <SplitView.Pane>
                 <StackPanel>
-                    <TextBlock x:Uid="SettingsSidebarHeader" Style="{StaticResource TitleTextBlockStyle}" Margin="12, 2, 12, 4"/>
+                    <TextBlock x:Uid="SettingsSidebarHeader" Style="{StaticResource TitleTextBlockStyle}" Margin="12, 8, 12, 4"/>
                     <ListView x:Name="NavListView" SelectionChanged="NavListView_SelectionChanged">
                         <ListViewItem Tag="general">
                             <StackPanel Orientation="Horizontal">

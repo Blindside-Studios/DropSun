@@ -161,6 +161,22 @@
     <value>Visual &amp; Performance</value>
     <comment>Determines the item text for the visuals tab in the settings sidebar, responsible for animations, etc.</comment>
   </data>
+  <data name="SettingsVisualInteractionsBouncyRadioButton.Content" xml:space="preserve">
+    <value>Bouncy</value>
+    <comment>The option to make the sun bouncy</comment>
+  </data>
+  <data name="SettingsVisualInteractionsHeader.Text" xml:space="preserve">
+    <value>How Should The Interactive Sun Feel?</value>
+    <comment>The header over the buttons that lets users choose whether the sun is to be interactive and if so, if it is to be bouncy or not.</comment>
+  </data>
+  <data name="SettingsVisualInteractionsOffRadioButton.Content" xml:space="preserve">
+    <value>Not Interactive</value>
+    <comment>The option to set the sun to not be interactive.</comment>
+  </data>
+  <data name="SettingsVisualInteractionsSlowRadioButton.Content" xml:space="preserve">
+    <value>Gentle</value>
+    <comment>The option to make sun movement gentle</comment>
+  </data>
   <data name="TitleBar.Text" xml:space="preserve">
     <value>DropSun</value>
     <comment>App name - only for translation into different character sets</comment>

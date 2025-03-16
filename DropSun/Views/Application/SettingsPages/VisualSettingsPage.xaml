@@ -9,6 +9,15 @@
     mc:Ignorable="d">
 
     <Grid>
-        <TextBlock Text="This will show visual and performance settings." Opacity="0.4" Style="{StaticResource TitleLargeTextBlockStyle}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <ScrollView>
+            <StackPanel Margin="32">
+                <TextBlock x:Uid="SettingsVisualInteractionsHeader" Style="{StaticResource SubtitleTextBlockStyle}"/>
+                <RadioButtons x:Name="InteractionsRadioButtonGroup">
+                    <RadioButton x:Name="OffRadioButton" x:Uid="SettingsVisualInteractionsOffRadioButton" Tag="off" Checked="OffRadioButton_Checked"/>
+                    <RadioButton x:Name="SlowRadioButton" x:Uid="SettingsVisualInteractionsSlowRadioButton" Tag="slow" Checked="SlowRadioButton_Checked"/>
+                    <RadioButton x:Name="BouncyRadioButton" x:Uid="SettingsVisualInteractionsBouncyRadioButton" Tag="bouncy" Checked="BouncyRadioButton_Checked"/>
+                </RadioButtons>
+            </StackPanel>
+        </ScrollView>
     </Grid>
 </Page>
