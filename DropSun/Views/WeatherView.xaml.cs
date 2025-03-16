@@ -77,17 +77,17 @@ namespace DropSun.Views
 
         private void ContentGrid_PointerEntered(object sender, PointerRoutedEventArgs e)
         {
-            Pikouna_Engine.OzoraViewModel.Instance.MouseEngaged = true;
+            if (AppSettings.Instance.InteractionStyle != SunInteractionStyle.None) Pikouna_Engine.OzoraViewModel.Instance.MouseEngaged = true;
         }
 
         private void ContentGrid_PointerExited(object sender, PointerRoutedEventArgs e)
         {
-            Pikouna_Engine.OzoraViewModel.Instance.MouseEngaged = false;
+            if (AppSettings.Instance.InteractionStyle != SunInteractionStyle.None) Pikouna_Engine.OzoraViewModel.Instance.MouseEngaged = false;
         }
 
         private void ContentGrid_PointerMoved(object sender, PointerRoutedEventArgs e)
         {
-            Pikouna_Engine.OzoraViewModel.Instance.MousePosition = e.GetCurrentPoint(ContentGrid).Position;
+            if (AppSettings.Instance.InteractionStyle != SunInteractionStyle.None) Pikouna_Engine.OzoraViewModel.Instance.MousePosition = e.GetCurrentPoint(ContentGrid).Position;
         }
 
         private void ContentGrid_SizeChanged(object sender, SizeChangedEventArgs e)
