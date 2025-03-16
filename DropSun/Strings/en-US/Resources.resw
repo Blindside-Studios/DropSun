@@ -161,6 +161,10 @@
     <value>Visual &amp; Performance</value>
     <comment>Determines the item text for the visuals tab in the settings sidebar, responsible for animations, etc.</comment>
   </data>
+  <data name="SettingsVisualAccessibilityHeader.Text" xml:space="preserve">
+    <value>Accessibility</value>
+    <comment>Accessibility header in visual settings</comment>
+  </data>
   <data name="SettingsVisualInteractionsBouncyRadioButton.Content" xml:space="preserve">
     <value>Bouncy</value>
     <comment>The option to make the sun bouncy</comment>
@@ -176,6 +180,18 @@
   <data name="SettingsVisualInteractionsSlowRadioButton.Content" xml:space="preserve">
     <value>Gentle</value>
     <comment>The option to make sun movement gentle</comment>
+  </data>
+  <data name="SettingsVisualPerformanceAndEnergyHeader.Text" xml:space="preserve">
+    <value>Performance and Resource Management</value>
+    <comment>The header for the performance section</comment>
+  </data>
+  <data name="SettingsVisualPowerSaverToggle.Header" xml:space="preserve">
+    <value>Save Energy by reducing complex rendering effects</value>
+    <comment>The text next to the power saver toggle in performance and energy settings</comment>
+  </data>
+  <data name="SettingsVisualReduceLightningFlashToggle.Header" xml:space="preserve">
+    <value>Reduce flashing during lightning strikes</value>
+    <comment>The accessibility option to reduce flashes during lightning strikes in settings to prevent epileptic seizures.</comment>
   </data>
   <data name="TitleBar.Text" xml:space="preserve">
     <value>DropSun</value>

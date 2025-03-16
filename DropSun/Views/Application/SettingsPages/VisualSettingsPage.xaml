@@ -6,6 +6,7 @@
     xmlns:local="using:DropSun.Views.Application.SettingsPages"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:vm="using:DropSun.Model.ViewModels"
     mc:Ignorable="d">
 
     <Grid>
@@ -17,6 +18,10 @@
                     <RadioButton x:Name="SlowRadioButton" x:Uid="SettingsVisualInteractionsSlowRadioButton" Tag="slow" Checked="SlowRadioButton_Checked"/>
                     <RadioButton x:Name="BouncyRadioButton" x:Uid="SettingsVisualInteractionsBouncyRadioButton" Tag="bouncy" Checked="BouncyRadioButton_Checked"/>
                 </RadioButtons>
+                <TextBlock x:Uid="SettingsVisualPerformanceAndEnergyHeader" Style="{StaticResource SubtitleTextBlockStyle}"/>
+                <ToggleSwitch x:Uid="SettingsVisualPowerSaverToggle" IsOn="{x:Bind vm:AppSettings.Instance.EnablePowerSaver, Mode=TwoWay}"/>
+                <TextBlock x:Uid="SettingsVisualAccessibilityHeader" Style="{StaticResource SubtitleTextBlockStyle}"/>
+                <ToggleSwitch x:Uid="SettingsVisualReduceLightningFlashToggle" IsOn="{x:Bind vm:AppSettings.Instance.ReduceLightningStrikeFlashing, Mode=TwoWay}"/>
             </StackPanel>
         </ScrollView>
     </Grid>
