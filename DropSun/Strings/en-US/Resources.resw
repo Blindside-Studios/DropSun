@@ -119,19 +119,31 @@
   </resheader>
   <data name="ApparentTemperatureString" xml:space="preserve">
     <value>Feels like {0}{1}</value>
-    <comment>0 is the temperature, 1 is the unit (°)</comment>
+    <comment>The apparent temperature in the overview widget; 0 is the temperature, 1 is the unit (°)</comment>
   </data>
   <data name="GeneralWidgetHumidityTextBlock.Text" xml:space="preserve">
     <value>Humidity</value>
-  </data>
-  <data name="GeneralWidgetSurfacePressureTextBlock.Text" xml:space="preserve">
-    <value>Pressure</value>
-  </data>
-  <data name="GeneralWidgetSurfacePressureTextBlock.ToolTipService.ToolTip" xml:space="preserve">
-    <value>Air pressure at ground level</value>
+    <comment>The header for the humidity display in the overview widget</comment>
   </data>
   <data name="GlobalSearchBox.PlaceholderText" xml:space="preserve">
     <value>Type here to add a location...</value>
+    <comment>The placeholder text in the location search box</comment>
+  </data>
+  <data name="SettingsSidebarAbout.Text" xml:space="preserve">
+    <value>About</value>
+    <comment>Determines the item text for the about tab in the settings sidebar</comment>
+  </data>
+  <data name="SettingsSidebarGeneral.Text" xml:space="preserve">
+    <value>General</value>
+    <comment>Determines the item text for the general tab in the settings sidebar</comment>
+  </data>
+  <data name="SettingsSidebarHeader.Text" xml:space="preserve">
+    <value>Settings</value>
+    <comment>The header in the settings sidebar</comment>
+  </data>
+  <data name="SettingsSidebarVisual.Text" xml:space="preserve">
+    <value>Visual &amp; Performance</value>
+    <comment>Determines the item text for the visuals tab in the settings sidebar, responsible for animations, etc.</comment>
   </data>
   <data name="TitleBar.Text" xml:space="preserve">
     <value>DropSun</value>

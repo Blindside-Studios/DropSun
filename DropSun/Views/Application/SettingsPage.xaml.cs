@@ -4,6 +4,7 @@ using Microsoft.UI.Xaml.Controls.Primitives;
 using Microsoft.UI.Xaml.Data;
 using Microsoft.UI.Xaml.Input;
 using Microsoft.UI.Xaml.Media;
+using Microsoft.UI.Xaml.Media.Animation;
 using Microsoft.UI.Xaml.Navigation;
 using System;
 using System.Collections.Generic;
@@ -26,6 +27,28 @@ namespace DropSun.Views.Application
         public SettingsPage()
         {
             this.InitializeComponent();
+            NavListView.SelectedIndex = 0; // Select General by default
+        }
+
+        private void NavListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (NavListView.SelectedItem is ListViewItem selectedItem)
+            {
+                string selectedTag = selectedItem.Tag as string;
+
+                switch (selectedTag)
+                {
+                    case "general":
+                        ContentFrame.Navigate(typeof(SettingsPages.GeneralSettingsPage), null, new DrillInNavigationTransitionInfo());
+                        break;
+                    case "visual":
+                        ContentFrame.Navigate(typeof(SettingsPages.VisualSettingsPage), null, new DrillInNavigationTransitionInfo());
+                        break;
+                    case "about":
+                        ContentFrame.Navigate(typeof(SettingsPages.InfoSettingsPage), null, new DrillInNavigationTransitionInfo());
+                        break;
+                }
+            }
         }
     }
 }

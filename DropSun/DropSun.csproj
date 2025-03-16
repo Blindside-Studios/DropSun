@@ -45,6 +45,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Remove="Views\Application\SettingsPage.xaml" />
+    <None Remove="Views\Application\SettingsPages\GeneralSettingsPage.xaml" />
+    <None Remove="Views\Application\SettingsPages\InfoSettingsPage.xaml" />
+    <None Remove="Views\Application\SettingsPages\VisualSettingsPage.xaml" />
     <None Remove="Views\Controls\SidebarWeatherItem.xaml" />
     <None Remove="Views\WeatherCards\BlankCard.xaml" />
     <None Remove="Views\WeatherCards\ForecastCard.xaml" />
@@ -182,6 +185,15 @@
     <None Update="Model\Geolocation\locations.sqlite3">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <Page Update="Views\Application\SettingsPages\InfoSettingsPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="Views\Application\SettingsPages\VisualSettingsPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="Views\Application\SettingsPages\GeneralSettingsPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Update="Views\Application\SettingsPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
