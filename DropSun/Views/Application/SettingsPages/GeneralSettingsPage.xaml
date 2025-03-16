@@ -9,6 +9,15 @@
     mc:Ignorable="d">
 
     <Grid>
-        <TextBlock Text="This will show general settings." Opacity="0.4" Style="{StaticResource TitleLargeTextBlockStyle}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <ScrollView>
+            <StackPanel Margin="32">
+                <TextBlock x:Uid="SettingsGeneralUnitsHeader" Style="{StaticResource SubtitleTextBlockStyle}"/>
+                <RadioButtons x:Name="UnitsRadioButtonGroup">
+                    <RadioButton x:Name="GetFromSystemRegionRadioButton" x:Uid="SettingsGeneralUnitsGetFromSystemRegion" Tag="system" Checked="GetFromSystemRegionRadioButton_Checked"/>
+                    <RadioButton x:Name="MetricRadioButton" x:Uid="SettingsGeneralUnitsMetric" Tag="metric" Checked="MetricRadioButton_Checked"/>
+                    <RadioButton x:Name="ImperialRadioButton" x:Uid="SettingsGeneralUnitsImperial" Tag="imperial" Checked="ImperialRadioButton_Checked"/>
+                </RadioButtons>
+            </StackPanel>
+        </ScrollView>        
     </Grid>
 </Page>

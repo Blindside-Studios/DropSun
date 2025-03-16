@@ -129,6 +129,22 @@
     <value>Type here to add a location...</value>
     <comment>The placeholder text in the location search box</comment>
   </data>
+  <data name="SettingsGeneralUnitsGetFromSystemRegion.Content" xml:space="preserve">
+    <value>Get From System</value>
+    <comment>The option to click when the user wants their measurement system inferred from Windows region settings</comment>
+  </data>
+  <data name="SettingsGeneralUnitsHeader.Text" xml:space="preserve">
+    <value>Preferred Measurement System</value>
+    <comment>The header over the options for the measurement systems</comment>
+  </data>
+  <data name="SettingsGeneralUnitsImperial.Content" xml:space="preserve">
+    <value>Imperial</value>
+    <comment>The option to click when the user wants their measurement system to be imperial.</comment>
+  </data>
+  <data name="SettingsGeneralUnitsMetric.Content" xml:space="preserve">
+    <value>Metric</value>
+    <comment>The option to click when the user wants their measurement system to be  metric.</comment>
+  </data>
   <data name="SettingsSidebarAbout.Text" xml:space="preserve">
     <value>About</value>
     <comment>Determines the item text for the about tab in the settings sidebar</comment>

@@ -10,6 +10,7 @@ using DropSun.Model.Geolocation;
 using System.Text.Json;
 using System.Diagnostics;
 using System.Net.Http;
+using DropSun.Model.ViewModels;
 
 namespace DropSun.Model.Weather
 {
@@ -22,6 +23,7 @@ namespace DropSun.Model.Weather
             string latitudeString = latitude.ToString(System.Globalization.CultureInfo.InvariantCulture);
             string longitudeString = longitude.ToString(System.Globalization.CultureInfo.InvariantCulture);
             string url = $"https://api.open-meteo.com/v1/forecast?latitude={latitudeString}&longitude={longitudeString}&current=temperature_2m,relative_humidity_2m,apparent_temperature,is_day,precipitation,rain,showers,snowfall,weather_code,cloud_cover,pressure_msl,surface_pressure,wind_speed_10m,wind_direction_10m,wind_gusts_10m&hourly=temperature_2m,apparent_temperature,precipitation_probability,weather_code,visibility,wind_speed_10m,is_day&daily=weather_code,temperature_2m_max,temperature_2m_min,apparent_temperature_max,apparent_temperature_min,precipitation_sum&timezone=Europe%2FBerlin&forecast_hours=6";
+            if (AppSettings.Instance.GetMeasurementUnits() == MeasurementUnits.Imperial) url = $"{url}&wind_speed_unit=mph&temperature_unit=fahrenheit&precipitation_unit=inch";
             try
             {
                 System.Net.Http.HttpClient _httpClient = new System.Net.Http.HttpClient();
