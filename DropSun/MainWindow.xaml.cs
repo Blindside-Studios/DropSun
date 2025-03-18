@@ -146,6 +146,14 @@ namespace DropSun
         private void Settings_Click(object sender, RoutedEventArgs e)
         {
             var wrapperPage = ContentFrame.Content as WrapperPage;
+            
+            // reset all currently loaded weather states to load them in anew when the Pikouna Engine is reloaded
+            Pikouna_Engine.WeatherViewModel.Instance.CloudCoverageExternal = 0;
+            Pikouna_Engine.WeatherViewModel.Instance.Showers = 0;
+            Pikouna_Engine.WeatherViewModel.Instance.WindSpeed = 0;
+            Pikouna_Engine.WeatherViewModel.Instance.Snow = 0;
+            Pikouna_Engine.WeatherViewModel.Instance.WeatherType = Pikouna_Engine.WeatherType.ClearSky;
+
             wrapperPage.showSettingsPage();
         }
 
