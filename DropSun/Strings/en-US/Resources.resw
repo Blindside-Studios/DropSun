@@ -165,6 +165,10 @@
     <value>Accessibility</value>
     <comment>Accessibility header in visual settings</comment>
   </data>
+  <data name="SettingsVisualDisableSidebarRippleToggle.Header" xml:space="preserve">
+    <value>Disable the ripple effect in the sidebar</value>
+    <comment>The toggle in visual settings that allows users to disable the ripple effect in the sidebar when adding or moving items.</comment>
+  </data>
   <data name="SettingsVisualInteractionsBouncyRadioButton.Content" xml:space="preserve">
     <value>Bouncy</value>
     <comment>The option to make the sun bouncy</comment>

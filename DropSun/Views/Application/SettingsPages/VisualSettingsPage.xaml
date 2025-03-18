@@ -22,6 +22,7 @@
                 <ToggleSwitch x:Uid="SettingsVisualPowerSaverToggle" IsOn="{x:Bind vm:AppSettings.Instance.EnablePowerSaver, Mode=TwoWay}"/>
                 <TextBlock x:Uid="SettingsVisualAccessibilityHeader" Style="{StaticResource SubtitleTextBlockStyle}"/>
                 <ToggleSwitch x:Uid="SettingsVisualReduceLightningFlashToggle" IsOn="{x:Bind vm:AppSettings.Instance.ReduceLightningStrikeFlashing, Mode=TwoWay}"/>
+                <ToggleSwitch x:Uid="SettingsVisualDisableSidebarRippleToggle" IsOn="{x:Bind vm:AppSettings.Instance.DisableSidebarRippleEffect, Mode=TwoWay}"/>
             </StackPanel>
         </ScrollView>
     </Grid>

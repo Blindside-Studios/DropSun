@@ -1,4 +1,5 @@
-﻿using Pikouna_Engine;
+﻿using Microsoft.Web.WebView2.Core;
+using Pikouna_Engine;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -36,7 +37,7 @@ namespace DropSun.Model.ViewModels
                 if (value != _units)
                 {
                     _units = value;
-                    Save(nameof(Units), (int)Units);
+                    Save(nameof(Units), (int)value);
                     OnPropertyChanged(nameof(Units));
                 }
             }
@@ -66,7 +67,7 @@ namespace DropSun.Model.ViewModels
                 {
                     Pikouna_Engine.ApplicationViewModel.Instance.SunInteractionStyle = value;
                     _interactionStyle = value;
-                    Save(nameof(InteractionStyle), (int)InteractionStyle);
+                    Save(nameof(InteractionStyle), (int)value);
                     OnPropertyChanged(nameof(InteractionStyle));
                 }
             }
@@ -82,7 +83,7 @@ namespace DropSun.Model.ViewModels
                 {
                     Pikouna_Engine.ApplicationViewModel.Instance.IsBatterySaverEnabled = value;
                     _enablePowerSaver = value;
-                    Save(nameof(EnablePowerSaver), EnablePowerSaver);
+                    Save(nameof(EnablePowerSaver), value);
                     OnPropertyChanged(nameof(EnablePowerSaver));
                 }
             }
@@ -97,12 +98,27 @@ namespace DropSun.Model.ViewModels
                 if (_reduceLightningStrikeFlashing != value)
                 {
                     _reduceLightningStrikeFlashing = value;
-                    Save(nameof(ReduceLightningStrikeFlashing), ReduceLightningStrikeFlashing);
+                    Save(nameof(ReduceLightningStrikeFlashing), value);
                     OnPropertyChanged(nameof(ReduceLightningStrikeFlashing));
                 }
             }
         }
         private bool _reduceLightningStrikeFlashing = false;
+
+        public bool DisableSidebarRippleEffect
+        {
+            get => _disableSidebarRippleEffect;
+            set
+            {
+                if (_disableSidebarRippleEffect != value)
+                {
+                    _disableSidebarRippleEffect = value;
+                    Save(nameof(DisableSidebarRippleEffect), value);
+                    OnPropertyChanged(nameof(DisableSidebarRippleEffect));
+                }
+            }
+        }
+        private bool _disableSidebarRippleEffect = false;
 
         protected virtual void OnPropertyChanged(string propertyName)
         {

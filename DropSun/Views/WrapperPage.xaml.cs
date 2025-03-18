@@ -1,4 +1,5 @@
 using DropSun.Model.Geolocation;
+using DropSun.Model.ViewModels;
 using DropSun.Model.Weather;
 using DropSun.Views.Application;
 using DropSun.Views.Controls;
@@ -235,17 +236,20 @@ namespace DropSun.Views
                 await Task.Delay(duration.TimeSpan * 0.25);
 
                 // ripple effect
-                var rippleOrigin = targetIndex;
-                for (int i = 1; i < LocationsStackPanel.Children.Count; i++)
+                if (!AppSettings.Instance.DisableSidebarRippleEffect)
                 {
-                    var upperIndex = rippleOrigin - i; // index is lower, aka items at the top
-                    var lowerIndex = rippleOrigin + i; // index is higher, aka items at the bottom
+                    var rippleOrigin = targetIndex;
+                    for (int i = 1; i < LocationsStackPanel.Children.Count; i++)
+                    {
+                        var upperIndex = rippleOrigin - i; // index is lower, aka items at the top
+                        var lowerIndex = rippleOrigin + i; // index is higher, aka items at the bottom
 
-                    // ripple upwards
-                    if (upperIndex >= 0) rippleOtherItems(LocationsStackPanel.Children[upperIndex] as Frame, (rippleOrigin - upperIndex) * 3, true);
-                    // ripple downwards
-                    if (lowerIndex < LocationsStackPanel.Children.Count) rippleOtherItems(LocationsStackPanel.Children[lowerIndex] as Frame, (lowerIndex - rippleOrigin) * 3, false);
-                    await Task.Delay(200);
+                        // ripple upwards
+                        if (upperIndex >= 0) rippleOtherItems(LocationsStackPanel.Children[upperIndex] as Frame, (rippleOrigin - upperIndex) * 3, true);
+                        // ripple downwards
+                        if (lowerIndex < LocationsStackPanel.Children.Count) rippleOtherItems(LocationsStackPanel.Children[lowerIndex] as Frame, (lowerIndex - rippleOrigin) * 3, false);
+                        await Task.Delay(200);
+                    }
                 }
             }
             else if (isAttemptingToDrag && draggingElement != null)
@@ -491,14 +495,17 @@ namespace DropSun.Views
                 .Reverse()
                 .ToList();
 
-            await Task.Delay(300);
-
-            int i = 1;
-            foreach (Frame otherFrame in listOfFrames)
+            if (!AppSettings.Instance.DisableSidebarRippleEffect)
             {
-                rippleOtherItems(otherFrame, i * 2);
-                await Task.Delay(200);
-                i++;
+                await Task.Delay(300);
+
+                int i = 1;
+                foreach (Frame otherFrame in listOfFrames)
+                {
+                    rippleOtherItems(otherFrame, i * 2);
+                    await Task.Delay(200);
+                    i++;
+                }
             }
         }
 
