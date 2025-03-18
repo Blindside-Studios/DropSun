@@ -121,7 +121,7 @@ namespace DropSun.Views
             var currentDragIndex = dragIndex;
 
             var frame = sender as Frame;
-            var timeDelay = TimeSpan.FromSeconds(0.8);
+            var timeDelay = TimeSpan.FromSeconds(0.4);
             frame.RenderTransform = new CompositeTransform();
             //frame.Translation = new Vector3(frame.Translation.X, frame.Translation.Y, 99999); // ensure it's always rendered on top 
 
@@ -354,6 +354,27 @@ namespace DropSun.Views
                 {
                     lastHoverPosition = targetIndex;
                     UpdateItemPositions();
+                }
+            }
+            else if (isAttemptingToDrag && draggingElement != null)
+            {
+                // before the item is being dragged, it can still subtly be pulled towards the cursor to indicate that dragging is about to occur
+                var pointerPos = e.GetCurrentPoint(null).Position;
+
+                double newX = pointerPos.X - offset.X;
+                double newY = pointerPos.Y - offset.Y;
+
+                double horizontalOffset = newX - originalPosition.X;
+                double verticalOffset = newY - originalPosition.Y;
+                var horizontalPullBackStrength = 3;
+                var verticalPullBackStrength = 0.25;
+                double correctedX = originalPosition.X + horizontalOffset * (1 / Math.Sqrt(Math.Abs(horizontalOffset) * horizontalPullBackStrength));
+                double correctedY = originalPosition.Y + verticalOffset * (1 / Math.Sqrt(Math.Abs(verticalOffset) * verticalPullBackStrength));
+
+                if (draggingElement.RenderTransform is CompositeTransform transform)
+                {
+                    transform.TranslateX = correctedX - originalPosition.X;
+                    transform.TranslateY = correctedY - originalPosition.Y;
                 }
             }
         }
