@@ -185,59 +185,61 @@ namespace DropSun.Views
                 }
 
                 // animation
+                UISettings settings = new();
                 Duration duration = new Duration(TimeSpan.FromMilliseconds(500));
+                if (settings.AnimationsEnabled)
+                {
+                    TransformGroup transformGroup = new TransformGroup();
+                    ScaleTransform scaleTransform = new ScaleTransform();
+                    TranslateTransform translateTransform = new TranslateTransform();
+                    transformGroup.Children.Add(scaleTransform);
+                    transformGroup.Children.Add(translateTransform);
+                    frame.RenderTransform = transformGroup;
 
-                TransformGroup transformGroup = new TransformGroup();
-                ScaleTransform scaleTransform = new ScaleTransform();
-                TranslateTransform translateTransform = new TranslateTransform();
-                transformGroup.Children.Add(scaleTransform);
-                transformGroup.Children.Add(translateTransform);
-                frame.RenderTransform = transformGroup;
+                    DoubleAnimationUsingKeyFrames scaleXAnimation = new DoubleAnimationUsingKeyFrames { EnableDependentAnimation = true };
+                    DoubleAnimationUsingKeyFrames scaleYAnimation = new DoubleAnimationUsingKeyFrames { EnableDependentAnimation = true };
+                    DoubleAnimationUsingKeyFrames translateXAnimation = new DoubleAnimationUsingKeyFrames { EnableDependentAnimation = true };
+                    DoubleAnimationUsingKeyFrames translateYAnimation = new DoubleAnimationUsingKeyFrames { EnableDependentAnimation = true };
 
-                DoubleAnimationUsingKeyFrames scaleXAnimation = new DoubleAnimationUsingKeyFrames { EnableDependentAnimation = true };
-                DoubleAnimationUsingKeyFrames scaleYAnimation = new DoubleAnimationUsingKeyFrames { EnableDependentAnimation = true };
-                DoubleAnimationUsingKeyFrames translateXAnimation = new DoubleAnimationUsingKeyFrames { EnableDependentAnimation = true };
-                DoubleAnimationUsingKeyFrames translateYAnimation = new DoubleAnimationUsingKeyFrames { EnableDependentAnimation = true };
+                    scaleXAnimation.KeyFrames.Add(new EasingDoubleKeyFrame { KeyTime = TimeSpan.FromSeconds(0), Value = 1.2 });
+                    scaleXAnimation.KeyFrames.Add(new EasingDoubleKeyFrame { KeyTime = duration.TimeSpan * 0.4, Value = 0.85, EasingFunction = new QuadraticEase { EasingMode = EasingMode.EaseOut } });
+                    scaleXAnimation.KeyFrames.Add(new EasingDoubleKeyFrame { KeyTime = duration.TimeSpan, Value = 1, EasingFunction = new QuadraticEase { EasingMode = EasingMode.EaseInOut } });
 
-                scaleXAnimation.KeyFrames.Add(new EasingDoubleKeyFrame { KeyTime = TimeSpan.FromSeconds(0), Value = 1.2 });
-                scaleXAnimation.KeyFrames.Add(new EasingDoubleKeyFrame { KeyTime = duration.TimeSpan * 0.4, Value = 0.85, EasingFunction = new QuadraticEase { EasingMode = EasingMode.EaseOut } });
-                scaleXAnimation.KeyFrames.Add(new EasingDoubleKeyFrame { KeyTime = duration.TimeSpan, Value = 1, EasingFunction = new QuadraticEase { EasingMode = EasingMode.EaseInOut } });
+                    scaleYAnimation.KeyFrames.Add(new EasingDoubleKeyFrame { KeyTime = TimeSpan.FromSeconds(0), Value = 1.2 });
+                    scaleYAnimation.KeyFrames.Add(new EasingDoubleKeyFrame { KeyTime = duration.TimeSpan * 0.4, Value = 0.85, EasingFunction = new QuadraticEase { EasingMode = EasingMode.EaseOut } });
+                    scaleYAnimation.KeyFrames.Add(new EasingDoubleKeyFrame { KeyTime = duration.TimeSpan, Value = 1, EasingFunction = new QuadraticEase { EasingMode = EasingMode.EaseInOut } });
 
-                scaleYAnimation.KeyFrames.Add(new EasingDoubleKeyFrame { KeyTime = TimeSpan.FromSeconds(0), Value = 1.2 });
-                scaleYAnimation.KeyFrames.Add(new EasingDoubleKeyFrame { KeyTime = duration.TimeSpan * 0.4, Value = 0.85, EasingFunction = new QuadraticEase { EasingMode = EasingMode.EaseOut } });
-                scaleYAnimation.KeyFrames.Add(new EasingDoubleKeyFrame { KeyTime = duration.TimeSpan, Value = 1, EasingFunction = new QuadraticEase { EasingMode = EasingMode.EaseInOut } });
+                    translateXAnimation.KeyFrames.Add(new EasingDoubleKeyFrame { KeyTime = TimeSpan.FromSeconds(0), Value = offsetX });
+                    translateXAnimation.KeyFrames.Add(new EasingDoubleKeyFrame { KeyTime = duration.TimeSpan * 0.5, Value = 0, EasingFunction = new BackEase { EasingMode = EasingMode.EaseOut, Amplitude = 0.2 } });
 
-                translateXAnimation.KeyFrames.Add(new EasingDoubleKeyFrame { KeyTime = TimeSpan.FromSeconds(0), Value = offsetX });
-                translateXAnimation.KeyFrames.Add(new EasingDoubleKeyFrame { KeyTime = duration.TimeSpan * 0.5, Value = 0, EasingFunction = new BackEase { EasingMode = EasingMode.EaseOut, Amplitude = 0.2 } });
+                    translateYAnimation.KeyFrames.Add(new EasingDoubleKeyFrame { KeyTime = TimeSpan.FromSeconds(0), Value = offsetY });
+                    translateYAnimation.KeyFrames.Add(new EasingDoubleKeyFrame { KeyTime = duration.TimeSpan * 0.5, Value = 0, EasingFunction = new BackEase { EasingMode = EasingMode.EaseOut, Amplitude = 0.2 } });
 
-                translateYAnimation.KeyFrames.Add(new EasingDoubleKeyFrame { KeyTime = TimeSpan.FromSeconds(0), Value = offsetY });
-                translateYAnimation.KeyFrames.Add(new EasingDoubleKeyFrame { KeyTime = duration.TimeSpan * 0.5, Value = 0, EasingFunction = new BackEase { EasingMode = EasingMode.EaseOut, Amplitude = 0.2 } });
+                    Storyboard sb = new Storyboard { Duration = duration };
+                    sb.Children.Add(scaleXAnimation);
+                    sb.Children.Add(scaleYAnimation);
+                    sb.Children.Add(translateXAnimation);
+                    sb.Children.Add(translateYAnimation);
 
-                Storyboard sb = new Storyboard { Duration = duration };
-                sb.Children.Add(scaleXAnimation);
-                sb.Children.Add(scaleYAnimation);
-                sb.Children.Add(translateXAnimation);
-                sb.Children.Add(translateYAnimation);
+                    Storyboard.SetTarget(scaleXAnimation, scaleTransform);
+                    Storyboard.SetTargetProperty(scaleXAnimation, "ScaleX");
 
-                Storyboard.SetTarget(scaleXAnimation, scaleTransform);
-                Storyboard.SetTargetProperty(scaleXAnimation, "ScaleX");
+                    Storyboard.SetTarget(scaleYAnimation, scaleTransform);
+                    Storyboard.SetTargetProperty(scaleYAnimation, "ScaleY");
 
-                Storyboard.SetTarget(scaleYAnimation, scaleTransform);
-                Storyboard.SetTargetProperty(scaleYAnimation, "ScaleY");
+                    Storyboard.SetTarget(translateXAnimation, translateTransform);
+                    Storyboard.SetTargetProperty(translateXAnimation, "X");
 
-                Storyboard.SetTarget(translateXAnimation, translateTransform);
-                Storyboard.SetTargetProperty(translateXAnimation, "X");
+                    Storyboard.SetTarget(translateYAnimation, translateTransform);
+                    Storyboard.SetTargetProperty(translateYAnimation, "Y");
 
-                Storyboard.SetTarget(translateYAnimation, translateTransform);
-                Storyboard.SetTargetProperty(translateYAnimation, "Y");
-
-                sb.Begin();
-
-                await Task.Delay(duration.TimeSpan * 0.25);
+                    sb.Begin();
+                }
 
                 // ripple effect
-                if (!AppSettings.Instance.DisableSidebarRippleEffect)
+                if (!AppSettings.Instance.DisableSidebarRippleEffect && settings.AnimationsEnabled)
                 {
+                    await Task.Delay(duration.TimeSpan * 0.25);
                     var rippleOrigin = targetIndex;
                     for (int i = 1; i < LocationsStackPanel.Children.Count; i++)
                     {
@@ -282,33 +284,37 @@ namespace DropSun.Views
         {
             if (element.RenderTransform is CompositeTransform transform)
             {
-                var scaleXAnim = new DoubleAnimation
+                UISettings settings = new();
+                if (settings.AnimationsEnabled)
                 {
-                    From = from,
-                    To = scale,
-                    Duration = timeSpan,
-                    EasingFunction = new CubicEase { EasingMode = EasingMode.EaseOut }
-                };
+                    var scaleXAnim = new DoubleAnimation
+                    {
+                        From = from,
+                        To = scale,
+                        Duration = timeSpan,
+                        EasingFunction = new CubicEase { EasingMode = EasingMode.EaseOut }
+                    };
 
-                var scaleYAnim = new DoubleAnimation
-                {
-                    From = from,
-                    To = scale,
-                    Duration = timeSpan,
-                    EasingFunction = new CubicEase { EasingMode = EasingMode.EaseOut }
-                };
+                    var scaleYAnim = new DoubleAnimation
+                    {
+                        From = from,
+                        To = scale,
+                        Duration = timeSpan,
+                        EasingFunction = new CubicEase { EasingMode = EasingMode.EaseOut }
+                    };
 
-                var storyboard = new Storyboard();
-                storyboard.Children.Add(scaleXAnim);
-                storyboard.Children.Add(scaleYAnim);
+                    var storyboard = new Storyboard();
+                    storyboard.Children.Add(scaleXAnim);
+                    storyboard.Children.Add(scaleYAnim);
 
-                Storyboard.SetTarget(scaleXAnim, element);
-                Storyboard.SetTargetProperty(scaleXAnim, "(UIElement.RenderTransform).(CompositeTransform.ScaleX)");
+                    Storyboard.SetTarget(scaleXAnim, element);
+                    Storyboard.SetTargetProperty(scaleXAnim, "(UIElement.RenderTransform).(CompositeTransform.ScaleX)");
 
-                Storyboard.SetTarget(scaleYAnim, element);
-                Storyboard.SetTargetProperty(scaleYAnim, "(UIElement.RenderTransform).(CompositeTransform.ScaleY)");
+                    Storyboard.SetTarget(scaleYAnim, element);
+                    Storyboard.SetTargetProperty(scaleYAnim, "(UIElement.RenderTransform).(CompositeTransform.ScaleY)");
 
-                storyboard.Begin();
+                    storyboard.Begin();
+                }
             }
         }
 
@@ -408,23 +414,30 @@ namespace DropSun.Views
 
             if (toY != currentY)
             {
-
-                var animation = new DoubleAnimation
+                UISettings settings = new();
+                if (settings.AnimationsEnabled)
                 {
-                    EasingFunction = new ExponentialEase() { Exponent = 3, EasingMode = EasingMode.EaseOut },
-                    From = currentY,
-                    To = toY,
-                    Duration = TimeSpan.FromMilliseconds(duration),
-                    EnableDependentAnimation = true
-                };
+                    var animation = new DoubleAnimation
+                    {
+                        EasingFunction = new ExponentialEase() { Exponent = 3, EasingMode = EasingMode.EaseOut },
+                        From = currentY,
+                        To = toY,
+                        Duration = TimeSpan.FromMilliseconds(duration),
+                        EnableDependentAnimation = true
+                    };
 
-                Storyboard.SetTarget(animation, translateTransform);
-                Storyboard.SetTargetProperty(animation, "Y");
+                    Storyboard.SetTarget(animation, translateTransform);
+                    Storyboard.SetTargetProperty(animation, "Y");
 
-                var storyboard = new Storyboard();
-                storyboard.Children.Add(animation);
+                    var storyboard = new Storyboard();
+                    storyboard.Children.Add(animation);
 
-                storyboard.Begin();
+                    storyboard.Begin();
+                }
+                else
+                {
+                    element.Translation = new Vector3(0, (float)toY, 0);
+                }
             }
         }
 
