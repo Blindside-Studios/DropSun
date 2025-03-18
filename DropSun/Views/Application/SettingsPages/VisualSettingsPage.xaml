@@ -13,18 +13,18 @@
         <ScrollView>
             <StackPanel Margin="32">
                 <TextBlock x:Uid="SettingsVisualInteractionsHeader" Style="{StaticResource SubtitleTextBlockStyle}"/>
-                <RadioButtons x:Name="InteractionsRadioButtonGroup">
+                <RadioButtons x:Name="InteractionsRadioButtonGroup" Margin="8,0,8,0">
                     <RadioButton x:Name="OffRadioButton" x:Uid="SettingsVisualInteractionsOffRadioButton" Tag="off" Checked="OffRadioButton_Checked"/>
                     <RadioButton x:Name="SlowRadioButton" x:Uid="SettingsVisualInteractionsSlowRadioButton" Tag="slow" Checked="SlowRadioButton_Checked"/>
                     <RadioButton x:Name="BouncyRadioButton" x:Uid="SettingsVisualInteractionsBouncyRadioButton" Tag="bouncy" Checked="BouncyRadioButton_Checked"/>
                 </RadioButtons>
                 <TextBlock x:Uid="SettingsVisualPerformanceAndEnergyHeader" Style="{StaticResource SubtitleTextBlockStyle}" Margin="0,16,0,0"/>
-                <ToggleSwitch x:Uid="SettingsVisualPowerSaverToggle" IsOn="{x:Bind vm:AppSettings.Instance.EnablePowerSaver, Mode=TwoWay}"/>
-                <ToggleSwitch x:Uid="SettingsVisualDisableWeatherEffectsToggle" IsOn="{x:Bind vm:AppSettings.Instance.DisableAllWeatherEffects, Mode=TwoWay}"/>
+                <ToggleSwitch x:Uid="SettingsVisualPowerSaverToggle" IsOn="{x:Bind vm:AppSettings.Instance.EnablePowerSaver, Mode=TwoWay}" Margin="8,4,8,4"/>
+                <ToggleSwitch x:Uid="SettingsVisualDisableWeatherEffectsToggle" IsOn="{x:Bind vm:AppSettings.Instance.DisableAllWeatherEffects, Mode=TwoWay}" Margin="8,4,8,4"/>
                 
                 <TextBlock x:Uid="SettingsVisualAccessibilityHeader" Style="{StaticResource SubtitleTextBlockStyle}" Margin="0,16,0,0"/>
-                <ToggleSwitch x:Uid="SettingsVisualReduceLightningFlashToggle" IsOn="{x:Bind vm:AppSettings.Instance.ReduceLightningStrikeFlashing, Mode=TwoWay}"/>
-                <ToggleSwitch x:Uid="SettingsVisualDisableSidebarRippleToggle" IsOn="{x:Bind vm:AppSettings.Instance.DisableSidebarRippleEffect, Mode=TwoWay}"/>
+                <ToggleSwitch x:Uid="SettingsVisualReduceLightningFlashToggle" IsOn="{x:Bind vm:AppSettings.Instance.ReduceLightningStrikeFlashing, Mode=TwoWay}" Margin="8,4,8,4"/>
+                <ToggleSwitch x:Uid="SettingsVisualDisableSidebarRippleToggle" IsOn="{x:Bind vm:AppSettings.Instance.DisableSidebarRippleEffect, Mode=TwoWay}" Margin="8,4,8,4"/>
             </StackPanel>
         </ScrollView>
     </Grid>

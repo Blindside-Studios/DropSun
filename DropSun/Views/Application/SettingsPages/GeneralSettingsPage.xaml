@@ -12,7 +12,7 @@
         <ScrollView>
             <StackPanel Margin="32">
                 <TextBlock x:Uid="SettingsGeneralUnitsHeader" Style="{StaticResource SubtitleTextBlockStyle}"/>
-                <RadioButtons x:Name="UnitsRadioButtonGroup">
+                <RadioButtons x:Name="UnitsRadioButtonGroup" Margin="8,0,8,0">
                     <RadioButton x:Name="GetFromSystemRegionRadioButton" x:Uid="SettingsGeneralUnitsGetFromSystemRegion" Tag="system" Checked="GetFromSystemRegionRadioButton_Checked"/>
                     <RadioButton x:Name="MetricRadioButton" x:Uid="SettingsGeneralUnitsMetric" Tag="metric" Checked="MetricRadioButton_Checked"/>
                     <RadioButton x:Name="ImperialRadioButton" x:Uid="SettingsGeneralUnitsImperial" Tag="imperial" Checked="ImperialRadioButton_Checked"/>
