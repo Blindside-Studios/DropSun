@@ -120,6 +120,22 @@ namespace DropSun.Model.ViewModels
         }
         private bool _disableSidebarRippleEffect = false;
 
+        public bool DisableAllWeatherEffects
+        {
+            get => _disableAllWeatherEffects;
+            set
+            {
+                if (_disableAllWeatherEffects != value)
+                {
+                    _disableAllWeatherEffects = value;
+                    Save(nameof(DisableAllWeatherEffects), value);
+                    Pikouna_Engine.ApplicationViewModel.Instance.CanPlayAnimations = !value;
+                    OnPropertyChanged(nameof(DisableAllWeatherEffects));
+                }
+            }
+        }
+        private bool _disableAllWeatherEffects = false;
+
         protected virtual void OnPropertyChanged(string propertyName)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));

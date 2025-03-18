@@ -20,7 +20,9 @@
                 </RadioButtons>
                 <TextBlock x:Uid="SettingsVisualPerformanceAndEnergyHeader" Style="{StaticResource SubtitleTextBlockStyle}"/>
                 <ToggleSwitch x:Uid="SettingsVisualPowerSaverToggle" IsOn="{x:Bind vm:AppSettings.Instance.EnablePowerSaver, Mode=TwoWay}"/>
-                <TextBlock x:Uid="SettingsVisualAccessibilityHeader" Style="{StaticResource SubtitleTextBlockStyle}"/>
+                <ToggleSwitch x:Uid="SettingsVisualDisableWeatherEffectsToggle" IsOn="{x:Bind vm:AppSettings.Instance.DisableAllWeatherEffects, Mode=TwoWay}"/>
+                
+                <TextBlock x:Uid="SettingsVisualAccessibilityHeader" Style="{StaticResource SubtitleTextBlockStyle}" Margin="0,16,0,0"/>
                 <ToggleSwitch x:Uid="SettingsVisualReduceLightningFlashToggle" IsOn="{x:Bind vm:AppSettings.Instance.ReduceLightningStrikeFlashing, Mode=TwoWay}"/>
                 <ToggleSwitch x:Uid="SettingsVisualDisableSidebarRippleToggle" IsOn="{x:Bind vm:AppSettings.Instance.DisableSidebarRippleEffect, Mode=TwoWay}"/>
             </StackPanel>

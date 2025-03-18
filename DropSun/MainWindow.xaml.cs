@@ -1,4 +1,5 @@
 using DropSun.Model.Geolocation;
+using DropSun.Model.ViewModels;
 using DropSun.Views;
 using Microsoft.UI.Input;
 using Microsoft.UI.Windowing;
@@ -31,6 +32,7 @@ namespace DropSun
     public sealed partial class MainWindow : Window
     {
         private AppWindow m_AppWindow;
+        private AppSettings settingsLoader = AppSettings.Instance; // fire this to build the view model instance and load the settings
 
         public MainWindow()
         {
@@ -114,17 +116,20 @@ namespace DropSun
 
         private void MainWindow_Activated(object sender, WindowActivatedEventArgs args)
         {
-            if (args.WindowActivationState == WindowActivationState.Deactivated)
+            if (!AppSettings.Instance.DisableAllWeatherEffects)
             {
-                TitleBarTextBlock.Foreground =
-                    (SolidColorBrush)App.Current.Resources["WindowCaptionForegroundDisabled"];
-                Pikouna_Engine.ApplicationViewModel.Instance.CanPlayAnimations = false;
-            }
-            else
-            {
-                TitleBarTextBlock.Foreground =
-                    (SolidColorBrush)App.Current.Resources["WindowCaptionForeground"];
-                Pikouna_Engine.ApplicationViewModel.Instance.CanPlayAnimations = true;
+                if (args.WindowActivationState == WindowActivationState.Deactivated)
+                {
+                    TitleBarTextBlock.Foreground =
+                        (SolidColorBrush)App.Current.Resources["WindowCaptionForegroundDisabled"];
+                    Pikouna_Engine.ApplicationViewModel.Instance.CanPlayAnimations = false;
+                }
+                else
+                {
+                    TitleBarTextBlock.Foreground =
+                        (SolidColorBrush)App.Current.Resources["WindowCaptionForeground"];
+                    Pikouna_Engine.ApplicationViewModel.Instance.CanPlayAnimations = true;
+                }
             }
         }
 
