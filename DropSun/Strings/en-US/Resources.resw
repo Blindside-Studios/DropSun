@@ -194,7 +194,7 @@
     <comment>The header for the performance section</comment>
   </data>
   <data name="SettingsVisualPowerSaverToggle.Header" xml:space="preserve">
-    <value>Save Energy by reducing complex rendering effects</value>
+    <value>Save energy by reducing complex rendering effects</value>
     <comment>The text next to the power saver toggle in performance and energy settings</comment>
   </data>
   <data name="SettingsVisualReduceLightningFlashToggle.Header" xml:space="preserve">

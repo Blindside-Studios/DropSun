@@ -18,7 +18,7 @@
                     <RadioButton x:Name="SlowRadioButton" x:Uid="SettingsVisualInteractionsSlowRadioButton" Tag="slow" Checked="SlowRadioButton_Checked"/>
                     <RadioButton x:Name="BouncyRadioButton" x:Uid="SettingsVisualInteractionsBouncyRadioButton" Tag="bouncy" Checked="BouncyRadioButton_Checked"/>
                 </RadioButtons>
-                <TextBlock x:Uid="SettingsVisualPerformanceAndEnergyHeader" Style="{StaticResource SubtitleTextBlockStyle}"/>
+                <TextBlock x:Uid="SettingsVisualPerformanceAndEnergyHeader" Style="{StaticResource SubtitleTextBlockStyle}" Margin="0,16,0,0"/>
                 <ToggleSwitch x:Uid="SettingsVisualPowerSaverToggle" IsOn="{x:Bind vm:AppSettings.Instance.EnablePowerSaver, Mode=TwoWay}"/>
                 <ToggleSwitch x:Uid="SettingsVisualDisableWeatherEffectsToggle" IsOn="{x:Bind vm:AppSettings.Instance.DisableAllWeatherEffects, Mode=TwoWay}"/>
                 
