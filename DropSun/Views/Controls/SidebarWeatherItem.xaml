@@ -8,8 +8,8 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid x:Name="BackgroundColor" CornerRadius="8" Height="106" Margin="0,8,0,8">
-        <Image x:Name="WeatherPreview" Stretch="None"/>
+    <Grid x:Name="BackgroundColor" CornerRadius="8" Height="106" Margin="0,8,0,8" PointerEntered="BackgroundColor_PointerEntered" PointerExited="BackgroundColor_PointerExited">
+        <Image x:Name="WeatherPreview" Stretch="UniformToFill"/>
         <Rectangle Fill="{ThemeResource SystemControlBackgroundAltHighBrush}" Opacity="0.6" Visibility="Visible"/>
         <Grid>
             <Grid.ColumnDefinitions>

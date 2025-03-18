@@ -6,6 +6,7 @@ using Microsoft.UI.Xaml.Controls.Primitives;
 using Microsoft.UI.Xaml.Data;
 using Microsoft.UI.Xaml.Input;
 using Microsoft.UI.Xaml.Media;
+using Microsoft.UI.Xaml.Media.Animation;
 using Microsoft.UI.Xaml.Media.Imaging;
 using Microsoft.UI.Xaml.Navigation;
 using System;
@@ -16,11 +17,13 @@ using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 using Windows.ApplicationModel.Activation;
 using Windows.ApplicationModel.Resources;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI;
+using Windows.UI.ViewManagement;
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -199,6 +202,80 @@ namespace DropSun.Views.Controls
                 else { ToolTipService.SetToolTip(ConditionsTextBox, null); ToolTipService.SetToolTip(TemperatureTextBox, null); }
             }
             else { ToolTipService.SetToolTip(ConditionsTextBox, null); ToolTipService.SetToolTip(TemperatureTextBox, null); ToolTipService.SetToolTip(HighLowTextBox, null); }
+        }
+
+        private void BackgroundColor_PointerEntered(object sender, PointerRoutedEventArgs e)
+        {
+            WeatherPreview.RenderTransform = new CompositeTransform();
+            WeatherPreview.RenderTransformOrigin = new Windows.Foundation.Point(0.5, 0.5);
+            UISettings settings = new();
+            if (settings.AnimationsEnabled)
+            {
+                var scaleXAnim = new DoubleAnimation
+                {
+                    From = 1,
+                    To = 1.2,
+                    Duration = System.TimeSpan.FromMilliseconds(200),
+                    EasingFunction = new CubicEase { EasingMode = EasingMode.EaseOut }
+                };
+
+                var scaleYAnim = new DoubleAnimation
+                {
+                    From = 1,
+                    To = 1.2,
+                    Duration = System.TimeSpan.FromMilliseconds(300),
+                    EasingFunction = new CubicEase { EasingMode = EasingMode.EaseOut }
+                };
+
+                var storyboard = new Storyboard();
+                storyboard.Children.Add(scaleXAnim);
+                storyboard.Children.Add(scaleYAnim);
+
+                Storyboard.SetTarget(scaleXAnim, WeatherPreview);
+                Storyboard.SetTargetProperty(scaleXAnim, "(UIElement.RenderTransform).(CompositeTransform.ScaleX)");
+
+                Storyboard.SetTarget(scaleYAnim, WeatherPreview);
+                Storyboard.SetTargetProperty(scaleYAnim, "(UIElement.RenderTransform).(CompositeTransform.ScaleY)");
+
+                storyboard.Begin();
+            }
+        }
+
+        private void BackgroundColor_PointerExited(object sender, PointerRoutedEventArgs e)
+        {
+            WeatherPreview.RenderTransform = new CompositeTransform();
+            WeatherPreview.RenderTransformOrigin = new Windows.Foundation.Point(0.5, 0.5);
+            UISettings settings = new();
+            if (settings.AnimationsEnabled)
+            {
+                var scaleXAnim = new DoubleAnimation
+                {
+                    From = 1.2,
+                    To = 1,
+                    Duration = System.TimeSpan.FromMilliseconds(300),
+                    EasingFunction = new CubicEase { EasingMode = EasingMode.EaseOut }
+                };
+
+                var scaleYAnim = new DoubleAnimation
+                {
+                    From = 1.2,
+                    To = 1,
+                    Duration = System.TimeSpan.FromMilliseconds(300),
+                    EasingFunction = new CubicEase { EasingMode = EasingMode.EaseOut }
+                };
+
+                var storyboard = new Storyboard();
+                storyboard.Children.Add(scaleXAnim);
+                storyboard.Children.Add(scaleYAnim);
+
+                Storyboard.SetTarget(scaleXAnim, WeatherPreview);
+                Storyboard.SetTargetProperty(scaleXAnim, "(UIElement.RenderTransform).(CompositeTransform.ScaleX)");
+
+                Storyboard.SetTarget(scaleYAnim, WeatherPreview);
+                Storyboard.SetTargetProperty(scaleYAnim, "(UIElement.RenderTransform).(CompositeTransform.ScaleY)");
+
+                storyboard.Begin();
+            }
         }
     }
 }
