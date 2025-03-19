@@ -4,6 +4,7 @@ using DropSun.Model.Weather;
 using DropSun.Views.Application;
 using DropSun.Views.Controls;
 using Microsoft.UI.Composition;
+using Microsoft.UI.Input;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Hosting;
@@ -115,7 +116,7 @@ namespace DropSun.Views
                 ContentFrame.NavigateToType(pageType, null, navOptions);
                 _currentlyShownPage = typeof(WeatherView);
             }
-            
+
             dragIndex++;
             isAttemptingToDrag = true;
             var currentDragIndex = dragIndex;
@@ -123,7 +124,7 @@ namespace DropSun.Views
             var frame = sender as Frame;
             var timeDelay = TimeSpan.FromSeconds(0.4);
             frame.RenderTransform = new CompositeTransform();
-            //frame.Translation = new Vector3(frame.Translation.X, frame.Translation.Y, 99999); // ensure it's always rendered on top 
+            var currentScrollOffset = LocationsScrollViewer.VerticalOffset;
 
             var transform = frame.TransformToVisual(null) as GeneralTransform;
             var elementPos = transform.TransformPoint(new Windows.Foundation.Point(0, 0));
@@ -132,15 +133,25 @@ namespace DropSun.Views
             offset = new Vector2((float)(pointerPos.X - elementPos.X), (float)(pointerPos.Y - elementPos.Y));
 
             draggingElement = frame;
-                
+
             animateScaleOfFrame(frame, 0.75, timeDelay);
             await Task.Delay(timeDelay);
-            if (isAttemptingToDrag && draggingElement == frame && dragIndex == currentDragIndex)
+            if (isAttemptingToDrag && draggingElement == frame && dragIndex == currentDragIndex && LocationsScrollViewer.VerticalOffset == currentScrollOffset)
             {
+                LocationsScrollViewer.VerticalScrollMode = ScrollingScrollMode.Disabled; // disable scrolling while moving items around
                 animateScaleOfFrame(frame, 1.2, TimeSpan.FromSeconds(0.2));
                 originalIndex = LocationsStackPanel.Children.IndexOf(frame);
                 lastHoverPosition = originalIndex;
                 canDrag = true;
+            }
+            else
+            {
+                dragIndex++;
+                isAttemptingToDrag = false;
+                isAttemptingToDrag = false;
+                canDrag = false;
+                animateScaleOfFrame(draggingElement, 1, TimeSpan.FromSeconds(0.2), 0.75);
+                draggingElement = null;
             }
         }
 
@@ -156,6 +167,7 @@ namespace DropSun.Views
 
         private async void dropItemFromRearranging()
         {
+            LocationsScrollViewer.VerticalScrollMode = ScrollingScrollMode.Auto;
             if (canDrag && draggingElement != null)
             {
                 dragIndex++;
@@ -282,6 +294,7 @@ namespace DropSun.Views
 
         private void animateScaleOfFrame(Frame element, double scale, TimeSpan timeSpan, double from = 1)
         {
+            element.RenderTransform = new CompositeTransform();
             if (element.RenderTransform is CompositeTransform transform)
             {
                 UISettings settings = new();
