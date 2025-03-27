@@ -87,38 +87,38 @@ namespace DropSun.Model.Weather
         [JsonPropertyName("daily")]
         public Daily Daily { get; set; }
         
-        public WeatherDescriptions GetWeatherDescription()
+        public Pikouna_Engine.WeatherType GetWeatherDescription()
         {
             switch (Current.WeatherCode)
             {
-                case 0: return WeatherDescriptions.ClearSky;
-                case 1: return WeatherDescriptions.MainlyClear;
-                case 2: return WeatherDescriptions.PartlyCloudy;
-                case 3: return WeatherDescriptions.Overcast;
-                case 45: return WeatherDescriptions.Fog;
-                case 48: return WeatherDescriptions.DepositingRimeFog;
-                case 51: return WeatherDescriptions.DrizzleLight;
-                case 53: return WeatherDescriptions.DrizzleModerate;
-                case 55: return WeatherDescriptions.DrizzleDense;
-                case 56: return WeatherDescriptions.FreezingDrizzleLight;
-                case 57: return WeatherDescriptions.FreezingDrizzleDense;
-                case 61: return WeatherDescriptions.RainSlight;
-                case 63: return WeatherDescriptions.RainModerate;
-                case 65: return WeatherDescriptions.RainHeavy;
-                case 66: return WeatherDescriptions.FreezingRainLight;
-                case 67: return WeatherDescriptions.FreezingRainHeavy;
-                case 71: return WeatherDescriptions.SnowFallSlight;
-                case 73: return WeatherDescriptions.SnowFallModerate;
-                case 75: return WeatherDescriptions.SnowFallHeavy;
-                case 77: return WeatherDescriptions.SnowGrains;
-                case 80: return WeatherDescriptions.RainShowersSlight;
-                case 81: return WeatherDescriptions.RainShowersModerate;
-                case 82: return WeatherDescriptions.RainShowersViolent;
-                case 85: return WeatherDescriptions.SnowShowersSlight;
-                case 86: return WeatherDescriptions.SnowShowersHeavy;
-                case 95: return WeatherDescriptions.ThunderstormSlightOrModerate;
-                case 96: return WeatherDescriptions.ThunderstormWithHailSlight;
-                case 99: return WeatherDescriptions.ThunderstormWithHailHeavy;
+                case 0: return Pikouna_Engine.WeatherType.ClearSky;
+                case 1: return Pikouna_Engine.WeatherType.MainlyClear;
+                case 2: return Pikouna_Engine.WeatherType.PartlyCloudy;
+                case 3: return Pikouna_Engine.WeatherType.Overcast;
+                case 45: return Pikouna_Engine.WeatherType.Fog;
+                case 48: return Pikouna_Engine.WeatherType.DepositingRimeFog;
+                case 51: return Pikouna_Engine.WeatherType.DrizzleLight;
+                case 53: return Pikouna_Engine.WeatherType.DrizzleModerate;
+                case 55: return Pikouna_Engine.WeatherType.DrizzleDense;
+                case 56: return Pikouna_Engine.WeatherType.FreezingDrizzleLight;
+                case 57: return Pikouna_Engine.WeatherType.FreezingDrizzleDense;
+                case 61: return Pikouna_Engine.WeatherType.RainSlight;
+                case 63: return Pikouna_Engine.WeatherType.RainModerate;
+                case 65: return Pikouna_Engine.WeatherType.RainHeavy;
+                case 66: return Pikouna_Engine.WeatherType.FreezingRainLight;
+                case 67: return Pikouna_Engine.WeatherType.FreezingRainHeavy;
+                case 71: return Pikouna_Engine.WeatherType.SnowFallSlight;
+                case 73: return Pikouna_Engine.WeatherType.SnowFallModerate;
+                case 75: return Pikouna_Engine.WeatherType.SnowFallHeavy;
+                case 77: return Pikouna_Engine.WeatherType.SnowGrains;
+                case 80: return Pikouna_Engine.WeatherType.RainShowersSlight;
+                case 81: return Pikouna_Engine.WeatherType.RainShowersModerate;
+                case 82: return Pikouna_Engine.WeatherType.RainShowersViolent;
+                case 85: return Pikouna_Engine.WeatherType.SnowShowersSlight;
+                case 86: return Pikouna_Engine.WeatherType.SnowShowersHeavy;
+                case 95: return Pikouna_Engine.WeatherType.ThunderstormSlightOrModerate;
+                case 96: return Pikouna_Engine.WeatherType.ThunderstormWithHailSlight;
+                case 99: return Pikouna_Engine.WeatherType.ThunderstormWithHailHeavy;
                 default: throw new ArgumentOutOfRangeException(nameof(Current.WeatherCode), "Invalid weather code");
             }
         }
@@ -332,37 +332,5 @@ namespace DropSun.Model.Weather
 
         [JsonPropertyName("precipitation_sum")]
         public List<double> PrecipitationSum { get; set; }
-    }
-
-    public enum WeatherDescriptions
-    {
-        ClearSky = 0,
-        MainlyClear = 1,
-        PartlyCloudy = 2,
-        Overcast = 3,
-        Fog = 45,
-        DepositingRimeFog = 48,
-        DrizzleLight = 51,
-        DrizzleModerate = 53,
-        DrizzleDense = 55,
-        FreezingDrizzleLight = 56,
-        FreezingDrizzleDense = 57,
-        RainSlight = 61,
-        RainModerate = 63,
-        RainHeavy = 65,
-        FreezingRainLight = 66,
-        FreezingRainHeavy = 67,
-        SnowFallSlight = 71,
-        SnowFallModerate = 73,
-        SnowFallHeavy = 75,
-        SnowGrains = 77,
-        RainShowersSlight = 80,
-        RainShowersModerate = 81,
-        RainShowersViolent = 82,
-        SnowShowersSlight = 85,
-        SnowShowersHeavy = 86,
-        ThunderstormSlightOrModerate = 95,
-        ThunderstormWithHailSlight = 96,
-        ThunderstormWithHailHeavy = 99
     }
 }

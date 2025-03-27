@@ -294,39 +294,42 @@ namespace DropSun.Views
 
         private void animateScaleOfFrame(Frame element, double scale, TimeSpan timeSpan, double from = 1)
         {
-            element.RenderTransform = new CompositeTransform();
-            if (element.RenderTransform is CompositeTransform transform)
+            if (element != null)
             {
-                UISettings settings = new();
-                if (settings.AnimationsEnabled)
+                if (element.RenderTransform == null) element.RenderTransform = new CompositeTransform();
+                if (element.RenderTransform is CompositeTransform transform)
                 {
-                    var scaleXAnim = new DoubleAnimation
+                    UISettings settings = new();
+                    if (settings.AnimationsEnabled)
                     {
-                        From = from,
-                        To = scale,
-                        Duration = timeSpan,
-                        EasingFunction = new CubicEase { EasingMode = EasingMode.EaseOut }
-                    };
+                        var scaleXAnim = new DoubleAnimation
+                        {
+                            From = from,
+                            To = scale,
+                            Duration = timeSpan,
+                            EasingFunction = new CubicEase { EasingMode = EasingMode.EaseOut }
+                        };
 
-                    var scaleYAnim = new DoubleAnimation
-                    {
-                        From = from,
-                        To = scale,
-                        Duration = timeSpan,
-                        EasingFunction = new CubicEase { EasingMode = EasingMode.EaseOut }
-                    };
+                        var scaleYAnim = new DoubleAnimation
+                        {
+                            From = from,
+                            To = scale,
+                            Duration = timeSpan,
+                            EasingFunction = new CubicEase { EasingMode = EasingMode.EaseOut }
+                        };
 
-                    var storyboard = new Storyboard();
-                    storyboard.Children.Add(scaleXAnim);
-                    storyboard.Children.Add(scaleYAnim);
+                        var storyboard = new Storyboard();
+                        storyboard.Children.Add(scaleXAnim);
+                        storyboard.Children.Add(scaleYAnim);
 
-                    Storyboard.SetTarget(scaleXAnim, element);
-                    Storyboard.SetTargetProperty(scaleXAnim, "(UIElement.RenderTransform).(CompositeTransform.ScaleX)");
+                        Storyboard.SetTarget(scaleXAnim, element);
+                        Storyboard.SetTargetProperty(scaleXAnim, "(UIElement.RenderTransform).(CompositeTransform.ScaleX)");
 
-                    Storyboard.SetTarget(scaleYAnim, element);
-                    Storyboard.SetTargetProperty(scaleYAnim, "(UIElement.RenderTransform).(CompositeTransform.ScaleY)");
+                        Storyboard.SetTarget(scaleYAnim, element);
+                        Storyboard.SetTargetProperty(scaleYAnim, "(UIElement.RenderTransform).(CompositeTransform.ScaleY)");
 
-                    storyboard.Begin();
+                        storyboard.Begin();
+                    }
                 }
             }
         }
