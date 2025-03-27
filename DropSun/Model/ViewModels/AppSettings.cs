@@ -98,6 +98,7 @@ namespace DropSun.Model.ViewModels
                 if (_reduceLightningStrikeFlashing != value)
                 {
                     _reduceLightningStrikeFlashing = value;
+                    ApplicationViewModel.Instance.ReduceThunderstormFlashes = value;
                     Save(nameof(ReduceLightningStrikeFlashing), value);
                     OnPropertyChanged(nameof(ReduceLightningStrikeFlashing));
                 }
