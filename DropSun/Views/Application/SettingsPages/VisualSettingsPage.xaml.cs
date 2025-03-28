@@ -45,6 +45,28 @@ namespace DropSun.Views.Application.SettingsPages
                     InteractionsRadioButtonGroup.SelectedIndex = 2;
                     break;
             }
+
+            switch (AppSettings.Instance.Framerate)
+            {
+                case 30:
+                    FramerateRadioButtonGroup.SelectedIndex = 0;
+                    break;
+                case 60:
+                    FramerateRadioButtonGroup.SelectedIndex = 1;
+                    break;
+                case 120:
+                    FramerateRadioButtonGroup.SelectedIndex = 2;
+                    break;
+                case 144:
+                    FramerateRadioButtonGroup.SelectedIndex = 3;
+                    break;
+                case 240:
+                    FramerateRadioButtonGroup.SelectedIndex = 4;
+                    break;
+                case 480:
+                    FramerateRadioButtonGroup.SelectedIndex = 5;
+                    break;
+            }
         }
 
         private void VisualSettingsPage_Loaded(object sender, RoutedEventArgs e)
@@ -70,6 +92,31 @@ namespace DropSun.Views.Application.SettingsPages
         private void BouncyRadioButton_Checked(object sender, RoutedEventArgs e)
         {
             AppSettings.Instance.InteractionStyle = Pikouna_Engine.SunInteractionStyle.Bouncy;
+        }
+
+        private void FramerateRadioButtonGroup_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            switch (FramerateRadioButtonGroup.SelectedIndex)
+            {
+                case 0:
+                    AppSettings.Instance.Framerate = 30;
+                    break;
+                case 1:
+                    AppSettings.Instance.Framerate = 60;
+                    break;
+                case 2:
+                    AppSettings.Instance.Framerate = 120;
+                    break;
+                case 3:
+                    AppSettings.Instance.Framerate = 144;
+                    break;
+                case 4:
+                    AppSettings.Instance.Framerate = 240;
+                    break;
+                case 5:
+                    AppSettings.Instance.Framerate = 480;
+                    break;
+            }
         }
     }
 }

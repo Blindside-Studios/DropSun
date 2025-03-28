@@ -18,7 +18,16 @@
                     <RadioButton x:Name="SlowRadioButton" x:Uid="SettingsVisualInteractionsSlowRadioButton" Tag="slow" Checked="SlowRadioButton_Checked"/>
                     <RadioButton x:Name="BouncyRadioButton" x:Uid="SettingsVisualInteractionsBouncyRadioButton" Tag="bouncy" Checked="BouncyRadioButton_Checked"/>
                 </RadioButtons>
+                
                 <TextBlock x:Uid="SettingsVisualPerformanceAndEnergyHeader" Style="{StaticResource SubtitleTextBlockStyle}" Margin="0,16,0,0"/>
+                <RadioButtons x:Name="FramerateRadioButtonGroup" x:Uid="SettingsVisualFramerateButtonGroup" SelectionChanged="FramerateRadioButtonGroup_SelectionChanged" Margin="8,4,8,4">
+                    <RadioButton x:Name="_030RadioButton" x:Uid="SettingsVisualFramerate030Option" Tag="30" />
+                    <RadioButton x:Name="_060RadioButton" x:Uid="SettingsVisualFramerate060Option" Tag="60" />
+                    <RadioButton x:Name="_120RadioButton" x:Uid="SettingsVisualFramerate120Option" Tag="120" />
+                    <RadioButton x:Name="_144RadioButton" x:Uid="SettingsVisualFramerate144Option" Tag="144" />
+                    <RadioButton x:Name="_240RadioButton" x:Uid="SettingsVisualFramerate240Option" Tag="240" />
+                    <RadioButton x:Name="_480RadioButton" x:Uid="SettingsVisualFramerate480Option" Tag="480" />
+                </RadioButtons>
                 <ToggleSwitch x:Uid="SettingsVisualPowerSaverToggle" IsOn="{x:Bind vm:AppSettings.Instance.EnablePowerSaver, Mode=TwoWay}" Margin="8,4,8,4"/>
                 <ToggleSwitch x:Uid="SettingsVisualDisableWeatherEffectsToggle" IsOn="{x:Bind vm:AppSettings.Instance.DisableAllWeatherEffects, Mode=TwoWay}" Margin="8,4,8,4"/>
                 

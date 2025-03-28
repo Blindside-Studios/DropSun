@@ -74,6 +74,22 @@ namespace DropSun.Model.ViewModels
         }
         private SunInteractionStyle _interactionStyle = SunInteractionStyle.Gentle;
 
+        public int Framerate
+        {
+            get => _framerate;
+            set
+            {
+                if (value != _framerate)
+                {
+                    Pikouna_Engine.ApplicationViewModel.Instance.Framerate = value;
+                    _framerate = value;
+                    Save(nameof(Framerate), (int)value);
+                    OnPropertyChanged(nameof(Framerate));
+                }
+            }
+        }
+        private int _framerate = 60;
+
         public bool EnablePowerSaver
         {
             get => _enablePowerSaver;

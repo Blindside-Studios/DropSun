@@ -173,6 +173,34 @@
     <value>Make all weather effects static (primarily intended for battery-powered devices, effects are always disabled when the window is not in focus, regardless of this setting)</value>
     <comment>The option that allows users to disable all animted weather effects for maximum power savings.</comment>
   </data>
+  <data name="SettingsVisualFramerateButtonGroup.Header" xml:space="preserve">
+    <value>Framerate (Sun and Weather Effects)</value>
+    <comment>The header for the radio buttons group that lets the user pick their preferred framerate.</comment>
+  </data>  
+  <data name="SettingsVisualFramerate030Option.Content" xml:space="preserve">
+    <value>30hz</value>
+    <comment>The button that lets the user choose 30hz as their preferred framerate.</comment>
+  </data>
+  <data name="SettingsVisualFramerate060Option.Content" xml:space="preserve">
+    <value>60hz</value>
+    <comment>The button that lets the user choose 60hz as their preferred framerate.</comment>
+  </data>
+  <data name="SettingsVisualFramerate120Option.Content" xml:space="preserve">
+    <value>120hz</value>
+    <comment>The button that lets the user choose 120hz as their preferred framerate.</comment>
+  </data>
+  <data name="SettingsVisualFramerate144Option.Content" xml:space="preserve">
+    <value>144hz</value>
+    <comment>The button that lets the user choose 144hz as their preferred framerate.</comment>
+  </data>
+  <data name="SettingsVisualFramerate240Option.Content" xml:space="preserve">
+    <value>240hz</value>
+    <comment>The button that lets the user choose 240hz as their preferred framerate.</comment>
+  </data>
+  <data name="SettingsVisualFramerate480Option.Content" xml:space="preserve">
+    <value>480hz</value>
+    <comment>The button that lets the user choose 480hz as their preferred framerate.</comment>
+  </data>
   <data name="SettingsVisualInteractionsBouncyRadioButton.Content" xml:space="preserve">
     <value>Bouncy</value>
     <comment>The option to make the sun bouncy</comment>
