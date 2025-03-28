@@ -1,0 +1,5530 @@
+[
+  {
+    "latitude": 33.94,
+    "longitude": -118.4,
+    "generationtime_ms": 2.395033836364746,
+    "utc_offset_seconds": 3600,
+    "timezone": "Europe/Berlin",
+    "timezone_abbreviation": "GMT+1",
+    "elevation": 0.0,
+    "current_units": {
+      "time": "iso8601",
+      "interval": "seconds",
+      "temperature_2m": "\u00b0C",
+      "relative_humidity_2m": "%",
+      "apparent_temperature": "\u00b0C",
+      "is_day": "",
+      "precipitation": "mm",
+      "rain": "mm",
+      "showers": "mm",
+      "snowfall": "cm",
+      "weather_code": "wmo code",
+      "cloud_cover": "%",
+      "pressure_msl": "hPa",
+      "surface_pressure": "hPa",
+      "wind_speed_10m": "km/h",
+      "wind_direction_10m": "\u00b0",
+      "wind_gusts_10m": "km/h"
+    },
+    "current": {
+      "time": "2025-03-27T23:07:48",
+      "interval": 900,
+      "temperature_2m": 30,
+      "relative_humidity_2m": 83,
+      "apparent_temperature": 28,
+      "is_day": 0,
+      "precipitation": 0.0,
+      "rain": 0.0,
+      "showers": 0.0,
+      "snowfall": 0.0,
+      "weather_code": 0,
+      "cloud_cover": 7,
+      "pressure_msl": 1010.1,
+      "surface_pressure": 1010.1,
+      "wind_speed_10m": 10,
+      "wind_direction_10m": 215,
+      "wind_gusts_10m": 15
+    },
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "\u00b0C",
+      "apparent_temperature": "\u00b0C",
+      "precipitation_probability": "%",
+      "weather_code": "wmo code",
+      "visibility": "m",
+      "wind_speed_10m": "km/h",
+      "is_day": ""
+    },
+    "hourly": {
+      "time": [
+        "2025-03-27T23:00:00",
+        "2025-03-28T00:00:00",
+        "2025-03-28T01:00:00",
+        "2025-03-28T02:00:00",
+        "2025-03-28T03:00:00",
+        "2025-03-28T04:00:00"
+      ],
+      "temperature_2m": [
+        28.7,
+        30.4,
+        29.1,
+        30.1,
+        31.4,
+        28.8
+      ],
+      "apparent_temperature": [
+        28.6,
+        27.4,
+        26.6,
+        28.3,
+        29.0,
+        28.3
+      ],
+      "precipitation_probability": [
+        3,
+        -3,
+        8,
+        2,
+        -1,
+        -3
+      ],
+      "weather_code": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "visibility": [
+        14446.692133735038,
+        10674.046885101472,
+        10481.169241641262,
+        11119.476156114912,
+        26728.237928883224,
+        17806.22968621264
+      ],
+      "wind_speed_10m": [
+        9.6,
+        9.6,
+        8.3,
+        11.4,
+        11.6,
+        10.7
+      ],
+      "is_day": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "daily_units": {
+      "time": "iso8601",
+      "weather_code": "wmo code",
+      "temperature_2m_max": "\u00b0C",
+      "temperature_2m_min": "\u00b0C",
+      "apparent_temperature_max": "\u00b0C",
+      "apparent_temperature_min": "\u00b0C",
+      "precipitation_sum": "mm"
+    },
+    "daily": {
+      "time": [
+        "2025-03-27T23:00:00",
+        "2025-03-28T00:00:00",
+        "2025-03-28T01:00:00",
+        "2025-03-28T02:00:00",
+        "2025-03-28T03:00:00",
+        "2025-03-28T04:00:00",
+        "2025-03-28T05:00:00"
+      ],
+      "weather_code": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "temperature_2m_max": [
+        31.9,
+        31.6,
+        32.0,
+        31.7,
+        30.6,
+        31.4,
+        33.3
+      ],
+      "temperature_2m_min": [
+        26.1,
+        25.6,
+        27.8,
+        26.1,
+        28.4,
+        28.4,
+        25.6
+      ],
+      "apparent_temperature_max": [
+        27.9,
+        30.0,
+        27.7,
+        29.2,
+        29.7,
+        28.0,
+        29.4
+      ],
+      "apparent_temperature_min": [
+        24.5,
+        24.9,
+        25.4,
+        24.7,
+        26.2,
+        27.2,
+        25.2
+      ],
+      "precipitation_sum": [
+        1.6,
+        1.0,
+        1.2,
+        1.4,
+        0.5,
+        -0.7,
+        -0.6
+      ]
+    }
+  },
+  {
+    "latitude": 40.71,
+    "longitude": -74.0,
+    "generationtime_ms": 2.395033836364746,
+    "utc_offset_seconds": 3600,
+    "timezone": "Europe/Berlin",
+    "timezone_abbreviation": "GMT+1",
+    "elevation": 0.0,
+    "current_units": {
+      "time": "iso8601",
+      "interval": "seconds",
+      "temperature_2m": "\u00b0C",
+      "relative_humidity_2m": "%",
+      "apparent_temperature": "\u00b0C",
+      "is_day": "",
+      "precipitation": "mm",
+      "rain": "mm",
+      "showers": "mm",
+      "snowfall": "cm",
+      "weather_code": "wmo code",
+      "cloud_cover": "%",
+      "pressure_msl": "hPa",
+      "surface_pressure": "hPa",
+      "wind_speed_10m": "km/h",
+      "wind_direction_10m": "\u00b0",
+      "wind_gusts_10m": "km/h"
+    },
+    "current": {
+      "time": "2025-03-27T23:07:48",
+      "interval": 900,
+      "temperature_2m": 25,
+      "relative_humidity_2m": 83,
+      "apparent_temperature": 23,
+      "is_day": 0,
+      "precipitation": 0.0,
+      "rain": 0.0,
+      "showers": 0.0,
+      "snowfall": 0.0,
+      "weather_code": 1,
+      "cloud_cover": 24,
+      "pressure_msl": 1010.1,
+      "surface_pressure": 1010.1,
+      "wind_speed_10m": 12,
+      "wind_direction_10m": 215,
+      "wind_gusts_10m": 17
+    },
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "\u00b0C",
+      "apparent_temperature": "\u00b0C",
+      "precipitation_probability": "%",
+      "weather_code": "wmo code",
+      "visibility": "m",
+      "wind_speed_10m": "km/h",
+      "is_day": ""
+    },
+    "hourly": {
+      "time": [
+        "2025-03-27T23:00:00",
+        "2025-03-28T00:00:00",
+        "2025-03-28T01:00:00",
+        "2025-03-28T02:00:00",
+        "2025-03-28T03:00:00",
+        "2025-03-28T04:00:00"
+      ],
+      "temperature_2m": [
+        26.4,
+        24.7,
+        26.2,
+        24.6,
+        26.3,
+        24.6
+      ],
+      "apparent_temperature": [
+        23.9,
+        23.1,
+        24.2,
+        21.8,
+        23.2,
+        22.5
+      ],
+      "precipitation_probability": [
+        -2,
+        -3,
+        -2,
+        8,
+        -1,
+        -7
+      ],
+      "weather_code": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "visibility": [
+        25894.071611163723,
+        28948.300221412766,
+        23100.998569741194,
+        12512.097423086934,
+        21651.84611831532,
+        14189.263742832245
+      ],
+      "wind_speed_10m": [
+        13.0,
+        10.7,
+        11.6,
+        12.5,
+        13.6,
+        10.2
+      ],
+      "is_day": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "daily_units": {
+      "time": "iso8601",
+      "weather_code": "wmo code",
+      "temperature_2m_max": "\u00b0C",
+      "temperature_2m_min": "\u00b0C",
+      "apparent_temperature_max": "\u00b0C",
+      "apparent_temperature_min": "\u00b0C",
+      "precipitation_sum": "mm"
+    },
+    "daily": {
+      "time": [
+        "2025-03-27T23:00:00",
+        "2025-03-28T00:00:00",
+        "2025-03-28T01:00:00",
+        "2025-03-28T02:00:00",
+        "2025-03-28T03:00:00",
+        "2025-03-28T04:00:00",
+        "2025-03-28T05:00:00"
+      ],
+      "weather_code": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "temperature_2m_max": [
+        25.5,
+        26.1,
+        26.1,
+        27.4,
+        27.9,
+        26.8,
+        27.5
+      ],
+      "temperature_2m_min": [
+        23.4,
+        21.3,
+        21.2,
+        23.1,
+        21.2,
+        22.2,
+        22.8
+      ],
+      "apparent_temperature_max": [
+        22.9,
+        24.4,
+        24.7,
+        23.4,
+        24.7,
+        23.7,
+        25.0
+      ],
+      "apparent_temperature_min": [
+        22.0,
+        20.3,
+        19.6,
+        22.2,
+        21.1,
+        21.0,
+        20.8
+      ],
+      "precipitation_sum": [
+        -1.8,
+        -0.4,
+        -0.2,
+        1.8,
+        -1.5,
+        -0.0,
+        -2.0
+      ]
+    }
+  },
+  {
+    "latitude": 51.51,
+    "longitude": -0.13,
+    "generationtime_ms": 2.395033836364746,
+    "utc_offset_seconds": 3600,
+    "timezone": "Europe/Berlin",
+    "timezone_abbreviation": "GMT+1",
+    "elevation": 0.0,
+    "current_units": {
+      "time": "iso8601",
+      "interval": "seconds",
+      "temperature_2m": "\u00b0C",
+      "relative_humidity_2m": "%",
+      "apparent_temperature": "\u00b0C",
+      "is_day": "",
+      "precipitation": "mm",
+      "rain": "mm",
+      "showers": "mm",
+      "snowfall": "cm",
+      "weather_code": "wmo code",
+      "cloud_cover": "%",
+      "pressure_msl": "hPa",
+      "surface_pressure": "hPa",
+      "wind_speed_10m": "km/h",
+      "wind_direction_10m": "\u00b0",
+      "wind_gusts_10m": "km/h"
+    },
+    "current": {
+      "time": "2025-03-27T23:07:48",
+      "interval": 900,
+      "temperature_2m": 21,
+      "relative_humidity_2m": 83,
+      "apparent_temperature": 22,
+      "is_day": 0,
+      "precipitation": 0.0,
+      "rain": 0.0,
+      "showers": 0.0,
+      "snowfall": 0.0,
+      "weather_code": 2,
+      "cloud_cover": 31,
+      "pressure_msl": 1010.1,
+      "surface_pressure": 1010.1,
+      "wind_speed_10m": 9,
+      "wind_direction_10m": 215,
+      "wind_gusts_10m": 14
+    },
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "\u00b0C",
+      "apparent_temperature": "\u00b0C",
+      "precipitation_probability": "%",
+      "weather_code": "wmo code",
+      "visibility": "m",
+      "wind_speed_10m": "km/h",
+      "is_day": ""
+    },
+    "hourly": {
+      "time": [
+        "2025-03-27T23:00:00",
+        "2025-03-28T00:00:00",
+        "2025-03-28T01:00:00",
+        "2025-03-28T02:00:00",
+        "2025-03-28T03:00:00",
+        "2025-03-28T04:00:00"
+      ],
+      "temperature_2m": [
+        19.8,
+        21.6,
+        20.3,
+        22.4,
+        20.3,
+        20.9
+      ],
+      "apparent_temperature": [
+        22.2,
+        21.9,
+        21.4,
+        20.6,
+        22.1,
+        23.4
+      ],
+      "precipitation_probability": [
+        -4,
+        -8,
+        5,
+        -5,
+        7,
+        0
+      ],
+      "weather_code": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "visibility": [
+        22982.591534900792,
+        29087.305989759672,
+        28892.022796875146,
+        19171.584440459734,
+        22388.53024496515,
+        22799.767335849177
+      ],
+      "wind_speed_10m": [
+        8.7,
+        7.5,
+        7.5,
+        10.4,
+        7.5,
+        7.9
+      ],
+      "is_day": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "daily_units": {
+      "time": "iso8601",
+      "weather_code": "wmo code",
+      "temperature_2m_max": "\u00b0C",
+      "temperature_2m_min": "\u00b0C",
+      "apparent_temperature_max": "\u00b0C",
+      "apparent_temperature_min": "\u00b0C",
+      "precipitation_sum": "mm"
+    },
+    "daily": {
+      "time": [
+        "2025-03-27T23:00:00",
+        "2025-03-28T00:00:00",
+        "2025-03-28T01:00:00",
+        "2025-03-28T02:00:00",
+        "2025-03-28T03:00:00",
+        "2025-03-28T04:00:00",
+        "2025-03-28T05:00:00"
+      ],
+      "weather_code": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "temperature_2m_max": [
+        22.4,
+        24.4,
+        22.7,
+        22.4,
+        23.7,
+        23.0,
+        23.7
+      ],
+      "temperature_2m_min": [
+        17.3,
+        17.2,
+        18.5,
+        17.7,
+        19.1,
+        17.1,
+        17.4
+      ],
+      "apparent_temperature_max": [
+        22.1,
+        24.4,
+        22.7,
+        23.6,
+        24.4,
+        23.3,
+        22.0
+      ],
+      "apparent_temperature_min": [
+        19.9,
+        19.2,
+        21.3,
+        21.5,
+        21.0,
+        20.2,
+        19.4
+      ],
+      "precipitation_sum": [
+        1.6,
+        -0.2,
+        1.4,
+        -0.7,
+        -0.7,
+        -0.2,
+        -1.4
+      ]
+    }
+  },
+  {
+    "latitude": 48.85,
+    "longitude": 2.35,
+    "generationtime_ms": 2.395033836364746,
+    "utc_offset_seconds": 3600,
+    "timezone": "Europe/Berlin",
+    "timezone_abbreviation": "GMT+1",
+    "elevation": 0.0,
+    "current_units": {
+      "time": "iso8601",
+      "interval": "seconds",
+      "temperature_2m": "\u00b0C",
+      "relative_humidity_2m": "%",
+      "apparent_temperature": "\u00b0C",
+      "is_day": "",
+      "precipitation": "mm",
+      "rain": "mm",
+      "showers": "mm",
+      "snowfall": "cm",
+      "weather_code": "wmo code",
+      "cloud_cover": "%",
+      "pressure_msl": "hPa",
+      "surface_pressure": "hPa",
+      "wind_speed_10m": "km/h",
+      "wind_direction_10m": "\u00b0",
+      "wind_gusts_10m": "km/h"
+    },
+    "current": {
+      "time": "2025-03-27T23:07:48",
+      "interval": 900,
+      "temperature_2m": 19,
+      "relative_humidity_2m": 83,
+      "apparent_temperature": 20,
+      "is_day": 0,
+      "precipitation": 0.0,
+      "rain": 0.0,
+      "showers": 0.0,
+      "snowfall": 0.0,
+      "weather_code": 3,
+      "cloud_cover": 94,
+      "pressure_msl": 1010.1,
+      "surface_pressure": 1010.1,
+      "wind_speed_10m": 7,
+      "wind_direction_10m": 215,
+      "wind_gusts_10m": 12
+    },
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "\u00b0C",
+      "apparent_temperature": "\u00b0C",
+      "precipitation_probability": "%",
+      "weather_code": "wmo code",
+      "visibility": "m",
+      "wind_speed_10m": "km/h",
+      "is_day": ""
+    },
+    "hourly": {
+      "time": [
+        "2025-03-27T23:00:00",
+        "2025-03-28T00:00:00",
+        "2025-03-28T01:00:00",
+        "2025-03-28T02:00:00",
+        "2025-03-28T03:00:00",
+        "2025-03-28T04:00:00"
+      ],
+      "temperature_2m": [
+        20.3,
+        19.2,
+        17.8,
+        18.9,
+        17.8,
+        19.2
+      ],
+      "apparent_temperature": [
+        19.1,
+        19.1,
+        18.5,
+        20.5,
+        19.5,
+        18.7
+      ],
+      "precipitation_probability": [
+        9,
+        -7,
+        1,
+        -6,
+        5,
+        -1
+      ],
+      "weather_code": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "visibility": [
+        29741.518790978735,
+        29788.058628306135,
+        20983.76341002019,
+        19002.861933609092,
+        12003.258614969982,
+        24141.300360452038
+      ],
+      "wind_speed_10m": [
+        6.7,
+        7.1,
+        7.2,
+        6.6,
+        8.0,
+        5.9
+      ],
+      "is_day": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "daily_units": {
+      "time": "iso8601",
+      "weather_code": "wmo code",
+      "temperature_2m_max": "\u00b0C",
+      "temperature_2m_min": "\u00b0C",
+      "apparent_temperature_max": "\u00b0C",
+      "apparent_temperature_min": "\u00b0C",
+      "precipitation_sum": "mm"
+    },
+    "daily": {
+      "time": [
+        "2025-03-27T23:00:00",
+        "2025-03-28T00:00:00",
+        "2025-03-28T01:00:00",
+        "2025-03-28T02:00:00",
+        "2025-03-28T03:00:00",
+        "2025-03-28T04:00:00",
+        "2025-03-28T05:00:00"
+      ],
+      "weather_code": [
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "temperature_2m_max": [
+        20.0,
+        19.9,
+        22.1,
+        20.7,
+        19.8,
+        21.3,
+        20.8
+      ],
+      "temperature_2m_min": [
+        15.5,
+        16.5,
+        16.8,
+        16.8,
+        15.1,
+        14.6,
+        16.0
+      ],
+      "apparent_temperature_max": [
+        22.3,
+        21.7,
+        20.9,
+        20.9,
+        20.9,
+        21.0,
+        19.5
+      ],
+      "apparent_temperature_min": [
+        17.0,
+        19.3,
+        19.4,
+        17.9,
+        17.4,
+        19.1,
+        17.1
+      ],
+      "precipitation_sum": [
+        1.8,
+        1.0,
+        1.9,
+        1.0,
+        1.1,
+        0.4,
+        -1.4
+      ]
+    }
+  },
+  {
+    "latitude": 64.13,
+    "longitude": -21.9,
+    "generationtime_ms": 2.395033836364746,
+    "utc_offset_seconds": 3600,
+    "timezone": "Europe/Berlin",
+    "timezone_abbreviation": "GMT+1",
+    "elevation": 0.0,
+    "current_units": {
+      "time": "iso8601",
+      "interval": "seconds",
+      "temperature_2m": "\u00b0C",
+      "relative_humidity_2m": "%",
+      "apparent_temperature": "\u00b0C",
+      "is_day": "",
+      "precipitation": "mm",
+      "rain": "mm",
+      "showers": "mm",
+      "snowfall": "cm",
+      "weather_code": "wmo code",
+      "cloud_cover": "%",
+      "pressure_msl": "hPa",
+      "surface_pressure": "hPa",
+      "wind_speed_10m": "km/h",
+      "wind_direction_10m": "\u00b0",
+      "wind_gusts_10m": "km/h"
+    },
+    "current": {
+      "time": "2025-03-27T23:07:48",
+      "interval": 900,
+      "temperature_2m": 5,
+      "relative_humidity_2m": 83,
+      "apparent_temperature": 6,
+      "is_day": 0,
+      "precipitation": 0.0,
+      "rain": 0.0,
+      "showers": 0.0,
+      "snowfall": 0.0,
+      "weather_code": 45,
+      "cloud_cover": 88,
+      "pressure_msl": 1010.1,
+      "surface_pressure": 1010.1,
+      "wind_speed_10m": 14,
+      "wind_direction_10m": 215,
+      "wind_gusts_10m": 19
+    },
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "\u00b0C",
+      "apparent_temperature": "\u00b0C",
+      "precipitation_probability": "%",
+      "weather_code": "wmo code",
+      "visibility": "m",
+      "wind_speed_10m": "km/h",
+      "is_day": ""
+    },
+    "hourly": {
+      "time": [
+        "2025-03-27T23:00:00",
+        "2025-03-28T00:00:00",
+        "2025-03-28T01:00:00",
+        "2025-03-28T02:00:00",
+        "2025-03-28T03:00:00",
+        "2025-03-28T04:00:00"
+      ],
+      "temperature_2m": [
+        5.1,
+        5.3,
+        3.7,
+        3.7,
+        5.9,
+        5.8
+      ],
+      "apparent_temperature": [
+        7.3,
+        7.3,
+        4.9,
+        4.9,
+        6.8,
+        4.9
+      ],
+      "precipitation_probability": [
+        10,
+        13,
+        14,
+        17,
+        7,
+        5
+      ],
+      "weather_code": [
+        45,
+        45,
+        45,
+        45,
+        45,
+        45
+      ],
+      "visibility": [
+        28030.517654930318,
+        20662.733697345917,
+        25996.551891442956,
+        21840.16595190583,
+        15029.335298443406,
+        27845.32037888891
+      ],
+      "wind_speed_10m": [
+        12.4,
+        15.0,
+        14.3,
+        15.2,
+        14.4,
+        12.4
+      ],
+      "is_day": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "daily_units": {
+      "time": "iso8601",
+      "weather_code": "wmo code",
+      "temperature_2m_max": "\u00b0C",
+      "temperature_2m_min": "\u00b0C",
+      "apparent_temperature_max": "\u00b0C",
+      "apparent_temperature_min": "\u00b0C",
+      "precipitation_sum": "mm"
+    },
+    "daily": {
+      "time": [
+        "2025-03-27T23:00:00",
+        "2025-03-28T00:00:00",
+        "2025-03-28T01:00:00",
+        "2025-03-28T02:00:00",
+        "2025-03-28T03:00:00",
+        "2025-03-28T04:00:00",
+        "2025-03-28T05:00:00"
+      ],
+      "weather_code": [
+        45,
+        45,
+        45,
+        45,
+        45,
+        45,
+        45
+      ],
+      "temperature_2m_max": [
+        6.0,
+        6.8,
+        6.6,
+        5.9,
+        5.8,
+        5.7,
+        6.9
+      ],
+      "temperature_2m_min": [
+        0.5,
+        2.7,
+        0.9,
+        2.5,
+        1.7,
+        2.7,
+        3.5
+      ],
+      "apparent_temperature_max": [
+        5.9,
+        6.5,
+        7.8,
+        5.8,
+        6.9,
+        6.7,
+        5.6
+      ],
+      "apparent_temperature_min": [
+        4.7,
+        2.5,
+        3.7,
+        2.5,
+        5.3,
+        3.7,
+        4.4
+      ],
+      "precipitation_sum": [
+        0.9,
+        -1.2,
+        2.1,
+        0.9,
+        2.4,
+        -0.6,
+        -1.2
+      ]
+    }
+  },
+  {
+    "latitude": 60.17,
+    "longitude": 24.94,
+    "generationtime_ms": 2.395033836364746,
+    "utc_offset_seconds": 3600,
+    "timezone": "Europe/Berlin",
+    "timezone_abbreviation": "GMT+1",
+    "elevation": 0.0,
+    "current_units": {
+      "time": "iso8601",
+      "interval": "seconds",
+      "temperature_2m": "\u00b0C",
+      "relative_humidity_2m": "%",
+      "apparent_temperature": "\u00b0C",
+      "is_day": "",
+      "precipitation": "mm",
+      "rain": "mm",
+      "showers": "mm",
+      "snowfall": "cm",
+      "weather_code": "wmo code",
+      "cloud_cover": "%",
+      "pressure_msl": "hPa",
+      "surface_pressure": "hPa",
+      "wind_speed_10m": "km/h",
+      "wind_direction_10m": "\u00b0",
+      "wind_gusts_10m": "km/h"
+    },
+    "current": {
+      "time": "2025-03-27T23:07:48",
+      "interval": 900,
+      "temperature_2m": -2,
+      "relative_humidity_2m": 83,
+      "apparent_temperature": -1,
+      "is_day": 0,
+      "precipitation": 0.4,
+      "rain": 0.0,
+      "showers": 0.0,
+      "snowfall": 0.4,
+      "weather_code": 48,
+      "cloud_cover": 90,
+      "pressure_msl": 1010.1,
+      "surface_pressure": 1010.1,
+      "wind_speed_10m": 11,
+      "wind_direction_10m": 215,
+      "wind_gusts_10m": 16
+    },
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "\u00b0C",
+      "apparent_temperature": "\u00b0C",
+      "precipitation_probability": "%",
+      "weather_code": "wmo code",
+      "visibility": "m",
+      "wind_speed_10m": "km/h",
+      "is_day": ""
+    },
+    "hourly": {
+      "time": [
+        "2025-03-27T23:00:00",
+        "2025-03-28T00:00:00",
+        "2025-03-28T01:00:00",
+        "2025-03-28T02:00:00",
+        "2025-03-28T03:00:00",
+        "2025-03-28T04:00:00"
+      ],
+      "temperature_2m": [
+        -3.3,
+        -2.0,
+        -1.7,
+        -2.4,
+        -3.0,
+        -1.3
+      ],
+      "apparent_temperature": [
+        -2.2,
+        -2.0,
+        0.3,
+        -0.6,
+        -1.1,
+        -1.3
+      ],
+      "precipitation_probability": [
+        15,
+        10,
+        11,
+        23,
+        16,
+        24
+      ],
+      "weather_code": [
+        48,
+        48,
+        48,
+        48,
+        48,
+        48
+      ],
+      "visibility": [
+        19646.891113335427,
+        20131.520040240823,
+        26055.4515511886,
+        26210.802067274562,
+        16739.041701266808,
+        10840.246637708844
+      ],
+      "wind_speed_10m": [
+        9.2,
+        12.1,
+        12.7,
+        12.5,
+        12.5,
+        11.9
+      ],
+      "is_day": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "daily_units": {
+      "time": "iso8601",
+      "weather_code": "wmo code",
+      "temperature_2m_max": "\u00b0C",
+      "temperature_2m_min": "\u00b0C",
+      "apparent_temperature_max": "\u00b0C",
+      "apparent_temperature_min": "\u00b0C",
+      "precipitation_sum": "mm"
+    },
+    "daily": {
+      "time": [
+        "2025-03-27T23:00:00",
+        "2025-03-28T00:00:00",
+        "2025-03-28T01:00:00",
+        "2025-03-28T02:00:00",
+        "2025-03-28T03:00:00",
+        "2025-03-28T04:00:00",
+        "2025-03-28T05:00:00"
+      ],
+      "weather_code": [
+        48,
+        48,
+        48,
+        48,
+        48,
+        48,
+        48
+      ],
+      "temperature_2m_max": [
+        0.5,
+        1.0,
+        -0.3,
+        1.4,
+        0.7,
+        0.7,
+        1.1
+      ],
+      "temperature_2m_min": [
+        -4.0,
+        -5.6,
+        -4.5,
+        -5.9,
+        -5.0,
+        -4.5,
+        -4.1
+      ],
+      "apparent_temperature_max": [
+        -1.0,
+        -1.0,
+        0.2,
+        0.2,
+        -0.2,
+        -0.5,
+        0.7
+      ],
+      "apparent_temperature_min": [
+        -3.1,
+        -2.1,
+        -3.6,
+        -2.6,
+        -2.3,
+        -1.6,
+        -3.1
+      ],
+      "precipitation_sum": [
+        1.3,
+        1.1,
+        2.8,
+        -0.0,
+        0.1,
+        0.1,
+        -1.0
+      ]
+    }
+  },
+  {
+    "latitude": 55.75,
+    "longitude": 37.62,
+    "generationtime_ms": 2.395033836364746,
+    "utc_offset_seconds": 3600,
+    "timezone": "Europe/Berlin",
+    "timezone_abbreviation": "GMT+1",
+    "elevation": 0.0,
+    "current_units": {
+      "time": "iso8601",
+      "interval": "seconds",
+      "temperature_2m": "\u00b0C",
+      "relative_humidity_2m": "%",
+      "apparent_temperature": "\u00b0C",
+      "is_day": "",
+      "precipitation": "mm",
+      "rain": "mm",
+      "showers": "mm",
+      "snowfall": "cm",
+      "weather_code": "wmo code",
+      "cloud_cover": "%",
+      "pressure_msl": "hPa",
+      "surface_pressure": "hPa",
+      "wind_speed_10m": "km/h",
+      "wind_direction_10m": "\u00b0",
+      "wind_gusts_10m": "km/h"
+    },
+    "current": {
+      "time": "2025-03-27T23:07:48",
+      "interval": 900,
+      "temperature_2m": 10,
+      "relative_humidity_2m": 83,
+      "apparent_temperature": 11,
+      "is_day": 0,
+      "precipitation": 0.3,
+      "rain": 0.0,
+      "showers": 0.3,
+      "snowfall": 0.0,
+      "weather_code": 51,
+      "cloud_cover": 92,
+      "pressure_msl": 1010.1,
+      "surface_pressure": 1010.1,
+      "wind_speed_10m": 6,
+      "wind_direction_10m": 215,
+      "wind_gusts_10m": 11
+    },
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "\u00b0C",
+      "apparent_temperature": "\u00b0C",
+      "precipitation_probability": "%",
+      "weather_code": "wmo code",
+      "visibility": "m",
+      "wind_speed_10m": "km/h",
+      "is_day": ""
+    },
+    "hourly": {
+      "time": [
+        "2025-03-27T23:00:00",
+        "2025-03-28T00:00:00",
+        "2025-03-28T01:00:00",
+        "2025-03-28T02:00:00",
+        "2025-03-28T03:00:00",
+        "2025-03-28T04:00:00"
+      ],
+      "temperature_2m": [
+        11.1,
+        9.2,
+        10.0,
+        11.0,
+        10.7,
+        11.0
+      ],
+      "apparent_temperature": [
+        9.7,
+        9.6,
+        9.8,
+        12.3,
+        11.8,
+        10.0
+      ],
+      "precipitation_probability": [
+        37,
+        25,
+        34,
+        25,
+        22,
+        34
+      ],
+      "weather_code": [
+        51,
+        51,
+        51,
+        51,
+        51,
+        51
+      ],
+      "visibility": [
+        16972.417746553903,
+        25069.35462062923,
+        19013.346264081534,
+        27798.934286492877,
+        29642.218580613528,
+        26509.118548526072
+      ],
+      "wind_speed_10m": [
+        5.5,
+        4.7,
+        4.2,
+        4.8,
+        7.9,
+        6.7
+      ],
+      "is_day": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "daily_units": {
+      "time": "iso8601",
+      "weather_code": "wmo code",
+      "temperature_2m_max": "\u00b0C",
+      "temperature_2m_min": "\u00b0C",
+      "apparent_temperature_max": "\u00b0C",
+      "apparent_temperature_min": "\u00b0C",
+      "precipitation_sum": "mm"
+    },
+    "daily": {
+      "time": [
+        "2025-03-27T23:00:00",
+        "2025-03-28T00:00:00",
+        "2025-03-28T01:00:00",
+        "2025-03-28T02:00:00",
+        "2025-03-28T03:00:00",
+        "2025-03-28T04:00:00",
+        "2025-03-28T05:00:00"
+      ],
+      "weather_code": [
+        51,
+        51,
+        51,
+        51,
+        51,
+        51,
+        51
+      ],
+      "temperature_2m_max": [
+        11.2,
+        10.9,
+        11.6,
+        11.4,
+        12.2,
+        11.6,
+        10.8
+      ],
+      "temperature_2m_min": [
+        6.6,
+        7.9,
+        7.8,
+        6.0,
+        8.0,
+        7.3,
+        7.7
+      ],
+      "apparent_temperature_max": [
+        12.7,
+        13.0,
+        11.8,
+        13.0,
+        12.7,
+        11.8,
+        13.2
+      ],
+      "apparent_temperature_min": [
+        9.6,
+        10.5,
+        9.5,
+        8.7,
+        10.4,
+        9.7,
+        10.4
+      ],
+      "precipitation_sum": [
+        2.2,
+        2.7,
+        0.3,
+        2.4,
+        -0.4,
+        2.2,
+        -0.2
+      ]
+    }
+  },
+  {
+    "latitude": 52.52,
+    "longitude": 13.41,
+    "generationtime_ms": 2.395033836364746,
+    "utc_offset_seconds": 3600,
+    "timezone": "Europe/Berlin",
+    "timezone_abbreviation": "GMT+1",
+    "elevation": 0.0,
+    "current_units": {
+      "time": "iso8601",
+      "interval": "seconds",
+      "temperature_2m": "\u00b0C",
+      "relative_humidity_2m": "%",
+      "apparent_temperature": "\u00b0C",
+      "is_day": "",
+      "precipitation": "mm",
+      "rain": "mm",
+      "showers": "mm",
+      "snowfall": "cm",
+      "weather_code": "wmo code",
+      "cloud_cover": "%",
+      "pressure_msl": "hPa",
+      "surface_pressure": "hPa",
+      "wind_speed_10m": "km/h",
+      "wind_direction_10m": "\u00b0",
+      "wind_gusts_10m": "km/h"
+    },
+    "current": {
+      "time": "2025-03-27T23:07:48",
+      "interval": 900,
+      "temperature_2m": 9,
+      "relative_humidity_2m": 83,
+      "apparent_temperature": 10,
+      "is_day": 0,
+      "precipitation": 0.4,
+      "rain": 0.0,
+      "showers": 0.4,
+      "snowfall": 0.0,
+      "weather_code": 53,
+      "cloud_cover": 95,
+      "pressure_msl": 1010.1,
+      "surface_pressure": 1010.1,
+      "wind_speed_10m": 10,
+      "wind_direction_10m": 215,
+      "wind_gusts_10m": 15
+    },
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "\u00b0C",
+      "apparent_temperature": "\u00b0C",
+      "precipitation_probability": "%",
+      "weather_code": "wmo code",
+      "visibility": "m",
+      "wind_speed_10m": "km/h",
+      "is_day": ""
+    },
+    "hourly": {
+      "time": [
+        "2025-03-27T23:00:00",
+        "2025-03-28T00:00:00",
+        "2025-03-28T01:00:00",
+        "2025-03-28T02:00:00",
+        "2025-03-28T03:00:00",
+        "2025-03-28T04:00:00"
+      ],
+      "temperature_2m": [
+        9.1,
+        10.2,
+        9.1,
+        8.3,
+        7.7,
+        10.3
+      ],
+      "apparent_temperature": [
+        9.3,
+        10.5,
+        10.0,
+        8.5,
+        11.4,
+        10.0
+      ],
+      "precipitation_probability": [
+        64,
+        72,
+        80,
+        72,
+        78,
+        66
+      ],
+      "weather_code": [
+        53,
+        53,
+        53,
+        53,
+        53,
+        53
+      ],
+      "visibility": [
+        27336.055404157916,
+        24348.045277647456,
+        28756.82054196216,
+        13662.392499868125,
+        14894.154428933007,
+        16846.709349223216
+      ],
+      "wind_speed_10m": [
+        9.1,
+        11.2,
+        12.0,
+        11.5,
+        11.8,
+        10.6
+      ],
+      "is_day": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "daily_units": {
+      "time": "iso8601",
+      "weather_code": "wmo code",
+      "temperature_2m_max": "\u00b0C",
+      "temperature_2m_min": "\u00b0C",
+      "apparent_temperature_max": "\u00b0C",
+      "apparent_temperature_min": "\u00b0C",
+      "precipitation_sum": "mm"
+    },
+    "daily": {
+      "time": [
+        "2025-03-27T23:00:00",
+        "2025-03-28T00:00:00",
+        "2025-03-28T01:00:00",
+        "2025-03-28T02:00:00",
+        "2025-03-28T03:00:00",
+        "2025-03-28T04:00:00",
+        "2025-03-28T05:00:00"
+      ],
+      "weather_code": [
+        53,
+        53,
+        53,
+        53,
+        53,
+        53,
+        53
+      ],
+      "temperature_2m_max": [
+        9.9,
+        10.0,
+        11.1,
+        11.7,
+        10.3,
+        11.4,
+        11.0
+      ],
+      "temperature_2m_min": [
+        5.0,
+        6.7,
+        4.9,
+        7.3,
+        7.2,
+        5.1,
+        5.0
+      ],
+      "apparent_temperature_max": [
+        10.8,
+        11.1,
+        11.0,
+        12.2,
+        9.9,
+        10.7,
+        9.8
+      ],
+      "apparent_temperature_min": [
+        8.4,
+        9.0,
+        7.6,
+        7.4,
+        9.0,
+        6.9,
+        8.5
+      ],
+      "precipitation_sum": [
+        2.1,
+        1.8,
+        2.6,
+        4.2,
+        4.6,
+        2.9,
+        4.2
+      ]
+    }
+  },
+  {
+    "latitude": 50.08,
+    "longitude": 14.44,
+    "generationtime_ms": 2.395033836364746,
+    "utc_offset_seconds": 3600,
+    "timezone": "Europe/Berlin",
+    "timezone_abbreviation": "GMT+1",
+    "elevation": 0.0,
+    "current_units": {
+      "time": "iso8601",
+      "interval": "seconds",
+      "temperature_2m": "\u00b0C",
+      "relative_humidity_2m": "%",
+      "apparent_temperature": "\u00b0C",
+      "is_day": "",
+      "precipitation": "mm",
+      "rain": "mm",
+      "showers": "mm",
+      "snowfall": "cm",
+      "weather_code": "wmo code",
+      "cloud_cover": "%",
+      "pressure_msl": "hPa",
+      "surface_pressure": "hPa",
+      "wind_speed_10m": "km/h",
+      "wind_direction_10m": "\u00b0",
+      "wind_gusts_10m": "km/h"
+    },
+    "current": {
+      "time": "2025-03-27T23:07:48",
+      "interval": 900,
+      "temperature_2m": 7,
+      "relative_humidity_2m": 83,
+      "apparent_temperature": 8,
+      "is_day": 0,
+      "precipitation": 0.9,
+      "rain": 0.0,
+      "showers": 0.9,
+      "snowfall": 0.0,
+      "weather_code": 55,
+      "cloud_cover": 91,
+      "pressure_msl": 1010.1,
+      "surface_pressure": 1010.1,
+      "wind_speed_10m": 8,
+      "wind_direction_10m": 215,
+      "wind_gusts_10m": 13
+    },
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "\u00b0C",
+      "apparent_temperature": "\u00b0C",
+      "precipitation_probability": "%",
+      "weather_code": "wmo code",
+      "visibility": "m",
+      "wind_speed_10m": "km/h",
+      "is_day": ""
+    },
+    "hourly": {
+      "time": [
+        "2025-03-27T23:00:00",
+        "2025-03-28T00:00:00",
+        "2025-03-28T01:00:00",
+        "2025-03-28T02:00:00",
+        "2025-03-28T03:00:00",
+        "2025-03-28T04:00:00"
+      ],
+      "temperature_2m": [
+        5.6,
+        5.6,
+        7.7,
+        6.2,
+        7.1,
+        7.9
+      ],
+      "apparent_temperature": [
+        7.9,
+        8.1,
+        8.6,
+        6.9,
+        8.5,
+        7.5
+      ],
+      "precipitation_probability": [
+        121,
+        111,
+        124,
+        128,
+        123,
+        110
+      ],
+      "weather_code": [
+        55,
+        55,
+        55,
+        55,
+        55,
+        55
+      ],
+      "visibility": [
+        15156.132103350785,
+        17404.07796515163,
+        22907.28308000861,
+        12398.154706925288,
+        28943.026242306736,
+        12910.571084504725
+      ],
+      "wind_speed_10m": [
+        7.8,
+        7.2,
+        9.8,
+        8.8,
+        9.7,
+        9.8
+      ],
+      "is_day": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "daily_units": {
+      "time": "iso8601",
+      "weather_code": "wmo code",
+      "temperature_2m_max": "\u00b0C",
+      "temperature_2m_min": "\u00b0C",
+      "apparent_temperature_max": "\u00b0C",
+      "apparent_temperature_min": "\u00b0C",
+      "precipitation_sum": "mm"
+    },
+    "daily": {
+      "time": [
+        "2025-03-27T23:00:00",
+        "2025-03-28T00:00:00",
+        "2025-03-28T01:00:00",
+        "2025-03-28T02:00:00",
+        "2025-03-28T03:00:00",
+        "2025-03-28T04:00:00",
+        "2025-03-28T05:00:00"
+      ],
+      "weather_code": [
+        55,
+        55,
+        55,
+        55,
+        55,
+        55,
+        55
+      ],
+      "temperature_2m_max": [
+        8.5,
+        7.8,
+        9.8,
+        9.1,
+        7.8,
+        7.8,
+        8.5
+      ],
+      "temperature_2m_min": [
+        3.4,
+        4.3,
+        5.1,
+        2.6,
+        5.0,
+        5.2,
+        5.4
+      ],
+      "apparent_temperature_max": [
+        9.0,
+        9.7,
+        10.0,
+        7.8,
+        10.2,
+        9.3,
+        9.1
+      ],
+      "apparent_temperature_min": [
+        6.3,
+        7.0,
+        5.4,
+        6.3,
+        6.0,
+        4.5,
+        6.6
+      ],
+      "precipitation_sum": [
+        5.8,
+        6.0,
+        5.4,
+        7.7,
+        7.4,
+        4.6,
+        7.0
+      ]
+    }
+  },
+  {
+    "latitude": 59.93,
+    "longitude": 30.31,
+    "generationtime_ms": 2.395033836364746,
+    "utc_offset_seconds": 3600,
+    "timezone": "Europe/Berlin",
+    "timezone_abbreviation": "GMT+1",
+    "elevation": 0.0,
+    "current_units": {
+      "time": "iso8601",
+      "interval": "seconds",
+      "temperature_2m": "\u00b0C",
+      "relative_humidity_2m": "%",
+      "apparent_temperature": "\u00b0C",
+      "is_day": "",
+      "precipitation": "mm",
+      "rain": "mm",
+      "showers": "mm",
+      "snowfall": "cm",
+      "weather_code": "wmo code",
+      "cloud_cover": "%",
+      "pressure_msl": "hPa",
+      "surface_pressure": "hPa",
+      "wind_speed_10m": "km/h",
+      "wind_direction_10m": "\u00b0",
+      "wind_gusts_10m": "km/h"
+    },
+    "current": {
+      "time": "2025-03-27T23:07:48",
+      "interval": 900,
+      "temperature_2m": -1,
+      "relative_humidity_2m": 83,
+      "apparent_temperature": 0,
+      "is_day": 0,
+      "precipitation": 0.2,
+      "rain": 0.0,
+      "showers": 0.2,
+      "snowfall": 0.0,
+      "weather_code": 56,
+      "cloud_cover": 89,
+      "pressure_msl": 1010.1,
+      "surface_pressure": 1010.1,
+      "wind_speed_10m": 13,
+      "wind_direction_10m": 215,
+      "wind_gusts_10m": 18
+    },
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "\u00b0C",
+      "apparent_temperature": "\u00b0C",
+      "precipitation_probability": "%",
+      "weather_code": "wmo code",
+      "visibility": "m",
+      "wind_speed_10m": "km/h",
+      "is_day": ""
+    },
+    "hourly": {
+      "time": [
+        "2025-03-27T23:00:00",
+        "2025-03-28T00:00:00",
+        "2025-03-28T01:00:00",
+        "2025-03-28T02:00:00",
+        "2025-03-28T03:00:00",
+        "2025-03-28T04:00:00"
+      ],
+      "temperature_2m": [
+        -2.3,
+        -1.7,
+        -0.0,
+        -2.1,
+        0.1,
+        -1.1
+      ],
+      "apparent_temperature": [
+        0.2,
+        -1.3,
+        -0.5,
+        -1.0,
+        0.0,
+        0.8
+      ],
+      "precipitation_probability": [
+        42,
+        47,
+        37,
+        48,
+        37,
+        45
+      ],
+      "weather_code": [
+        56,
+        56,
+        56,
+        56,
+        56,
+        56
+      ],
+      "visibility": [
+        27592.643062102383,
+        29993.43351912628,
+        22375.57018089828,
+        21900.52627584648,
+        28255.820543128615,
+        28335.820431292137
+      ],
+      "wind_speed_10m": [
+        11.2,
+        11.3,
+        11.7,
+        13.6,
+        11.1,
+        11.8
+      ],
+      "is_day": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "daily_units": {
+      "time": "iso8601",
+      "weather_code": "wmo code",
+      "temperature_2m_max": "\u00b0C",
+      "temperature_2m_min": "\u00b0C",
+      "apparent_temperature_max": "\u00b0C",
+      "apparent_temperature_min": "\u00b0C",
+      "precipitation_sum": "mm"
+    },
+    "daily": {
+      "time": [
+        "2025-03-27T23:00:00",
+        "2025-03-28T00:00:00",
+        "2025-03-28T01:00:00",
+        "2025-03-28T02:00:00",
+        "2025-03-28T03:00:00",
+        "2025-03-28T04:00:00",
+        "2025-03-28T05:00:00"
+      ],
+      "weather_code": [
+        56,
+        56,
+        56,
+        56,
+        56,
+        56,
+        56
+      ],
+      "temperature_2m_max": [
+        -0.0,
+        -0.3,
+        0.9,
+        0.7,
+        2.5,
+        2.2,
+        1.9
+      ],
+      "temperature_2m_min": [
+        -2.9,
+        -3.2,
+        -2.6,
+        -5.3,
+        -4.6,
+        -3.6,
+        -4.5
+      ],
+      "apparent_temperature_max": [
+        0.9,
+        2.3,
+        0.9,
+        -0.4,
+        1.7,
+        2.0,
+        2.3
+      ],
+      "apparent_temperature_min": [
+        -2.2,
+        -3.3,
+        -2.2,
+        -2.8,
+        -3.1,
+        -1.9,
+        -1.4
+      ],
+      "precipitation_sum": [
+        2.0,
+        3.2,
+        1.3,
+        0.9,
+        0.2,
+        3.9,
+        4.0
+      ]
+    }
+  },
+  {
+    "latitude": 62.24,
+    "longitude": 25.75,
+    "generationtime_ms": 2.395033836364746,
+    "utc_offset_seconds": 3600,
+    "timezone": "Europe/Berlin",
+    "timezone_abbreviation": "GMT+1",
+    "elevation": 0.0,
+    "current_units": {
+      "time": "iso8601",
+      "interval": "seconds",
+      "temperature_2m": "\u00b0C",
+      "relative_humidity_2m": "%",
+      "apparent_temperature": "\u00b0C",
+      "is_day": "",
+      "precipitation": "mm",
+      "rain": "mm",
+      "showers": "mm",
+      "snowfall": "cm",
+      "weather_code": "wmo code",
+      "cloud_cover": "%",
+      "pressure_msl": "hPa",
+      "surface_pressure": "hPa",
+      "wind_speed_10m": "km/h",
+      "wind_direction_10m": "\u00b0",
+      "wind_gusts_10m": "km/h"
+    },
+    "current": {
+      "time": "2025-03-27T23:07:48",
+      "interval": 900,
+      "temperature_2m": -3,
+      "relative_humidity_2m": 83,
+      "apparent_temperature": -2,
+      "is_day": 0,
+      "precipitation": 0.5,
+      "rain": 0.0,
+      "showers": 0.5,
+      "snowfall": 0.0,
+      "weather_code": 57,
+      "cloud_cover": 96,
+      "pressure_msl": 1010.1,
+      "surface_pressure": 1010.1,
+      "wind_speed_10m": 15,
+      "wind_direction_10m": 215,
+      "wind_gusts_10m": 20
+    },
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "\u00b0C",
+      "apparent_temperature": "\u00b0C",
+      "precipitation_probability": "%",
+      "weather_code": "wmo code",
+      "visibility": "m",
+      "wind_speed_10m": "km/h",
+      "is_day": ""
+    },
+    "hourly": {
+      "time": [
+        "2025-03-27T23:00:00",
+        "2025-03-28T00:00:00",
+        "2025-03-28T01:00:00",
+        "2025-03-28T02:00:00",
+        "2025-03-28T03:00:00",
+        "2025-03-28T04:00:00"
+      ],
+      "temperature_2m": [
+        -3.2,
+        -1.5,
+        -3.5,
+        -4.1,
+        -2.1,
+        -3.0
+      ],
+      "apparent_temperature": [
+        -1.1,
+        -1.0,
+        -1.0,
+        -2.0,
+        -2.9,
+        -1.5
+      ],
+      "precipitation_probability": [
+        87,
+        79,
+        75,
+        89,
+        82,
+        72
+      ],
+      "weather_code": [
+        57,
+        57,
+        57,
+        57,
+        57,
+        57
+      ],
+      "visibility": [
+        21331.911475908924,
+        19695.88857205822,
+        23759.01002354335,
+        24107.832093113197,
+        24878.95644110231,
+        13278.127954527901
+      ],
+      "wind_speed_10m": [
+        13.3,
+        15.4,
+        15.1,
+        15.2,
+        14.4,
+        13.9
+      ],
+      "is_day": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "daily_units": {
+      "time": "iso8601",
+      "weather_code": "wmo code",
+      "temperature_2m_max": "\u00b0C",
+      "temperature_2m_min": "\u00b0C",
+      "apparent_temperature_max": "\u00b0C",
+      "apparent_temperature_min": "\u00b0C",
+      "precipitation_sum": "mm"
+    },
+    "daily": {
+      "time": [
+        "2025-03-27T23:00:00",
+        "2025-03-28T00:00:00",
+        "2025-03-28T01:00:00",
+        "2025-03-28T02:00:00",
+        "2025-03-28T03:00:00",
+        "2025-03-28T04:00:00",
+        "2025-03-28T05:00:00"
+      ],
+      "weather_code": [
+        57,
+        57,
+        57,
+        57,
+        57,
+        57,
+        57
+      ],
+      "temperature_2m_max": [
+        -0.8,
+        -0.3,
+        0.1,
+        -1.5,
+        0.0,
+        -1.5,
+        0.5
+      ],
+      "temperature_2m_min": [
+        -7.0,
+        -7.4,
+        -4.5,
+        -6.1,
+        -6.8,
+        -4.6,
+        -6.9
+      ],
+      "apparent_temperature_max": [
+        -1.7,
+        -1.0,
+        -0.0,
+        -2.4,
+        0.1,
+        -1.5,
+        -0.3
+      ],
+      "apparent_temperature_min": [
+        -3.8,
+        -5.0,
+        -2.7,
+        -5.3,
+        -4.6,
+        -3.6,
+        -4.7
+      ],
+      "precipitation_sum": [
+        3.5,
+        5.0,
+        5.4,
+        3.1,
+        4.9,
+        2.7,
+        4.7
+      ]
+    }
+  },
+  {
+    "latitude": 35.68,
+    "longitude": 139.69,
+    "generationtime_ms": 2.395033836364746,
+    "utc_offset_seconds": 3600,
+    "timezone": "Europe/Berlin",
+    "timezone_abbreviation": "GMT+1",
+    "elevation": 0.0,
+    "current_units": {
+      "time": "iso8601",
+      "interval": "seconds",
+      "temperature_2m": "\u00b0C",
+      "relative_humidity_2m": "%",
+      "apparent_temperature": "\u00b0C",
+      "is_day": "",
+      "precipitation": "mm",
+      "rain": "mm",
+      "showers": "mm",
+      "snowfall": "cm",
+      "weather_code": "wmo code",
+      "cloud_cover": "%",
+      "pressure_msl": "hPa",
+      "surface_pressure": "hPa",
+      "wind_speed_10m": "km/h",
+      "wind_direction_10m": "\u00b0",
+      "wind_gusts_10m": "km/h"
+    },
+    "current": {
+      "time": "2025-03-27T23:07:48",
+      "interval": 900,
+      "temperature_2m": 22,
+      "relative_humidity_2m": 83,
+      "apparent_temperature": 23,
+      "is_day": 0,
+      "precipitation": 0.8,
+      "rain": 1.5,
+      "showers": 0.8,
+      "snowfall": 0.0,
+      "weather_code": 61,
+      "cloud_cover": 99,
+      "pressure_msl": 1010.1,
+      "surface_pressure": 1010.1,
+      "wind_speed_10m": 9,
+      "wind_direction_10m": 215,
+      "wind_gusts_10m": 14
+    },
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "\u00b0C",
+      "apparent_temperature": "\u00b0C",
+      "precipitation_probability": "%",
+      "weather_code": "wmo code",
+      "visibility": "m",
+      "wind_speed_10m": "km/h",
+      "is_day": ""
+    },
+    "hourly": {
+      "time": [
+        "2025-03-27T23:00:00",
+        "2025-03-28T00:00:00",
+        "2025-03-28T01:00:00",
+        "2025-03-28T02:00:00",
+        "2025-03-28T03:00:00",
+        "2025-03-28T04:00:00"
+      ],
+      "temperature_2m": [
+        22.6,
+        22.9,
+        21.0,
+        22.9,
+        20.7,
+        22.3
+      ],
+      "apparent_temperature": [
+        23.1,
+        21.9,
+        24.0,
+        22.4,
+        22.4,
+        22.8
+      ],
+      "precipitation_probability": [
+        97,
+        88,
+        92,
+        91,
+        82,
+        85
+      ],
+      "weather_code": [
+        61,
+        61,
+        61,
+        61,
+        61,
+        61
+      ],
+      "visibility": [
+        17837.105758106805,
+        25123.994131989544,
+        28411.976506928313,
+        12888.529506539773,
+        18072.65985041623,
+        20938.966001536726
+      ],
+      "wind_speed_10m": [
+        7.9,
+        8.9,
+        7.0,
+        8.9,
+        10.6,
+        8.2
+      ],
+      "is_day": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "daily_units": {
+      "time": "iso8601",
+      "weather_code": "wmo code",
+      "temperature_2m_max": "\u00b0C",
+      "temperature_2m_min": "\u00b0C",
+      "apparent_temperature_max": "\u00b0C",
+      "apparent_temperature_min": "\u00b0C",
+      "precipitation_sum": "mm"
+    },
+    "daily": {
+      "time": [
+        "2025-03-27T23:00:00",
+        "2025-03-28T00:00:00",
+        "2025-03-28T01:00:00",
+        "2025-03-28T02:00:00",
+        "2025-03-28T03:00:00",
+        "2025-03-28T04:00:00",
+        "2025-03-28T05:00:00"
+      ],
+      "weather_code": [
+        61,
+        61,
+        61,
+        61,
+        61,
+        61,
+        61
+      ],
+      "temperature_2m_max": [
+        25.1,
+        23.6,
+        24.4,
+        24.8,
+        23.8,
+        23.3,
+        23.0
+      ],
+      "temperature_2m_min": [
+        17.5,
+        19.2,
+        20.3,
+        18.8,
+        19.8,
+        18.4,
+        18.9
+      ],
+      "apparent_temperature_max": [
+        24.7,
+        23.5,
+        23.4,
+        22.8,
+        23.1,
+        24.7,
+        25.3
+      ],
+      "apparent_temperature_min": [
+        21.0,
+        22.2,
+        20.7,
+        21.4,
+        20.4,
+        19.7,
+        20.6
+      ],
+      "precipitation_sum": [
+        3.6,
+        5.4,
+        5.2,
+        3.6,
+        5.8,
+        3.8,
+        5.9
+      ]
+    }
+  },
+  {
+    "latitude": 55.68,
+    "longitude": 12.57,
+    "generationtime_ms": 2.395033836364746,
+    "utc_offset_seconds": 3600,
+    "timezone": "Europe/Berlin",
+    "timezone_abbreviation": "GMT+1",
+    "elevation": 0.0,
+    "current_units": {
+      "time": "iso8601",
+      "interval": "seconds",
+      "temperature_2m": "\u00b0C",
+      "relative_humidity_2m": "%",
+      "apparent_temperature": "\u00b0C",
+      "is_day": "",
+      "precipitation": "mm",
+      "rain": "mm",
+      "showers": "mm",
+      "snowfall": "cm",
+      "weather_code": "wmo code",
+      "cloud_cover": "%",
+      "pressure_msl": "hPa",
+      "surface_pressure": "hPa",
+      "wind_speed_10m": "km/h",
+      "wind_direction_10m": "\u00b0",
+      "wind_gusts_10m": "km/h"
+    },
+    "current": {
+      "time": "2025-03-27T23:07:48",
+      "interval": 900,
+      "temperature_2m": 17,
+      "relative_humidity_2m": 83,
+      "apparent_temperature": 18,
+      "is_day": 0,
+      "precipitation": 2.0,
+      "rain": 1.5,
+      "showers": 2.0,
+      "snowfall": 0.0,
+      "weather_code": 63,
+      "cloud_cover": 97,
+      "pressure_msl": 1010.1,
+      "surface_pressure": 1010.1,
+      "wind_speed_10m": 10,
+      "wind_direction_10m": 215,
+      "wind_gusts_10m": 15
+    },
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "\u00b0C",
+      "apparent_temperature": "\u00b0C",
+      "precipitation_probability": "%",
+      "weather_code": "wmo code",
+      "visibility": "m",
+      "wind_speed_10m": "km/h",
+      "is_day": ""
+    },
+    "hourly": {
+      "time": [
+        "2025-03-27T23:00:00",
+        "2025-03-28T00:00:00",
+        "2025-03-28T01:00:00",
+        "2025-03-28T02:00:00",
+        "2025-03-28T03:00:00",
+        "2025-03-28T04:00:00"
+      ],
+      "temperature_2m": [
+        15.9,
+        16.4,
+        18.3,
+        16.0,
+        17.1,
+        17.3
+      ],
+      "apparent_temperature": [
+        16.7,
+        18.8,
+        16.9,
+        19.1,
+        18.6,
+        18.9
+      ],
+      "precipitation_probability": [
+        346,
+        351,
+        355,
+        347,
+        359,
+        341
+      ],
+      "weather_code": [
+        63,
+        63,
+        63,
+        63,
+        63,
+        63
+      ],
+      "visibility": [
+        12926.197299898558,
+        24404.08774103468,
+        25390.059930837208,
+        25827.896202701966,
+        20110.94671641827,
+        20506.546133930293
+      ],
+      "wind_speed_10m": [
+        11.4,
+        10.1,
+        10.7,
+        10.0,
+        8.2,
+        11.6
+      ],
+      "is_day": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "daily_units": {
+      "time": "iso8601",
+      "weather_code": "wmo code",
+      "temperature_2m_max": "\u00b0C",
+      "temperature_2m_min": "\u00b0C",
+      "apparent_temperature_max": "\u00b0C",
+      "apparent_temperature_min": "\u00b0C",
+      "precipitation_sum": "mm"
+    },
+    "daily": {
+      "time": [
+        "2025-03-27T23:00:00",
+        "2025-03-28T00:00:00",
+        "2025-03-28T01:00:00",
+        "2025-03-28T02:00:00",
+        "2025-03-28T03:00:00",
+        "2025-03-28T04:00:00",
+        "2025-03-28T05:00:00"
+      ],
+      "weather_code": [
+        63,
+        63,
+        63,
+        63,
+        63,
+        63,
+        63
+      ],
+      "temperature_2m_max": [
+        17.7,
+        19.3,
+        17.8,
+        18.3,
+        19.9,
+        20.3,
+        17.9
+      ],
+      "temperature_2m_min": [
+        12.6,
+        13.6,
+        15.1,
+        14.9,
+        13.7,
+        14.1,
+        14.5
+      ],
+      "apparent_temperature_max": [
+        19.4,
+        19.3,
+        19.6,
+        17.6,
+        17.8,
+        18.8,
+        19.1
+      ],
+      "apparent_temperature_min": [
+        16.3,
+        16.7,
+        17.3,
+        15.3,
+        16.2,
+        15.0,
+        15.0
+      ],
+      "precipitation_sum": [
+        19.4,
+        15.6,
+        18.5,
+        16.1,
+        18.3,
+        18.3,
+        17.0
+      ]
+    }
+  },
+  {
+    "latitude": 47.38,
+    "longitude": 8.54,
+    "generationtime_ms": 2.395033836364746,
+    "utc_offset_seconds": 3600,
+    "timezone": "Europe/Berlin",
+    "timezone_abbreviation": "GMT+1",
+    "elevation": 0.0,
+    "current_units": {
+      "time": "iso8601",
+      "interval": "seconds",
+      "temperature_2m": "\u00b0C",
+      "relative_humidity_2m": "%",
+      "apparent_temperature": "\u00b0C",
+      "is_day": "",
+      "precipitation": "mm",
+      "rain": "mm",
+      "showers": "mm",
+      "snowfall": "cm",
+      "weather_code": "wmo code",
+      "cloud_cover": "%",
+      "pressure_msl": "hPa",
+      "surface_pressure": "hPa",
+      "wind_speed_10m": "km/h",
+      "wind_direction_10m": "\u00b0",
+      "wind_gusts_10m": "km/h"
+    },
+    "current": {
+      "time": "2025-03-27T23:07:48",
+      "interval": 900,
+      "temperature_2m": 12,
+      "relative_humidity_2m": 83,
+      "apparent_temperature": 13,
+      "is_day": 0,
+      "precipitation": 11.5,
+      "rain": 1.5,
+      "showers": 11.5,
+      "snowfall": 0.0,
+      "weather_code": 65,
+      "cloud_cover": 90,
+      "pressure_msl": 1010.1,
+      "surface_pressure": 1010.1,
+      "wind_speed_10m": 14,
+      "wind_direction_10m": 215,
+      "wind_gusts_10m": 19
+    },
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "\u00b0C",
+      "apparent_temperature": "\u00b0C",
+      "precipitation_probability": "%",
+      "weather_code": "wmo code",
+      "visibility": "m",
+      "wind_speed_10m": "km/h",
+      "is_day": ""
+    },
+    "hourly": {
+      "time": [
+        "2025-03-27T23:00:00",
+        "2025-03-28T00:00:00",
+        "2025-03-28T01:00:00",
+        "2025-03-28T02:00:00",
+        "2025-03-28T03:00:00",
+        "2025-03-28T04:00:00"
+      ],
+      "temperature_2m": [
+        12.7,
+        12.7,
+        12.8,
+        12.3,
+        12.2,
+        11.1
+      ],
+      "apparent_temperature": [
+        14.4,
+        12.3,
+        12.1,
+        12.2,
+        14.1,
+        12.9
+      ],
+      "precipitation_probability": [
+        714,
+        729,
+        714,
+        715,
+        717,
+        720
+      ],
+      "weather_code": [
+        65,
+        65,
+        65,
+        65,
+        65,
+        65
+      ],
+      "visibility": [
+        26777.19383480664,
+        21841.279433355347,
+        29279.374425555558,
+        16746.922223447305,
+        26507.080136889315,
+        20079.939709855236
+      ],
+      "wind_speed_10m": [
+        15.1,
+        12.8,
+        13.2,
+        12.8,
+        14.9,
+        12.6
+      ],
+      "is_day": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "daily_units": {
+      "time": "iso8601",
+      "weather_code": "wmo code",
+      "temperature_2m_max": "\u00b0C",
+      "temperature_2m_min": "\u00b0C",
+      "apparent_temperature_max": "\u00b0C",
+      "apparent_temperature_min": "\u00b0C",
+      "precipitation_sum": "mm"
+    },
+    "daily": {
+      "time": [
+        "2025-03-27T23:00:00",
+        "2025-03-28T00:00:00",
+        "2025-03-28T01:00:00",
+        "2025-03-28T02:00:00",
+        "2025-03-28T03:00:00",
+        "2025-03-28T04:00:00",
+        "2025-03-28T05:00:00"
+      ],
+      "weather_code": [
+        65,
+        65,
+        65,
+        65,
+        65,
+        65,
+        65
+      ],
+      "temperature_2m_max": [
+        14.4,
+        15.3,
+        13.7,
+        15.4,
+        12.6,
+        13.7,
+        12.5
+      ],
+      "temperature_2m_min": [
+        9.4,
+        10.2,
+        10.3,
+        8.4,
+        7.5,
+        7.5,
+        8.2
+      ],
+      "apparent_temperature_max": [
+        12.7,
+        13.6,
+        14.9,
+        13.3,
+        14.5,
+        12.8,
+        13.5
+      ],
+      "apparent_temperature_min": [
+        12.4,
+        12.0,
+        11.6,
+        12.0,
+        10.3,
+        10.1,
+        10.9
+      ],
+      "precipitation_sum": [
+        36.7,
+        35.4,
+        34.4,
+        35.7,
+        34.0,
+        36.0,
+        37.4
+      ]
+    }
+  },
+  {
+    "latitude": 45.52,
+    "longitude": -73.57,
+    "generationtime_ms": 2.395033836364746,
+    "utc_offset_seconds": 3600,
+    "timezone": "Europe/Berlin",
+    "timezone_abbreviation": "GMT+1",
+    "elevation": 0.0,
+    "current_units": {
+      "time": "iso8601",
+      "interval": "seconds",
+      "temperature_2m": "\u00b0C",
+      "relative_humidity_2m": "%",
+      "apparent_temperature": "\u00b0C",
+      "is_day": "",
+      "precipitation": "mm",
+      "rain": "mm",
+      "showers": "mm",
+      "snowfall": "cm",
+      "weather_code": "wmo code",
+      "cloud_cover": "%",
+      "pressure_msl": "hPa",
+      "surface_pressure": "hPa",
+      "wind_speed_10m": "km/h",
+      "wind_direction_10m": "\u00b0",
+      "wind_gusts_10m": "km/h"
+    },
+    "current": {
+      "time": "2025-03-27T23:07:48",
+      "interval": 900,
+      "temperature_2m": -5,
+      "relative_humidity_2m": 83,
+      "apparent_temperature": -4,
+      "is_day": 0,
+      "precipitation": 0.4,
+      "rain": 1.2,
+      "showers": 0.4,
+      "snowfall": 0.0,
+      "weather_code": 66,
+      "cloud_cover": 85,
+      "pressure_msl": 1010.1,
+      "surface_pressure": 1010.1,
+      "wind_speed_10m": 18,
+      "wind_direction_10m": 215,
+      "wind_gusts_10m": 23
+    },
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "\u00b0C",
+      "apparent_temperature": "\u00b0C",
+      "precipitation_probability": "%",
+      "weather_code": "wmo code",
+      "visibility": "m",
+      "wind_speed_10m": "km/h",
+      "is_day": ""
+    },
+    "hourly": {
+      "time": [
+        "2025-03-27T23:00:00",
+        "2025-03-28T00:00:00",
+        "2025-03-28T01:00:00",
+        "2025-03-28T02:00:00",
+        "2025-03-28T03:00:00",
+        "2025-03-28T04:00:00"
+      ],
+      "temperature_2m": [
+        -4.1,
+        -5.3,
+        -4.9,
+        -3.6,
+        -5.9,
+        -4.5
+      ],
+      "apparent_temperature": [
+        -4.9,
+        -2.7,
+        -4.1,
+        -3.1,
+        -3.8,
+        -4.7
+      ],
+      "precipitation_probability": [
+        203,
+        195,
+        193,
+        205,
+        210,
+        198
+      ],
+      "weather_code": [
+        66,
+        66,
+        66,
+        66,
+        66,
+        66
+      ],
+      "visibility": [
+        22748.34105221441,
+        26650.412703194666,
+        13414.89763499012,
+        10339.177246420517,
+        13699.427113832788,
+        29919.983361351657
+      ],
+      "wind_speed_10m": [
+        19.2,
+        18.8,
+        18.1,
+        16.0,
+        19.7,
+        18.9
+      ],
+      "is_day": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "daily_units": {
+      "time": "iso8601",
+      "weather_code": "wmo code",
+      "temperature_2m_max": "\u00b0C",
+      "temperature_2m_min": "\u00b0C",
+      "apparent_temperature_max": "\u00b0C",
+      "apparent_temperature_min": "\u00b0C",
+      "precipitation_sum": "mm"
+    },
+    "daily": {
+      "time": [
+        "2025-03-27T23:00:00",
+        "2025-03-28T00:00:00",
+        "2025-03-28T01:00:00",
+        "2025-03-28T02:00:00",
+        "2025-03-28T03:00:00",
+        "2025-03-28T04:00:00",
+        "2025-03-28T05:00:00"
+      ],
+      "weather_code": [
+        66,
+        66,
+        66,
+        66,
+        66,
+        66,
+        66
+      ],
+      "temperature_2m_max": [
+        -2.6,
+        -1.6,
+        -3.4,
+        -2.9,
+        -4.0,
+        -3.4,
+        -3.7
+      ],
+      "temperature_2m_min": [
+        -8.6,
+        -9.1,
+        -9.1,
+        -8.2,
+        -9.1,
+        -7.9,
+        -6.6
+      ],
+      "apparent_temperature_max": [
+        -2.9,
+        -3.9,
+        -3.9,
+        -2.0,
+        -4.4,
+        -4.0,
+        -3.5
+      ],
+      "apparent_temperature_min": [
+        -7.2,
+        -5.9,
+        -5.2,
+        -7.0,
+        -5.4,
+        -4.6,
+        -4.7
+      ],
+      "precipitation_sum": [
+        10.3,
+        8.9,
+        11.5,
+        8.5,
+        8.5,
+        9.7,
+        8.6
+      ]
+    }
+  },
+  {
+    "latitude": 53.35,
+    "longitude": -6.26,
+    "generationtime_ms": 2.395033836364746,
+    "utc_offset_seconds": 3600,
+    "timezone": "Europe/Berlin",
+    "timezone_abbreviation": "GMT+1",
+    "elevation": 0.0,
+    "current_units": {
+      "time": "iso8601",
+      "interval": "seconds",
+      "temperature_2m": "\u00b0C",
+      "relative_humidity_2m": "%",
+      "apparent_temperature": "\u00b0C",
+      "is_day": "",
+      "precipitation": "mm",
+      "rain": "mm",
+      "showers": "mm",
+      "snowfall": "cm",
+      "weather_code": "wmo code",
+      "cloud_cover": "%",
+      "pressure_msl": "hPa",
+      "surface_pressure": "hPa",
+      "wind_speed_10m": "km/h",
+      "wind_direction_10m": "\u00b0",
+      "wind_gusts_10m": "km/h"
+    },
+    "current": {
+      "time": "2025-03-27T23:07:48",
+      "interval": 900,
+      "temperature_2m": -7,
+      "relative_humidity_2m": 83,
+      "apparent_temperature": -6,
+      "is_day": 0,
+      "precipitation": 0.6,
+      "rain": 1.2,
+      "showers": 0.6,
+      "snowfall": 0.0,
+      "weather_code": 67,
+      "cloud_cover": 92,
+      "pressure_msl": 1010.1,
+      "surface_pressure": 1010.1,
+      "wind_speed_10m": 19,
+      "wind_direction_10m": 215,
+      "wind_gusts_10m": 24
+    },
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "\u00b0C",
+      "apparent_temperature": "\u00b0C",
+      "precipitation_probability": "%",
+      "weather_code": "wmo code",
+      "visibility": "m",
+      "wind_speed_10m": "km/h",
+      "is_day": ""
+    },
+    "hourly": {
+      "time": [
+        "2025-03-27T23:00:00",
+        "2025-03-28T00:00:00",
+        "2025-03-28T01:00:00",
+        "2025-03-28T02:00:00",
+        "2025-03-28T03:00:00",
+        "2025-03-28T04:00:00"
+      ],
+      "temperature_2m": [
+        -6.5,
+        -6.9,
+        -7.4,
+        -6.0,
+        -6.7,
+        -6.9
+      ],
+      "apparent_temperature": [
+        -6.6,
+        -6.2,
+        -6.5,
+        -7.4,
+        -4.5,
+        -7.3
+      ],
+      "precipitation_probability": [
+        447,
+        445,
+        451,
+        444,
+        457,
+        449
+      ],
+      "weather_code": [
+        67,
+        67,
+        67,
+        67,
+        67,
+        67
+      ],
+      "visibility": [
+        12362.376873604248,
+        21793.969888521635,
+        20313.766698164807,
+        14636.001834372662,
+        24666.646638478123,
+        21113.984746278278
+      ],
+      "wind_speed_10m": [
+        18.8,
+        18.2,
+        20.4,
+        18.1,
+        20.6,
+        20.7
+      ],
+      "is_day": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "daily_units": {
+      "time": "iso8601",
+      "weather_code": "wmo code",
+      "temperature_2m_max": "\u00b0C",
+      "temperature_2m_min": "\u00b0C",
+      "apparent_temperature_max": "\u00b0C",
+      "apparent_temperature_min": "\u00b0C",
+      "precipitation_sum": "mm"
+    },
+    "daily": {
+      "time": [
+        "2025-03-27T23:00:00",
+        "2025-03-28T00:00:00",
+        "2025-03-28T01:00:00",
+        "2025-03-28T02:00:00",
+        "2025-03-28T03:00:00",
+        "2025-03-28T04:00:00",
+        "2025-03-28T05:00:00"
+      ],
+      "weather_code": [
+        67,
+        67,
+        67,
+        67,
+        67,
+        67,
+        67
+      ],
+      "temperature_2m_max": [
+        -6.0,
+        -4.7,
+        -3.6,
+        -5.1,
+        -3.8,
+        -5.2,
+        -5.4
+      ],
+      "temperature_2m_min": [
+        -10.1,
+        -8.7,
+        -9.9,
+        -10.0,
+        -10.6,
+        -10.8,
+        -9.2
+      ],
+      "apparent_temperature_max": [
+        -5.3,
+        -4.1,
+        -5.4,
+        -6.1,
+        -5.6,
+        -5.5,
+        -4.6
+      ],
+      "apparent_temperature_min": [
+        -6.6,
+        -9.0,
+        -8.8,
+        -6.9,
+        -9.4,
+        -6.7,
+        -7.3
+      ],
+      "precipitation_sum": [
+        24.2,
+        23.9,
+        22.8,
+        24.3,
+        23.2,
+        21.6,
+        23.3
+      ]
+    }
+  },
+  {
+    "latitude": 59.91,
+    "longitude": 10.75,
+    "generationtime_ms": 2.395033836364746,
+    "utc_offset_seconds": 3600,
+    "timezone": "Europe/Berlin",
+    "timezone_abbreviation": "GMT+1",
+    "elevation": 0.0,
+    "current_units": {
+      "time": "iso8601",
+      "interval": "seconds",
+      "temperature_2m": "\u00b0C",
+      "relative_humidity_2m": "%",
+      "apparent_temperature": "\u00b0C",
+      "is_day": "",
+      "precipitation": "mm",
+      "rain": "mm",
+      "showers": "mm",
+      "snowfall": "cm",
+      "weather_code": "wmo code",
+      "cloud_cover": "%",
+      "pressure_msl": "hPa",
+      "surface_pressure": "hPa",
+      "wind_speed_10m": "km/h",
+      "wind_direction_10m": "\u00b0",
+      "wind_gusts_10m": "km/h"
+    },
+    "current": {
+      "time": "2025-03-27T23:07:48",
+      "interval": 900,
+      "temperature_2m": -6,
+      "relative_humidity_2m": 83,
+      "apparent_temperature": -5,
+      "is_day": 0,
+      "precipitation": 1.0,
+      "rain": 0.0,
+      "showers": 0.0,
+      "snowfall": 0.7,
+      "weather_code": 71,
+      "cloud_cover": 86,
+      "pressure_msl": 1010.1,
+      "surface_pressure": 1010.1,
+      "wind_speed_10m": 12,
+      "wind_direction_10m": 215,
+      "wind_gusts_10m": 17
+    },
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "\u00b0C",
+      "apparent_temperature": "\u00b0C",
+      "precipitation_probability": "%",
+      "weather_code": "wmo code",
+      "visibility": "m",
+      "wind_speed_10m": "km/h",
+      "is_day": ""
+    },
+    "hourly": {
+      "time": [
+        "2025-03-27T23:00:00",
+        "2025-03-28T00:00:00",
+        "2025-03-28T01:00:00",
+        "2025-03-28T02:00:00",
+        "2025-03-28T03:00:00",
+        "2025-03-28T04:00:00"
+      ],
+      "temperature_2m": [
+        -6.1,
+        -7.3,
+        -6.2,
+        -7.0,
+        -5.9,
+        -4.8
+      ],
+      "apparent_temperature": [
+        -4.9,
+        -5.2,
+        -6.0,
+        -5.4,
+        -4.5,
+        -4.9
+      ],
+      "precipitation_probability": [
+        93,
+        108,
+        104,
+        102,
+        91,
+        107
+      ],
+      "weather_code": [
+        71,
+        71,
+        71,
+        71,
+        71,
+        71
+      ],
+      "visibility": [
+        23770.681931624786,
+        21131.383791133376,
+        23350.297985249978,
+        12568.064615347494,
+        13697.03650654031,
+        22232.001353066917
+      ],
+      "wind_speed_10m": [
+        10.5,
+        10.4,
+        10.6,
+        11.3,
+        12.8,
+        12.7
+      ],
+      "is_day": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "daily_units": {
+      "time": "iso8601",
+      "weather_code": "wmo code",
+      "temperature_2m_max": "\u00b0C",
+      "temperature_2m_min": "\u00b0C",
+      "apparent_temperature_max": "\u00b0C",
+      "apparent_temperature_min": "\u00b0C",
+      "precipitation_sum": "mm"
+    },
+    "daily": {
+      "time": [
+        "2025-03-27T23:00:00",
+        "2025-03-28T00:00:00",
+        "2025-03-28T01:00:00",
+        "2025-03-28T02:00:00",
+        "2025-03-28T03:00:00",
+        "2025-03-28T04:00:00",
+        "2025-03-28T05:00:00"
+      ],
+      "weather_code": [
+        71,
+        71,
+        71,
+        71,
+        71,
+        71,
+        71
+      ],
+      "temperature_2m_max": [
+        -3.0,
+        -4.6,
+        -4.6,
+        -3.5,
+        -5.4,
+        -4.7,
+        -3.1
+      ],
+      "temperature_2m_min": [
+        -8.2,
+        -9.9,
+        -10.1,
+        -7.6,
+        -7.6,
+        -8.3,
+        -8.1
+      ],
+      "apparent_temperature_max": [
+        -4.8,
+        -4.8,
+        -3.4,
+        -3.9,
+        -4.7,
+        -4.5,
+        -4.5
+      ],
+      "apparent_temperature_min": [
+        -6.3,
+        -6.2,
+        -6.2,
+        -6.3,
+        -5.8,
+        -6.4,
+        -7.1
+      ],
+      "precipitation_sum": [
+        3.4,
+        5.8,
+        3.0,
+        3.0,
+        6.3,
+        4.1,
+        3.4
+      ]
+    },
+    "snowfall": 2.0
+  },
+  {
+    "latitude": 61.5,
+    "longitude": 23.8,
+    "generationtime_ms": 2.395033836364746,
+    "utc_offset_seconds": 3600,
+    "timezone": "Europe/Berlin",
+    "timezone_abbreviation": "GMT+1",
+    "elevation": 0.0,
+    "current_units": {
+      "time": "iso8601",
+      "interval": "seconds",
+      "temperature_2m": "\u00b0C",
+      "relative_humidity_2m": "%",
+      "apparent_temperature": "\u00b0C",
+      "is_day": "",
+      "precipitation": "mm",
+      "rain": "mm",
+      "showers": "mm",
+      "snowfall": "cm",
+      "weather_code": "wmo code",
+      "cloud_cover": "%",
+      "pressure_msl": "hPa",
+      "surface_pressure": "hPa",
+      "wind_speed_10m": "km/h",
+      "wind_direction_10m": "\u00b0",
+      "wind_gusts_10m": "km/h"
+    },
+    "current": {
+      "time": "2025-03-27T23:07:48",
+      "interval": 900,
+      "temperature_2m": -9,
+      "relative_humidity_2m": 83,
+      "apparent_temperature": -8,
+      "is_day": 0,
+      "precipitation": 2.2,
+      "rain": 0.0,
+      "showers": 0.0,
+      "snowfall": 2.2,
+      "weather_code": 73,
+      "cloud_cover": 90,
+      "pressure_msl": 1010.1,
+      "surface_pressure": 1010.1,
+      "wind_speed_10m": 14,
+      "wind_direction_10m": 215,
+      "wind_gusts_10m": 19
+    },
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "\u00b0C",
+      "apparent_temperature": "\u00b0C",
+      "precipitation_probability": "%",
+      "weather_code": "wmo code",
+      "visibility": "m",
+      "wind_speed_10m": "km/h",
+      "is_day": ""
+    },
+    "hourly": {
+      "time": [
+        "2025-03-27T23:00:00",
+        "2025-03-28T00:00:00",
+        "2025-03-28T01:00:00",
+        "2025-03-28T02:00:00",
+        "2025-03-28T03:00:00",
+        "2025-03-28T04:00:00"
+      ],
+      "temperature_2m": [
+        -8.9,
+        -9.8,
+        -10.1,
+        -8.0,
+        -9.1,
+        -10.5
+      ],
+      "apparent_temperature": [
+        -6.5,
+        -8.5,
+        -8.2,
+        -8.1,
+        -8.1,
+        -9.5
+      ],
+      "precipitation_probability": [
+        292,
+        290,
+        292,
+        307,
+        297,
+        301
+      ],
+      "weather_code": [
+        73,
+        73,
+        73,
+        73,
+        73,
+        73
+      ],
+      "visibility": [
+        17878.839046148394,
+        24946.395901799275,
+        11663.348409616765,
+        23383.594759755717,
+        20731.37568731422,
+        24044.747998479797
+      ],
+      "wind_speed_10m": [
+        14.5,
+        15.2,
+        14.9,
+        12.5,
+        15.7,
+        13.5
+      ],
+      "is_day": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "daily_units": {
+      "time": "iso8601",
+      "weather_code": "wmo code",
+      "temperature_2m_max": "\u00b0C",
+      "temperature_2m_min": "\u00b0C",
+      "apparent_temperature_max": "\u00b0C",
+      "apparent_temperature_min": "\u00b0C",
+      "precipitation_sum": "mm"
+    },
+    "daily": {
+      "time": [
+        "2025-03-27T23:00:00",
+        "2025-03-28T00:00:00",
+        "2025-03-28T01:00:00",
+        "2025-03-28T02:00:00",
+        "2025-03-28T03:00:00",
+        "2025-03-28T04:00:00",
+        "2025-03-28T05:00:00"
+      ],
+      "weather_code": [
+        73,
+        73,
+        73,
+        73,
+        73,
+        73,
+        73
+      ],
+      "temperature_2m_max": [
+        -6.4,
+        -6.5,
+        -7.4,
+        -6.9,
+        -5.7,
+        -5.9,
+        -8.1
+      ],
+      "temperature_2m_min": [
+        -12.0,
+        -11.0,
+        -11.3,
+        -12.6,
+        -11.6,
+        -11.7,
+        -11.8
+      ],
+      "apparent_temperature_max": [
+        -5.6,
+        -8.3,
+        -6.6,
+        -7.5,
+        -7.4,
+        -7.1,
+        -7.4
+      ],
+      "apparent_temperature_min": [
+        -8.5,
+        -10.7,
+        -10.8,
+        -10.2,
+        -9.4,
+        -10.3,
+        -9.2
+      ],
+      "precipitation_sum": [
+        15.8,
+        13.2,
+        13.5,
+        15.2,
+        13.3,
+        15.7,
+        16.0
+      ]
+    },
+    "snowfall": 2.0
+  },
+  {
+    "latitude": 46.6,
+    "longitude": 14.3,
+    "generationtime_ms": 2.395033836364746,
+    "utc_offset_seconds": 3600,
+    "timezone": "Europe/Berlin",
+    "timezone_abbreviation": "GMT+1",
+    "elevation": 0.0,
+    "current_units": {
+      "time": "iso8601",
+      "interval": "seconds",
+      "temperature_2m": "\u00b0C",
+      "relative_humidity_2m": "%",
+      "apparent_temperature": "\u00b0C",
+      "is_day": "",
+      "precipitation": "mm",
+      "rain": "mm",
+      "showers": "mm",
+      "snowfall": "cm",
+      "weather_code": "wmo code",
+      "cloud_cover": "%",
+      "pressure_msl": "hPa",
+      "surface_pressure": "hPa",
+      "wind_speed_10m": "km/h",
+      "wind_direction_10m": "\u00b0",
+      "wind_gusts_10m": "km/h"
+    },
+    "current": {
+      "time": "2025-03-27T23:07:48",
+      "interval": 900,
+      "temperature_2m": -12,
+      "relative_humidity_2m": 83,
+      "apparent_temperature": -11,
+      "is_day": 0,
+      "precipitation": 6.7,
+      "rain": 0.0,
+      "showers": 0.0,
+      "snowfall": 6.7,
+      "weather_code": 75,
+      "cloud_cover": 97,
+      "pressure_msl": 1010.1,
+      "surface_pressure": 1010.1,
+      "wind_speed_10m": 16,
+      "wind_direction_10m": 215,
+      "wind_gusts_10m": 21
+    },
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "\u00b0C",
+      "apparent_temperature": "\u00b0C",
+      "precipitation_probability": "%",
+      "weather_code": "wmo code",
+      "visibility": "m",
+      "wind_speed_10m": "km/h",
+      "is_day": ""
+    },
+    "hourly": {
+      "time": [
+        "2025-03-27T23:00:00",
+        "2025-03-28T00:00:00",
+        "2025-03-28T01:00:00",
+        "2025-03-28T02:00:00",
+        "2025-03-28T03:00:00",
+        "2025-03-28T04:00:00"
+      ],
+      "temperature_2m": [
+        -11.9,
+        -12.4,
+        -11.8,
+        -12.7,
+        -13.2,
+        -11.0
+      ],
+      "apparent_temperature": [
+        -10.6,
+        -9.8,
+        -11.4,
+        -11.7,
+        -10.6,
+        -10.1
+      ],
+      "precipitation_probability": [
+        598,
+        610,
+        605,
+        592,
+        610,
+        601
+      ],
+      "weather_code": [
+        75,
+        75,
+        75,
+        75,
+        75,
+        75
+      ],
+      "visibility": [
+        21971.47409715431,
+        26509.071358193618,
+        11227.745077173504,
+        11515.227414200006,
+        17192.383195182083,
+        20686.543719655703
+      ],
+      "wind_speed_10m": [
+        15.1,
+        14.7,
+        14.1,
+        15.3,
+        17.7,
+        14.8
+      ],
+      "is_day": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "daily_units": {
+      "time": "iso8601",
+      "weather_code": "wmo code",
+      "temperature_2m_max": "\u00b0C",
+      "temperature_2m_min": "\u00b0C",
+      "apparent_temperature_max": "\u00b0C",
+      "apparent_temperature_min": "\u00b0C",
+      "precipitation_sum": "mm"
+    },
+    "daily": {
+      "time": [
+        "2025-03-27T23:00:00",
+        "2025-03-28T00:00:00",
+        "2025-03-28T01:00:00",
+        "2025-03-28T02:00:00",
+        "2025-03-28T03:00:00",
+        "2025-03-28T04:00:00",
+        "2025-03-28T05:00:00"
+      ],
+      "weather_code": [
+        75,
+        75,
+        75,
+        75,
+        75,
+        75,
+        75
+      ],
+      "temperature_2m_max": [
+        -9.5,
+        -9.4,
+        -9.3,
+        -10.6,
+        -11.5,
+        -11.3,
+        -10.8
+      ],
+      "temperature_2m_min": [
+        -15.1,
+        -15.9,
+        -15.6,
+        -15.1,
+        -15.4,
+        -16.2,
+        -14.5
+      ],
+      "apparent_temperature_max": [
+        -11.2,
+        -8.7,
+        -10.4,
+        -9.8,
+        -10.5,
+        -11.0,
+        -9.0
+      ],
+      "apparent_temperature_min": [
+        -12.7,
+        -12.3,
+        -12.9,
+        -13.8,
+        -13.3,
+        -13.9,
+        -12.8
+      ],
+      "precipitation_sum": [
+        29.9,
+        28.1,
+        28.5,
+        30.6,
+        31.9,
+        29.1,
+        29.3
+      ]
+    },
+    "snowfall": 2.0
+  },
+  {
+    "latitude": 66.5,
+    "longitude": 25.7,
+    "generationtime_ms": 2.395033836364746,
+    "utc_offset_seconds": 3600,
+    "timezone": "Europe/Berlin",
+    "timezone_abbreviation": "GMT+1",
+    "elevation": 0.0,
+    "current_units": {
+      "time": "iso8601",
+      "interval": "seconds",
+      "temperature_2m": "\u00b0C",
+      "relative_humidity_2m": "%",
+      "apparent_temperature": "\u00b0C",
+      "is_day": "",
+      "precipitation": "mm",
+      "rain": "mm",
+      "showers": "mm",
+      "snowfall": "cm",
+      "weather_code": "wmo code",
+      "cloud_cover": "%",
+      "pressure_msl": "hPa",
+      "surface_pressure": "hPa",
+      "wind_speed_10m": "km/h",
+      "wind_direction_10m": "\u00b0",
+      "wind_gusts_10m": "km/h"
+    },
+    "current": {
+      "time": "2025-03-27T23:07:48",
+      "interval": 900,
+      "temperature_2m": -15,
+      "relative_humidity_2m": 83,
+      "apparent_temperature": -14,
+      "is_day": 0,
+      "precipitation": 0.5,
+      "rain": 0.0,
+      "showers": 0.0,
+      "snowfall": 0.4,
+      "weather_code": 77,
+      "cloud_cover": 85,
+      "pressure_msl": 1010.1,
+      "surface_pressure": 1010.1,
+      "wind_speed_10m": 20,
+      "wind_direction_10m": 215,
+      "wind_gusts_10m": 25
+    },
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "\u00b0C",
+      "apparent_temperature": "\u00b0C",
+      "precipitation_probability": "%",
+      "weather_code": "wmo code",
+      "visibility": "m",
+      "wind_speed_10m": "km/h",
+      "is_day": ""
+    },
+    "hourly": {
+      "time": [
+        "2025-03-27T23:00:00",
+        "2025-03-28T00:00:00",
+        "2025-03-28T01:00:00",
+        "2025-03-28T02:00:00",
+        "2025-03-28T03:00:00",
+        "2025-03-28T04:00:00"
+      ],
+      "temperature_2m": [
+        -15.8,
+        -14.6,
+        -15.0,
+        -15.7,
+        -13.7,
+        -16.0
+      ],
+      "apparent_temperature": [
+        -15.3,
+        -12.7,
+        -12.7,
+        -12.7,
+        -14.9,
+        -15.1
+      ],
+      "precipitation_probability": [
+        44,
+        52,
+        42,
+        50,
+        49,
+        53
+      ],
+      "weather_code": [
+        77,
+        77,
+        77,
+        77,
+        77,
+        77
+      ],
+      "visibility": [
+        21497.140021224528,
+        15861.511041612093,
+        24933.79965267385,
+        11512.486363733093,
+        13592.746455066783,
+        20351.464961683567
+      ],
+      "wind_speed_10m": [
+        18.1,
+        21.1,
+        18.4,
+        19.3,
+        18.3,
+        18.7
+      ],
+      "is_day": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "daily_units": {
+      "time": "iso8601",
+      "weather_code": "wmo code",
+      "temperature_2m_max": "\u00b0C",
+      "temperature_2m_min": "\u00b0C",
+      "apparent_temperature_max": "\u00b0C",
+      "apparent_temperature_min": "\u00b0C",
+      "precipitation_sum": "mm"
+    },
+    "daily": {
+      "time": [
+        "2025-03-27T23:00:00",
+        "2025-03-28T00:00:00",
+        "2025-03-28T01:00:00",
+        "2025-03-28T02:00:00",
+        "2025-03-28T03:00:00",
+        "2025-03-28T04:00:00",
+        "2025-03-28T05:00:00"
+      ],
+      "weather_code": [
+        77,
+        77,
+        77,
+        77,
+        77,
+        77,
+        77
+      ],
+      "temperature_2m_max": [
+        -12.3,
+        -14.2,
+        -13.2,
+        -13.9,
+        -13.3,
+        -11.6,
+        -12.4
+      ],
+      "temperature_2m_min": [
+        -17.3,
+        -18.1,
+        -17.0,
+        -16.8,
+        -17.4,
+        -17.9,
+        -16.9
+      ],
+      "apparent_temperature_max": [
+        -13.7,
+        -12.4,
+        -13.3,
+        -13.2,
+        -11.6,
+        -12.8,
+        -13.8
+      ],
+      "apparent_temperature_min": [
+        -16.6,
+        -16.1,
+        -15.6,
+        -15.7,
+        -15.4,
+        -15.6,
+        -14.5
+      ],
+      "precipitation_sum": [
+        2.1,
+        2.5,
+        3.0,
+        1.0,
+        1.1,
+        1.3,
+        3.8
+      ]
+    },
+    "snowfall": 1.0
+  },
+  {
+    "latitude": 35.68,
+    "longitude": 139.69,
+    "generationtime_ms": 2.395033836364746,
+    "utc_offset_seconds": 3600,
+    "timezone": "Europe/Berlin",
+    "timezone_abbreviation": "GMT+1",
+    "elevation": 0.0,
+    "current_units": {
+      "time": "iso8601",
+      "interval": "seconds",
+      "temperature_2m": "\u00b0C",
+      "relative_humidity_2m": "%",
+      "apparent_temperature": "\u00b0C",
+      "is_day": "",
+      "precipitation": "mm",
+      "rain": "mm",
+      "showers": "mm",
+      "snowfall": "cm",
+      "weather_code": "wmo code",
+      "cloud_cover": "%",
+      "pressure_msl": "hPa",
+      "surface_pressure": "hPa",
+      "wind_speed_10m": "km/h",
+      "wind_direction_10m": "\u00b0",
+      "wind_gusts_10m": "km/h"
+    },
+    "current": {
+      "time": "2025-03-27T23:07:48",
+      "interval": 900,
+      "temperature_2m": 26,
+      "relative_humidity_2m": 83,
+      "apparent_temperature": 24,
+      "is_day": 0,
+      "precipitation": 0.8,
+      "rain": 0.0,
+      "showers": 0.8,
+      "snowfall": 0.0,
+      "weather_code": 80,
+      "cloud_cover": 81,
+      "pressure_msl": 1010.1,
+      "surface_pressure": 1010.1,
+      "wind_speed_10m": 25,
+      "wind_direction_10m": 215,
+      "wind_gusts_10m": 30
+    },
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "\u00b0C",
+      "apparent_temperature": "\u00b0C",
+      "precipitation_probability": "%",
+      "weather_code": "wmo code",
+      "visibility": "m",
+      "wind_speed_10m": "km/h",
+      "is_day": ""
+    },
+    "hourly": {
+      "time": [
+        "2025-03-27T23:00:00",
+        "2025-03-28T00:00:00",
+        "2025-03-28T01:00:00",
+        "2025-03-28T02:00:00",
+        "2025-03-28T03:00:00",
+        "2025-03-28T04:00:00"
+      ],
+      "temperature_2m": [
+        26.9,
+        24.7,
+        26.6,
+        26.8,
+        27.4,
+        27.5
+      ],
+      "apparent_temperature": [
+        23.3,
+        23.3,
+        24.8,
+        24.7,
+        22.8,
+        23.8
+      ],
+      "precipitation_probability": [
+        142,
+        144,
+        142,
+        144,
+        155,
+        145
+      ],
+      "weather_code": [
+        80,
+        80,
+        80,
+        80,
+        80,
+        80
+      ],
+      "visibility": [
+        15461.125543523007,
+        18586.754846831594,
+        27655.393735874935,
+        21493.15287304372,
+        21892.675793694994,
+        11077.129691879647
+      ],
+      "wind_speed_10m": [
+        23.7,
+        23.0,
+        23.2,
+        24.2,
+        26.9,
+        23.4
+      ],
+      "is_day": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "daily_units": {
+      "time": "iso8601",
+      "weather_code": "wmo code",
+      "temperature_2m_max": "\u00b0C",
+      "temperature_2m_min": "\u00b0C",
+      "apparent_temperature_max": "\u00b0C",
+      "apparent_temperature_min": "\u00b0C",
+      "precipitation_sum": "mm"
+    },
+    "daily": {
+      "time": [
+        "2025-03-27T23:00:00",
+        "2025-03-28T00:00:00",
+        "2025-03-28T01:00:00",
+        "2025-03-28T02:00:00",
+        "2025-03-28T03:00:00",
+        "2025-03-28T04:00:00",
+        "2025-03-28T05:00:00"
+      ],
+      "weather_code": [
+        80,
+        80,
+        80,
+        80,
+        80,
+        80,
+        80
+      ],
+      "temperature_2m_max": [
+        27.7,
+        28.4,
+        28.4,
+        27.5,
+        28.4,
+        28.4,
+        28.2
+      ],
+      "temperature_2m_min": [
+        22.4,
+        21.8,
+        22.5,
+        22.4,
+        24.1,
+        22.3,
+        23.5
+      ],
+      "apparent_temperature_max": [
+        25.9,
+        25.6,
+        25.4,
+        26.2,
+        25.6,
+        25.1,
+        26.5
+      ],
+      "apparent_temperature_min": [
+        22.2,
+        22.9,
+        23.3,
+        22.0,
+        22.4,
+        23.4,
+        22.2
+      ],
+      "precipitation_sum": [
+        7.5,
+        6.4,
+        9.0,
+        6.5,
+        8.9,
+        8.2,
+        9.3
+      ]
+    },
+    "showers": 3.0
+  },
+  {
+    "latitude": 14.6,
+    "longitude": 121.0,
+    "generationtime_ms": 2.395033836364746,
+    "utc_offset_seconds": 3600,
+    "timezone": "Europe/Berlin",
+    "timezone_abbreviation": "GMT+1",
+    "elevation": 0.0,
+    "current_units": {
+      "time": "iso8601",
+      "interval": "seconds",
+      "temperature_2m": "\u00b0C",
+      "relative_humidity_2m": "%",
+      "apparent_temperature": "\u00b0C",
+      "is_day": "",
+      "precipitation": "mm",
+      "rain": "mm",
+      "showers": "mm",
+      "snowfall": "cm",
+      "weather_code": "wmo code",
+      "cloud_cover": "%",
+      "pressure_msl": "hPa",
+      "surface_pressure": "hPa",
+      "wind_speed_10m": "km/h",
+      "wind_direction_10m": "\u00b0",
+      "wind_gusts_10m": "km/h"
+    },
+    "current": {
+      "time": "2025-03-27T23:07:48",
+      "interval": 900,
+      "temperature_2m": 29,
+      "relative_humidity_2m": 83,
+      "apparent_temperature": 27,
+      "is_day": 0,
+      "precipitation": 1.4,
+      "rain": 0.0,
+      "showers": 1.4,
+      "snowfall": 0.0,
+      "weather_code": 81,
+      "cloud_cover": 74,
+      "pressure_msl": 1010.1,
+      "surface_pressure": 1010.1,
+      "wind_speed_10m": 30,
+      "wind_direction_10m": 215,
+      "wind_gusts_10m": 35
+    },
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "\u00b0C",
+      "apparent_temperature": "\u00b0C",
+      "precipitation_probability": "%",
+      "weather_code": "wmo code",
+      "visibility": "m",
+      "wind_speed_10m": "km/h",
+      "is_day": ""
+    },
+    "hourly": {
+      "time": [
+        "2025-03-27T23:00:00",
+        "2025-03-28T00:00:00",
+        "2025-03-28T01:00:00",
+        "2025-03-28T02:00:00",
+        "2025-03-28T03:00:00",
+        "2025-03-28T04:00:00"
+      ],
+      "temperature_2m": [
+        28.1,
+        29.1,
+        28.1,
+        30.5,
+        28.7,
+        28.0
+      ],
+      "apparent_temperature": [
+        28.2,
+        25.9,
+        26.9,
+        25.8,
+        27.7,
+        26.5
+      ],
+      "precipitation_probability": [
+        491,
+        501,
+        491,
+        498,
+        499,
+        497
+      ],
+      "weather_code": [
+        81,
+        81,
+        81,
+        81,
+        81,
+        81
+      ],
+      "visibility": [
+        26090.308139702043,
+        26841.146010907945,
+        14258.209864430442,
+        22234.28082544959,
+        13110.760714755374,
+        13690.514267543229
+      ],
+      "wind_speed_10m": [
+        28.4,
+        31.5,
+        29.3,
+        31.5,
+        28.6,
+        30.5
+      ],
+      "is_day": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "daily_units": {
+      "time": "iso8601",
+      "weather_code": "wmo code",
+      "temperature_2m_max": "\u00b0C",
+      "temperature_2m_min": "\u00b0C",
+      "apparent_temperature_max": "\u00b0C",
+      "apparent_temperature_min": "\u00b0C",
+      "precipitation_sum": "mm"
+    },
+    "daily": {
+      "time": [
+        "2025-03-27T23:00:00",
+        "2025-03-28T00:00:00",
+        "2025-03-28T01:00:00",
+        "2025-03-28T02:00:00",
+        "2025-03-28T03:00:00",
+        "2025-03-28T04:00:00",
+        "2025-03-28T05:00:00"
+      ],
+      "weather_code": [
+        81,
+        81,
+        81,
+        81,
+        81,
+        81,
+        81
+      ],
+      "temperature_2m_max": [
+        29.7,
+        32.3,
+        30.3,
+        30.8,
+        31.4,
+        31.4,
+        30.0
+      ],
+      "temperature_2m_min": [
+        26.8,
+        27.5,
+        25.1,
+        27.0,
+        25.7,
+        25.7,
+        24.9
+      ],
+      "apparent_temperature_max": [
+        29.2,
+        28.4,
+        28.2,
+        27.0,
+        27.5,
+        26.9,
+        27.6
+      ],
+      "apparent_temperature_min": [
+        25.9,
+        24.2,
+        24.4,
+        25.2,
+        23.6,
+        24.5,
+        25.3
+      ],
+      "precipitation_sum": [
+        25.9,
+        23.4,
+        24.1,
+        23.2,
+        26.4,
+        26.0,
+        23.2
+      ]
+    },
+    "showers": 3.0
+  },
+  {
+    "latitude": 3.14,
+    "longitude": 101.69,
+    "generationtime_ms": 2.395033836364746,
+    "utc_offset_seconds": 3600,
+    "timezone": "Europe/Berlin",
+    "timezone_abbreviation": "GMT+1",
+    "elevation": 0.0,
+    "current_units": {
+      "time": "iso8601",
+      "interval": "seconds",
+      "temperature_2m": "\u00b0C",
+      "relative_humidity_2m": "%",
+      "apparent_temperature": "\u00b0C",
+      "is_day": "",
+      "precipitation": "mm",
+      "rain": "mm",
+      "showers": "mm",
+      "snowfall": "cm",
+      "weather_code": "wmo code",
+      "cloud_cover": "%",
+      "pressure_msl": "hPa",
+      "surface_pressure": "hPa",
+      "wind_speed_10m": "km/h",
+      "wind_direction_10m": "\u00b0",
+      "wind_gusts_10m": "km/h"
+    },
+    "current": {
+      "time": "2025-03-27T23:07:48",
+      "interval": 900,
+      "temperature_2m": 27,
+      "relative_humidity_2m": 83,
+      "apparent_temperature": 25,
+      "is_day": 0,
+      "precipitation": 10.3,
+      "rain": 0.0,
+      "showers": 10.3,
+      "snowfall": 0.0,
+      "weather_code": 82,
+      "cloud_cover": 97,
+      "pressure_msl": 1010.1,
+      "surface_pressure": 1010.1,
+      "wind_speed_10m": 35,
+      "wind_direction_10m": 215,
+      "wind_gusts_10m": 40
+    },
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "\u00b0C",
+      "apparent_temperature": "\u00b0C",
+      "precipitation_probability": "%",
+      "weather_code": "wmo code",
+      "visibility": "m",
+      "wind_speed_10m": "km/h",
+      "is_day": ""
+    },
+    "hourly": {
+      "time": [
+        "2025-03-27T23:00:00",
+        "2025-03-28T00:00:00",
+        "2025-03-28T01:00:00",
+        "2025-03-28T02:00:00",
+        "2025-03-28T03:00:00",
+        "2025-03-28T04:00:00"
+      ],
+      "temperature_2m": [
+        25.7,
+        28.4,
+        26.8,
+        26.7,
+        25.6,
+        27.2
+      ],
+      "apparent_temperature": [
+        24.6,
+        23.6,
+        23.5,
+        25.9,
+        26.4,
+        23.7
+      ],
+      "precipitation_probability": [
+        907,
+        909,
+        898,
+        893,
+        901,
+        906
+      ],
+      "weather_code": [
+        82,
+        82,
+        82,
+        82,
+        82,
+        82
+      ],
+      "visibility": [
+        20009.100101836542,
+        16115.773096624614,
+        12557.98123450793,
+        17173.550577516347,
+        28713.18894190366,
+        27920.856862303597
+      ],
+      "wind_speed_10m": [
+        33.8,
+        34.7,
+        36.2,
+        34.3,
+        36.0,
+        36.5
+      ],
+      "is_day": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "daily_units": {
+      "time": "iso8601",
+      "weather_code": "wmo code",
+      "temperature_2m_max": "\u00b0C",
+      "temperature_2m_min": "\u00b0C",
+      "apparent_temperature_max": "\u00b0C",
+      "apparent_temperature_min": "\u00b0C",
+      "precipitation_sum": "mm"
+    },
+    "daily": {
+      "time": [
+        "2025-03-27T23:00:00",
+        "2025-03-28T00:00:00",
+        "2025-03-28T01:00:00",
+        "2025-03-28T02:00:00",
+        "2025-03-28T03:00:00",
+        "2025-03-28T04:00:00",
+        "2025-03-28T05:00:00"
+      ],
+      "weather_code": [
+        82,
+        82,
+        82,
+        82,
+        82,
+        82,
+        82
+      ],
+      "temperature_2m_max": [
+        28.4,
+        29.2,
+        28.2,
+        29.2,
+        28.7,
+        27.8,
+        30.3
+      ],
+      "temperature_2m_min": [
+        23.0,
+        23.8,
+        23.4,
+        24.4,
+        24.0,
+        24.8,
+        23.7
+      ],
+      "apparent_temperature_max": [
+        24.5,
+        27.5,
+        26.6,
+        26.0,
+        26.2,
+        25.0,
+        27.1
+      ],
+      "apparent_temperature_min": [
+        23.8,
+        21.9,
+        23.8,
+        22.6,
+        22.4,
+        21.8,
+        21.6
+      ],
+      "precipitation_sum": [
+        46.0,
+        43.9,
+        46.6,
+        46.1,
+        46.9,
+        44.1,
+        46.0
+      ]
+    },
+    "showers": 3.0
+  },
+  {
+    "latitude": 64.5,
+    "longitude": -20.1,
+    "generationtime_ms": 2.395033836364746,
+    "utc_offset_seconds": 3600,
+    "timezone": "Europe/Berlin",
+    "timezone_abbreviation": "GMT+1",
+    "elevation": 0.0,
+    "current_units": {
+      "time": "iso8601",
+      "interval": "seconds",
+      "temperature_2m": "\u00b0C",
+      "relative_humidity_2m": "%",
+      "apparent_temperature": "\u00b0C",
+      "is_day": "",
+      "precipitation": "mm",
+      "rain": "mm",
+      "showers": "mm",
+      "snowfall": "cm",
+      "weather_code": "wmo code",
+      "cloud_cover": "%",
+      "pressure_msl": "hPa",
+      "surface_pressure": "hPa",
+      "wind_speed_10m": "km/h",
+      "wind_direction_10m": "\u00b0",
+      "wind_gusts_10m": "km/h"
+    },
+    "current": {
+      "time": "2025-03-27T23:07:48",
+      "interval": 900,
+      "temperature_2m": -5,
+      "relative_humidity_2m": 83,
+      "apparent_temperature": -4,
+      "is_day": 0,
+      "precipitation": 2.0,
+      "rain": 0.0,
+      "showers": 0.0,
+      "snowfall": 0.7,
+      "weather_code": 85,
+      "cloud_cover": 79,
+      "pressure_msl": 1010.1,
+      "surface_pressure": 1010.1,
+      "wind_speed_10m": 22,
+      "wind_direction_10m": 215,
+      "wind_gusts_10m": 27
+    },
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "\u00b0C",
+      "apparent_temperature": "\u00b0C",
+      "precipitation_probability": "%",
+      "weather_code": "wmo code",
+      "visibility": "m",
+      "wind_speed_10m": "km/h",
+      "is_day": ""
+    },
+    "hourly": {
+      "time": [
+        "2025-03-27T23:00:00",
+        "2025-03-28T00:00:00",
+        "2025-03-28T01:00:00",
+        "2025-03-28T02:00:00",
+        "2025-03-28T03:00:00",
+        "2025-03-28T04:00:00"
+      ],
+      "temperature_2m": [
+        -3.7,
+        -5.5,
+        -4.0,
+        -3.8,
+        -5.6,
+        -6.3
+      ],
+      "apparent_temperature": [
+        -4.3,
+        -4.5,
+        -3.2,
+        -3.3,
+        -4.0,
+        -4.0
+      ],
+      "precipitation_probability": [
+        190,
+        195,
+        196,
+        202,
+        199,
+        196
+      ],
+      "weather_code": [
+        85,
+        85,
+        85,
+        85,
+        85,
+        85
+      ],
+      "visibility": [
+        23811.87478331462,
+        10543.68596541149,
+        26562.54286572508,
+        24775.75562017497,
+        18086.577373743574,
+        20545.098965728594
+      ],
+      "wind_speed_10m": [
+        20.2,
+        21.7,
+        21.2,
+        20.7,
+        21.1,
+        21.9
+      ],
+      "is_day": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "daily_units": {
+      "time": "iso8601",
+      "weather_code": "wmo code",
+      "temperature_2m_max": "\u00b0C",
+      "temperature_2m_min": "\u00b0C",
+      "apparent_temperature_max": "\u00b0C",
+      "apparent_temperature_min": "\u00b0C",
+      "precipitation_sum": "mm"
+    },
+    "daily": {
+      "time": [
+        "2025-03-27T23:00:00",
+        "2025-03-28T00:00:00",
+        "2025-03-28T01:00:00",
+        "2025-03-28T02:00:00",
+        "2025-03-28T03:00:00",
+        "2025-03-28T04:00:00",
+        "2025-03-28T05:00:00"
+      ],
+      "weather_code": [
+        85,
+        85,
+        85,
+        85,
+        85,
+        85,
+        85
+      ],
+      "temperature_2m_max": [
+        -4.0,
+        -2.8,
+        -2.5,
+        -3.8,
+        -3.1,
+        -2.2,
+        -1.5
+      ],
+      "temperature_2m_min": [
+        -9.5,
+        -9.4,
+        -8.5,
+        -9.2,
+        -9.1,
+        -7.5,
+        -8.1
+      ],
+      "apparent_temperature_max": [
+        -3.9,
+        -2.8,
+        -1.9,
+        -2.3,
+        -2.9,
+        -2.5,
+        -3.1
+      ],
+      "apparent_temperature_min": [
+        -7.2,
+        -7.1,
+        -6.8,
+        -5.2,
+        -4.6,
+        -4.5,
+        -5.0
+      ],
+      "precipitation_sum": [
+        10.9,
+        11.8,
+        8.9,
+        11.9,
+        9.5,
+        10.1,
+        11.6
+      ]
+    },
+    "snowfall": 2.0
+  },
+  {
+    "latitude": 46.2,
+    "longitude": 6.1,
+    "generationtime_ms": 2.395033836364746,
+    "utc_offset_seconds": 3600,
+    "timezone": "Europe/Berlin",
+    "timezone_abbreviation": "GMT+1",
+    "elevation": 0.0,
+    "current_units": {
+      "time": "iso8601",
+      "interval": "seconds",
+      "temperature_2m": "\u00b0C",
+      "relative_humidity_2m": "%",
+      "apparent_temperature": "\u00b0C",
+      "is_day": "",
+      "precipitation": "mm",
+      "rain": "mm",
+      "showers": "mm",
+      "snowfall": "cm",
+      "weather_code": "wmo code",
+      "cloud_cover": "%",
+      "pressure_msl": "hPa",
+      "surface_pressure": "hPa",
+      "wind_speed_10m": "km/h",
+      "wind_direction_10m": "\u00b0",
+      "wind_gusts_10m": "km/h"
+    },
+    "current": {
+      "time": "2025-03-27T23:07:48",
+      "interval": 900,
+      "temperature_2m": -8,
+      "relative_humidity_2m": 83,
+      "apparent_temperature": -7,
+      "is_day": 0,
+      "precipitation": 2.0,
+      "rain": 0.0,
+      "showers": 0.0,
+      "snowfall": 1.6,
+      "weather_code": 86,
+      "cloud_cover": 90,
+      "pressure_msl": 1010.1,
+      "surface_pressure": 1010.1,
+      "wind_speed_10m": 24,
+      "wind_direction_10m": 215,
+      "wind_gusts_10m": 29
+    },
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "\u00b0C",
+      "apparent_temperature": "\u00b0C",
+      "precipitation_probability": "%",
+      "weather_code": "wmo code",
+      "visibility": "m",
+      "wind_speed_10m": "km/h",
+      "is_day": ""
+    },
+    "hourly": {
+      "time": [
+        "2025-03-27T23:00:00",
+        "2025-03-28T00:00:00",
+        "2025-03-28T01:00:00",
+        "2025-03-28T02:00:00",
+        "2025-03-28T03:00:00",
+        "2025-03-28T04:00:00"
+      ],
+      "temperature_2m": [
+        -8.8,
+        -7.5,
+        -6.8,
+        -9.5,
+        -7.3,
+        -9.3
+      ],
+      "apparent_temperature": [
+        -7.3,
+        -6.4,
+        -6.9,
+        -5.8,
+        -7.7,
+        -6.7
+      ],
+      "precipitation_probability": [
+        491,
+        496,
+        499,
+        503,
+        500,
+        508
+      ],
+      "weather_code": [
+        86,
+        86,
+        86,
+        86,
+        86,
+        86
+      ],
+      "visibility": [
+        23600.339440137213,
+        11336.85864292769,
+        13383.668604691651,
+        21624.183794465367,
+        29115.510047745713,
+        12715.237377597457
+      ],
+      "wind_speed_10m": [
+        25.0,
+        23.0,
+        23.6,
+        25.3,
+        24.7,
+        23.9
+      ],
+      "is_day": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "daily_units": {
+      "time": "iso8601",
+      "weather_code": "wmo code",
+      "temperature_2m_max": "\u00b0C",
+      "temperature_2m_min": "\u00b0C",
+      "apparent_temperature_max": "\u00b0C",
+      "apparent_temperature_min": "\u00b0C",
+      "precipitation_sum": "mm"
+    },
+    "daily": {
+      "time": [
+        "2025-03-27T23:00:00",
+        "2025-03-28T00:00:00",
+        "2025-03-28T01:00:00",
+        "2025-03-28T02:00:00",
+        "2025-03-28T03:00:00",
+        "2025-03-28T04:00:00",
+        "2025-03-28T05:00:00"
+      ],
+      "weather_code": [
+        86,
+        86,
+        86,
+        86,
+        86,
+        86,
+        86
+      ],
+      "temperature_2m_max": [
+        -6.2,
+        -5.4,
+        -7.2,
+        -5.4,
+        -7.1,
+        -4.7,
+        -6.0
+      ],
+      "temperature_2m_min": [
+        -10.0,
+        -10.4,
+        -12.3,
+        -10.9,
+        -10.5,
+        -9.9,
+        -12.1
+      ],
+      "apparent_temperature_max": [
+        -5.4,
+        -5.3,
+        -5.4,
+        -4.9,
+        -6.2,
+        -7.4,
+        -5.8
+      ],
+      "apparent_temperature_min": [
+        -9.5,
+        -9.3,
+        -9.9,
+        -9.8,
+        -8.1,
+        -8.9,
+        -9.3
+      ],
+      "precipitation_sum": [
+        23.2,
+        24.7,
+        23.0,
+        25.8,
+        26.4,
+        25.3,
+        23.1
+      ]
+    },
+    "snowfall": 2.0
+  },
+  {
+    "latitude": 29.76,
+    "longitude": -95.37,
+    "generationtime_ms": 2.395033836364746,
+    "utc_offset_seconds": 3600,
+    "timezone": "Europe/Berlin",
+    "timezone_abbreviation": "GMT+1",
+    "elevation": 0.0,
+    "current_units": {
+      "time": "iso8601",
+      "interval": "seconds",
+      "temperature_2m": "\u00b0C",
+      "relative_humidity_2m": "%",
+      "apparent_temperature": "\u00b0C",
+      "is_day": "",
+      "precipitation": "mm",
+      "rain": "mm",
+      "showers": "mm",
+      "snowfall": "cm",
+      "weather_code": "wmo code",
+      "cloud_cover": "%",
+      "pressure_msl": "hPa",
+      "surface_pressure": "hPa",
+      "wind_speed_10m": "km/h",
+      "wind_direction_10m": "\u00b0",
+      "wind_gusts_10m": "km/h"
+    },
+    "current": {
+      "time": "2025-03-27T23:07:48",
+      "interval": 900,
+      "temperature_2m": 30,
+      "relative_humidity_2m": 83,
+      "apparent_temperature": 28,
+      "is_day": 0,
+      "precipitation": 1.5,
+      "rain": 0.0,
+      "showers": 1.5,
+      "snowfall": 0.0,
+      "weather_code": 95,
+      "cloud_cover": 80,
+      "pressure_msl": 1010.1,
+      "surface_pressure": 1010.1,
+      "wind_speed_10m": 40,
+      "wind_direction_10m": 215,
+      "wind_gusts_10m": 45
+    },
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "\u00b0C",
+      "apparent_temperature": "\u00b0C",
+      "precipitation_probability": "%",
+      "weather_code": "wmo code",
+      "visibility": "m",
+      "wind_speed_10m": "km/h",
+      "is_day": ""
+    },
+    "hourly": {
+      "time": [
+        "2025-03-27T23:00:00",
+        "2025-03-28T00:00:00",
+        "2025-03-28T01:00:00",
+        "2025-03-28T02:00:00",
+        "2025-03-28T03:00:00",
+        "2025-03-28T04:00:00"
+      ],
+      "temperature_2m": [
+        30.0,
+        31.0,
+        30.7,
+        29.6,
+        31.3,
+        29.0
+      ],
+      "apparent_temperature": [
+        28.5,
+        28.4,
+        28.4,
+        28.4,
+        27.0,
+        28.0
+      ],
+      "precipitation_probability": [
+        401,
+        391,
+        408,
+        405,
+        393,
+        403
+      ],
+      "weather_code": [
+        95,
+        95,
+        95,
+        95,
+        95,
+        95
+      ],
+      "visibility": [
+        25369.71101434196,
+        10601.937056042567,
+        19817.503831732807,
+        26734.8506789273,
+        12732.82237761574,
+        29182.588259325843
+      ],
+      "wind_speed_10m": [
+        40.2,
+        39.8,
+        39.0,
+        38.9,
+        38.6,
+        41.5
+      ],
+      "is_day": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "daily_units": {
+      "time": "iso8601",
+      "weather_code": "wmo code",
+      "temperature_2m_max": "\u00b0C",
+      "temperature_2m_min": "\u00b0C",
+      "apparent_temperature_max": "\u00b0C",
+      "apparent_temperature_min": "\u00b0C",
+      "precipitation_sum": "mm"
+    },
+    "daily": {
+      "time": [
+        "2025-03-27T23:00:00",
+        "2025-03-28T00:00:00",
+        "2025-03-28T01:00:00",
+        "2025-03-28T02:00:00",
+        "2025-03-28T03:00:00",
+        "2025-03-28T04:00:00",
+        "2025-03-28T05:00:00"
+      ],
+      "weather_code": [
+        95,
+        95,
+        95,
+        95,
+        95,
+        95,
+        95
+      ],
+      "temperature_2m_max": [
+        30.5,
+        32.4,
+        32.4,
+        32.7,
+        30.6,
+        32.3,
+        33.4
+      ],
+      "temperature_2m_min": [
+        28.2,
+        28.1,
+        26.8,
+        26.8,
+        27.9,
+        27.5,
+        26.0
+      ],
+      "apparent_temperature_max": [
+        28.8,
+        30.4,
+        29.9,
+        28.0,
+        29.7,
+        29.7,
+        30.3
+      ],
+      "apparent_temperature_min": [
+        26.1,
+        26.2,
+        26.8,
+        25.3,
+        26.9,
+        26.2,
+        25.9
+      ],
+      "precipitation_sum": [
+        21.9,
+        19.4,
+        21.8,
+        19.4,
+        18.3,
+        20.9,
+        21.4
+      ]
+    },
+    "rain": 2.0
+  },
+  {
+    "latitude": 50.45,
+    "longitude": 30.52,
+    "generationtime_ms": 2.395033836364746,
+    "utc_offset_seconds": 3600,
+    "timezone": "Europe/Berlin",
+    "timezone_abbreviation": "GMT+1",
+    "elevation": 0.0,
+    "current_units": {
+      "time": "iso8601",
+      "interval": "seconds",
+      "temperature_2m": "\u00b0C",
+      "relative_humidity_2m": "%",
+      "apparent_temperature": "\u00b0C",
+      "is_day": "",
+      "precipitation": "mm",
+      "rain": "mm",
+      "showers": "mm",
+      "snowfall": "cm",
+      "weather_code": "wmo code",
+      "cloud_cover": "%",
+      "pressure_msl": "hPa",
+      "surface_pressure": "hPa",
+      "wind_speed_10m": "km/h",
+      "wind_direction_10m": "\u00b0",
+      "wind_gusts_10m": "km/h"
+    },
+    "current": {
+      "time": "2025-03-27T23:07:48",
+      "interval": 900,
+      "temperature_2m": 24,
+      "relative_humidity_2m": 83,
+      "apparent_temperature": 25,
+      "is_day": 0,
+      "precipitation": 13.1,
+      "rain": 0.0,
+      "showers": 13.1,
+      "snowfall": 0.0,
+      "weather_code": 96,
+      "cloud_cover": 91,
+      "pressure_msl": 1010.1,
+      "surface_pressure": 1010.1,
+      "wind_speed_10m": 45,
+      "wind_direction_10m": 215,
+      "wind_gusts_10m": 50
+    },
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "\u00b0C",
+      "apparent_temperature": "\u00b0C",
+      "precipitation_probability": "%",
+      "weather_code": "wmo code",
+      "visibility": "m",
+      "wind_speed_10m": "km/h",
+      "is_day": ""
+    },
+    "hourly": {
+      "time": [
+        "2025-03-27T23:00:00",
+        "2025-03-28T00:00:00",
+        "2025-03-28T01:00:00",
+        "2025-03-28T02:00:00",
+        "2025-03-28T03:00:00",
+        "2025-03-28T04:00:00"
+      ],
+      "temperature_2m": [
+        22.7,
+        23.4,
+        23.6,
+        24.1,
+        23.3,
+        23.7
+      ],
+      "apparent_temperature": [
+        26.2,
+        25.7,
+        25.2,
+        26.1,
+        25.8,
+        24.0
+      ],
+      "precipitation_probability": [
+        598,
+        594,
+        592,
+        608,
+        601,
+        601
+      ],
+      "weather_code": [
+        96,
+        96,
+        96,
+        96,
+        96,
+        96
+      ],
+      "visibility": [
+        28438.961887876932,
+        29048.480549572512,
+        24061.976770020592,
+        25002.78296150752,
+        24410.902047179097,
+        14593.513635679039
+      ],
+      "wind_speed_10m": [
+        45.7,
+        46.5,
+        44.3,
+        44.9,
+        44.5,
+        44.8
+      ],
+      "is_day": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "daily_units": {
+      "time": "iso8601",
+      "weather_code": "wmo code",
+      "temperature_2m_max": "\u00b0C",
+      "temperature_2m_min": "\u00b0C",
+      "apparent_temperature_max": "\u00b0C",
+      "apparent_temperature_min": "\u00b0C",
+      "precipitation_sum": "mm"
+    },
+    "daily": {
+      "time": [
+        "2025-03-27T23:00:00",
+        "2025-03-28T00:00:00",
+        "2025-03-28T01:00:00",
+        "2025-03-28T02:00:00",
+        "2025-03-28T03:00:00",
+        "2025-03-28T04:00:00",
+        "2025-03-28T05:00:00"
+      ],
+      "weather_code": [
+        96,
+        96,
+        96,
+        96,
+        96,
+        96,
+        96
+      ],
+      "temperature_2m_max": [
+        26.3,
+        25.5,
+        25.2,
+        25.9,
+        26.8,
+        25.9,
+        26.7
+      ],
+      "temperature_2m_min": [
+        21.6,
+        22.1,
+        21.8,
+        19.9,
+        20.9,
+        21.5,
+        21.6
+      ],
+      "apparent_temperature_max": [
+        27.1,
+        26.7,
+        25.8,
+        25.3,
+        25.6,
+        25.9,
+        27.3
+      ],
+      "apparent_temperature_min": [
+        23.5,
+        23.9,
+        23.6,
+        23.0,
+        23.2,
+        23.5,
+        23.5
+      ],
+      "precipitation_sum": [
+        31.8,
+        31.7,
+        28.7,
+        31.4,
+        31.7,
+        31.2,
+        29.2
+      ]
+    },
+    "rain": 2.0
+  },
+  {
+    "latitude": 35.22,
+    "longitude": -80.84,
+    "generationtime_ms": 2.395033836364746,
+    "utc_offset_seconds": 3600,
+    "timezone": "Europe/Berlin",
+    "timezone_abbreviation": "GMT+1",
+    "elevation": 0.0,
+    "current_units": {
+      "time": "iso8601",
+      "interval": "seconds",
+      "temperature_2m": "\u00b0C",
+      "relative_humidity_2m": "%",
+      "apparent_temperature": "\u00b0C",
+      "is_day": "",
+      "precipitation": "mm",
+      "rain": "mm",
+      "showers": "mm",
+      "snowfall": "cm",
+      "weather_code": "wmo code",
+      "cloud_cover": "%",
+      "pressure_msl": "hPa",
+      "surface_pressure": "hPa",
+      "wind_speed_10m": "km/h",
+      "wind_direction_10m": "\u00b0",
+      "wind_gusts_10m": "km/h"
+    },
+    "current": {
+      "time": "2025-03-27T23:07:48",
+      "interval": 900,
+      "temperature_2m": 27,
+      "relative_humidity_2m": 83,
+      "apparent_temperature": 25,
+      "is_day": 0,
+      "precipitation": 42.0,
+      "rain": 0.0,
+      "showers": 42.0,
+      "snowfall": 0.0,
+      "weather_code": 99,
+      "cloud_cover": 96,
+      "pressure_msl": 1010.1,
+      "surface_pressure": 1010.1,
+      "wind_speed_10m": 50,
+      "wind_direction_10m": 215,
+      "wind_gusts_10m": 55
+    },
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "\u00b0C",
+      "apparent_temperature": "\u00b0C",
+      "precipitation_probability": "%",
+      "weather_code": "wmo code",
+      "visibility": "m",
+      "wind_speed_10m": "km/h",
+      "is_day": ""
+    },
+    "hourly": {
+      "time": [
+        "2025-03-27T23:00:00",
+        "2025-03-28T00:00:00",
+        "2025-03-28T01:00:00",
+        "2025-03-28T02:00:00",
+        "2025-03-28T03:00:00",
+        "2025-03-28T04:00:00"
+      ],
+      "temperature_2m": [
+        26.3,
+        27.2,
+        25.7,
+        28.0,
+        28.1,
+        27.7
+      ],
+      "apparent_temperature": [
+        26.5,
+        26.1,
+        25.6,
+        25.8,
+        23.6,
+        25.3
+      ],
+      "precipitation_probability": [
+        908,
+        892,
+        906,
+        910,
+        893,
+        908
+      ],
+      "weather_code": [
+        99,
+        99,
+        99,
+        99,
+        99,
+        99
+      ],
+      "visibility": [
+        16140.389946462667,
+        26567.765190098988,
+        27869.555638476653,
+        23600.55093463179,
+        16038.966143425872,
+        25213.51315018188
+      ],
+      "wind_speed_10m": [
+        50.3,
+        50.3,
+        48.3,
+        50.6,
+        49.6,
+        48.4
+      ],
+      "is_day": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "daily_units": {
+      "time": "iso8601",
+      "weather_code": "wmo code",
+      "temperature_2m_max": "\u00b0C",
+      "temperature_2m_min": "\u00b0C",
+      "apparent_temperature_max": "\u00b0C",
+      "apparent_temperature_min": "\u00b0C",
+      "precipitation_sum": "mm"
+    },
+    "daily": {
+      "time": [
+        "2025-03-27T23:00:00",
+        "2025-03-28T00:00:00",
+        "2025-03-28T01:00:00",
+        "2025-03-28T02:00:00",
+        "2025-03-28T03:00:00",
+        "2025-03-28T04:00:00",
+        "2025-03-28T05:00:00"
+      ],
+      "weather_code": [
+        99,
+        99,
+        99,
+        99,
+        99,
+        99,
+        99
+      ],
+      "temperature_2m_max": [
+        29.5,
+        30.4,
+        29.1,
+        29.4,
+        30.1,
+        27.6,
+        28.4
+      ],
+      "temperature_2m_min": [
+        25.1,
+        25.5,
+        24.8,
+        22.6,
+        23.3,
+        23.6,
+        22.7
+      ],
+      "apparent_temperature_max": [
+        24.9,
+        24.8,
+        24.7,
+        24.8,
+        25.4,
+        27.1,
+        25.1
+      ],
+      "apparent_temperature_min": [
+        21.6,
+        23.7,
+        23.1,
+        23.4,
+        24.1,
+        23.3,
+        22.7
+      ],
+      "precipitation_sum": [
+        46.1,
+        43.9,
+        46.8,
+        43.4,
+        45.9,
+        43.4,
+        44.4
+      ]
+    },
+    "rain": 2.0
+  }
+]

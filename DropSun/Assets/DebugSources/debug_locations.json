@@ -1,0 +1,210 @@
+[
+  {
+    "name": "Los Angeles",
+    "country_code": "US",
+    "latitude": 33.94,
+    "longitude": -118.4,
+    "id": 0,
+    "state_code": ""
+  },
+  {
+    "name": "New York",
+    "country_code": "US",
+    "latitude": 40.71,
+    "longitude": -74.0,
+    "id": 0,
+    "state_code": ""
+  },
+  {
+    "name": "London",
+    "country_code": "GB",
+    "latitude": 51.51,
+    "longitude": -0.13,
+    "id": 0,
+    "state_code": ""
+  },
+  {
+    "name": "Paris",
+    "country_code": "FR",
+    "latitude": 48.85,
+    "longitude": 2.35,
+    "id": 0,
+    "state_code": ""
+  },
+  {
+    "name": "Reykjavík",
+    "country_code": "IS",
+    "latitude": 64.13,
+    "longitude": -21.9,
+    "id": 0,
+    "state_code": ""
+  },
+  {
+    "name": "Helsinki",
+    "country_code": "FI",
+    "latitude": 60.17,
+    "longitude": 24.94,
+    "id": 0,
+    "state_code": ""
+  },
+  {
+    "name": "Moscow",
+    "country_code": "RU",
+    "latitude": 55.75,
+    "longitude": 37.62,
+    "id": 0,
+    "state_code": ""
+  },
+  {
+    "name": "Berlin",
+    "country_code": "DE",
+    "latitude": 52.52,
+    "longitude": 13.41,
+    "id": 0,
+    "state_code": ""
+  },
+  {
+    "name": "Prague",
+    "country_code": "CZ",
+    "latitude": 50.08,
+    "longitude": 14.44,
+    "id": 0,
+    "state_code": ""
+  },
+  {
+    "name": "St Petersburg",
+    "country_code": "RU",
+    "latitude": 59.93,
+    "longitude": 30.31,
+    "id": 0,
+    "state_code": ""
+  },
+  {
+    "name": "Jyväskylä",
+    "country_code": "FI",
+    "latitude": 62.24,
+    "longitude": 25.75,
+    "id": 0,
+    "state_code": ""
+  },
+  {
+    "name": "Tokyo",
+    "country_code": "JP",
+    "latitude": 35.68,
+    "longitude": 139.69,
+    "id": 0,
+    "state_code": ""
+  },
+  {
+    "name": "Copenhagen",
+    "country_code": "DK",
+    "latitude": 55.68,
+    "longitude": 12.57,
+    "id": 0,
+    "state_code": ""
+  },
+  {
+    "name": "Zurich",
+    "country_code": "CH",
+    "latitude": 47.38,
+    "longitude": 8.54,
+    "id": 0,
+    "state_code": ""
+  },
+  {
+    "name": "Montreal",
+    "country_code": "CA",
+    "latitude": 45.52,
+    "longitude": -73.57,
+    "id": 0,
+    "state_code": ""
+  },
+  {
+    "name": "Dublin",
+    "country_code": "IE",
+    "latitude": 53.35,
+    "longitude": -6.26,
+    "id": 0,
+    "state_code": ""
+  },
+  {
+    "name": "Oslo",
+    "country_code": "NO",
+    "latitude": 59.91,
+    "longitude": 10.75,
+    "id": 0,
+    "state_code": ""
+  },
+  {
+    "name": "Tampere",
+    "country_code": "FI",
+    "latitude": 61.5,
+    "longitude": 23.8,
+    "id": 0,
+    "state_code": ""
+  },
+  {
+    "name": "Villach",
+    "country_code": "AT",
+    "latitude": 46.6,
+    "longitude": 14.3,
+    "id": 0,
+    "state_code": ""
+  },
+  {
+    "name": "Lapland",
+    "country_code": "FI",
+    "latitude": 66.5,
+    "longitude": 25.7,
+    "id": 0,
+    "state_code": ""
+  },
+  {
+    "name": "Manila",
+    "country_code": "PH",
+    "latitude": 14.6,
+    "longitude": 121.0,
+    "id": 0,
+    "state_code": ""
+  },
+  {
+    "name": "Kuala Lumpur",
+    "country_code": "MY",
+    "latitude": 3.14,
+    "longitude": 101.69,
+    "id": 0,
+    "state_code": ""
+  },
+  {
+    "name": "Geneva",
+    "country_code": "CH",
+    "latitude": 46.2,
+    "longitude": 6.1,
+    "id": 0,
+    "state_code": ""
+  },
+  {
+    "name": "Houston",
+    "country_code": "US",
+    "latitude": 29.76,
+    "longitude": -95.37,
+    "id": 0,
+    "state_code": ""
+  },
+  {
+    "name": "Kyiv",
+    "country_code": "UA",
+    "latitude": 50.45,
+    "longitude": 30.52,
+    "id": 0,
+    "state_code": ""
+  },
+  {
+    "name": "Charlotte",
+    "country_code": "US",
+    "latitude": 35.22,
+    "longitude": -80.84,
+    "id": 0,
+    "state_code": ""
+  }
+]

@@ -230,6 +230,21 @@ namespace DropSun.Model.Weather
 
         [JsonPropertyName("wind_gusts_10m")]
         public double WindGusts10M { get; set; }
+
+        public override string ToString()
+        {
+            return $"[CurrentWeather]\n" +
+                   $"- Time: {Time}\n" +
+                   $"- Interval: {Interval}s\n" +
+                   $"- Temp: {Temperature2M}°C (Feels like {ApparentTemperature}°C)\n" +
+                   $"- Humidity: {RelativeHumidity2M}%\n" +
+                   $"- IsDay: {(IsDay == 1 ? "Yes" : "No")}\n" +
+                   $"- Precip: {Precipitation}mm | Rain: {Rain}mm | Showers: {Showers}mm | Snowfall: {Snowfall}cm\n" +
+                   $"- WeatherCode: {WeatherCode}\n" +
+                   $"- CloudCover: {CloudCover}%\n" +
+                   $"- Pressure: {PressureMsl} hPa (Surface: {SurfacePressure} hPa)\n" +
+                   $"- Wind: {WindSpeed10M} km/h at {WindDirection10M}° (Gusts: {WindGusts10M} km/h)";
+        }
     }
 
     public class HourlyUnits

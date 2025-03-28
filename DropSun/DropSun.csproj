@@ -12,6 +12,8 @@
     <EnableMsixTooling>true</EnableMsixTooling>
   </PropertyGroup>
   <ItemGroup>
+    <Content Remove="Assets\DebugSources\debug_locations.json" />
+    <Content Remove="Assets\DebugSources\weather_debug_locations.json" />
     <Content Remove="Assets\Source\AppIcon\DropSunIcon.svg" />
     <Content Remove="Assets\WeatherPreviews\ClearSky.png" />
     <Content Remove="Assets\WeatherPreviews\DepositingRimeFog.png" />
@@ -95,6 +97,12 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <None Update="Assets\DebugSources\debug_locations.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Assets\DebugSources\weather_debug_locations.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="Assets\WeatherPreviews\ClearSky.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
