@@ -92,6 +92,7 @@ namespace DropSun.Views
 
         private void ContentGrid_SizeChanged(object sender, SizeChangedEventArgs e)
         {
+            if (ContentGrid.ActualWidth != 0 && ContentGrid.ActualWidth != 0) AppState.Instance.ViewPortSize = new System.Numerics.Vector2((float)ContentGrid.ActualWidth, (float)ContentGrid.ActualHeight);
             updatePusherSize();
         }
 

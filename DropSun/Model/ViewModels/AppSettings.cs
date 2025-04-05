@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Globalization;
 using System.Linq;
+using System.Numerics;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
@@ -190,6 +191,24 @@ namespace DropSun.Model.ViewModels
             GetMeasurementUnits(); // run this once to apply to Pikouna Engine
         }
 
+    }
+
+    public class AppState
+    {
+        public static AppState Instance
+        {
+            get
+            {
+                if (_instance == null)
+                {
+                    _instance = new AppState();
+                }
+                return _instance;
+            }
+        }
+        private static AppState _instance;
+
+        public Vector2 ViewPortSize { get; set; } = new Vector2(1, 1);
     }
 
     public enum MeasurementUnits

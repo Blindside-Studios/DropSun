@@ -1,4 +1,5 @@
 using DropSun.Model.Geolocation;
+using DropSun.Model.ViewModels;
 using DropSun.Model.Weather;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
@@ -9,12 +10,14 @@ using Microsoft.UI.Xaml.Media;
 using Microsoft.UI.Xaml.Media.Animation;
 using Microsoft.UI.Xaml.Media.Imaging;
 using Microsoft.UI.Xaml.Navigation;
+using Pikouna_Engine;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Numerics;
 using System.Runtime.InteropServices.WindowsRuntime;
 using System.Threading.Tasks;
 using System.Xml.Linq;
@@ -48,6 +51,17 @@ namespace DropSun.Views.Controls
             Pikouna_Engine.WeatherViewModel.Instance.WindSpeed = Weather.Current.WindSpeed10M;
             Pikouna_Engine.WeatherViewModel.Instance.Snow = Weather.Current.Snowfall;
             Pikouna_Engine.WeatherViewModel.Instance.WeatherType = Weather.GetWeatherDescription();
+
+            Vector2 screenSize = AppState.Instance.ViewPortSize;
+            OzoraViewModel.Instance.MouseEngaged = true;
+            if (Weather.Current.IsDay == 0)
+            {
+                OzoraViewModel.Instance.MousePosition = new Vector2((float)(screenSize.X * 0.25), (float)(screenSize.Y * 0.25)).ToPoint();
+            }
+            else
+            {
+                OzoraViewModel.Instance.MousePosition = new Vector2((float)(screenSize.X * 1.00), (float)(screenSize.Y * 1.00)).ToPoint();
+            }
 
             Debug.WriteLine(Weather.Current.ToString());
         }
