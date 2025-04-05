@@ -18,6 +18,7 @@ using Pikouna_Engine;
 using System.Collections.ObjectModel;
 using ShinGrid;
 using System.Threading.Tasks;
+using System.Numerics;
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -92,7 +93,18 @@ namespace DropSun.Views
 
         private void ContentGrid_SizeChanged(object sender, SizeChangedEventArgs e)
         {
-            if (ContentGrid.ActualWidth != 0 && ContentGrid.ActualWidth != 0) AppState.Instance.ViewPortSize = new System.Numerics.Vector2((float)ContentGrid.ActualWidth, (float)ContentGrid.ActualHeight);
+            // only move sun if the background variable isn't at the default position.
+            if (AppState.Instance.ViewPortSize.X != 1 && AppState.Instance.ViewPortSize.Y != 1)
+            {
+                // adjust sun position to resize properly
+                if (!OzoraViewModel.Instance.MouseEngaged) OzoraViewModel.Instance.MouseEngaged = true;
+                var previousSize = AppState.Instance.ViewPortSize;
+                var previousPosition = OzoraViewModel.Instance.MousePosition.ToVector2();
+                var newSize = new Vector2((float)ContentGrid.ActualWidth, (float)ContentGrid.ActualHeight);
+                OzoraViewModel.Instance.MousePosition = new Vector2(previousPosition.X / previousSize.X * newSize.X, previousPosition.Y / previousSize.Y * newSize.Y).ToPoint();
+            }
+            
+            if (ContentGrid.ActualWidth != 0 && ContentGrid.ActualWidth != 0) AppState.Instance.ViewPortSize = new Vector2((float)ContentGrid.ActualWidth, (float)ContentGrid.ActualHeight);
             updatePusherSize();
         }
 
